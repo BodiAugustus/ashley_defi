@@ -7,11 +7,24 @@ module.exports = {
   ],
   theme: {
     screens: {
-      'xs': '375px',
+      'xs': '374px',
       ...defaultTheme.screens,
     },
   
-    extend: {},
+    extend: {
+      fontFamily: {
+        economica: "Economica, sans-serif",
+
+      },
+      screens: {
+        // 'sm': '400px',
+        // 'ms': '539px',
+        // 'mx': '767px',
+  
+
+
+      }
+    },
   },
   plugins: [],
 }

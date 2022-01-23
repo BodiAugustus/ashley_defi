@@ -7,3 +7,5 @@
 #4. Downloaded npm install react-icons --save. Created socials data, imported react icon for each link. Added title to index.js in root using imported Head. Setup skelaton for Navbar component.
 
 #5. Worked on building out the Navbar component. Added custom config to tailwind.config.js for smaller screens.
+
+#6. Continued building out Navbar, specifically the links and mobile responsiveness. Created _document.js file and imported a Google Fonts type by adding an extension to the tailwind.config.js file. Brought in color scheme.
