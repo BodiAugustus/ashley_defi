@@ -5,11 +5,11 @@ import Navbar from '@components/ui/Navbar'
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Ashley Capital & DeFi</title>
+      </Head>
       <Navbar/>
-
-      <h1 className="text-3xl font-bold underline">
-       Hello world!
-      </h1>
+  
     </>
   )
 }
