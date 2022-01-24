@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Navbar from '@components/ui/Navbar'
+import Hero from '@components/ui/Hero'
 
 
 export default function Home() {
@@ -8,8 +9,8 @@ export default function Home() {
       <Head>
         <title>Ashley Capital & DeFi</title>
       </Head>
-      <Navbar/>
-  
+      <Navbar/>      
+      <Hero/>  
     </>
   )
 }

@@ -14,6 +14,7 @@ module.exports = {
     extend: {
       fontFamily: {
         economica: "Economica, sans-serif",
+        playfair: "Playfair Display SC, serif"
 
       },
       screens: {

@@ -10,3 +10,31 @@
   .show-container {
     height: 100vh;
   }
+
+  .mains{
+
+
+
+    background: rgba(0,0,0,.2);
+    box-shadow: inset 10rem 16rem 6rem #270082, inset -2rem -4rem 7rem #43f;
+}
+
+.mains::after{
+    content: '';
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh; */
+    z-index: var(--z-index-s);
+    background: rgba(0,0,0,.3);
+    box-shadow: inset 2rem 2em 4rem #000, inset -10rem -2rem 12rem #5da;
+}
+
+.white-glassmorphism {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}

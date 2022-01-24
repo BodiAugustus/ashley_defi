@@ -40,7 +40,7 @@ const Navbar = () => {
                 </a>
                     <button
                     onClick={() => setShowMenu(!showMenu)}
-                    className='text-5xl text-white cursor-pointer transition-all hover:rotate-90 active:scale-110  md:hidden'>
+                    className='text-5xl text-slate-100 cursor-pointer transition-all hover:rotate-90 active:scale-110  md:hidden'>
                         <FaBars/>
                     </button>
                 </div>
