@@ -55,7 +55,9 @@ const Main = () => {
                     <h2 className="absolute w-[80%] left-[10%] mt-8 text-xl ">Influencers influence poorly.
                      <AiFillTwitterCircle
                          className="mx-auto text-4xl fill-blue-400"
-                     /></h2>                
+                     />
+                     <hr className="border-red-500 border-2 w-[35%] absolute rotate-45 left-10 bottom-4"/>            
+                     </h2>    
                 </div>
             </div>
 

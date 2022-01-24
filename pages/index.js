@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Navbar from '@components/ui/Navbar'
 import Hero from '@components/ui/Hero'
 import Main from '@components/ui/Main'
+import Info from '@components/ui/Info'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Navbar/>      
       <Hero/>  
       <Main/>
+      <Info/>
     </>
   )
 }

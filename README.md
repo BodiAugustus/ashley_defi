@@ -15,3 +15,5 @@
 #8. Created images folder inside of public folder. Created Hero.jsx inside of components/ui, added path to index file. Added new font. Started working on Hero layout for mobile screen size. Finished for mobile.
 
 #9. Created Main.jsx inside of components folder. Started setting up Main component. Updated next.confis.js to allow image imports from cloudinary. Finished Main component using grid-layout.
+
+#10. Created Info.jsx file inside of components folder. Started setting up Info component. Updated index.jsx inside of components folder. Finished Info component.

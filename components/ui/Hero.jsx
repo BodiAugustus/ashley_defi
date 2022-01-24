@@ -50,22 +50,22 @@ const Hero = () => {
                          
 
                 <Image
-                src='/images/fantom.png' 
-                alt=" logo"    
-                height={30}
-                width={100}
-                layout="fixed"
-                className="rounded-sm"
-                />
+                    src='/images/fantom.png' 
+                    alt=" logo"    
+                    height={30}
+                    width={100}
+                    layout="fixed"
+                    className="rounded-sm"
+                    />
                 
                 <Image
-                src='/images/secret.png' 
-                alt=" logo"    
-                height={30}
-                width={100}
-                layout="fixed"
-                className="rounded-sm"
-                />
+                    src='/images/secret.png' 
+                    alt=" logo"    
+                    height={30}
+                    width={100}
+                    layout="fixed"
+                    className="rounded-sm"
+                    />
             </div>
 
             <h1 className="text-center text-white -mt-10 font-bold">The Future Is Digital.
