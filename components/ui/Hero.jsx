@@ -21,7 +21,7 @@ const Hero = () => {
                    width={55}
                    />
                </div>
-               
+
                 <div className="w-full md:w-[20%]  text-white  bg-[#2b2b2b] p-3 mt-4 ">
                     <Image
                     src='/images/herobg.jpg'
@@ -75,14 +75,14 @@ const Hero = () => {
             <div className="text-white mt-3">
 
                 <div className="flex justify-between h-[20vh]">
-                    <div className="bg-[#2b2b2b] text-xs w-[30%] rounded-lg white-glassmorphism">               
+                    <div className="bg-[#2b2b2b] text-xs w-[31%] rounded-lg white-glassmorphism">               
                         <div className="flex justify-between p-2 items-center">
                             <h4>Our Job</h4>
                                 <GiAbstract070
                                     className="fill-blue-500 text-2xl"
                                 />
                         </div>                   
-                            <p className="text-center">To teach you how to make your own well informed and educated decisions.</p>
+                            <p className="text-center px-[0.2px]">To teach you how to make your own well informed and educated investing decisions.</p>
                     </div>
 
                     <div className="bg-[#2b2b2b] text-xs w-[30%] rounded-lg white-glassmorphism">
@@ -102,7 +102,7 @@ const Hero = () => {
                                     className="fill-red-400 text-2xl"
                                 />
                         </div>  
-                            <p className="text-center">Discussions, classes, updates, reports, one-on-one chats and so much more!</p>
+                            <p className="text-center">Discussions, classes, updates, reports, one-on-one chats and much more!</p>
                     </div>          
                 </div>
             </div>          

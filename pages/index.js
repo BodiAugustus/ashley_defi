@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Navbar from '@components/ui/Navbar'
 import Hero from '@components/ui/Hero'
-
+import Main from '@components/ui/Main'
 
 export default function Home() {
   return (
@@ -11,6 +11,7 @@ export default function Home() {
       </Head>
       <Navbar/>      
       <Hero/>  
+      <Main/>
     </>
   )
 }
