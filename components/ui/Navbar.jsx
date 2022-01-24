@@ -1,62 +1,96 @@
 import Image from 'next/image'
-import {FaBars, FaTwitter} from 'react-icons/fa'
+import {FaBars, FaTwitter, FaLinkedin, FaGithub} from 'react-icons/fa'
+import { links, socials } from '@components/data/data'
+import { useEffect, useRef, useState } from 'react'
+
 
 const Navbar = () => {
+    const [showMenu, setShowMenu] = useState(false)
+    let time = new Date
+    // const linksContainerRef = useRef(null)
+    // const linksRef = useRef(null)
+
+    // useEffect(() => {
+    //     const linksHeight = linksRef.current.getBoundingClientRect().height
+    //     // console.log(linksHeight)
+    //     if(showMenu){
+    //         linksContainerRef.current.style.height = `${linksHeight}px`
+    //     } else{
+    //         linksContainerRef.current.style.height = '0px'
+    //     }
+    // },[showMenu])
+
     return(
-        <nav className='bg-purple-600'>
-            <div className="flex flex-wrap justify-between items-center p-1 bg-black ">
+        <nav className=''>
+            <div className="flex flex-wrap justify-between items-center p-1 bg-black relative ">
+           {showMenu && 
+            <h1 className='absolute text-white -right-[30%] top-[45%] rotate-90 text-7xl'>Ashley DeFi</h1>
+           }
                 <div className="  flex justify-between h-[12vh] p-2 items-center w-full md:w-auto bg-[#2b2b2b] md:rounded-lg">
+                <a href="www.bodiaugustus.com"
+                className='mt-1'
+                target="_blank"
+                >
                     <Image
                         src="/android-chrome-192x192.png"
                         alt="Ashley Capital & DeFi Logo"                        
                         height="65%"
                         width="65%"
                         />
-                    <button className='text-5xl text-sky-400 cursor-pointer transition-all hover:rotate-90 md:hidden'>
+                </a>
+                    <button
+                    onClick={() => setShowMenu(!showMenu)}
+                    className='text-5xl text-white cursor-pointer transition-all hover:rotate-90 active:scale-110  md:hidden'>
                         <FaBars/>
                     </button>
                 </div>
-                <div className="bg-[#2b2b2b] transition-all h-auto  overflow-hidden md:w-[45%] md:p-3 md:rounded-xl ">
-                    <ul className='transition-all uppercase md:flex md:justify-between md:text-3xl text-white font-economica tracking-wide '>
-                        <li>
-                            <a href="#">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                About
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Services
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Extras
-                            </a>
-                        </li>
+                
+                <div 
+                // ref={linksContainerRef}
+                className={`bg-[#2b2b2b] transition-all md:h-auto overflow-hidden  w-[55vw]  md:w-[35%] md:p-3 md:rounded-xl ${showMenu ? 'links-container show-container' : 'links-container'}`}>
+                    <ul 
+                    // ref={linksRef}
+                    className='text-5xl p-8  transition-all uppercase md:flex md:justify-between md:text-3xl md:p-0 text-white font-economica tracking-wide md:h-9'>
+                       {links.map((item) => {
+                           const {id, name, url, howLong} = item
+                           return (
+                               <li
+                                className={`mt-[30%] w-auto md:mt-0 transition-all hover:bg-black hover:p-1 md:hover:text-2xl hover:items-center md:hover:p-1
+                                hover:rounded-lg
+                                 ${howLong} md:w-auto `}
+                                key={id}>
+                                   <a href={url}>{name}</a>
+                               </li>
+                               )
+                       })}
                     </ul>
-                </div>
-                <ul className="hidden md:flex md:items-center md:justify-between bg-[#2b2b2b] md:p-2  md:mr-1 md:text-3xl md:w-[15%] md:rounded-xl">
-                    <li className='text-sky-400'>
-                        <a href="#">
-                            <FaTwitter/>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <FaTwitter/>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <FaTwitter/>
-                        </a>
-                    </li>
+                        {showMenu && 
+                       <>
+                       <div className="flex justify-around text-2xl text-white mt-8 cursor-pointer  ">
+                            <FaTwitter className='hover:scale-110 active:scale-100 transition-all'/>
+                            <FaGithub className='hover:scale-110 active:scale-100 transition-all'/>
+                            <FaLinkedin className='hover:scale-110 active:scale-100 transition-all'/>
+                        </div>
+                        <div className="flex flex-col text-center mt-16 text-xs">
+                            <h4>Ashley Capital & DeFi - All Rights Reserved &#169; {time.getFullYear()}</h4>
+                        </div>
+                       </>
+                        }
+                </div>               
+           
+                    <ul className="hidden md:flex md:items-center md:justify-between bg-[#2b2b2b] md:p-2  md:mr-1 md:text-3xl md:w-[15%] md:rounded-xl">
+                    {socials.map((item) => {
+                        const {id, url, icon, color} = item
+                        return (
+                            <li key={id} className={`${color} hover:scale-110 transition-all active:scale-100`}>
+                                <a
+                                className=''
+                                 href={url}>{icon}</a>
+                            </li>
+                        )
+                    })}
                 </ul>
+               
             </div>
         </nav>
     )

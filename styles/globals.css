@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.links-container {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.7s linear;
+  }
+  .show-container {
+    height: 100vh;
+  }
