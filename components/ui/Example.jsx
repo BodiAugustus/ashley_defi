@@ -4,14 +4,22 @@ import {GiTwoCoins} from 'react-icons/gi'
 const Example = () => {
     return (
         <div className="h-[100vh] bg-black text-white ">
-            <h2 className="text-center text-4xl pt-4 mb-1">Take an Example</h2>
-            <div className="h-[89vh] w-[90vw] bg-[#2b2b2b] mx-auto border-2 rounded-xl border-stone-500 grid grid-cols-1 ">
+            <h2 className="text-center text-4xl pt-4 mb-1
+            md:text-5xl md:mb-3
+            ">Take an Example</h2>
+            <div className="h-[89vh] w-[90vw] bg-[#2b2b2b] mx-auto border-2 rounded-xl border-stone-500 grid grid-cols-1 
+            sm:text-lg
+            md:text-2xl
+            ">
            
        
                 <div className=" rounded-lg p-2 mt-1 overflow-y-scroll">
                     <div className="relative">
-                    <div className="indent-4 ">Have you been wondering why Bitcoin and Ethereum have been going down instead of up lately? Follow along with us here at Ashley DeFi and let us show you one side of the coin.
-                    <GiTwoCoins className='absolute bottom-[4%] left-[37%]'/> 
+                    <div className="indent-4
+                    md:indent-8
+                    ">Have you been wondering why Bitcoin and Ethereum have been going down instead of up lately? Follow along with us here at Ashley DeFi and let us show you one side of the coin.
+                    <GiTwoCoins className='absolute bottom-[4%] left-[37%] sm:left-[37%]
+                    md:invisible'/> 
                     </div>
                      
                     </div> 

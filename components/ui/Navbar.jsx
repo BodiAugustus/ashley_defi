@@ -28,7 +28,9 @@ const Navbar = () => {
            }
                 <div className="  flex justify-between h-[12vh] p-2 items-center w-full md:w-auto bg-[#2b2b2b] md:rounded-lg">
                 <a href="www.bodiaugustus.com"
-                className='mt-1'
+                className='mt-1
+                md:p-4
+                '
                 target="_blank"
                 >
                     <Image
@@ -47,10 +49,13 @@ const Navbar = () => {
                 
                 <div 
                 // ref={linksContainerRef}
-                className={`bg-[#2b2b2b] transition-all md:h-auto overflow-hidden  w-[55vw]  md:w-[35%] md:p-3 md:rounded-xl ${showMenu ? 'links-container show-container' : 'links-container'}`}>
+                className={`bg-[#2b2b2b] transition-all md:h-auto overflow-hidden  w-[55vw]  
+                md:w-[55%] md:p-3 md:rounded-xl ${showMenu ? 'links-container show-container' : 'links-container'}`}>
                     <ul 
                     // ref={linksRef}
-                    className='text-5xl p-8  transition-all uppercase md:flex md:justify-between md:text-3xl md:p-0 text-white font-economica tracking-wide md:h-9'>
+                    className='text-5xl p-8 transition-all uppercase md:flex md:justify-between md:text-3xl md:p-0 text-white font-economica tracking-wide md:h-9
+                    sm:leading-relaxed
+                    '>
                        {links.map((item) => {
                            const {id, name, url, howLong} = item
                            return (
@@ -66,19 +71,23 @@ const Navbar = () => {
                     </ul>
                         {showMenu && 
                        <>
-                       <div className="flex justify-around text-2xl text-white mt-8 cursor-pointer  ">
+                       <div className="flex justify-around text-2xl text-white mt-8 cursor-pointer
+                       sm:text-3xl
+                         ">
                             <FaTwitter className='hover:scale-110 active:scale-100 transition-all'/>
                             <FaGithub className='hover:scale-110 active:scale-100 transition-all'/>
                             <FaLinkedin className='hover:scale-110 active:scale-100 transition-all'/>
                         </div>
-                        <div className="flex flex-col text-center mt-16 text-xs">
-                            <h4>Ashley Capital & DeFi - All Rights Reserved &#169; {time.getFullYear()}</h4>
+                        <div className="flex flex-col text-center mt-20 text-xs text-white 
+                        sm:mt-32 ">
+                            <h4>Ashley Capital & DeFi -  &#169; {time.getFullYear()}</h4>
                         </div>
                        </>
                         }
                 </div>               
            
-                    <ul className="hidden md:flex md:items-center md:justify-between bg-[#2b2b2b] md:p-2  md:mr-1 md:text-3xl md:w-[15%] md:rounded-xl">
+                    <ul className="hidden bg-[#2b2b2b] 
+                    md:flex md:items-center md:justify-between md:p-2  md:mr-1 md:text-3xl md:w-[17%] md:rounded-xl">
                     {socials.map((item) => {
                         const {id, url, icon, color} = item
                         return (
