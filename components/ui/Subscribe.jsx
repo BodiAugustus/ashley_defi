@@ -16,22 +16,22 @@ const Subscribe = () => {
                     </div>
                         <h4 className='text-center text-xl mt-2'>All members, all access. <span className='text-amber-900 font-bold'>No bull.</span></h4>
                 </div>
-                <div className="col-span-1 bg-blue-600 text-center hover:bg-blue-500">
+                <div className="col-span-1 bg-blue-600 text-center hover:bg-blue-500 font-thin">
                     <h2>Individualized risk assessments custom tailored to you and your desired levels of exposure.</h2>
                 </div>
-                <div className="col-span-1 bg-blue-600 text-center hover:bg-blue-500">
+                <div className="col-span-1 bg-blue-600 text-center hover:bg-blue-500 font-thin">
                     <h2>Personal portfolio management and recommendations with regular reporting & updates.</h2>
                 </div>
-                <div className="col-span-1 bg-blue-600 text-center pt-2 hover:bg-blue-500">
+                <div className="col-span-1 bg-blue-600 text-center pt-3 hover:bg-blue-500 font-thin">
                     <h2>Timely feedback from an actual consultant, not a customer service representitve.</h2>
                 </div>
-                <div className="col-span-1 bg-blue-600 text-center p-2 hover:bg-blue-500">
+                <div className="col-span-1 bg-blue-600 text-center p-2 hover:bg-blue-500 font-thin">
                     <h2>Market outlooks and projections compiled in house using real-time market metrics.</h2>
                 </div>
-                <div className="col-span-1 bg-blue-600 text-center hover:bg-blue-500">
+                <div className="col-span-1 bg-blue-600 text-center hover:bg-blue-500 font-thin pt-2">
                     <h2>Advanced technical expertise and knowledge from real world blockchain developers.</h2>
                 </div>
-                <div className="col-span-1 bg-blue-600 text-center hover:bg-blue-500">
+                <div className="col-span-1 bg-blue-600 text-center hover:bg-blue-500 font-thin">
                     <h2>Access to alpha news drops & the latest tech unveilings revealed though our cultivated list of proven affiliates.</h2>
                 </div>
                 <div className="col-span-2 bg-blue-400 rounded-bl-lg rounded-br-lg">
