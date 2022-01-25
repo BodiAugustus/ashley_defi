@@ -21,3 +21,5 @@
 #11. Created Example.jsx. Updated index.jsx. Started setting up Example component. Finished Example component.
 
 #12. Created Features.jsx inside of components/ui folder. Began setting up Features component. Finished Features component.
+
+#13. Created Benefits.jsx inside utils/components folder. Began setting up Benefits component. Finished setting up Benefits component.
