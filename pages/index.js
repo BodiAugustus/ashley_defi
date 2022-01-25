@@ -4,6 +4,7 @@ import Hero from '@components/ui/Hero'
 import Main from '@components/ui/Main'
 import Info from '@components/ui/Info'
 import Example from '@components/ui/Example'
+import Features from '@components/ui/Features'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Main/>
       <Info/>
       <Example/>
+      <Features/>
     </>
   )
 }

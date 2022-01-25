@@ -18,4 +18,6 @@
 
 #10. Created Info.jsx file inside of components folder. Started setting up Info component. Updated index.jsx inside of components folder. Finished Info component.
 
-#11. Created Example.jsx. Updated index.jsx. Started setting up Example component. Finished Exa,ple component.
+#11. Created Example.jsx. Updated index.jsx. Started setting up Example component. Finished Example component.
+
+#12. Created Features.jsx inside of components/ui folder. Began setting up Features component. Finished Features component.
