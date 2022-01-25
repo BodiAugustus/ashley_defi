@@ -6,6 +6,9 @@ import Info from '@components/ui/Info'
 import Example from '@components/ui/Example'
 import Features from '@components/ui/Features'
 import Benefits from '@components/ui/Benefits'
+import Subscribe from '@components/ui/Subscribe'
+import Call2Action from '@components/ui/Call2Action'
+import Footer from '@components/ui/Footer'
 
 export default function Home() {
   return (
@@ -20,6 +23,9 @@ export default function Home() {
       <Example/>
       <Features/>
       <Benefits/>
+      <Subscribe/>
+      <Call2Action/>
+      <Footer/>
     </>
   )
 }

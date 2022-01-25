@@ -15,7 +15,7 @@ const Features = () => {
                     <h4 className='flex justify-evenly items-center'><GiTorch className='fill-yellow-300'/> Freedom is everything.</h4>
                     <h4 className='flex justify-evenly items-center'><AiFillLock className='fill-stone-300'/> Privacy is your right.</h4>
                     <h4 className='flex justify-evenly items-center'><GiBrain className='fill-red-400'/> Knowledge is power.</h4>
-                    <h4 className='flex justify-evenly items-center'><GiTeamIdea className='fill-indigo-300'/> Teamwork makes the dreamwork.</h4>
+                    <h4 className='flex justify-evenly items-center'><GiTeamIdea className='fill-indigo-300'/> Where there&apos;s a will, there&apos;s a way.</h4>
                 </div>
 
                 <h2 className='text-4xl mb-1'>2022 DeFi Landscape</h2>

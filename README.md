@@ -23,3 +23,5 @@
 #12. Created Features.jsx inside of components/ui folder. Began setting up Features component. Finished Features component.
 
 #13. Created Benefits.jsx inside utils/components folder. Began setting up Benefits component. Finished setting up Benefits component.
+
+#14. Created Subscribe.jsx inside of ui/components folder. Started setting up Subscribe component. Finished Subscribe component.
