@@ -17,3 +17,5 @@
 #9. Created Main.jsx inside of components folder. Started setting up Main component. Updated next.confis.js to allow image imports from cloudinary. Finished Main component using grid-layout.
 
 #10. Created Info.jsx file inside of components folder. Started setting up Info component. Updated index.jsx inside of components folder. Finished Info component.
+
+#11. Created Example.jsx. Updated index.jsx. Started setting up Example component. Finished Exa,ple component.
