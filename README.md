@@ -27,3 +27,5 @@
 #14. Created Subscribe.jsx inside of ui/components folder. Started setting up Subscribe component. Finished Subscribe component.
 
 #15. Created Call2Action.jsx inside of ui/components folder. Started setting up Call2Action component. Finished Call2Action component.
+
+#16. Created Footer.jsx inside of ui/components folder. Started setting up Footer component. Finished Footer component.
