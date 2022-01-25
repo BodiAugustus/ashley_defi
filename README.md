@@ -25,3 +25,5 @@
 #13. Created Benefits.jsx inside utils/components folder. Began setting up Benefits component. Finished setting up Benefits component.
 
 #14. Created Subscribe.jsx inside of ui/components folder. Started setting up Subscribe component. Finished Subscribe component.
+
+#15. Created Call2Action.jsx inside of ui/components folder. Started setting up Call2Action component. Finished Call2Action component.
