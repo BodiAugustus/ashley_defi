@@ -41,3 +41,5 @@
 #21. Created sales folder inside components. Created list folder inside. Created index.js inside for defaults. Created keypoints folder inside of order folder. Created KeyPoints.jsx file. Created modal folder inside of common folder. Created Modal.jsx inside of modal.
 
 #22. Created BaseLayout to attach Navbar and Footer to all pages instead of using imports method. Created layout folder in components. Created base inside layout. Created BaseLayout inside base folder. Created index.js inside of baseLayout. Created BaseLAyout component. Applied BaseLayout to all pages. Made working as before.
+
+#23. Created content folder in the root directory. Created subscriptions folder inside of content. Created index.json and fetcher.js inside of subscriptions. Populated index.json with test data for use in development. Created getAllCourse function inside of fetcher.js.
