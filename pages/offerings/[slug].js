@@ -1,10 +1,9 @@
 import BaseLayout from "@components/layout/baseLayout/BaseLayout"
-import Keypoints from "@components/order/keypoints/Keypoints"
+import KeyPoints from "@components/order/keypoints/KeyPoints"
 import Included from "@components/order/included/Included"
 import Modal from "@components/common/modal/Modal"
 import Head from "next/head"
 import { getAllCourses } from "@content/subscriptions/fetcher"
-import Banner from "@components/order/banner/Banner"
 import HeroBanner from "@components/order/heroBanner/HeroBanner"
 
 export default function Course({course}) {
@@ -23,8 +22,12 @@ export default function Course({course}) {
               description={course.description}
               image={course.coverImage}
             />
-            <Keypoints/>
-            <Included/>\
+            <KeyPoints
+              points={course.wsl}
+            />
+            <Included
+              locked={true}
+            />\
             <Modal/>
           </div>          
           </BaseLayout>

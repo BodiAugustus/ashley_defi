@@ -51,3 +51,5 @@
 #26. Created offerings folder inside of pages. Created [ slug ].js file to create multiple dynamic routing according to data slug. Deleted services.jsx. Added < Head> and meta tag in [slug ].js to prevent screen clipping on mx.
 
 #27. Created getStaticPaths to tell NextJS app how many pages to create during build time. Created getStaticProps. Both inside [ slug].js file. Passed props into Banner.jsx component to render data to UI for each page.
+
+#28. Passed props into KeyPoints.jsx component and used to render data to UI dynamically. Added dynamic classes to the status section to display Locked/Unlocked according to locked property.
