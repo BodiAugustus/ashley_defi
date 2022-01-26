@@ -43,3 +43,5 @@
 #22. Created BaseLayout to attach Navbar and Footer to all pages instead of using imports method. Created layout folder in components. Created base inside layout. Created BaseLayout inside base folder. Created index.js inside of baseLayout. Created BaseLAyout component. Applied BaseLayout to all pages. Made working as before.
 
 #23. Created content folder in the root directory. Created subscriptions folder inside of content. Created index.json and fetcher.js inside of subscriptions. Populated index.json with test data for use in development. Created getAllCourse function inside of fetcher.js.
+
+#24. Updated jsconfig.json file to path to content folder. Created getStaticProps() for data fetching inside of services.jsx. Displayed JSON data to UI. Passes fetched data via SalesCard into its component. Mapped over data and iterated one sales card per each object in the array.
