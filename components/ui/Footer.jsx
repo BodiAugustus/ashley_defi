@@ -4,16 +4,25 @@ const Footer = () => {
     let time = new Date
    
     return (
-        <footer className="h-[26vh] flex flex-col justify-center items-center  text-white bg-black pt-8 pb-2">
+        <footer className="h-[26vh] flex flex-col justify-center items-center  text-white bg-black pt-8 pb-2
+        lg:h-[35vh]
+        xl:relative">
+        
         <Link href="/" className="transition-all">
           <a className="neontext neonP cursor-pointer mb-4 text-5xl
           md:text-7xl
+          xl:relative
+          
           ">Ashley DeFi</a>
         </Link>
-        <div className=" w-full text-center mt-8   ">
+        <div className=" w-full text-center mt-8
+         ">
 
 
-        <p className='bg-black text-sm '>Crypto Consulting & Wealth Management -	
+        <p className='bg-black text-sm 
+        xl:relative top-5
+        
+        '>Crypto Consulting & Wealth Management Firm -	
 &#169; {time.getFullYear()} </p>
 
         </div>

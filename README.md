@@ -30,4 +30,6 @@
 
 #16. Created Footer.jsx inside of ui/components folder. Started setting up Footer component. Finished Footer component. Home page complete.
 
-#17. Made the Home page responsive for all relevant screen sizes up to 1024.
+#17. Made the Home page responsive for all relevant screen sizes up to 768.
+
+#18. Made the Home page responsive for all relevant screen sizes up to 1280. Home screen responsive styling finished.

@@ -6,53 +6,81 @@ import Image from 'next/image'
 
 const Features = () => {
     return(
-        <div className="h-[100vh] bg-black text-white">
+        <div className="h-[100vh] bg-black text-white
+        
+        ">
             <h2 className="text-center text-4xl pt-4 mb-1
             md:text-5xl md:mb-3
+            lg:text-4xl lg:mr-[53%] lg:mb-2
+            xl:text-5xl xl:mb-3 xl:mr-[54%]
+            
             ">The Ashley Way</h2>
             <div className="h-[89vh] w-[90vw] mx-auto
+            lg:grid lg:grid-cols-5 lg:h-[90vh]
             ">
                 <div className="white-glassmorphism h-[30vh] mb-6 text-lg p-3 sm:text-xl sm:leading-loose
                 md:text-2xl md:leading-loose md:w-[70%] md:mx-auto
+                lg:text-xl lg:leading-loose lg:col-span-2 lg:row-span-2 lg:h-[57vh] lg:w-[80%] lg:pt-8
+                xl:text-2xl xl:leading-loose xl:h-[49vh] xl:p-7
+                xl:w-[85%]
                 ">
                     <h4 className='flex justify-evenly items-center
                     md:justify-center
                     '><GiThreeFriends className='fill-green-300 
                     md:mr-3 md:text-5xl
+                    lg:text-3xl
+                    xl:text-4xl
                     '/> Every member is a friend.</h4>
                     <h4 className='flex justify-evenly items-center
                     md:justify-center
                     '><FaHandshake className='fill-blue-300 
                     md:mr-3 md:text-5xl
+                    lg:text-3xl
+                    xl:text-4xl
                     '/> People over profits.</h4>
                     <h4 className='flex justify-evenly items-center
                     md:justify-center
                     '><GiTorch className='fill-yellow-300 
                     md:mr-3 md:text-5xl
+                    lg:text-3xl
+                    xl:text-4xl
                     '/> Freedom is everything.</h4>
                     <h4 className='flex justify-evenly items-center
                     md:justify-center
                     '><AiFillLock className='fill-stone-300 
                     md:mr-3 md:text-5xl
+                    lg:text-3xl
+                    xl:text-4xl
                     '/> Privacy is your right.</h4>
                     <h4 className='flex justify-evenly items-center
                     md:justify-center
                     '><GiBrain className='fill-red-400 
                     md:mr-3 md:text-5xl
+                    lg:text-3xl
+                    xl:text-4xl
                     '/> Knowledge is power.</h4>
                     <h4 className='flex justify-evenly items-center
                     md:justify-center
+                    lg:text-lg
+                    xl:text-2xl
                     '><GiTeamIdea className='fill-indigo-300 
                     md:mr-3 md:text-5xl
+                    lg:text-3xl
+                    xl:text-4xl
+                    
                     '/> Where there&apos;s a will, there&apos;s a way.</h4>
                 </div>
 
                 <h2 className='text-4xl mb-1 text-center
                 md:text-5xl md:mt-8
+                lg:col-span-3 lg:mt-4 lg:text-4xl lg:-mb-12
+                xl:text-5xl xl:mt-12 xl:-mb-20
                 '>2022 DeFi Focus</h2>
                 <div className="white-glassmorphism h-[30vh] mb-8 
                 sm:text-xl sm:leading-loose
                 md:text-2xl md:leading-loose md:h-[31vh] md:w-[90%] md:mx-auto
+                lg:col-span-3 lg:h-[47vh] lg:leading-relaxed
+                xl:h-[36vh]
                 ">
                     <ul>
                     <li>
@@ -85,6 +113,8 @@ const Features = () => {
 
                 <div className="h-[13vh] bg-[#2b2b2b] rounded-lg border-[1px] grid grid-cols-5 relative
                 sm:h-[18vh]
+                lg:col-span-5 lg:h-[20vh] lg:-mt-8
+                xl:h-[25vh]
                 ">
 
                 <Image

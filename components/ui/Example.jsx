@@ -6,10 +6,13 @@ const Example = () => {
         <div className="h-[100vh] bg-black text-white ">
             <h2 className="text-center text-4xl pt-4 mb-1
             md:text-5xl md:mb-3
+            lg:text-4xl lg:mb-1 lg:pt-8
+            xl:text-5xl
             ">Take an Example</h2>
             <div className="h-[89vh] w-[90vw] bg-[#2b2b2b] mx-auto border-2 rounded-xl border-stone-500 grid grid-cols-1 
             sm:text-lg
             md:text-2xl
+            lg:h-[84vh]
             ">
            
        
@@ -19,7 +22,9 @@ const Example = () => {
                     md:indent-8
                     ">Have you been wondering why Bitcoin and Ethereum have been going down instead of up lately? Follow along with us here at Ashley DeFi and let us show you one side of the coin.
                     <GiTwoCoins className='absolute bottom-[4%] left-[37%] sm:left-[37%]
-                    md:invisible'/> 
+                    md:invisible
+                    lg:visible lg:left-[25%]
+                    '/> 
                     </div>
                      
                     </div> 

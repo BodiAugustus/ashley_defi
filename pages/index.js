@@ -9,23 +9,29 @@ import Benefits from '@components/ui/Benefits'
 import Subscribe from '@components/ui/Subscribe'
 import Call2Action from '@components/ui/Call2Action'
 import Footer from '@components/ui/Footer'
+import { Fragment } from 'react'
 
 export default function Home() {
   return (
-    <>
+    <div>
       <Head>
         <title>Ashley Capital & DeFi</title>
       </Head>
       <Navbar/>      
       <Hero/>  
-      <Main/>
-      <Info/>
+      <div className='lg:grid lg:grid-cols-2'>
+        <Main/>
+        <Info/>
+      </div>     
       <Example/>
       <Features/>
+      <div className="lg:grid lg:grid-cols-2">
       <Benefits/>
       <Subscribe/>
+      </div>
       <Call2Action/>
       <Footer/>
-    </>
+    </div>
+    
   )
 }
