@@ -3,7 +3,8 @@ module.exports = {
 
   images: {
     domains: [
-      'res.cloudinary.com'
+      'res.cloudinary.com',
+      'thrangra.sirv.com'
     ],
   },
 }

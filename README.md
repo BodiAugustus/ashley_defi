@@ -45,3 +45,7 @@
 #23. Created content folder in the root directory. Created subscriptions folder inside of content. Created index.json and fetcher.js inside of subscriptions. Populated index.json with test data for use in development. Created getAllCourse function inside of fetcher.js.
 
 #24. Updated jsconfig.json file to path to content folder. Created getStaticProps() for data fetching inside of services.jsx. Displayed JSON data to UI. Passes fetched data via SalesCard into its component. Mapped over data and iterated one sales card per each object in the array.
+
+#25. Worked on SalesCard component. Updated nextjs.config file to allow outside images via the domain path.
+
+#26. Created offerings folder inside of pages. Created [ slug ].js file to create multiple dynamic routing according to data slug. Deleted services.jsx. Added < Head> and meta tag in [slug ].js to prevent screen clipping on mx.
