@@ -1,5 +1,5 @@
-import Navbar from "@components/common/navbar/Navbar"
-import Footer from "@components/common/footer/Footer"
+import Navbar from "@components/ui/common/navbar/Navbar"
+import Footer from "@components/ui/common/footer/Footer"
 
 const BaseLayout = ({children}) => {
     return(

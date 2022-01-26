@@ -1,7 +1,6 @@
 
 
 const Keypoints = ({points}) => {
-  console.log(points);
     return(
         <section>
         <div className="py-12 bg-white">

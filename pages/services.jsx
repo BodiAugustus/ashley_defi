@@ -1,7 +1,7 @@
 
-import SalesCard from "@components/sales/list/SalesCard"
-import BaseLayout from "@components/layout/baseLayout/BaseLayout"
-import Banner from "@components/order/banner/Banner"
+import SalesCard from "@components/ui/sales/list/SalesCard"
+import BaseLayout from "@components/ui/layout/baseLayout/BaseLayout"
+import Banner from "@components/ui/order/banner/Banner"
 import { getAllCourses } from "@content/subscriptions/fetcher"
 
 export default function Info({courses}) {

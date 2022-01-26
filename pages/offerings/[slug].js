@@ -1,10 +1,10 @@
-import BaseLayout from "@components/layout/baseLayout/BaseLayout"
-import KeyPoints from "@components/order/keypoints/KeyPoints"
-import Included from "@components/order/included/Included"
-import Modal from "@components/common/modal/Modal"
+import BaseLayout from "@components/ui/layout/baseLayout/BaseLayout"
+import KeyPoints from "@components/ui/order/keypoints/KeyPoints"
+import Included from "@components/ui/order/included/Included"
+import Modal from "@components/ui/common/modal/Modal"
 import Head from "next/head"
 import { getAllCourses } from "@content/subscriptions/fetcher"
-import HeroBanner from "@components/order/heroBanner/HeroBanner"
+import HeroBanner from "@components/ui/order/heroBanner/HeroBanner"
 
 export default function Course({course}) {
 
