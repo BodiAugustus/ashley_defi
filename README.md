@@ -55,3 +55,5 @@
 #28. Passed props into KeyPoints.jsx component and used to render data to UI dynamically. Added dynamic classes to the status section to display Locked/Unlocked according to locked property.
 
 #29. Moved common, layout, order, sales and web3 folders to ui folder. Updated routes. Made all working. Created providers folder inside of components. Created folder called web3 inside of providers. Created index.js inside of web3.
+
+#30. Set up createContext inside of web3/index.jsx for web3 to pass it around the app. Wrapped the app inside the new Web3Provider using the BaseLayout.
