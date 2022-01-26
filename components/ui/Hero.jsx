@@ -31,6 +31,7 @@ const Hero = () => {
                <div className="h-14 w-14 rounded-full bg-[#2b2b2b] absolute right-[48%] top-[22%] border-4 border-[#2b2b2b] sm:top-[20%]
                md:right-[40%] md:top-[18%]
                lg:right-[4%] lg:top-[4%]
+               xl:right-[47%] xl:top-[43%]
                ">
                   <a href="https://www.getmonero.org/">
                   <Image
@@ -79,7 +80,8 @@ const Hero = () => {
                     layout="fixed"
                     height={30}
                     width={100}
-                    className="rounded-sm "
+                    className="rounded-sm 
+                    xl:invisible"
                     /> 
                          
 
@@ -92,6 +94,7 @@ const Hero = () => {
                     className="rounded-sm
                     xs:invisible
                     md:visible
+                    xl:invisible
                     "
                     />
                 
@@ -101,7 +104,8 @@ const Hero = () => {
                     height={30}
                     width={100}
                     layout="fixed"
-                    className="rounded-sm"
+                    className="rounded-sm
+                    xl:invisible"
                     />
                 <Image
                     src='/images/secret.png' 
@@ -112,6 +116,7 @@ const Hero = () => {
                     className="rounded-sm
                     xs:invisible
                     md:visible
+                    xl:invisible
                     "
                     />
                 <Image
@@ -121,6 +126,7 @@ const Hero = () => {
                     width={100}
                     layout="fixed"
                     className="rounded-sm
+                    xl:invisible
                     
                     "
                     />

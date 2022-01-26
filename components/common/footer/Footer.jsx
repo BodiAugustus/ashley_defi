@@ -22,7 +22,7 @@ const Footer = () => {
         <p className='bg-black text-sm 
         xl:relative top-5
         
-        '>Crypto Consulting & Wealth Management Firm -	
+        '>Crypto Consulting & Wealth Management -	
 &#169; {time.getFullYear()} </p>
 
         </div>

@@ -33,3 +33,5 @@
 #17. Made the Home page responsive for all relevant screen sizes up to 768.
 
 #18. Made the Home page responsive for all relevant screen sizes up to 1280. Home screen responsive styling finished.
+
+#19. Created common folder. Created subscriptions.jsx. Created info.jsx, both inside of the public folder. Created common folder inside of the components folder for reusable components. Created footer and navbar folders inside of common folder. Moved the file location of the Footer.jsx and Navbar.jsx componnts from components/ui folder into components/common folder. Created index.js inside of common folder to act as main export file for the common folder components. Made everything working as before.

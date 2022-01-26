@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Navbar from '@components/ui/Navbar'
+import Navbar from '@components/common/navbar/Navbar'
 import Hero from '@components/ui/Hero'
 import Main from '@components/ui/Main'
 import Info from '@components/ui/Info'
@@ -8,8 +8,8 @@ import Features from '@components/ui/Features'
 import Benefits from '@components/ui/Benefits'
 import Subscribe from '@components/ui/Subscribe'
 import Call2Action from '@components/ui/Call2Action'
-import Footer from '@components/ui/Footer'
-import { Fragment } from 'react'
+import Footer from '@components/common/footer/Footer'
+
 
 export default function Home() {
   return (
