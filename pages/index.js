@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Navbar from '@components/common/navbar/Navbar'
-import Hero from '@components/ui/Hero'
+import Hero from '@components/common/hero/Hero'
 import Main from '@components/ui/Main'
 import Info from '@components/ui/Info'
 import Example from '@components/ui/Example'
