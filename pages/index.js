@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Navbar from '@components/common/navbar/Navbar'
+import BaseLayout from '@components/layout/baseLayout/BaseLayout'
 import Hero from '@components/common/hero/Hero'
 import Main from '@components/ui/Main'
 import Info from '@components/ui/Info'
@@ -8,7 +8,7 @@ import Features from '@components/ui/Features'
 import Benefits from '@components/ui/Benefits'
 import Subscribe from '@components/ui/Subscribe'
 import Call2Action from '@components/ui/Call2Action'
-import Footer from '@components/common/footer/Footer'
+
 
 
 export default function Home() {
@@ -17,7 +17,7 @@ export default function Home() {
       <Head>
       <title>Ashley Capital & DeFi</title>
       </Head>
-      <Navbar/>      
+      <BaseLayout>      
       <Hero/>  
       <div className='lg:grid lg:grid-cols-2'>
         <Main/>
@@ -30,7 +30,7 @@ export default function Home() {
         <Subscribe/>
       </div>
       <Call2Action/>
-      <Footer/>
+      </BaseLayout>
     </div>
     
   )
