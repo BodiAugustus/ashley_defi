@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Ashley Capital & DeFi</title>
+      <title>Ashley Capital & DeFi</title>
       </Head>
       <Navbar/>      
       <Hero/>  
@@ -26,8 +26,8 @@ export default function Home() {
       <Example/>
       <Features/>
       <div className="lg:grid lg:grid-cols-2">
-      <Benefits/>
-      <Subscribe/>
+        <Benefits/>
+        <Subscribe/>
       </div>
       <Call2Action/>
       <Footer/>

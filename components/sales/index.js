@@ -1,0 +1,1 @@
+export {default as SalesCard} from './sales/list/SalesCard'
