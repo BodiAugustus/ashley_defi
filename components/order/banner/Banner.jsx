@@ -1,6 +1,6 @@
 
 
-const Banner = () => {
+const Banner = ({title, description, image}) => {
     return(
         <section className="lg:2/6 text-left my-28">
         <div className="text-6xl font-semibold text-gray-900 leading-none">Grow your career as a developer</div>

@@ -10,11 +10,11 @@ export default function Info({courses}) {
         <div className="relative bg-white overflow-hidden">
           <div className="relative max-w-7xl mx-auto ">
             <BaseLayout>
-            <div className="fit">
-              <Banner/>
-              <SalesCard courses={courses}/> 
-            </div>
-          </BaseLayout>
+              <div className="fit">
+                <Banner/>
+                <SalesCard courses={courses}/> 
+              </div>
+            </BaseLayout>
           </div>
         </div>
       </div>

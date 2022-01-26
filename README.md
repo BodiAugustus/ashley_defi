@@ -49,3 +49,5 @@
 #25. Worked on SalesCard component. Updated nextjs.config file to allow outside images via the domain path.
 
 #26. Created offerings folder inside of pages. Created [ slug ].js file to create multiple dynamic routing according to data slug. Deleted services.jsx. Added < Head> and meta tag in [slug ].js to prevent screen clipping on mx.
+
+#27. Created getStaticPaths to tell NextJS app how many pages to create during build time. Created getStaticProps. Both inside [ slug].js file. Passed props into Banner.jsx component to render data to UI for each page.
