@@ -63,7 +63,8 @@ const Hero = () => {
 
             {isLoading ? 
             <Button
-            onClick={connect}>
+            onClick={connect}
+            disabled={true}>
                 Loading...
             </Button> :
 
@@ -71,9 +72,9 @@ const Hero = () => {
             <Button
             onClick={connect}
             >
-            Connect
+            Connect Wallet
             </Button>
-            
+
             :
             <Button
             onClick={connect}>

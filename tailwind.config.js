@@ -15,16 +15,15 @@ module.exports = {
       fontFamily: {
         economica: "Economica, sans-serif",
         playfair: "Playfair Display SC, serif"
-
       },
       screens: {
         'sm': '400px',
         // 'ms': '539px',
         // 'mx': '767px',
-  
+      },
+      opacity: ["disabled"],
+      cursor: ["disabled"],
 
-
-      }
     },
   },
   plugins: [],
