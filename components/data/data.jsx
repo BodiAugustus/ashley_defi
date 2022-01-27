@@ -11,13 +11,13 @@ export const links = [{
 {
     id: "13gfgg",
     name: "About",
-    url: "/about",
+    url: "/marketplace",
     howLong: "w-[81%] "
 },
 {
     id: "13gfss",
     name: "Services",
-    url: "/contact",
+    url: "/services",
     howLong: "w-[114%] "
 },
 {

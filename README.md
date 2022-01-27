@@ -83,3 +83,5 @@
 #42. Added sliced user account to connect button ui when connected. Set up and used Useswr to handle data fetching in useAccount.js. Installed npm i swr to do so. Retested, accounts successfully fetched/updated on change.
 
 #43. Setup admin property to display admin account. Added adminAddresses. Ran through Keccak256. Used utils to run in return. Added new conditional to connect button in Hero if admin.
+
+#44. Created hooks folder inside components. Created web3 folder inside of hooks. Moved useAccount.js from web3/hooks into hooks/web3. Deleted web3/hooks folders. Made all working as before. Created marketplace folder inside of pages folder. Created index.js inside marketplace. Passed account data through marketplace into Walletbar component, displayed to UI.
