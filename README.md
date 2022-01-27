@@ -69,3 +69,5 @@
 #35. Created button folder inside of common folder. Created Button.jsx. Created Button component. C&p buttons from Hero into Button.jsx. Set up Button component and replaced old buttons with it. Edited isWeb3Loaded property from _web3Api. Added double ternary to Hero to add more conditional rendering to the connect button.
 
 #36. Set up a disable property on the button to disallow interaction during loading and when the account is already connected to MetaMask. Extended tailwing.config.js to allow disable property to be hovered. Added disabled property to connect button during Loading. 
+
+#37. Created hooks folder inside web3 folder. Created setupAccount.jsx inside. Started working on setupAccount function. Created setupHooks.jsx. Set up setupHooks function. Added hooks property on _web3Api and on it called setupHooks to take web3 and use it to call setupAccounts. Passed the hooks prop and used it to called setupAccount, test value successfully displayed to UI.

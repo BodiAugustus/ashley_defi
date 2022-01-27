@@ -4,7 +4,9 @@ import { useWeb3 } from "@components/providers/web3"
 import Button from "../button/Button"
 
 const Hero = () => {
-    const {connect, isWeb3Loaded, isLoading} = useWeb3()
+    const { connect, isWeb3Loaded, isLoading, hooks } = useWeb3()
+    const {account} = hooks.setupAccount()
+    console.log(account);
     return(
         <div className="h-[87vh] bg-black p-4 relative
         md:h-[85vh]
@@ -77,7 +79,7 @@ const Hero = () => {
 
             :
             <Button
-            onClick={connect}>
+            onClick={() => window.open("https://metamask.io/", "_blank")}>
                 Install Metamask
             </Button>
             }
