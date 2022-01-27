@@ -23,9 +23,9 @@ console.log(account);
             lg:flex-col
             ">
 
-               <div className="flex flex-col
+            <div className="flex flex-col
                 md:text-center md:relative
-               ">
+            ">
                     <h1 className="text-white text-5xl w-[50%]  font-playfair
                     md:w-[75%] md:text-6xl
                     lg:w-[100%]
@@ -37,28 +37,28 @@ console.log(account);
                     lg:mx-auto xl:text-3xl
                     ">Crypto Consulting & Wealth Management 
                     </h4>     
-               </div>
+            </div>
 
-               <div className="h-14 w-14 rounded-full bg-[#2b2b2b] absolute right-[48%] top-[22%] border-4 border-[#2b2b2b] sm:top-[20%]
-               md:right-[40%] md:top-[18%]
-               lg:right-[4%] lg:top-[4%]
-               xl:right-[47%] xl:top-[43%]
-               ">
-                  <a href="https://www.getmonero.org/">
-                  <Image
-                   src='/images/XMR1.png'
-                   alt="The True Cryptocurrency Monero (XMR)"
-                   height={55}
-                   width={55}
-                   />
-                  </a>
-               </div>
+            <div className="h-14 w-14 rounded-full bg-[#2b2b2b] absolute right-[48%] top-[22%] border-4 border-[#2b2b2b] sm:top-[20%]
+            md:right-[40%] md:top-[18%]
+            lg:right-[4%] lg:top-[4%]
+            xl:right-[47%] xl:top-[43%]
+            ">
+                <a href="https://www.getmonero.org/">
+                <Image
+                src='/images/XMR1.png'
+                alt="The True Cryptocurrency Monero (XMR)"
+                height={55}
+                width={55}
+                />
+                </a>
+            </div>
 
                 <div className="w-full   text-white  bg-[#2b2b2b] p-3 mt-4
                 md:mr-2 md:w-[40%]
                 lg:hidden
                 xl:
-                 ">
+                ">
                     <Image
                     src='/images/herobg.jpg'
                     alt="DeFi City"
@@ -71,26 +71,30 @@ console.log(account);
 
             {isLoading ? 
             <Button
-            onClick={connect}
             disabled={true}>
                 Loading...
             </Button> :
 
             isWeb3Loaded ?
+            account ?
+            <Button
+            className="cursor-default"
+            hoverable={false}
+            >
+            Hello Friend
+            </Button>
+            :
             <Button
             onClick={connect}
             >
             Connect Wallet
             </Button>
-
             :
-             <Button
+            <Button
             onClick={() => window.open("https://metamask.io/", "_blank")}>
                 Install Metamask
             </Button>
-            }
-            
-            
+            }                      
             <div className=" h-20 sepia opacity-30 mt-7 text-center flex justify-between 
             sm:mt-10
             lg:mt-28
@@ -104,8 +108,7 @@ console.log(account);
                     width={100}
                     className="rounded-sm 
                     xl:invisible"
-                    /> 
-                         
+                    />                         
 
                 <Image
                     src='/images/fantom.png' 
@@ -162,8 +165,7 @@ console.log(account);
             lg:mb-6 lg:-mt-8
             xl:mt-0 xl:mb-12 xl:text-4xl
             ">The Future Is Digital.
-            </h1>
-   
+            </h1>   
 
             <div className="text-white mt-3">
 

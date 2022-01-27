@@ -75,3 +75,5 @@
 #38. Refactored the provider. Replaced hooks with getHooks inside the _web3Api. Created useHooks function. Inside of components folder created web3 folder. Created hooks folder inside of there. Created getUserAccount.jsx inside of there. Created a system of function calls to return the useAccount hook using multiple functions recently created. getHooks from the _web3Api  calls setupHooks with the instance of web3 as its parameter. Setup hooks then calls getUserAccount which then calls useHooks with setupAccounts as the parameter. This call to useHooks results in the setupAccount function being called which actually retrieves the users MetaMask account.
 
 #39. Setup the MetaMask active account user return to UI using handler function inside of useAccount.js. Account successfully displayed to UI.
+
+#40. Worked on the buttons to add more conditionals. Created variants and hoverable properties on button component. 
