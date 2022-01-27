@@ -2,10 +2,12 @@ import Image from "next/image"
 import {GiAbstract070, GiConcentricCrescents, GiHalfTornado} from 'react-icons/gi'
 import { useWeb3 } from "@components/providers/web3"
 import Button from "../button/Button"
+import getUserAccount from "@components/web3/hooks/getUserAccount"
+
 
 const Hero = () => {
-    const { connect, isWeb3Loaded, isLoading, hooks } = useWeb3()
-    const {account} = hooks.setupAccount()
+    const { connect, isWeb3Loaded, isLoading } = useWeb3()
+    const {account} = getUserAccount()
     console.log(account);
     return(
         <div className="h-[87vh] bg-black p-4 relative

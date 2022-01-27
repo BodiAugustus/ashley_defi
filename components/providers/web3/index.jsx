@@ -37,14 +37,15 @@ export default function Web3Provider({children}) {
   },[])
 
   const _web3Api = useMemo(() => {
+    const {web3, provider} = web3Api
     return {
       ...web3Api,
-      isWeb3Loaded: web3Api.web3 != null,
-      hooks: setupHooks(web3Api.web3),
-      connect: web3Api.provider ? // connect method pops out MetaMask
+      isWeb3Loaded: web3 != null,
+      getHooks: () => setupHooks(web3),
+      connect: provider ? // connect method pops out MetaMask
       async () => {
         try {
-          await web3Api.provider.request({method:'eth_requestAccounts'})
+          await provider.request({method:'eth_requestAccounts'})
         } catch (error) {
           location.reload()
           console.error('Cannot retrieve MetaMask!');
@@ -66,4 +67,9 @@ export default function Web3Provider({children}) {
 
 export function useWeb3() {
   return useContext(Web3Context)
+}
+
+export function useHooks(callBack){
+  const { getHooks } = useWeb3()
+  return callBack(getHooks())
 }
