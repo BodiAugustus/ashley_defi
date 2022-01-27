@@ -77,3 +77,5 @@
 #39. Setup the MetaMask active account user return to UI using handler function inside of useAccount.js. Account successfully displayed to UI.
 
 #40. Worked on the buttons to add more conditionals. Created variants and hoverable properties on button component. 
+
+#41. Added useEffect in useAccount.js to add a change event on user account change to update UI with active account. Added provider as a dependency to useAccount, passed through setupHooks.
