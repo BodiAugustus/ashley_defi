@@ -3,7 +3,7 @@ import {GiAbstract070, GiConcentricCrescents, GiHalfTornado} from 'react-icons/g
 import { useWeb3 } from "@components/providers/web3"
 
 const Hero = () => {
-    const {connect, test} = useWeb3()
+    const {connect, isWeb3Loaded} = useWeb3()
     return(
         <div className="h-[87vh] bg-black p-4 relative
         md:h-[85vh]
@@ -60,17 +60,25 @@ const Hero = () => {
                 </div>
             </div>
 
+            {isWeb3Loaded ? 
             <button
             onClick={connect}
-                className="text-white w-[40%] p-2 rounded-lg ml-5 bg-blue-600 shadow-2xl shadow-blue-600/75 mt-3 sm:-mt-2
-                
+                className="text-white w-[40%] p-2 rounded-lg ml-5 bg-blue-600 shadow-2xl shadow-blue-600/75 mt-3 sm:-mt-2                
                 md:w-[27%] md:absolute md:left-[10.5%] md:top-[37%] md:text-2xl 
                 lg:top-[30%] lg:w-[20%] lg:left-[37%]
-                xl:w-[17%] xl:left-[40%]
-
-                "
-                >Connect Wallet
+                xl:w-[17%] xl:left-[40%]">
+                Connect Wallet
             </button>
+            :
+            <button
+            onClick={connect}
+                className="text-white w-[40%] p-2 rounded-lg ml-5 bg-blue-600 shadow-2xl shadow-blue-600/75 mt-3 sm:-mt-2                
+                md:w-[27%] md:absolute md:left-[10.5%] md:top-[37%] md:text-2xl 
+                lg:top-[30%] lg:w-[20%] lg:left-[37%]
+                xl:w-[17%] xl:left-[40%]">
+                Install Metamask
+            </button>
+            }
             
             <div className=" h-20 sepia opacity-30 mt-7 text-center flex justify-between 
             sm:mt-10

@@ -63,3 +63,5 @@
 #32. Set up Web3Provider and created instance of web3. Installed npm i web3 and npm i @metamask/detect-provider. Tested for web3, successful.
 
 #33. Created _web3Api with useMemo to add changes to web3Ap after its initial load.
+
+#34. Created isWeb3Loaded property in _web3Api. Passed web3 props into Hero.jsx. Set up connect wallet button to open metamask on click. Conditionally rendered connect button depending on if web3provider is loaded/web3 present or not.

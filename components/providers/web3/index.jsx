@@ -38,7 +38,8 @@ export default function Web3Provider({children}) {
   const _web3Api = useMemo(() => {
     return {
       ...web3Api,
-      connect: web3Api.provider ? 
+      isWeb3Loaded: !web3Api.isLoading && web3Api.web3,
+      connect: web3Api.provider ? // connect method pops out MetaMask
       async () => {
         try {
           await web3Api.provider.request({method:'eth_requestAccounts'})
