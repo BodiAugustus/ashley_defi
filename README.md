@@ -61,3 +61,5 @@
 #31. Remade the BaseLayout as a property on the component. Used inside of _app.js to wrap the app to pass props to all pages as needed - earlier method was resulting in null because provider was wrapped around content only and not the page. Now it wraps the page entire. Tested useContext (useWeb3) to pass value to another page, successful.
 
 #32. Set up Web3Provider and created instance of web3. Installed npm i web3 and npm i @metamask/detect-provider. Tested for web3, successful.
+
+#33. Created _web3Api with useMemo to add changes to web3Ap after its initial load.

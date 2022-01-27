@@ -1,7 +1,9 @@
 import Image from "next/image"
 import {GiAbstract070, GiConcentricCrescents, GiHalfTornado} from 'react-icons/gi'
+import { useWeb3 } from "@components/providers/web3"
 
 const Hero = () => {
+    const {connect, test} = useWeb3()
     return(
         <div className="h-[87vh] bg-black p-4 relative
         md:h-[85vh]
@@ -19,12 +21,12 @@ const Hero = () => {
                     md:w-[75%] md:text-6xl
                     lg:w-[100%]
                     xl:text-7xl
-                    ">Ashley Capital & DeFi
+                    ">Ashley Capital & DeFi 
                     </h1>
                     <h4 className="text-white w-[75%] font-thin
                     md:mt-2 md:text-2xl
                     lg:mx-auto xl:text-3xl
-                    ">Crypto Consulting & Wealth Management
+                    ">Crypto Consulting & Wealth Management 
                     </h4>     
                </div>
 
@@ -59,6 +61,7 @@ const Hero = () => {
             </div>
 
             <button
+            onClick={connect}
                 className="text-white w-[40%] p-2 rounded-lg ml-5 bg-blue-600 shadow-2xl shadow-blue-600/75 mt-3 sm:-mt-2
                 
                 md:w-[27%] md:absolute md:left-[10.5%] md:top-[37%] md:text-2xl 
