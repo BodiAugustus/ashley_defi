@@ -1,14 +1,18 @@
 import Image from "next/image"
 import {GiAbstract070, GiConcentricCrescents, GiHalfTornado} from 'react-icons/gi'
-import { useWeb3 } from "@components/providers/web3"
 import Button from "../button/Button"
-import getUserAccount from "@components/web3/hooks/getUserAccount"
+
+import { useWeb3 } from "@components/providers"
+import { useAccount } from "@components/web3/hooks/useAccount"
 
 
 const Hero = () => {
-    const { connect, isWeb3Loaded, isLoading } = useWeb3()
-    const {account} = getUserAccount()
-    console.log(account);
+const { connect, isLoading, isWeb3Loaded } = useWeb3()
+const { account } = useAccount()
+console.log(account);
+
+
+
     return(
         <div className="h-[87vh] bg-black p-4 relative
         md:h-[85vh]
@@ -80,11 +84,12 @@ const Hero = () => {
             </Button>
 
             :
-            <Button
+             <Button
             onClick={() => window.open("https://metamask.io/", "_blank")}>
                 Install Metamask
             </Button>
             }
+            
             
             <div className=" h-20 sepia opacity-30 mt-7 text-center flex justify-between 
             sm:mt-10

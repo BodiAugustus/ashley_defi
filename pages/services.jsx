@@ -5,11 +5,11 @@ import Banner from "@components/ui/order/banner/Banner"
 import { getAllCourses } from "@content/subscriptions/fetcher"
 
 
-import { useWeb3 } from "@components/providers/web3"
+
 
 export default function Info({courses}) {
-const {web3, isLoading} = useWeb3()
-console.log(web3);
+
+
     return (
       <div>
         <div className="relative bg-white overflow-hidden">
