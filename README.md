@@ -81,3 +81,5 @@
 #41. Added useEffect in useAccount.js to add a change event on user account change to update UI with active account. Added provider as a dependency to useAccount, passed through setupHooks.
 
 #42. Added sliced user account to connect button ui when connected. Set up and used Useswr to handle data fetching in useAccount.js. Installed npm i swr to do so. Retested, accounts successfully fetched/updated on change.
+
+#43. Setup admin property to display admin account. Added adminAddresses. Ran through Keccak256. Used utils to run in return. Added new conditional to connect button in Hero if admin.

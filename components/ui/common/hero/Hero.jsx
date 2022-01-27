@@ -81,7 +81,7 @@ console.log(account.data);
             className="cursor-default"
             hoverable={false}
             >
-            Hello {`${account.data.slice(0,4)}...${account.data.slice(38)}`}
+            Hello {account.isAdmin ? "Bodi" : `${account.data.slice(0,4)}...${account.data.slice(38)}` }
             </Button>
             :
             <Button
