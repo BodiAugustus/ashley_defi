@@ -17,7 +17,7 @@ export default function Home() {
       <Head>
       <title>Ashley Capital & DeFi</title>
       </Head>
-      <BaseLayout>      
+      {/* <BaseLayout>       */}
       <Hero/>  
       <div className='lg:grid lg:grid-cols-2'>
         <Main/>
@@ -30,8 +30,10 @@ export default function Home() {
         <Subscribe/>
       </div>
       <Call2Action/>
-      </BaseLayout>
+      {/* </BaseLayout> */}
     </div>
     
   )
 }
+
+Home.Layout = BaseLayout

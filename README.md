@@ -57,3 +57,5 @@
 #29. Moved common, layout, order, sales and web3 folders to ui folder. Updated routes. Made all working. Created providers folder inside of components. Created folder called web3 inside of providers. Created index.js inside of web3.
 
 #30. Set up createContext inside of web3/index.jsx for web3 to pass it around the app. Wrapped the app inside the new Web3Provider using the BaseLayout.
+
+#31. Remade the BaseLayout as a property on the component. Used inside of _app.js to wrap the app to pass props to all pages as needed - earlier method was resulting in null because provider was wrapped around content only and not the page. Now it wraps the page entire. Tested useContext (useWeb3) to pass value to another page, successful.

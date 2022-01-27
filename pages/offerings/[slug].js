@@ -15,7 +15,7 @@ export default function Course({course}) {
             content="width=device-width, 
             initial-scale=1"/>
           </Head>
-          <BaseLayout>
+  
           <div className="relative max-w-7xl mx-auto">
             <HeroBanner
               title={course.title}
@@ -30,10 +30,12 @@ export default function Course({course}) {
             />\
             <Modal/>
           </div>          
-          </BaseLayout>
+
         </div>
     )
   }
+
+  Course.Layout = BaseLayout
 
   export function getStaticPaths(){
     const { data } = getAllCourses()
