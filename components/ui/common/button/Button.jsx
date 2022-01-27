@@ -1,0 +1,21 @@
+
+
+const Button = ({
+    children // Contains display text
+    ,className = "text-white bg-blue-600 shadow-blue-600/75",
+    ...rest
+}) => {
+
+    return(
+        <button
+            {...rest} // Includes onClick and other events
+            className={` w-[40%] p-2 rounded-lg ml-5  shadow-2xl  mt-3 sm:-mt-2                
+            md:w-[27%] md:absolute md:left-[10.5%] md:top-[37%] md:text-2xl 
+            lg:top-[30%] lg:w-[20%] lg:left-[37%]
+            xl:w-[17%] xl:left-[40%] ${className}`}>
+            Connect Wallet
+        </button>
+    )
+}
+
+export default Button

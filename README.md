@@ -65,3 +65,5 @@
 #33. Created _web3Api with useMemo to add changes to web3Ap after its initial load.
 
 #34. Created isWeb3Loaded property in _web3Api. Passed web3 props into Hero.jsx. Set up connect wallet button to open metamask on click. Conditionally rendered connect button depending on if web3provider is loaded/web3 present or not.
+
+#35. Created button folder inside of common folder. Created Button.jsx. Created Button component. C&p buttons from Hero into Button.jsx. Set up Button component and replaced old buttons with it. Edited isWeb3Loaded property from _web3Api. Added double ternary to Hero to add more conditional rendering to the connect button.
