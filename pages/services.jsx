@@ -7,6 +7,7 @@ import { getAllCourses } from "@content/subscriptions/fetcher"
 
 
 
+
 export default function Info({courses}) {
 
 
@@ -17,8 +18,7 @@ export default function Info({courses}) {
               <div className="fit">
                 <Banner/>
                 <SalesCard courses={courses}/> 
-              </div>
-       
+              </div>       
           </div>
         </div>
       </div>

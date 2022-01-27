@@ -9,7 +9,7 @@ import { useAccount } from "@components/web3/hooks/useAccount"
 const Hero = () => {
 const { connect, isLoading, isWeb3Loaded } = useWeb3()
 const { account } = useAccount()
-console.log(account);
+console.log(account.data);
 
 
 
@@ -76,12 +76,12 @@ console.log(account);
             </Button> :
 
             isWeb3Loaded ?
-            account ?
+            account.data ?
             <Button
             className="cursor-default"
             hoverable={false}
             >
-            Hello Friend
+            Hello {`${account.data.slice(0,4)}...${account.data.slice(38)}`}
             </Button>
             :
             <Button
