@@ -88,4 +88,6 @@
 
 #45. Created useNetwork.js inside of web3/hooks and setup initial handler function. Added useNetwork to setupHooks function. Created useNetwork.js inside of hooks/web3. Brought useNetwork into marketplace and displayed passed data successfully. 
 
-#46. Setup useSWR to fetch network id to the UI using web3.eth.net.getId(). Setup a useEffect to update the UI on accounts change using provider.on("chainChanged", netId => mutate(netId)). Passed network through marketplace to Walletbar component. Displayed current network id to UI in Walletbar.
+#46. Setup useSWR to fetch network id to the UI using web3.eth.getChainId(). Setup a useEffect to update the UI on accounts change using provider.on("chainChanged", netId => mutate(netId)). Passed network through marketplace to Walletbar component. Displayed current network id to UI in Walletbar.
+
+#47. Created mapping from network ID's to strings to display actual names to UI. Displayed network string names to UI.
