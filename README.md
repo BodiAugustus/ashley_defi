@@ -87,3 +87,5 @@
 #44. Created hooks folder inside components. Created web3 folder inside of hooks. Moved useAccount.js from web3/hooks into hooks/web3. Deleted web3/hooks folders. Made all working as before. Created marketplace folder inside of pages folder. Created index.js inside marketplace. Passed account data through marketplace into Walletbar component, displayed to UI.
 
 #45. Created useNetwork.js inside of web3/hooks and setup initial handler function. Added useNetwork to setupHooks function. Created useNetwork.js inside of hooks/web3. Brought useNetwork into marketplace and displayed passed data successfully. 
+
+#46. Setup useSWR to fetch network id to the UI using web3.eth.net.getId(). Setup a useEffect to update the UI on accounts change using provider.on("chainChanged", netId => mutate(netId)). Passed network through marketplace to Walletbar component. Displayed current network id to UI in Walletbar.

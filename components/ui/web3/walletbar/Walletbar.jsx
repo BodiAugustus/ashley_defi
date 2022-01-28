@@ -1,4 +1,4 @@
-const FtmPrice = ({address}) => {
+const WalletBar = ({address, network}) => {
 
   return(
       <section className="text-white bg-indigo-600">
@@ -14,7 +14,7 @@ const FtmPrice = ({address}) => {
             </div>
           </div>
           <div>
-            <div><span>Currently on </span><strong className="text-2xl">Ethereum Main Network</strong></div>
+            <div><span>Currently on </span><strong className="text-2xl">{network}</strong></div>
           </div>
         </div>
       </div>
@@ -22,4 +22,4 @@ const FtmPrice = ({address}) => {
   )
 }
 
-export default FtmPrice
+export default WalletBar
