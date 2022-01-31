@@ -18,7 +18,12 @@ export default function Marketplace({courses}) {
               <div className="fit">
                 <Walletbar  // props passed to Walletbar
                 address={account.data}
-                network={network.data}
+                network={{
+                  data: network.data,
+                  target: network.target,
+                  isSupported: network.isSupported
+                }}
+                
                 />
                 {/* "Current" {`${network.data}`}
                 "Target" {`${network.target}`}

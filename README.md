@@ -94,4 +94,6 @@
 
 #48. Created index.js inside of card. Copied from list/index.js to card/index.js. Created new card component. Imported into list/index.js to use there. Copied the same functionality to services.jsx which shares the card component.
 
-#49. Created .env.development & production files in root directory. Setup targetNetwork and isSupported properties in useNetwork.js to display UI error message on wrong network.
+#49. Created .env.development & production files in root directory. Setup targetNetwork and isSupported properties in useNetwork.js to eventually display UI error message on wrong network.
+
+#50. Constructed new div using new properties from useNetwork to display error UI message on wrong network. 
