@@ -1,3 +1,5 @@
+// This file loads the Web3Provider. uses npm i web3 & npm i @metamask/detect-provider
+
 const { createContext, useContext, useEffect, useState, useMemo } = require("react");
 import detectEthereumProvider from "@metamask/detect-provider";
 import Web3 from 'web3'
@@ -7,45 +9,45 @@ import { setupHooks } from "./hooks/setupHooks";
 const Web3Context = createContext(null)
 
 export default function Web3Provider({children}) {
-    const [web3Api, setWeb3Api] = useState({
+    const [web3Api, setWeb3Api] = useState({ // Keeps state values we are interested in
         provider: null,
         web3: null,
         contract: null,
         isLoading: true
     })
 
-    useEffect(() => {
+    useEffect(() => { //Called once during page load
         const loadProvider = async () => {
-            const provider = await detectEthereumProvider()
+            const provider = await detectEthereumProvider() // Gets us a provider. So we keep a state above.
             if(provider){
-                const web3 = new Web3(provider)
-                setWeb3Api({
+                const web3 = new Web3(provider) // Creates new instance of Web3 once we have a provider
+                setWeb3Api({ // Updates the state values 
                     provider,
                     web3,
                     contract: null,
                     isLoading: false
                 })
             }else{
-                setWeb3Api(api => ({...api, isLoading: false})) 
+                setWeb3Api(rest => ({...rest, isLoading: false})) 
                 console.error("Please install MetaMask!");
             }
         }
         loadProvider()
     }, [])
 
-    const _web3Api = useMemo(() => {
+    const _web3Api = useMemo(() => { // Adds additional properties/methods to the web3Api AFTER it is initially loaded and set with the values defined in the useState above. useMemo only updates when changes occur to the web3Api - we extended functionality to it
         const {web3, provider} = web3Api
         return {
             ...web3Api,
             isWeb3Loaded: web3 != null,
-            getHooks: () => setupHooks(web3, provider),
-            connect: provider ?
+            getHooks: () => setupHooks(web3, provider), // 
+            connect: provider ? 
             async () => {
                 try {
-                    await provider.request({method: "eth_requestAccounts"})
+                    await provider.request({method: "eth_requestAccounts"}) // opens metamask
                 } catch (error) {
                     console.error("Cannot retrieve account!")
-                    location.reload()
+                    location.reload() // Used to prevent error when metamask reload attempted
                 }
             }
             :
@@ -55,7 +57,7 @@ export default function Web3Provider({children}) {
 
 
         }
-    }, [web3Api])
+    }, [web3Api]) // getHooks, connect only updates/runs when Web3Api changes.
 
     return (
         <Web3Context.Provider value={_web3Api}>

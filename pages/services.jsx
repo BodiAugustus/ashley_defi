@@ -1,8 +1,11 @@
 
-import SalesCard from "@components/ui/sales/list/SalesCard"
-import BaseLayout from "@components/ui/layout/baseLayout/BaseLayout"
+import { CourseCard, CourseList } from "@components/ui/course"
+import BaseLayout from "@components/ui/layout/baseLayout"
 import Banner from "@components/ui/order/banner/Banner"
-import { getAllCourses } from "@content/subscriptions/fetcher"
+import { getAllCourses } from "@content/courses/fetcher"
+
+
+
 
 
 
@@ -17,7 +20,11 @@ export default function Info({courses}) {
           <div className="relative max-w-7xl mx-auto ">      
               <div className="fit">
                 <Banner/>
-                <SalesCard courses={courses}/> 
+                <CourseList courses={courses}>
+                  {
+                    (course) => <CourseCard key={course.id} course={course}/>
+                  }
+                </CourseList>
               </div>       
           </div>
         </div>

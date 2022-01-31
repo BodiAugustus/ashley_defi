@@ -1,6 +1,6 @@
 
 
-const Keypoints = ({points}) => {
+const KeyPoints = ({points}) => {
     return(
         <section>
         <div className="py-12 bg-white">
@@ -17,7 +17,7 @@ const Keypoints = ({points}) => {
                       </svg>
                     </div>
                     <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
-                     {point}
+                     Keypoint: {i + 1}
                     </p>
                   </dt>
                   <dd className="mt-2 ml-16 text-base text-gray-500">
@@ -36,4 +36,4 @@ const Keypoints = ({points}) => {
     )
 }
 
-export default Keypoints
+export default KeyPoints

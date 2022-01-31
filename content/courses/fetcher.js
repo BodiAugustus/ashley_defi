@@ -1,7 +1,7 @@
 
 import courses from "./index.json"
 
-export const getAllCourses = () => {
+export const getAllCourses = () => { //gets data 
 
     return {
         data: courses,

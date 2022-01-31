@@ -10,7 +10,7 @@ export const links = [{
 },
 {
     id: "13gfgg",
-    name: "About",
+    name: "market",
     url: "/marketplace",
     howLong: "w-[81%] "
 },

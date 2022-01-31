@@ -1,7 +1,7 @@
 
 
 const Button = ({
-    children // Contains display text
+    children // Contains display text and events
     ,className,
     variant = "blue",
     hoverable = true,

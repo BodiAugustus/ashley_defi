@@ -91,3 +91,5 @@
 #46. Setup useSWR to fetch network id to the UI using web3.eth.getChainId(). Setup a useEffect to update the UI on accounts change using provider.on("chainChanged", netId => mutate(netId)). Passed network through marketplace to Walletbar component. Displayed current network id to UI in Walletbar.
 
 #47. Created mapping from network ID's to strings to display actual names to UI. Displayed network string names to UI.
+
+#48. Created index.js inside of card. Copied from list/index.js to card/index.js. Created new card component. Imported into list/index.js to use there. Copied the same functionality to services.jsx which shares the card component.

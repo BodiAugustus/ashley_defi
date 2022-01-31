@@ -1,2 +1,2 @@
-export {default as FtmPrice} from './web3/ftmPrice/FtmPrice'
-export {default as Walletbar} from './web3/walletbar/Walletbar'
+export {default as FtmPrice} from './ethRates'
+export {default as Walletbar} from './walletbar'

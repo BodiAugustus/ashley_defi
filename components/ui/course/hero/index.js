@@ -1,7 +1,7 @@
 import Image from "next/image"
 
 
-const HeroBanner = ({title, description, image}) => {
+const CourseHero = ({title, description, image}) => {
     return(
         <section>
         <div className="relative bg-white overflow-hidden">
@@ -54,4 +54,4 @@ const HeroBanner = ({title, description, image}) => {
 }
 
 
-export default HeroBanner
+export default CourseHero

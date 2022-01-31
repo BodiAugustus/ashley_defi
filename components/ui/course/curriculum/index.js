@@ -1,8 +1,4 @@
-
-
-const Included = ({locked}) => {
-
-  const lectures = [
+const lectures = [
     "How to init App",
     "How to get a help",
     "Introduction to Solidity",
@@ -10,11 +6,12 @@ const Included = ({locked}) => {
     "How to write For Loops",
     "Safe operator",
   ]
-
+  
+  export default function Curriculum({locked}) {
+  
     const statusClass = "px-2 inline-flex text-xs leading-5 font-semibold rounded-full"
-
-    return(
-        <section className="max-w-5xl mx-auto">
+    return (
+      <section className="max-w-5xl mx-auto">
         <div className="flex flex-col">
           <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
@@ -46,21 +43,14 @@ const Included = ({locked}) => {
                           </div>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
-                          <span className={
-                            !locked ? 
-                            ` bg-green-100 text-green-800 ${statusClass}`
-                            :
-                            ` bg-red-100 text-red-800 ${statusClass}`
-                            
-                            }>
+                          <span 
+                          className={locked ? `bg-red-100 text-red-800 ${statusClass}` : `bg-green-100 text-green-800 ${statusClass}`}>
                             { locked ? "Locked" : "Unlocked"}
                           </span>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                          <a 
-                          href="#" 
-                          className="text-indigo-600 hover:text-indigo-900">
-                          { locked ? "Get Access" : "Play" }
+                          <a href="#" className="text-indigo-600 hover:text-indigo-900">
+                            {locked ? "Get Access" : "Play"}
                           </a>
                         </td>
                       </tr>
@@ -73,6 +63,4 @@ const Included = ({locked}) => {
         </div>
       </section>
     )
-}
-
-export default Included
+  }

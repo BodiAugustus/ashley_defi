@@ -1,5 +1,5 @@
-import Navbar from "@components/ui/common/navbar/Navbar"
-import Footer from "@components/ui/common/footer/Footer"
+import Navbar from "@components/ui/common/navbar"
+import Footer from "@components/ui/common/footer"
 import { Web3Provider } from "@components/providers"
 
 
@@ -10,7 +10,6 @@ const BaseLayout = ({children}) => {
                 {children}
             <Footer/>
         </Web3Provider>
-
     )
 }
 
