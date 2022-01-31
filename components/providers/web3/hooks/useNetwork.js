@@ -14,9 +14,11 @@ const NETWORKS = { //This is a mapping using the chainId
     1337: "Ganache"
 }
 
+const targetNetwork = NETWORKS[process.env.NEXT_PUBLIC_TARGET_CHAIN_ID]
+
 export const handler = (web3, provider) => () => {
 
-    const {mutate, ...rest} = useSWR(() => {
+    const {data, mutate, ...rest} = useSWR(() => {
     return web3 ? "web3/network" : null}, 
     async () => {
         const chainId = await web3.eth.getChainId() //web3, fetches network ID as a normal number
@@ -31,7 +33,10 @@ export const handler = (web3, provider) => () => {
 
     return {
         network: {
+            data,
             mutate,
+            target: targetNetwork, //these two values are used to display the error message if user is on incorrect network
+            isSupported: data === targetNetwork, //If current network is same as target network then isSupported is true
             ...rest
         }
     }

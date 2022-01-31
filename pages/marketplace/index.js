@@ -20,6 +20,10 @@ export default function Marketplace({courses}) {
                 address={account.data}
                 network={network.data}
                 />
+                {/* "Current" {`${network.data}`}
+                "Target" {`${network.target}`}
+                "Is Supported" {`${network.isSupported}`}  THESE ARE TESTING VALUES to make sure the UI message is displayed properly - change between networks and check UI message  */} 
+      
                 <CourseList courses={courses}>
                   {
                     (course) => <CourseCard key={course.id} course={course}/>

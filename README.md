@@ -93,3 +93,5 @@
 #47. Created mapping from network ID's to strings to display actual names to UI. Displayed network string names to UI.
 
 #48. Created index.js inside of card. Copied from list/index.js to card/index.js. Created new card component. Imported into list/index.js to use there. Copied the same functionality to services.jsx which shares the card component.
+
+#49. Created .env.development & production files in root directory. Setup targetNetwork and isSupported properties in useNetwork.js to display UI error message on wrong network.
