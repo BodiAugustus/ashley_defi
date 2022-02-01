@@ -7,7 +7,7 @@ import { useAccount } from "@components/hooks/web3"
 
 
 const Hero = () => {
-const { connect, isLoading, isWeb3Loaded } = useWeb3() // Brings in these 3 properties from _web3Api using the provider context (useWeb3) -- connect opens MetaMask
+const { connect, isLoading, web3 } = useWeb3() // Brings in these 3 properties from _web3Api using the provider context (useWeb3) -- connect opens MetaMask
 const { account } = useAccount()
 console.log(account.data);
 
@@ -75,7 +75,7 @@ console.log(account.data);
                 Loading...
             </Button> :
 
-            isWeb3Loaded ?
+            web3 != null ?
             account.data ?
             <Button
             className="cursor-default"

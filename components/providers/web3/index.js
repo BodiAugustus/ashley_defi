@@ -14,7 +14,7 @@ export default function Web3Provider({children}) {
         web3: null,
         contract: null,
         isLoading: true,
-        hooks: setupHooks()
+        hooks: setupHooks() // Now setupHooks is only called initially and after web3Provider is loaded.
     })
 
     useEffect(() => { //Called once during page load
@@ -38,10 +38,11 @@ export default function Web3Provider({children}) {
     }, [])
 
     const _web3Api = useMemo(() => { // Adds additional properties/methods to the web3Api AFTER it is initially loaded and set with the values defined in the useState above. useMemo only updates when changes occur to the web3Api - we extended functionality to it
-        const {web3, provider} = web3Api
+        const {web3, provider, isLoading} = web3Api
         return {
             ...web3Api,
-            isWeb3Loaded: web3 != null,
+            // isWeb3Loaded: web3 != null,
+            requireInstall: !isLoading && !web3,
             connect: provider ? 
             async () => {
                 try {

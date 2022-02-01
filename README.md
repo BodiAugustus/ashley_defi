@@ -103,3 +103,5 @@
 #52. Created index.js inside of hooks/web3. c&p useAccount and useNetwork into new index.js. Deleted useAccount and useNetwork from hooks/web3 folder. Created helper function enhanceHook. Wrapped useNetwork and useAccount functions with enhanceHook. Removed hasInitialResponse and error from useNetwork. Reconstructed the return statement for that file. Made all working as before.
 
 #53. Current setup of setupHooks in the _web3Api results in too many function calls because getHooks gets called any time a useAccount or useNetwork gets called which triggers setupHooks. Removed getHooks. Defined hooks: setupHooks on the web3Api state value. Changed useHooks function body.
+
+#54. Removed isWeb3Loaded property from _web3Api. Replaced with requireInstall which detects if web3 is not present in the browser(no metamask). Replaced instances of isWeb3Loaded with requireInstall. Set up a conditional div inside of Walletbar to display UI message in case of web3 not detected in browser( no metamask).
