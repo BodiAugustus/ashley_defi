@@ -144,3 +144,5 @@
 #72. Created link folder inside of components/common. Created index.js inside of that. Created an ActiveLink wrapper to wrap around anchor tag elements in order to add additional styling and other props. Imported useRouter to compare path name with link href. Created active link for breadCrumbs component.
 
 #73. Created defaultOrder and new useState with defaultOrder as the value inside of order/modal/index. Inserted price dynsmically to modal using value and onChange props.
+
+#74. Added new useState to modal file, enablePrice. Added to checked input via checked prop. Setup checked input and price input insode Modal to allow changes when checkbox checked.

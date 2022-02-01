@@ -12,9 +12,11 @@ const defaultOrder = {
 
 const OrderModal = ({course, onClose}) => {     //When orderModal receives course data then we open the modal with that course info
     const [isOpen, setIsOpen] = useState(false)
+    const [enablePrice, setEnablePrice] = useState(false) // for the modal checkbox
 
     const [order, setOrder] = useState(defaultOrder)
     const { eth } = useEthPrice()
+
 
     //the useEffect is used to respond to changes, like a change in course eing selected from a purchase button
     useEffect(() => {
@@ -47,6 +49,14 @@ const OrderModal = ({course, onClose}) => {     //When orderModal receives cours
                   <div className="text-xs text-gray-700 flex">
                     <label className="flex items-center mr-2">
                       <input
+                        checked={enablePrice}
+                        onChange={({target: {checked}}) => { // Cjecks if checkbox has been checked or not
+                          setOrder({
+                            ...order,
+                            price: checked ? order.price : eth.perItem  //If checked, can set own price, otherwise is default
+                          })
+                          setEnablePrice(checked) //allows price to be changed when checkbox checked
+                        }}  
                         type="checkbox"
                         className="form-checkbox"
                       />
@@ -56,6 +66,7 @@ const OrderModal = ({course, onClose}) => {     //When orderModal receives cours
                 </div>
                 <input
                 value={order.price} //Shows price in modal
+                disabled={!enablePrice} //disables price input unless checkbox checked
                 onChange={({target: {value}}) => {
                   if(isNaN(value)){ return} //If price input is not a number then nothing is returned, if it is then the price is updated with that value
                   setOrder({
