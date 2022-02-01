@@ -1,14 +1,28 @@
 import { Modal } from "@components/ui/common"
 import Button from "@components/ui/common/button/Button"
-const OrderModal = () => {
+import { useEffect, useState } from "react"
+const OrderModal = ({course, onClose}) => {     //When orderModal receives course data then we open the modal with that course info
+    const [isOpen, setIsOpen] = useState(false)
+
+    //the useEffect is used to respond to changes, like a change in course eing selected from a purchase button
+    useEffect(() => {
+        if(!!course){ //double !! will result a null or undefined returned value into false to avoid throwing an error
+            setIsOpen(true)
+        }
+    },[course])
+
+    const closeModal = () => {
+        setIsOpen(false)
+        onClose()
+    }
     return(
-        <Modal isOpen={true}>
+        <Modal isOpen={isOpen}>
       <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
         <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
           <div className="sm:flex sm:items-start">
             <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
               <h3 className="mb-7 text-lg font-bold leading-6 text-gray-900" id="modal-title">
-                Course Title
+                {course?.title}
               </h3>
               <div className="mt-1 relative rounded-md">
                 <div className="mb-1">
@@ -74,6 +88,7 @@ const OrderModal = () => {
             Submit
           </Button>
           <Button
+            onClick={closeModal}
             variant="red">
             Cancel
           </Button>

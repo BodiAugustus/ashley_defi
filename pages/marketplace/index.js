@@ -7,10 +7,12 @@ import { useAccount, useNetwork } from "@components/hooks/web3"
 import { CourseCard, CourseList } from "@components/ui/course"
 import { Button } from "@components/ui/common"
 import { OrderModal } from "@components/ui/order"
+import { useState } from "react"
 
 export default function Marketplace({courses}) {
     const { account } = useAccount() // passes in active user accnt
     const { network} = useNetwork() // passes in active user network
+    const [selectedCourse, setSelectedCourse] = useState(null)
     console.log(network.data);
 
     return (
@@ -39,7 +41,10 @@ export default function Marketplace({courses}) {
                     course={course}
                     Footer={() => 
                       <div className="mt-4">
-                        <Button variant="purple">
+                        <Button 
+                        variant="purple"
+                        onClick={() => setSelectedCourse(course)} 
+                        > {/*Click the button will select a course to purchase so we need to keep a state for it - selectedCourse */}
                           Purchase
                         </Button>
                       </div>
@@ -47,7 +52,13 @@ export default function Marketplace({courses}) {
                     />
                   }
                 </CourseList>
-                <OrderModal/>
+                {
+                  selectedCourse &&
+                <OrderModal course={selectedCourse}
+                  onClose={() => setSelectedCourse(null)}
+
+                /> 
+                }{/*This gets the selected course from the button click passed as a prop to ordermodal so the modal opens for the correct course. onClose was added to pass the null value to OrderModal so that the value is reset to null on modal close in order to allow useEffect to fire even when the same purchase button is clicked twice */}
               
               </div>       
           </div>
