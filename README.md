@@ -130,3 +130,7 @@
 #65. Displayed XMR logo instead of text inside UI display for useEthPrice.
 
 #66. Created canPurchaseCourse check inside marketplace and passed into button as a disabled property when the condition is met. Passed disabled property as a prop into the CourseCard component and used to disable image/purchase button when !canPurchaseCourse.
+
+#67. Created useWalletInfo to combine useAccount and useNetwork hooks when needed inside of hooks/web3/index.js.
+
+#68. Added BreadCrumbs compnt to marketplace page. Styled and set up.

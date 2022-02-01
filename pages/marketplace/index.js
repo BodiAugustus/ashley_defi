@@ -2,22 +2,22 @@
 import BaseLayout from "@components/ui/layout/baseLayout"
 import Walletbar from "@components/ui/web3/walletbar"
 import { getAllCourses } from "@content/courses/fetcher"
-import { useAccount, useNetwork } from "@components/hooks/web3"
+import { useWalletInfo } from "@components/hooks/web3"
 
 import { CourseCard, CourseList } from "@components/ui/course"
-import { Button } from "@components/ui/common"
+import { Breadcrumbs, Button } from "@components/ui/common"
 import { OrderModal } from "@components/ui/order"
 import { useState } from "react"
 import useEthPrice from "@components/hooks/useEthPrice"
 import { FtmPrice } from "@components/ui/web3"
 
 export default function Marketplace({courses}) {
-    const { account } = useAccount() // passes in active user accnt
-    const { network} = useNetwork() // passes in active user network
+    //  const { account, network, canPurchaseCourse} = useWalletInfo() // passes in active user network and account
+    const { account, network, canPurchaseCourse} = useWalletInfo()
     const [selectedCourse, setSelectedCourse] = useState(null)
     const { eth } = useEthPrice()
 
-    const canPurchaseCourse = !!(account.data && network.isSupported)
+
 
 
 
@@ -25,7 +25,7 @@ export default function Marketplace({courses}) {
       <div>
         <div className="relative bg-white overflow-hidden">
           <div className="relative max-w-7xl mx-auto ">      
-              <div className="fit">
+              <div className="fit pt-4">
                 <Walletbar  // props passed to Walletbar
                 address={account.data}
                 network={{
@@ -40,6 +40,9 @@ export default function Marketplace({courses}) {
                 eth={eth.data}
                 ethPerItem={eth.perItem}
                 />
+                <div className="flex flex-row-reverse py-4 px-4 sm:px-6 lg:px-8">
+                <Breadcrumbs/>
+                </div>
                 
                 {/* "Current" {`${network.data}`}
                 "Target" {`${network.target}`}
