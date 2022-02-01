@@ -134,3 +134,5 @@
 #67. Created useWalletInfo to combine useAccount and useNetwork hooks when needed inside of hooks/web3/index.js.
 
 #68. Added BreadCrumbs compnt to marketplace page. Styled and set up.
+
+#69. Reconfigued how EthRates is called. Moved hook from market and put everything direcly into FtmPrice, made working as before. Repeated process for WattetBar and its props. Created wrapped component for WalletBar, FtmPrice and Breadcrumbs since they will be used together on multiple pages. Created marketplace folder inside components, created header folder inside of that and then index.js inside of that. Also created an index.js in the marketplace. Created wrapper inside index.js then used inside of marketplace to replace the three seperate components there before.

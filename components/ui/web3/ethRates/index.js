@@ -1,7 +1,8 @@
+import useEthPrice from "@components/hooks/useEthPrice"
 import Image from "next/image"
 
-const FtmPrice = ({eth, ethPerItem}) => {
-
+const FtmPrice = () => {
+  const { eth } = useEthPrice()
   return (
     <div className="grid grid-cols-4 ">
       <div className="flex flex-1 items-stretch text-center">
@@ -14,7 +15,7 @@ const FtmPrice = ({eth, ethPerItem}) => {
             src="/images/XMR1.png"
             alt="XMR Logo"
           />
-            <span className="text-2xl font-bold"> = ${eth}</span>
+            <span className="text-2xl font-bold"> = ${eth.data}</span>
           </div>
           <p className="text-xl text-gray-500">Current eth Price</p>
         </div>
@@ -23,7 +24,7 @@ const FtmPrice = ({eth, ethPerItem}) => {
         <div className="p-10 border drop-shadow rounded-md">
           <div className="flex items-center">
             <span className="text-2xl font-bold">
-            ${ethPerItem} 
+            ${eth.perItem} 
             </span>
             <Image
             layout="fixed"

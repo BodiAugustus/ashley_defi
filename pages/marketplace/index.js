@@ -1,53 +1,27 @@
 // This file displays products for sale
 import BaseLayout from "@components/ui/layout/baseLayout"
-import Walletbar from "@components/ui/web3/walletbar"
 import { getAllCourses } from "@content/courses/fetcher"
 import { useWalletInfo } from "@components/hooks/web3"
-
 import { CourseCard, CourseList } from "@components/ui/course"
-import { Breadcrumbs, Button } from "@components/ui/common"
+import { Button } from "@components/ui/common"
 import { OrderModal } from "@components/ui/order"
 import { useState } from "react"
-import useEthPrice from "@components/hooks/useEthPrice"
-import { FtmPrice } from "@components/ui/web3"
+import { MarketHeader } from "@components/ui/marketplace"
 
 export default function Marketplace({courses}) {
     //  const { account, network, canPurchaseCourse} = useWalletInfo() // passes in active user network and account
-    const { account, network, canPurchaseCourse} = useWalletInfo()
+    const {canPurchaseCourse} = useWalletInfo()
     const [selectedCourse, setSelectedCourse] = useState(null)
-    const { eth } = useEthPrice()
-
-
-
-
-
+ 
     return (
       <div>
         <div className="relative bg-white overflow-hidden">
           <div className="relative max-w-7xl mx-auto ">      
-              <div className="fit pt-4">
-                <Walletbar  // props passed to Walletbar
-                address={account.data}
-                network={{
-                  data: network.data,
-                  target: network.target,
-                  isSupported: network.isSupported,
-                  hasInitialResponse: network.hasInitialResponse
-                }}
-                
-                />
-                <FtmPrice 
-                eth={eth.data}
-                ethPerItem={eth.perItem}
-                />
-                <div className="flex flex-row-reverse py-4 px-4 sm:px-6 lg:px-8">
-                <Breadcrumbs/>
-                </div>
-                
+              <div className="fit pb-4">
+               <MarketHeader/>               
                 {/* "Current" {`${network.data}`}
                 "Target" {`${network.target}`}
-                "Is Supported" {`${network.isSupported}`}  THESE ARE TESTING VALUES to make sure the UI message is displayed properly - change between networks and check UI message  */} 
-      
+                "Is Supported" {`${network.isSupported}`}  THESE ARE TESTING VALUES to make sure the UI message is displayed properly - change between networks and check UI message  */}      
                 <CourseList courses={courses}>
                   {
                     (course) => <CourseCard 
@@ -59,8 +33,7 @@ export default function Marketplace({courses}) {
                         <Button 
                         variant="purple"
                         disabled={!canPurchaseCourse}
-                        onClick={() => setSelectedCourse(course)} 
-                        
+                        onClick={() => setSelectedCourse(course)}                       
                         > {/*Click the button will select a course to purchase so we need to keep a state for it - selectedCourse */}
                           Purchase
                         </Button>
@@ -73,10 +46,8 @@ export default function Marketplace({courses}) {
                   selectedCourse &&
                 <OrderModal course={selectedCourse}
                   onClose={() => setSelectedCourse(null)}
-
                 /> 
-                }{/*This gets the selected course from the button click passed as a prop to ordermodal so the modal opens for the correct course. onClose was added to pass the null value to OrderModal so that the value is reset to null on modal close in order to allow useEffect to fire even when the same purchase button is clicked twice */}
-              
+                }{/*This gets the selected course from the button click passed as a prop to ordermodal so the modal opens for the correct course. onClose was added to pass the null value to OrderModal so that the value is reset to null on modal close in order to allow useEffect to fire even when the same purchase button is clicked twice */}             
               </div>       
           </div>
         </div>
