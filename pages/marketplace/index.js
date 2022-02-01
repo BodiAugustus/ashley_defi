@@ -34,7 +34,11 @@ export default function Marketplace({courses}) {
                 }}
                 
                 />
-                <FtmPrice eth={eth.data}/>
+                <FtmPrice 
+                eth={eth.data}
+                ethPerItem={eth.perItem}
+                />
+                
                 {/* "Current" {`${network.data}`}
                 "Target" {`${network.target}`}
                 "Is Supported" {`${network.isSupported}`}  THESE ARE TESTING VALUES to make sure the UI message is displayed properly - change between networks and check UI message  */} 

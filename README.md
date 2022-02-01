@@ -124,3 +124,5 @@
 #62. Created useEthPrice.js inside of components/hooks. Created fetcher. Use CoinGecko API to pull json data about ETH into console.
 
 #63. Accessed ETH prince in USD then displayed to UI. Amended useEthPrice return to include swrRes data. Imported to marketpage and passed as a prop to FtmPrice component that was brought in. Set refreshInterval to reresh API request to update UI.
+
+#64. Updated useEthPrice to allow price per item to be displayed to UI by passing new variable as a prop through marketplace and into FtmPrice.
