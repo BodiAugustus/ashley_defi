@@ -18,7 +18,7 @@ const targetNetwork = NETWORKS[process.env.NEXT_PUBLIC_TARGET_CHAIN_ID]
 
 export const handler = (web3, provider) => () => {
 
-    const {data, error, mutate, ...rest} = useSWR(() => {
+    const {data, mutate, ...rest} = useSWR(() => {
     return web3 ? "web3/network" : null}, 
     async () => {
         const chainId = await web3.eth.getChainId() //web3, fetches network ID as a normal number
@@ -33,13 +33,13 @@ export const handler = (web3, provider) => () => {
     },[web3])
 
     return {
-        network: {
+    
             data,
-            isLoading: !data && !error, // If data and error are undefined then it means the function has NOT resolved yet which means we are loading.
+            // hasInitialResponse: data || error, // If data and error are undefined then it means the function has NOT resolved yet which means we are loading. If we have either data or error it means we have finished first fetch. --- This functionality is now taken care of by the enhanceHook() function in web3/hooks folder.
             mutate,
             target: targetNetwork, //these two values are used to display the error message if user is on incorrect network
             isSupported: data === targetNetwork, //If current network is same as target network then isSupported is true
             ...rest
-        }
+        
     }
 }

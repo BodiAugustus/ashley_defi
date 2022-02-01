@@ -3,7 +3,7 @@ import {GiAbstract070, GiConcentricCrescents, GiHalfTornado} from 'react-icons/g
 import Button from "../button/Button"
 
 import { useWeb3 } from "@components/providers"
-import { useAccount } from "@components/hooks/web3/useAccount"
+import { useAccount } from "@components/hooks/web3"
 
 
 const Hero = () => {

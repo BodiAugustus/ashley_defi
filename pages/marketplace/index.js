@@ -2,8 +2,8 @@
 import BaseLayout from "@components/ui/layout/baseLayout"
 import Walletbar from "@components/ui/web3/walletbar"
 import { getAllCourses } from "@content/courses/fetcher"
-import { useAccount } from "@components/hooks/web3/useAccount"
-import { useNetwork } from "@components/hooks/web3/useNetwork"
+import { useAccount, useNetwork } from "@components/hooks/web3"
+
 import { CourseCard, CourseList } from "@components/ui/course"
 
 export default function Marketplace({courses}) {
@@ -22,7 +22,7 @@ export default function Marketplace({courses}) {
                   data: network.data,
                   target: network.target,
                   isSupported: network.isSupported,
-                  isLoading: network.isLoading
+                  hasInitialResponse: network.hasInitialResponse
                 }}
                 
                 />

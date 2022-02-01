@@ -22,10 +22,10 @@ export const handler = (web3, provider) => () => { // This is a function that ca
         (accounts) => mutate(accounts[0] ?? null)) // mutate reexecutes function and returns new data (the new account)
     }, [provider])
 
-    return { account: {
+    return { 
         data, // data is the accnt address
         isAdmin: (data && adminAddresses[web3.utils.keccak256(data)]) ?? false, //checks our hashed version to check it is the same, this increases security.
         mutate,
         ...rest
-    } }
+     }
 }

@@ -3,7 +3,7 @@ const WalletBar = ({address, network}) => {
   return(
       <section className="text-white bg-indigo-600">
       <div className="p-8">
-        <h1 className="text-2xl">Hello, {address}</h1>
+        <h1 className="text-2xl">Hello, {address ? address : "guest, you're not logged in!"}</h1>
         <h2 className="subtitle mb-5 text-xl">I hope you are having a great day!</h2>
         <div className="flex justify-between items-center">
           <div className="sm:flex sm:justify-center lg:justify-start">
@@ -15,7 +15,7 @@ const WalletBar = ({address, network}) => {
           </div>
           <div>
           {
-           !network.isLoading && !network.isSupported &&
+           network.hasInitialResponse && !network.isSupported &&
           <div className="bg-red-400 p-4 rounded-lg">
             <div className="">Connected to wrong network!</div>
             <div className="">
