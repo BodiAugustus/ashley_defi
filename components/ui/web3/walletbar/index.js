@@ -15,7 +15,7 @@ const WalletBar = ({address, network}) => {
           </div>
           <div>
           {
-            !network.isSupported &&
+           !network.isLoading && !network.isSupported &&
           <div className="bg-red-400 p-4 rounded-lg">
             <div className="">Connected to wrong network!</div>
             <div className="">
@@ -26,10 +26,13 @@ const WalletBar = ({address, network}) => {
             </div>
           </div>
           }
+          {
+            network.data &&
             <div>
               <span>Currently on </span>
-              <strong className="text-2xl">{network.data}</strong>
+              <strong className="text-2xl">{network.data}</strong> {/*This conditionally renders so that when a user does not have metamask installed the currently on message does not appear to UI*/}
             </div>
+          }
           </div>
         </div>
       </div>

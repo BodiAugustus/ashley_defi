@@ -97,3 +97,5 @@
 #49. Created .env.development & production files in root directory. Setup targetNetwork and isSupported properties in useNetwork.js to eventually display UI error message on wrong network.
 
 #50. Constructed new div using new properties from useNetwork to display error UI message on wrong network. 
+
+#51. There is a small bug which causes the ui incorrect network message to briefly display upon page loading. Had to set up a new property called isLoading using SWR error and data. Passed isLoading into Walletbar through the marketplace. Used inside of Walletbar.

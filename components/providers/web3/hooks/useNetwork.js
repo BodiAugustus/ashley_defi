@@ -18,11 +18,12 @@ const targetNetwork = NETWORKS[process.env.NEXT_PUBLIC_TARGET_CHAIN_ID]
 
 export const handler = (web3, provider) => () => {
 
-    const {data, mutate, ...rest} = useSWR(() => {
+    const {data, error, mutate, ...rest} = useSWR(() => {
     return web3 ? "web3/network" : null}, 
     async () => {
         const chainId = await web3.eth.getChainId() //web3, fetches network ID as a normal number
-        return NETWORKS[chainId] // Changes chainId to corresponding string
+        return NETWORKS[chainId] // Changes chainId to corresponding string.
+        // When this async function finishes loading then isLoading will change to false. 
     }
     )
 
@@ -34,6 +35,7 @@ export const handler = (web3, provider) => () => {
     return {
         network: {
             data,
+            isLoading: !data && !error, // If data and error are undefined then it means the function has NOT resolved yet which means we are loading.
             mutate,
             target: targetNetwork, //these two values are used to display the error message if user is on incorrect network
             isSupported: data === targetNetwork, //If current network is same as target network then isSupported is true
