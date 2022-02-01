@@ -1,6 +1,6 @@
 import Image from "next/image"
 import {GiAbstract070, GiConcentricCrescents, GiHalfTornado} from 'react-icons/gi'
-import Button from "../button/Button"
+import Button from "../button"
 
 import { useWeb3 } from "@components/providers"
 import { useAccount } from "@components/hooks/web3"

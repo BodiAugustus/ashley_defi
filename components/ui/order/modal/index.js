@@ -1,6 +1,5 @@
 import useEthPrice from "@components/hooks/useEthPrice"
-import { Modal } from "@components/ui/common"
-import Button from "@components/ui/common/button/Button"
+import { Modal, Button } from "@components/ui/common"
 import { useEffect, useState } from "react"
 
 
@@ -10,13 +9,29 @@ const defaultOrder = {
   confirmationEmail: ""
 }
 
+const _createFormState = (isDisabled = false, message = "") => ({isDisabled, message})
+
+const createFormState = ({price, email, confirmationEmail}) => { 
+  if(!price || Number(price) <= 0 ){
+    return _createFormState(true, "Price is not valid!")
+  }
+  else if(confirmationEmail.length === 0 || email.length === 0){
+    return _createFormState(true)
+  }
+  else if(email !== confirmationEmail){
+    return _createFormState(true, "Emails are not matching.")
+  }
+
+  return _createFormState()
+
+}
+
 const OrderModal = ({course, onClose}) => {     //When orderModal receives course data then we open the modal with that course info
     const [isOpen, setIsOpen] = useState(false)
+    const [order, setOrder] = useState(defaultOrder)
     const [enablePrice, setEnablePrice] = useState(false) // for the modal checkbox
 
-    const [order, setOrder] = useState(defaultOrder)
     const { eth } = useEthPrice()
-
 
     //the useEffect is used to respond to changes, like a change in course eing selected from a purchase button
     useEffect(() => {
@@ -34,12 +49,15 @@ const OrderModal = ({course, onClose}) => {     //When orderModal receives cours
         setOrder(defaultOrder)
         onClose()
     }
+
+    const formState = createFormState(order) //gives us isDisabled and message properties
+
     return(
         <Modal isOpen={isOpen}>
       <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
         <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
           <div className="sm:flex sm:items-start">
-            <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+            <div className="mt-3 sm:mt-0 sm:ml-4 sm:text-left">
               <h3 className="mb-7 text-lg font-bold leading-6 text-gray-900" id="modal-title">
                 {course?.title}
               </h3>
@@ -49,8 +67,8 @@ const OrderModal = ({course, onClose}) => {     //When orderModal receives cours
                   <div className="text-xs text-gray-700 flex">
                     <label className="flex items-center mr-2">
                       <input
-                        checked={enablePrice}
-                        onChange={({target: {checked}}) => { // Cjecks if checkbox has been checked or not
+                        checked={enablePrice} // Checks if checkbox has been checked or not
+                        onChange={({target: {checked}}) => { 
                           setOrder({
                             ...order,
                             price: checked ? order.price : eth.perItem  //If checked, can set own price, otherwise is default
@@ -65,8 +83,8 @@ const OrderModal = ({course, onClose}) => {     //When orderModal receives cours
                   </div>
                 </div>
                 <input
-                value={order.price} //Shows price in modal
                 disabled={!enablePrice} //disables price input unless checkbox checked
+                value={order.price} //Shows price in modal
                 onChange={({target: {value}}) => {
                   if(isNaN(value)){ return} //If price input is not a number then nothing is returned, if it is then the price is updated with that value
                   setOrder({
@@ -90,7 +108,8 @@ const OrderModal = ({course, onClose}) => {     //When orderModal receives cours
                 <input
                 onChange={({target: {value}}) => {
                   setOrder({
-                    ...order, email: value.trim()
+                    ...order, 
+                    email: value.trim()
                   })
                 }}  
                   type="email"
@@ -110,7 +129,8 @@ const OrderModal = ({course, onClose}) => {     //When orderModal receives cours
                 <input
                   onChange={({target: {value}}) => {
                     setOrder({
-                      ...order, email: value.trim()
+                      ...order, 
+                      confirmationEmail: value.trim()
                     })
                   }} 
                   type="email"
@@ -126,11 +146,19 @@ const OrderModal = ({course, onClose}) => {     //When orderModal receives cours
                 </label>
                 <span>I accept Eincode &apos;terms of service&apos; and I agree that my order can be rejected in the case data provided above are not correct</span>
               </div>
+              {
+                formState.message &&
+                <div className="p-4 my-3 text-red-700 bg-red-200 rounded-lg text-sm">
+                  { formState.message }
+                </div>
+              }
             </div>
           </div>
         </div>
         <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex">
-          <Button onClick={() => {
+          <Button 
+            disabled={formState.isDisabled}
+            onClick={() => {
             alert(JSON.stringify(order))
           }}>
             Submit

@@ -148,3 +148,5 @@
 #74. Added new useState to modal file, enablePrice. Added to checked input via checked prop. Setup checked input and price input insode Modal to allow changes when checkbox checked.
 
 #75. Set up email form functionality using onChange. Setup onClick on the submit button to allow modal submission with alert of submitted data.
+
+#76. Setup createFormState and its helper function _createFormState to handle modal form data validations. Disabled submit button when validations not passing, displayed UI error message when invalid submits attempted.
