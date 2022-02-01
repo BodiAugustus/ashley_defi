@@ -138,3 +138,5 @@
 #69. Reconfigued how EthRates is called. Moved hook from market and put everything direcly into FtmPrice, made working as before. Repeated process for WattetBar and its props. Created wrapped component for WalletBar, FtmPrice and Breadcrumbs since they will be used together on multiple pages. Created marketplace folder inside components, created header folder inside of that and then index.js inside of that. Also created an index.js in the marketplace. Created wrapper inside index.js then used inside of marketplace to replace the three seperate components there before.
 
 #70. Created courses folder inside of marketplace folder. Created manage.js and owned.js inside courses folder. Set up initial pages. Changed name of CourseCard to OwnedCourseCard and created a new file of the same name inside ui/course/card. Updated index, deleted old card folder and file contents. Made work as before.
+
+#71. Created links array of objects inside the header component, passed as a prop into breadcrumbs for use there. Mapped over the links inside of breadcrumbs.
