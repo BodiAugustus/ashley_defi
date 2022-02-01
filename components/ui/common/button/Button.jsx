@@ -11,7 +11,7 @@ const Button = ({
     const variants = {
         blue: `text-white bg-blue-600 shadow-blue-600/75 ${hoverable && "hover:bg-indigo-700"}`,
         red: `text-white bg-red-600 shadow-red-600/75  ${hoverable && "hover:bg-red-700"}`,
-        purple: `text-white bg-indigo-200 shadow-indigo-600/75  ${hoverable && "hover:bg-indigo-700"}`,
+        purple: `text-purple-700 bg-indigo-200 shadow-indigo-600/75  ${hoverable && "hover:bg-indigo-700"}`,
     }
     return(
         <button

@@ -21,6 +21,9 @@ module.exports = {
         // 'ms': '539px',
         // 'mx': '767px',
       },
+      flex : {
+        "2": "2 2 0%"
+      },
       opacity: ["disabled"],
       cursor: ["disabled"],
 

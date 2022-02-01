@@ -109,3 +109,9 @@
 #55. Reconfigured button conditionals in Hero to utilize requireInstall.
 
 #56. Added Footer prop function to CourseCard, passed in and used in return to add purchase buttons to product cards. Added new variant to purchase buttons in Button component.
+
+#57. Recent button additions to card caused layout problem bc Image has fixed layout with same h and w. Fixed by making image responive and adding a flex-2 extension to tailwinds then setting the div to have its two childs as flex-1 for the image and flex-2 for the content. This results in image not reaching bottom of card - this is bc nextJS is creating a div for the image that we cant see and is causing height to not be full. To fix had to add new class next-image-wrapper. Added that property to global styles and targeted the span UNDER it - the child:
+.next-image-wrapper > span {
+  height: 100% !important;
+}
+Added substring to make card descriptions same length. Set a fixed height to the title.
