@@ -6,7 +6,6 @@ const enhanceHook = (swrResponse) => { // This function uses swrResponse bc that
         ...swrResponse,
         hasInitialResponse: swrResponse.data || swrResponse.error// This is adding new data to swrResponse
     }
-
 }
 
 export const useNetwork = () => {

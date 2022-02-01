@@ -101,3 +101,5 @@
 #51. There is a small bug which causes the ui incorrect network message to briefly display upon page loading. Had to set up a new property called isLoading using SWR error and data. Passed isLoading into Walletbar through the marketplace. Used inside of Walletbar.
 
 #52. Created index.js inside of hooks/web3. c&p useAccount and useNetwork into new index.js. Deleted useAccount and useNetwork from hooks/web3 folder. Created helper function enhanceHook. Wrapped useNetwork and useAccount functions with enhanceHook. Removed hasInitialResponse and error from useNetwork. Reconstructed the return statement for that file. Made all working as before.
+
+#53. Current setup of setupHooks in the _web3Api results in too many function calls because getHooks gets called any time a useAccount or useNetwork gets called which triggers setupHooks. Removed getHooks. Defined hooks: setupHooks on the web3Api state value. Changed useHooks function body.
