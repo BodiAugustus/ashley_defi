@@ -17,6 +17,8 @@ export default function Marketplace({courses}) {
     const [selectedCourse, setSelectedCourse] = useState(null)
     const { eth } = useEthPrice()
 
+    const canPurchaseCourse = !!(account.data && network.isSupported)
+
 
 
     return (
@@ -47,12 +49,15 @@ export default function Marketplace({courses}) {
                   {
                     (course) => <CourseCard 
                     key={course.id} 
+                    disabled={!canPurchaseCourse}
                     course={course}
                     Footer={() => 
                       <div className="mt-4">
                         <Button 
                         variant="purple"
+                        disabled={!canPurchaseCourse}
                         onClick={() => setSelectedCourse(course)} 
+                        
                         > {/*Click the button will select a course to purchase so we need to keep a state for it - selectedCourse */}
                           Purchase
                         </Button>

@@ -128,3 +128,5 @@
 #64. Updated useEthPrice to allow price per item to be displayed to UI by passing new variable as a prop through marketplace and into FtmPrice.
 
 #65. Displayed XMR logo instead of text inside UI display for useEthPrice.
+
+#66. Created canPurchaseCourse check inside marketplace and passed into button as a disabled property when the condition is met. Passed disabled property as a prop into the CourseCard component and used to disable image/purchase button when !canPurchaseCourse.
