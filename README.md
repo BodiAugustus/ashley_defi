@@ -107,3 +107,5 @@
 #54. Removed isWeb3Loaded property from _web3Api. Replaced with requireInstall which detects if web3 is not present in the browser(no metamask). Replaced instances of isWeb3Loaded with requireInstall. Set up a conditional div inside of Walletbar to display UI message in case of web3 not detected in browser( no metamask).
 
 #55. Reconfigured button conditionals in Hero to utilize requireInstall.
+
+#56. Added Footer prop function to CourseCard, passed in and used in return to add purchase buttons to product cards. Added new variant to purchase buttons in Button component.
