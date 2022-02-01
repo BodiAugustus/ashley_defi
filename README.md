@@ -114,3 +114,5 @@
 .next-image-wrapper > span {height: 100% !important;}. Added substring to make card descriptions same length. Set a fixed height to the title.
 
 #58. Added modeal component to market page. Added isOpen prop to Modal to conditionally display modal by adding/removing its hidden class.
+
+#59. Created modal folder inside order folder. Creaated index.js inside that. Set up new Modal component. Replaced Modal with OrderModal inside market page. Made to display to UI when condition met.
