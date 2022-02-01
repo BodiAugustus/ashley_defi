@@ -122,3 +122,5 @@
 #61. Created new useState in marketplace to keep track of courses by purchase button. Set up useEffect in orderModal to open the modal whenever a puchase button is clicked. Created closeModal function, added to button as onClick. Bug occurs when a purchase button is clicked, the modal open and closed, then the button is clicked again - modal does not reopen. Occurs bc useEffect only updates on course change and clicking the same button is the same course so no rerender occurs. 
 
 #62. Created useEthPrice.js inside of components/hooks. Created fetcher. Use CoinGecko API to pull json data about ETH into console.
+
+#63. Accessed ETH prince in USD then displayed to UI. Amended useEthPrice return to include swrRes data. Imported to marketpage and passed as a prop to FtmPrice component that was brought in. Set refreshInterval to reresh API request to update UI.

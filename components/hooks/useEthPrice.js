@@ -6,15 +6,16 @@ const fetcher = async (url) => {
  const res = await fetch(url)
  const json = await res.json() // json is the returned data
 //  debugger
- return json
+ return json.market_data.current_price.usd ?? null
 }
 
 const useEthPrice = () => {
     const swrRes = useSWR(() => 
         URL, 
-        fetcher      
+        fetcher,
+        { refreshInterval: 100000}      
     )
-    return swrRes
+    return { eth: {...swrRes} }
 }
 
 export default useEthPrice

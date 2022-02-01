@@ -9,11 +9,14 @@ import { Button } from "@components/ui/common"
 import { OrderModal } from "@components/ui/order"
 import { useState } from "react"
 import useEthPrice from "@components/hooks/useEthPrice"
+import { FtmPrice } from "@components/ui/web3"
 
 export default function Marketplace({courses}) {
     const { account } = useAccount() // passes in active user accnt
     const { network} = useNetwork() // passes in active user network
     const [selectedCourse, setSelectedCourse] = useState(null)
+    const { eth } = useEthPrice()
+
 
 
     return (
@@ -31,6 +34,7 @@ export default function Marketplace({courses}) {
                 }}
                 
                 />
+                <FtmPrice eth={eth.data}/>
                 {/* "Current" {`${network.data}`}
                 "Target" {`${network.target}`}
                 "Is Supported" {`${network.isSupported}`}  THESE ARE TESTING VALUES to make sure the UI message is displayed properly - change between networks and check UI message  */} 
