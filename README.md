@@ -146,3 +146,5 @@
 #73. Created defaultOrder and new useState with defaultOrder as the value inside of order/modal/index. Inserted price dynsmically to modal using value and onChange props.
 
 #74. Added new useState to modal file, enablePrice. Added to checked input via checked prop. Setup checked input and price input insode Modal to allow changes when checkbox checked.
+
+#75. Set up email form functionality using onChange. Setup onClick on the submit button to allow modal submission with alert of submitted data.

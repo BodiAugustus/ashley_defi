@@ -88,6 +88,11 @@ const OrderModal = ({course, onClose}) => {     //When orderModal receives cours
                   <label className="mb-2 font-bold">Email</label>
                 </div>
                 <input
+                onChange={({target: {value}}) => {
+                  setOrder({
+                    ...order, email: value.trim()
+                  })
+                }}  
                   type="email"
                   name="email"
                   id="email"
@@ -103,6 +108,11 @@ const OrderModal = ({course, onClose}) => {     //When orderModal receives cours
                   <label className="mb-2 font-bold">Repeat Email</label>
                 </div>
                 <input
+                  onChange={({target: {value}}) => {
+                    setOrder({
+                      ...order, email: value.trim()
+                    })
+                  }} 
                   type="email"
                   name="confirmationEmail"
                   id="confirmationEmail"
@@ -120,7 +130,9 @@ const OrderModal = ({course, onClose}) => {     //When orderModal receives cours
           </div>
         </div>
         <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex">
-          <Button>
+          <Button onClick={() => {
+            alert(JSON.stringify(order))
+          }}>
             Submit
           </Button>
           <Button
