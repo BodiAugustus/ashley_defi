@@ -7,7 +7,7 @@ import { useAccount } from "@components/hooks/web3"
 
 
 const Hero = () => {
-const { connect, isLoading, web3 } = useWeb3() // Brings in these 3 properties from _web3Api using the provider context (useWeb3) -- connect opens MetaMask
+const { connect, isLoading, requireInstall } = useWeb3() // Brings in these 3 properties from _web3Api using the provider context (useWeb3) -- connect opens MetaMask
 const { account } = useAccount()
 console.log(account.data);
 
@@ -73,9 +73,8 @@ console.log(account.data);
             <Button
             disabled={true}>
                 Loading...
-            </Button> :
-
-            web3 != null ?
+            </Button> 
+            :
             account.data ?
             <Button
             className="cursor-default"
@@ -84,16 +83,18 @@ console.log(account.data);
             Hello {account.isAdmin ? "Bodi" : `${account.data.slice(0,4)}...${account.data.slice(38)}` }
             </Button>
             :
+            requireInstall ?
+            <Button
+            onClick={() => window.open("https://metamask.io/", "_blank")}>
+                Install Metamask
+            </Button>
+            :
             <Button
             onClick={connect}
             >
             Connect Wallet
             </Button>
-            :
-            <Button
-            onClick={() => window.open("https://metamask.io/", "_blank")}>
-                Install Metamask
-            </Button>
+      
             }                      
             <div className=" h-20 sepia opacity-30 mt-7 text-center flex justify-between 
             sm:mt-10
