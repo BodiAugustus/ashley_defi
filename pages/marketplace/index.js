@@ -8,12 +8,13 @@ import { CourseCard, CourseList } from "@components/ui/course"
 import { Button } from "@components/ui/common"
 import { OrderModal } from "@components/ui/order"
 import { useState } from "react"
+import useEthPrice from "@components/hooks/useEthPrice"
 
 export default function Marketplace({courses}) {
     const { account } = useAccount() // passes in active user accnt
     const { network} = useNetwork() // passes in active user network
     const [selectedCourse, setSelectedCourse] = useState(null)
-    console.log(network.data);
+
 
     return (
       <div>
