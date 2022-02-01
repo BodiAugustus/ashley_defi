@@ -2,6 +2,7 @@ import Image from 'next/image'
 import {FaBars, FaTwitter, FaLinkedin, FaGithub} from 'react-icons/fa'
 import { links, socials } from '@components/data/data'
 import { useEffect, useRef, useState } from 'react'
+import { ActiveLink } from '..'
 
 
 const Navbar = () => {

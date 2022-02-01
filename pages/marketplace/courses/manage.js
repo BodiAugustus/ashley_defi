@@ -7,7 +7,9 @@ import { MarketHeader } from "@components/ui/marketplace"
 const ManageCourses = () => {
     return(
         <>
-            <MarketHeader/>
+            <div className="fit pb-4">
+                <MarketHeader/>
+            </div>
             <section className="grid grid-cols-1">
                 <OwnedCourseCard/>
             </section>

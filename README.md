@@ -140,3 +140,5 @@
 #70. Created courses folder inside of marketplace folder. Created manage.js and owned.js inside courses folder. Set up initial pages. Changed name of CourseCard to OwnedCourseCard and created a new file of the same name inside ui/course/card. Updated index, deleted old card folder and file contents. Made work as before.
 
 #71. Created links array of objects inside the header component, passed as a prop into breadcrumbs for use there. Mapped over the links inside of breadcrumbs.
+
+#72. Created link folder inside of components/common. Created index.js inside of that. Created an ActiveLink wrapper to wrap around anchor tag elements in order to add additional styling and other props. Imported useRouter to compare path name with link href. Created active link for breadCrumbs component.
