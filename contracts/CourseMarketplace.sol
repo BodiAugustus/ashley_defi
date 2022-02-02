@@ -23,6 +23,12 @@ contract CourseMarketplace {
 
     uint private totalOwnedCourses;
 
+    address payable private owner;
+
+    constructor(){
+        setContractOwner(msg.sender);
+    }
+
     /// Course has already been purchased!
     error CourseHasOwner();
 
@@ -36,7 +42,9 @@ contract CourseMarketplace {
         }
 
         uint id = totalOwnedCourses++;
+
         ownedCourseHash[id] = courseHash; // returns the courseHash for  specific index of the ownedCourseHash mapping.
+
         ownedCourses[courseHash] = Course({ //Creates a Course struct for each courseHash used inside of ownedCourses.
             id: id,
             price: msg.value,
@@ -60,7 +68,13 @@ contract CourseMarketplace {
         return ownedCourses[courseHash];
     }
 
-    // if course owner is same as msg.sender then it means sender already owns the course so it cannot be repurchased.
+    function setContractOwner(address newOwner) private {
+        owner = payable(newOwner);
+        owner.transfer(10);
+        
+    }
+
+    // if course owner is same as msg.sender then it means sender already owns the course so it cannot be repurchased - reverts TX to error.
     function hasCourseOwnership(bytes32 courseHash) private view returns(bool) {
         return ownedCourses[courseHash].owner == msg.sender;
     }
