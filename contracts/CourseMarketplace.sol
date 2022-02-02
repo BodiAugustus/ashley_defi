@@ -32,8 +32,18 @@ contract CourseMarketplace {
     /// Course has already been purchased!
     error CourseHasOwner();
 
+    /// Only owner has an access!
+    error OnlyOwner();
+
+    modifier onlyOwner() {
+        if(msg.sender != getContractOwner()){
+            revert OnlyOwner();
+        }
+        _;
+    }
+
     //courseHash constructed first when purchaseCourse is called. totalOwnedCourses then is iniatiated starting at index 0. In ownedCourseHash mapping at the index 0 the first courseHash is assigned. In the mapping of ownedCourses, the courseHash is used to map there the courses data (id, price proof, ect). So when you access courseHash, course data is accessed.
-    function purchaseCourse(bytes16 courseId, bytes32 proof) external payable returns(bytes32){
+    function purchaseCourse(bytes16 courseId, bytes32 proof) external payable {
         bytes32 courseHash = keccak256(abi.encodePacked(courseId, msg.sender)); // used in mapping
 
         // This error calls if owner tries to purchase same course multiple times
@@ -54,6 +64,10 @@ contract CourseMarketplace {
         });
     }
 
+    function transferOwnership(address newOwner) external onlyOwner {
+        setContractOwner(newOwner);
+    }
+
     function getCourseCount() external view returns(uint){
         return totalOwnedCourses;
     }
@@ -64,13 +78,17 @@ contract CourseMarketplace {
     }
 
     // accepts courseHash as param to retrieve Course struct
-    function getCourseHashByHash(bytes32 courseHash) external view returns(Course memory){
+    function getCourseByHash(bytes32 courseHash) external view returns(Course memory){
         return ownedCourses[courseHash];
+    }
+
+    function getContractOwner() public view returns(address) {
+        return owner;
     }
 
     function setContractOwner(address newOwner) private {
         owner = payable(newOwner);
-        owner.transfer(10);
+        
         
     }
 

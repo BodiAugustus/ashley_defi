@@ -172,3 +172,5 @@
 #86. Current setup has bug where repeat transactions of same product result in identicle courseHash's which prevents new courseHash's from being mapped - so even though shows multiple purchases, there is only one bc only one courseHash was created for each identicle purchase TX. Getting the course by hash returns the last indexed course as the previous course's ID is being overwritten. To fix a check was added to see if the course has already been created before the totalOwnedCourses is incremented. To do this created private helper function, hasCourseOwnership. Created courseHasOwner error.
 
 #87. Set up owner of contract using a constructor. Created setContractOwner().
+
+#88. Created getContractOwner(). Created transferOwnership(). Created onlyOwner() modifier and OnlyOwner error, added modifier t transferOwnership function.
