@@ -11,8 +11,9 @@ export const handler = (web3, contract) => (courses, account) => {
 
     const swrRes = useSWR(() => 
 
-    //must have all 3 true to call the function otherwise null
-        (web3 && contract && account) ? "web3/ownedCourses" : null,
+    //must have all 3 true to call the function otherwise null.
+    // the identifier being unique allows auto updates to my courses whenever meta account changed
+        (web3 && contract && account) ? `web3/ownedCourses/${account}` : null,
         async () => {
             const ownedCourses = []
 
@@ -42,7 +43,7 @@ export const handler = (web3, contract) => (courses, account) => {
                     ownedCourses.push(normalized)
                 }
             }
-            debugger
+            // debugger
 
             //returns the array
             return ownedCourses

@@ -17,15 +17,21 @@ const OwnedCourses = ({courses}) => {
                 <MarketHeader/>
             </div>
             <section className="grid grid-cols-1">
-            <OwnedCourseCard>
-            <Message type="success"> 
-                My custom message!
-            </Message>
+            { ownedCourses.data?.map(course => 
+            <OwnedCourseCard
+            key={course.id}
+            course={course}
+            >
+                {/* <Message type="success"> 
+                    My custom message!
+                </Message> */}
 
                 <Button>
-            Watch the course
-          </Button>
-        </OwnedCourseCard>
+                    Watch the course
+                </Button>
+            </OwnedCourseCard>
+            )}
+
             </section>
         </>
     )
