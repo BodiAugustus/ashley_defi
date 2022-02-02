@@ -180,3 +180,5 @@
 #90. Confirmed TruffleContract was loaded in the console. Tested network - truffle contract is very large. Created js folder in public folder. Created truffle-contract.js there. Copied node modules/truffle/contract/dist/minified version into the truffle-contract.js file. Brought in the new library using Script inside the baselayout file. Reworked the loadContract file to run via the Script. New method still passes too large of a file across the network.
 
 #91. Removed Script method of loading truffle-contracts. Uninstalled @truffle/contract. Created new loadContract functionality to load the contract via web3. Added new env variable. Used web3 instead of provider in the contract method of provider useEffect. Successfully loaded contract.
+
+#92. Setup purchaseCourse functionality inside marketplace/index. Successfully console logged values.

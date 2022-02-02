@@ -9,7 +9,7 @@ import { useAccount } from "@components/hooks/web3"
 const Hero = () => {
 const { connect, isLoading, requireInstall } = useWeb3() // Brings in these 3 properties from _web3Api using the provider context (useWeb3) -- connect opens MetaMask
 const { account } = useAccount()
-console.log(account.data);
+// console.log(account.data);
 
 
 

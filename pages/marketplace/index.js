@@ -7,14 +7,36 @@ import { Button } from "@components/ui/common"
 import { OrderModal } from "@components/ui/order"
 import { useState } from "react"
 import { MarketHeader } from "@components/ui/marketplace"
+import { useWeb3 } from "@components/providers"
 
 export default function Marketplace({courses}) {
     //  const { account, network, canPurchaseCourse} = useWalletInfo() // passes in active user network and account
-    const {canPurchaseCourse} = useWalletInfo()
+    const {canPurchaseCourse, account} = useWalletInfo()
     const [selectedCourse, setSelectedCourse] = useState(null)
 
+    const { web3 } = useWeb3()
+    
+
     const purchaseCourse = (order) => { //passes order into Modal component
-      alert(JSON.stringify(order))
+      const hexCourseId = web3.utils.utf8ToHex(selectedCourse.id) //gets selected course id in hex format
+      // console.log(hexCourseId);
+      const orderHash = web3.utils.soliditySha3(
+        {type: "bytes16", value: hexCourseId},
+        {type: "address", value: account.data}
+
+      )
+        // console.log(orderHash);
+        //hashes email
+        const emailHash = web3.utils.sha3(order.email)
+        
+        // console.log(emailHash);
+        
+        // emailHash + courseHash = proof
+      const proof = web3.utils.soliditySha3(
+        { type: "bytes32", value: emailHash},
+        { type: "bytes32", value: orderHash},
+      )
+      // console.log(proof);
     }
  
     return (
