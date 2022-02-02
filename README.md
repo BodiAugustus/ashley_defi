@@ -160,3 +160,5 @@
 #80. Created loader folder inside ui/common. Created index.js. Created Loader component. Used spinkit to bring in css spinner. Refactored and mapped over. Displayed loader to UI.
 
 #81. Changed global.css settings for loader, manipulated through classes to create various size loaders. Styled and finished setting up Loader component.
+
+#82. Ran truffle init. Setup truffle.config. Created CourseMarketplace.sol inside of contracts. Began setting up CourseMarketplace contract.
