@@ -182,3 +182,5 @@
 #91. Removed Script method of loading truffle-contracts. Uninstalled @truffle/contract. Created new loadContract functionality to load the contract via web3. Added new env variable. Used web3 instead of provider in the contract method of provider useEffect. Successfully loaded contract.
 
 #92. Setup purchaseCourse functionality inside marketplace/index. Successfully console logged values.
+
+#93. Continued setting up purchaseCourse. Successfully transacted a TX through metamask into the contract via Ganache. 

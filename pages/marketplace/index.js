@@ -14,10 +14,10 @@ export default function Marketplace({courses}) {
     const {canPurchaseCourse, account} = useWalletInfo()
     const [selectedCourse, setSelectedCourse] = useState(null)
 
-    const { web3 } = useWeb3()
+    const { web3, contract } = useWeb3()
     
-
-    const purchaseCourse = (order) => { //passes order into Modal component
+    // Calling this causes metamask to open in the browser
+    const purchaseCourse = async (order) => { //passes order into Modal component
       const hexCourseId = web3.utils.utf8ToHex(selectedCourse.id) //gets selected course id in hex format
       // console.log(hexCourseId);
       const orderHash = web3.utils.soliditySha3(
@@ -26,7 +26,7 @@ export default function Marketplace({courses}) {
 
       )
         // console.log(orderHash);
-        //hashes email
+        // this hashes the email
         const emailHash = web3.utils.sha3(order.email)
         
         // console.log(emailHash);
@@ -37,6 +37,18 @@ export default function Marketplace({courses}) {
         { type: "bytes32", value: orderHash},
       )
       // console.log(proof);
+      
+      const value = web3.utils.toWei(String(order.price))
+
+      try {
+        const result = await contract.methods.purchaseCourse(
+          hexCourseId,
+          proof
+        ).send({from: account.data, value})
+        console.log(result);
+      } catch (error) {
+        console.error("Purchase course: Operation has failed!");
+      }
     }
  
     return (
