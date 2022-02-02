@@ -149,4 +149,10 @@
 
 #75. Set up email form functionality using onChange. Setup onClick on the submit button to allow modal submission with alert of submitted data.
 
-#76. Setup createFormState and its helper function _createFormState to handle modal form data validations. Disabled submit button when validations not passing, displayed UI error message when invalid submits attempted.
+#76. Setup createFormState and its helper function _createFormState to handle modal form data validations. Disabled submit button when validations not passing, displayed UI error message when invalid inputs attempted.
+
+#77. Setup new useState hasAgreedTOS. Passed through createFormState and added check for it. Added onChange to checkbox input with new check/state value. Added onSubmit prop to OrderModal component in market. Created purchaseCourse function to receive the order and alert the json data. Passed in onSubmit into OrderModal component.
+
+#78. Reconstructed the OwnerCourseCard component. Created filter folder inside of ui/course. Created index.js inside of there. Moved inputs from manage/owner courses into this file.
+
+#79. Created message folder inside common folder. Created index.js. Constucted Message component for UI display in owned courses. Finished Message component.

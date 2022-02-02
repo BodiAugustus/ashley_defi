@@ -11,7 +11,7 @@ const defaultOrder = {
 
 const _createFormState = (isDisabled = false, message = "") => ({isDisabled, message})
 
-const createFormState = ({price, email, confirmationEmail}) => { 
+const createFormState = ({price, email, confirmationEmail}, hasAgreedTOS) => { 
   if(!price || Number(price) <= 0 ){
     return _createFormState(true, "Price is not valid!")
   }
@@ -21,15 +21,19 @@ const createFormState = ({price, email, confirmationEmail}) => {
   else if(email !== confirmationEmail){
     return _createFormState(true, "Emails are not matching.")
   }
+  else if(!hasAgreedTOS){
+    return _createFormState(true, "You must accept the terms & conditions to subit the form.")
+  }
 
   return _createFormState()
 
 }
 
-const OrderModal = ({course, onClose}) => {     //When orderModal receives course data then we open the modal with that course info
+const OrderModal = ({course, onClose, onSubmit}) => {     //When orderModal receives course data then we open the modal with that course info
     const [isOpen, setIsOpen] = useState(false)
     const [order, setOrder] = useState(defaultOrder)
     const [enablePrice, setEnablePrice] = useState(false) // for the modal checkbox
+    const [hasAgreedTOS, setHasAgreedTOS] = useState(false) // for TOS checkbox in modal
 
     const { eth } = useEthPrice()
 
@@ -47,10 +51,12 @@ const OrderModal = ({course, onClose}) => {     //When orderModal receives cours
     const closeModal = () => {
         setIsOpen(false)
         setOrder(defaultOrder)
+        setEnablePrice(false)
+        setHasAgreedTOS(false)
         onClose()
     }
 
-    const formState = createFormState(order) //gives us isDisabled and message properties
+    const formState = createFormState(order, hasAgreedTOS) //gives us isDisabled and message properties
 
     return(
         <Modal isOpen={isOpen}>
@@ -141,6 +147,10 @@ const OrderModal = ({course, onClose}) => {     //When orderModal receives cours
               <div className="text-xs text-gray-700 flex">
                 <label className="flex items-center mr-2">
                   <input
+                    checked={hasAgreedTOS}
+                    onChange={({target: {checked}}) => {
+                      setHasAgreedTOS(checked)
+                    }}
                     type="checkbox"
                     className="form-checkbox" />
                 </label>
@@ -148,7 +158,7 @@ const OrderModal = ({course, onClose}) => {     //When orderModal receives cours
               </div>
               {
                 formState.message &&
-                <div className="p-4 my-3 text-red-700 bg-red-200 rounded-lg text-sm">
+                <div className="p-4 my-3 text-yellow-700 bg-yellow-200 rounded-lg text-sm">
                   { formState.message }
                 </div>
               }
@@ -159,7 +169,7 @@ const OrderModal = ({course, onClose}) => {     //When orderModal receives cours
           <Button 
             disabled={formState.isDisabled}
             onClick={() => {
-            alert(JSON.stringify(order))
+            onSubmit(order)
           }}>
             Submit
           </Button>

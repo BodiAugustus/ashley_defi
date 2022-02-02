@@ -12,6 +12,10 @@ export default function Marketplace({courses}) {
     //  const { account, network, canPurchaseCourse} = useWalletInfo() // passes in active user network and account
     const {canPurchaseCourse} = useWalletInfo()
     const [selectedCourse, setSelectedCourse] = useState(null)
+
+    const purchaseCourse = (order) => { //passes order into Modal component
+      alert(JSON.stringify(order))
+    }
  
     return (
       <div>
@@ -44,7 +48,10 @@ export default function Marketplace({courses}) {
                 </CourseList>
                 {
                   selectedCourse &&
-                <OrderModal course={selectedCourse}
+                <OrderModal 
+
+                  course={selectedCourse}
+                  onSubmit={purchaseCourse}
                   onClose={() => setSelectedCourse(null)}
                 /> 
                 }{/*This gets the selected course from the button click passed as a prop to ordermodal so the modal opens for the correct course. onClose was added to pass the null value to OrderModal so that the value is reset to null on modal close in order to allow useEffect to fire even when the same purchase button is clicked twice */}             
