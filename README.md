@@ -158,3 +158,5 @@
 #79. Created message folder inside common folder. Created index.js. Constucted Message component for UI display in owned courses. Finished Message component.
 
 #80. Created loader folder inside ui/common. Created index.js. Created Loader component. Used spinkit to bring in css spinner. Refactored and mapped over. Displayed loader to UI.
+
+#81. Changed global.css settings for loader, manipulated through classes to create various size loaders. Styled and finished setting up Loader component.
