@@ -176,3 +176,5 @@
 #88. Created getContractOwner(). Created transferOwnership(). Created onlyOwner() modifier and OnlyOwner error, added modifier t transferOwnership function.
 
 #89. Ran truffle migrate --reset. Created utils folder in root directory. Created loadContract.js inside of that. Added utils folder to jsconfig.json file. Ran npm i @truffle/contract. Built out loadContract.js. Added contract to provider and updated setWeb3Api.
+
+#90. Confirmed TruffleContract was loaded in the console. Tested network - truffle contract is very large. Created js folder in public folder. Created truffle-contract.js there. Copied node modules/truffle/contract/dist/minified version into the truffle-contract.js file. Brought in the new library using Script inside the baselayout file. Reworked the loadContract file to run via the Script. New method still passes too large of a file across the network.
