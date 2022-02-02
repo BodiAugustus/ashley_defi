@@ -23,7 +23,7 @@ export default function Web3Provider({children}) {
             const provider = await detectEthereumProvider() // Gets us a provider. So we keep a state above.
             if(provider){
                 const web3 = new Web3(provider) // Creates new instance of Web3 once we have a provider
-                const contract = await loadContract("CourseMarketplace", provider)
+                const contract = await loadContract("CourseMarketplace", web3)
                 console.log(contract);
                 setWeb3Api({ // Updates the state values 
                     provider,
