@@ -2,6 +2,7 @@
 // we use contract bc through contract we will be calling the functions
 
 import useSWR from "swr"
+import normalizeOwnedCourse from "utils/normalize"
 
 //courses and account are brought in from hooks/web3/index at useOwnedCourses (...args)
 export const handler = (web3, contract) => (courses, account) => {
@@ -37,11 +38,13 @@ export const handler = (web3, contract) => (courses, account) => {
                 //if ownedCourse.owner does not equal 0x00... then it means the course is owned and only then do we add it to the ownedCourses array. 
                 if (ownedCourse.owner !== "0x0000000000000000000000000000000000000000"){
                     // debugger
-                    ownedCourses.push(ownedCourse)
+                    const normalized = normalizeOwnedCourse(web3)(course, ownedCourse)
+                    ownedCourses.push(normalized)
                 }
             }
-            // debugger
+            debugger
 
+            //returns the array
             return ownedCourses
         }
     )
