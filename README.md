@@ -156,3 +156,5 @@
 #78. Reconstructed the OwnerCourseCard component. Created filter folder inside of ui/course. Created index.js inside of there. Moved inputs from manage/owner courses into this file.
 
 #79. Created message folder inside common folder. Created index.js. Constucted Message component for UI display in owned courses. Finished Message component.
+
+#80. Created loader folder inside ui/common. Created index.js. Created Loader component. Used spinkit to bring in css spinner. Refactored and mapped over. Displayed loader to UI.
