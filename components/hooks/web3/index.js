@@ -23,12 +23,12 @@ export const useAccount = () => {
         account: swrResponse
     }
 }
-
-export const useOwnedCourses = () => {
-    const res = useHooks((hooks) => hooks.useOwnedCourses)()
+// ...args brings all the parameters in like courses and eventually passes them into the hook function where they can be used.
+export const useOwnedCourses = (...args) => {
+    const swrRes = useHooks((hooks) => hooks.useOwnedCourses)(...args)
 
     return {
-        ownedCourses: { data: res }
+        ownedCourses: swrRes
     }
 
 }

@@ -188,3 +188,5 @@
 #94. Created useOwnedCourses.js inside of prov/web3/hooks. Created handler to receive web3/contract and return a new hook function. Added to setupHooks file which sets the hook up by adding the dependencies. setupHooks calls the hook. Successfully displayed message to UI. Changed how setupHooks dependencies are called into an object in the provider and setupHooks files.
 
 #95. Refactored out setupHooks is retrieving data. Created helper function createWeb3State. Upgraded the useState for web3Api inside the provider file. Made all working as before.
+
+#96. Added a getStaticProps to marketplace/courses. Passed courses as prop to OwnedCourses. Console logged user account and owned courses array of objects successfully in manage courses. Finished building out handler for useOwnedCourses using useSWR. Successfully displayed courseId's to UI on MyCourses.

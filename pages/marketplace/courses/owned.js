@@ -2,16 +2,17 @@ import { OwnedCourseCard } from "@components/ui/course"
 import { BaseLayout } from "@components/ui/layout"
 import { MarketHeader } from "@components/ui/marketplace"
 import { Button, Message } from "@components/ui/common"
-import { useOwnedCourses } from "@components/hooks/web3"
+import { useAccount, useOwnedCourses } from "@components/hooks/web3"
+import { getAllCourses } from "@content/courses/fetcher"
 
 
 
-const OwnedCourses = () => {
-
-    const { ownedCourses } = useOwnedCourses()
+const OwnedCourses = ({courses}) => {
+        const { account } = useAccount()
+    const { ownedCourses } = useOwnedCourses(courses, account.data)
     return(
         <>
-            { ownedCourses.data}
+            {JSON.stringify( ownedCourses?.data)}
             <div className="fit pb-4">
                 <MarketHeader/>
             </div>
@@ -29,6 +30,15 @@ const OwnedCourses = () => {
         </>
     )
 }
+
+export function getStaticProps(){ // to fetch data 
+    const { data } = getAllCourses() // Gets the products data from the JSON file
+    return {
+      props: {
+        courses: data // data from JSON
+      }
+    }
+  }
 
 OwnedCourses.Layout = BaseLayout
 
