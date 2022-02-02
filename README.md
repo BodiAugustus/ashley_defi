@@ -174,3 +174,5 @@
 #87. Set up owner of contract using a constructor. Created setContractOwner().
 
 #88. Created getContractOwner(). Created transferOwnership(). Created onlyOwner() modifier and OnlyOwner error, added modifier t transferOwnership function.
+
+#89. Ran truffle migrate --reset. Created utils folder in root directory. Created loadContract.js inside of that. Added utils folder to jsconfig.json file. Ran npm i @truffle/contract. Built out loadContract.js. Added contract to provider and updated setWeb3Api.
