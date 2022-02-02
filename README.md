@@ -190,3 +190,5 @@
 #95. Refactored out setupHooks is retrieving data. Created helper function createWeb3State. Upgraded the useState for web3Api inside the provider file. Made all working as before.
 
 #96. Added a getStaticProps to marketplace/courses. Passed courses as prop to OwnedCourses. Console logged user account and owned courses array of objects successfully in manage courses. Finished building out handler for useOwnedCourses using useSWR. Successfully displayed courseId's to UI on MyCourses.
+
+#97. Continued building out handler function to allow courseHAsh retrieval from blockchain. Wrapped useOWnedCourses inside of enhanceHook.

@@ -25,7 +25,7 @@ export const useAccount = () => {
 }
 // ...args brings all the parameters in like courses and eventually passes them into the hook function where they can be used.
 export const useOwnedCourses = (...args) => {
-    const swrRes = useHooks((hooks) => hooks.useOwnedCourses)(...args)
+    const swrRes = enhanceHook(useHooks((hooks) => hooks.useOwnedCourses)(...args))
 
     return {
         ownedCourses: swrRes

@@ -12,7 +12,7 @@ const OwnedCourses = ({courses}) => {
     const { ownedCourses } = useOwnedCourses(courses, account.data)
     return(
         <>
-            {JSON.stringify( ownedCourses?.data)}
+            {/* {JSON.stringify( ownedCourses?.data)} */}
             <div className="fit pb-4">
                 <MarketHeader/>
             </div>
