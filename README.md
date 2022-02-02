@@ -162,3 +162,5 @@
 #81. Changed global.css settings for loader, manipulated through classes to create various size loaders. Styled and finished setting up Loader component.
 
 #82. Ran truffle init. Setup truffle.config. Created CourseMarketplace.sol inside of contracts. Began setting up CourseMarketplace contract.
+
+#83. Created 2_marketplace_migration.js inside migrations folder. c&p from initial migration. Changed values as needed. Ran truffle migrate. Connected to Ganache.

@@ -1,0 +1,482 @@
+{
+  "contractName": "CourseMarketplace",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/CourseMarketplace.sol\":\"CourseMarketplace\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/CourseMarketplace.sol\":{\"keccak256\":\"0x1ace7be5b228ff7fafc790906504806ad92d2910f3667068682d41b7160da486\",\"urls\":[\"bzz-raw://523df069d40ae1aeb32010c442aca7f5d75ba61e222d76cd513321838239986f\",\"dweb:/ipfs/QmaxDZZ6LcUdgW58H3npJSsStDik3bjjfwDbamrEMH1qEG\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a72315820377b0ce5256ca4b452e140b753ecca23210cccf8238e6ad55d2b2cdc17828af464736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a72315820377b0ce5256ca4b452e140b753ecca23210cccf8238e6ad55d2b2cdc17828af464736f6c63430005100032",
+  "sourceMap": "69:310:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;69:310:0;;;;;;;",
+  "deployedSourceMap": "69:310:0:-;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.4.22 <0.9.0;\r\n\r\ncontract CourseMarketplace {\r\n\r\n    enum State {\r\n        Purchased, \r\n        Activated,\r\n        Deactivated\r\n    }\r\n\r\n    struct Course {\r\n        uint id; //32\r\n        uint price; //32\r\n        bytes32 proof; //special constructed value 32\r\n        address owner; //20\r\n        State state; // 1\r\n    }\r\n}\r\n",
+  "sourcePath": "C:\\Users\\bodiA\\Desktop\\Ashley\\contracts\\CourseMarketplace.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/CourseMarketplace.sol",
+    "exportedSymbols": {
+      "CourseMarketplace": [
+        17
+      ]
+    },
+    "id": 18,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:32:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 17,
+        "linearizedBaseContracts": [
+          17
+        ],
+        "name": "CourseMarketplace",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "CourseMarketplace.State",
+            "id": 5,
+            "members": [
+              {
+                "id": 2,
+                "name": "Purchased",
+                "nodeType": "EnumValue",
+                "src": "127:9:0"
+              },
+              {
+                "id": 3,
+                "name": "Activated",
+                "nodeType": "EnumValue",
+                "src": "148:9:0"
+              },
+              {
+                "id": 4,
+                "name": "Deactivated",
+                "nodeType": "EnumValue",
+                "src": "168:11:0"
+              }
+            ],
+            "name": "State",
+            "nodeType": "EnumDefinition",
+            "src": "105:81:0"
+          },
+          {
+            "canonicalName": "CourseMarketplace.Course",
+            "id": 16,
+            "members": [
+              {
+                "constant": false,
+                "id": 7,
+                "name": "id",
+                "nodeType": "VariableDeclaration",
+                "scope": 16,
+                "src": "219:7:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "219:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9,
+                "name": "price",
+                "nodeType": "VariableDeclaration",
+                "scope": 16,
+                "src": "242:10:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 8,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "242:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 11,
+                "name": "proof",
+                "nodeType": "VariableDeclaration",
+                "scope": 16,
+                "src": "268:13:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 10,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "268:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13,
+                "name": "owner",
+                "nodeType": "VariableDeclaration",
+                "scope": 16,
+                "src": "323:13:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 12,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "323:7:0",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 15,
+                "name": "state",
+                "nodeType": "VariableDeclaration",
+                "scope": 16,
+                "src": "352:11:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_State_$5",
+                  "typeString": "enum CourseMarketplace.State"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 14,
+                  "name": "State",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 5,
+                  "src": "352:5:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_State_$5",
+                    "typeString": "enum CourseMarketplace.State"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Course",
+            "nodeType": "StructDefinition",
+            "scope": 17,
+            "src": "194:182:0",
+            "visibility": "public"
+          }
+        ],
+        "scope": 18,
+        "src": "69:310:0"
+      }
+    ],
+    "src": "33:348:0"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/CourseMarketplace.sol",
+      "exportedSymbols": {
+        "CourseMarketplace": [
+          17
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".22",
+            "<",
+            "0.9",
+            ".0"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "33:32:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            17
+          ],
+          "name": "CourseMarketplace",
+          "scope": 18
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "CourseMarketplace.State",
+              "name": "State"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "Purchased"
+                },
+                "id": 2,
+                "name": "EnumValue",
+                "src": "127:9:0"
+              },
+              {
+                "attributes": {
+                  "name": "Activated"
+                },
+                "id": 3,
+                "name": "EnumValue",
+                "src": "148:9:0"
+              },
+              {
+                "attributes": {
+                  "name": "Deactivated"
+                },
+                "id": 4,
+                "name": "EnumValue",
+                "src": "168:11:0"
+              }
+            ],
+            "id": 5,
+            "name": "EnumDefinition",
+            "src": "105:81:0"
+          },
+          {
+            "attributes": {
+              "canonicalName": "CourseMarketplace.Course",
+              "name": "Course",
+              "scope": 17,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "id",
+                  "scope": 16,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 6,
+                    "name": "ElementaryTypeName",
+                    "src": "219:4:0"
+                  }
+                ],
+                "id": 7,
+                "name": "VariableDeclaration",
+                "src": "219:7:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "price",
+                  "scope": 16,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 8,
+                    "name": "ElementaryTypeName",
+                    "src": "242:4:0"
+                  }
+                ],
+                "id": 9,
+                "name": "VariableDeclaration",
+                "src": "242:10:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "proof",
+                  "scope": 16,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes32",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes32",
+                      "type": "bytes32"
+                    },
+                    "id": 10,
+                    "name": "ElementaryTypeName",
+                    "src": "268:7:0"
+                  }
+                ],
+                "id": 11,
+                "name": "VariableDeclaration",
+                "src": "268:13:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "owner",
+                  "scope": 16,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "address",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "stateMutability": "nonpayable",
+                      "type": "address"
+                    },
+                    "id": 12,
+                    "name": "ElementaryTypeName",
+                    "src": "323:7:0"
+                  }
+                ],
+                "id": 13,
+                "name": "VariableDeclaration",
+                "src": "323:13:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "state",
+                  "scope": 16,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "enum CourseMarketplace.State",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "State",
+                      "referencedDeclaration": 5,
+                      "type": "enum CourseMarketplace.State"
+                    },
+                    "id": 14,
+                    "name": "UserDefinedTypeName",
+                    "src": "352:5:0"
+                  }
+                ],
+                "id": 15,
+                "name": "VariableDeclaration",
+                "src": "352:11:0"
+              }
+            ],
+            "id": 16,
+            "name": "StructDefinition",
+            "src": "194:182:0"
+          }
+        ],
+        "id": 17,
+        "name": "ContractDefinition",
+        "src": "69:310:0"
+      }
+    ],
+    "id": 18,
+    "name": "SourceUnit",
+    "src": "33:348:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x2Ac0DfDd4fdC815b6590B5dF7e410c60bBE5e199",
+      "transactionHash": "0xf06288dff905d5598d6cfda229020b424a5eaf46e1131dff9ada96df601d1d20"
+    }
+  },
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-02-02T01:09:16.855Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
