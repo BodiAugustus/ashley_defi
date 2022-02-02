@@ -15,7 +15,7 @@ export default function Web3Provider({children}) {
         web3: null,
         contract: null,
         isLoading: true,
-        hooks: setupHooks() // Now setupHooks is only called initially and after web3Provider is loaded.
+        hooks: setupHooks({provider: null, web3: null, contract: null}) // Now setupHooks is only called initially and after web3Provider is loaded.
     })
 
     useEffect(() => { //Called once during page load
@@ -30,7 +30,7 @@ export default function Web3Provider({children}) {
                     web3,
                     contract,
                     isLoading: false,
-                    hooks: setupHooks(web3, provider)
+                    hooks: setupHooks({web3, provider, contract})
                 })
             }else{
                 setWeb3Api(rest => ({...rest, isLoading: false})) 

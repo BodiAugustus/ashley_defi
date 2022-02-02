@@ -2,12 +2,16 @@ import { OwnedCourseCard } from "@components/ui/course"
 import { BaseLayout } from "@components/ui/layout"
 import { MarketHeader } from "@components/ui/marketplace"
 import { Button, Message } from "@components/ui/common"
+import { useOwnedCourses } from "@components/hooks/web3"
 
 
 
 const OwnedCourses = () => {
+
+    const { ownedCourses } = useOwnedCourses()
     return(
         <>
+            { ownedCourses.data}
             <div className="fit pb-4">
                 <MarketHeader/>
             </div>
