@@ -168,3 +168,5 @@
 #84. Continued building CourseMarketplace SC. Created purchaseCourse(). Created two mappings and totlOwnedCourses.
 
 #85. Created getCourseCount, getCourseAtHashIndex and getCourseAtCourseHash getter functions. Successfully tested in Remix.
+
+#86. Current setup has bug where repeat transactions of same product result in identicle courseHash's which prevents new courseHash's from being mapped - so even though shows multiple purchases, there is only one bc only one courseHash was created for each identicle purchase TX. Getting the course by hash returns the last indexed course as the previous course's ID is being overwritten. To fix a check was added to see if the course has already been created before the totalOwnedCourses is incremented. To do this created private helper function, hasCourseOwnership. Created courseHasOwner error.
