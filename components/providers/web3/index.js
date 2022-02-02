@@ -9,14 +9,24 @@ import { setupHooks } from "./hooks/setupHooks";
 
 const Web3Context = createContext(null)
 
+//returns initial state of web3Api
+const createWeb3State = ({web3, provider, contract, isLoading}) => {
+    return {
+        web3,
+        provider,
+        contract,
+        isLoading,
+        hooks: setupHooks({web3, provider, contract}) // Now setupHooks is only called initially and after web3Provider is loaded.
+    }
+}
+
 export default function Web3Provider({children}) {
-    const [web3Api, setWeb3Api] = useState({ // Keeps state values we are interested in
-        provider: null,
+    const [web3Api, setWeb3Api] = useState(createWeb3State({
         web3: null,
+        provider: null,
         contract: null,
-        isLoading: true,
-        hooks: setupHooks({provider: null, web3: null, contract: null}) // Now setupHooks is only called initially and after web3Provider is loaded.
-    })
+        isLoading: true
+    }))
 
     useEffect(() => { //Called once during page load
         const loadProvider = async () => {
@@ -25,13 +35,12 @@ export default function Web3Provider({children}) {
                 const web3 = new Web3(provider) // Creates new instance of Web3 once we have a provider
                 const contract = await loadContract("CourseMarketplace", web3)
                 // console.log(contract);
-                setWeb3Api({ // Updates the state values 
-                    provider,
+                setWeb3Api(createWeb3State({
                     web3,
+                    provider,
                     contract,
-                    isLoading: false,
-                    hooks: setupHooks({web3, provider, contract})
-                })
+                    isLoading: false
+                }))
             }else{
                 setWeb3Api(rest => ({...rest, isLoading: false})) 
                 console.error("Please install MetaMask!");
