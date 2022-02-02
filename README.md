@@ -166,3 +166,5 @@
 #83. Created 2_marketplace_migration.js inside migrations folder. c&p from initial migration. Changed values as needed. Ran truffle migrate. Connected to Ganache.
 
 #84. Continued building CourseMarketplace SC. Created purchaseCourse(). Created two mappings and totlOwnedCourses.
+
+#85. Created getCourseCount, getCourseAtHashIndex and getCourseAtCourseHash getter functions. Successfully tested in Remix.
