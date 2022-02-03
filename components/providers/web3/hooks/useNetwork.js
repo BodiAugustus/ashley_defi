@@ -31,10 +31,21 @@ export const handler = (web3, provider) => () => {
     }
     )
 
-    useEffect(() => {
-        provider &&
-        provider.on("chainChanged", chainId => mutate(NETWORKS[parseInt(chainId,16)])) // updates UI on network change (chainChanged) which calls the chainId function using mutate. Returns as a hex decimal so must use ParseInt with the chain ID, 16 is signifying that the chainId number is hexadecimal based so it gets parsed to a number correctly.
-    },[web3])
+    // useEffect(() => {
+    //     provider &&
+    //     provider.on("chainChanged", chainId => mutate(NETWORKS[parseInt(chainId,16)])) // updates UI on network change (chainChanged) which calls the chainId function using mutate. Returns as a hex decimal so must use ParseInt with the chain ID, 16 is signifying that the chainId number is hexadecimal based so it gets parsed to a number correctly.
+    // },[web3])
+
+    useEffect(() => { //used to keep track of active meta account
+        const mutator = (chainId) => mutate(NETWORKS[parseInt(chainId,16)])
+        provider?.on("chainChanged",  mutator)//changes user Meta account on accnt change
+        // mutate reexecutes function and returns new data (the new account)
+
+        console.log(provider);
+        return () => {
+            provider?.removeListener("chainChanged", mutator)
+        }
+    }, [provider])
 
     return {
     

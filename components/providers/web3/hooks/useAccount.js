@@ -22,9 +22,12 @@ export const handler = (web3, provider) => () => { // This is a function that ca
     )
 
     useEffect(() => { //used to keep track of active meta account
-        provider &&
-        provider.on("accountsChanged",  //changes user Meta account on accnt change
-        (accounts) => mutate(accounts[0] ?? null)) // mutate reexecutes function and returns new data (the new account)
+        const mutator = (accounts) => mutate(accounts[0] ?? null) 
+        provider?.on("accountsChanged",  mutator)//changes user Meta account on accnt change
+        // mutate reexecutes function and returns new data (the new account)
+        return () => {
+            provider?.removeListener("accountsChanged", mutator)
+        }
     }, [provider])
 
     return { 

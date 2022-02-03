@@ -216,3 +216,5 @@
 #108. Added an error check to useAccount to check for undefined account return which was preventing UI message in owned.js from displaying. Added same check to useNetwork. 
 
 #109. Created hash.js inside of utils folder. Combined hexCourseId functionality from useOwnedCourses/s into one resuable function. Redistributed back to useOwnedCourses/s. Made all working as before. 
+
+#110. Current useEffect method of subscribing to events results in way too many function calls. Refactored to reduce in the useAccount and useNetwork useEffects. Tested for reduction in callbacks, successful.
