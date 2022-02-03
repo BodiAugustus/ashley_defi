@@ -34,6 +34,12 @@ contract CourseMarketplace {
  
     /// Only owner has an access!
     error OnlyOwner();
+
+    /// Course has invalid state!
+    error InvalidState();
+
+    /// Course is not created!
+    error CourseIsNotCreated();
  
     modifier onlyOwner() {
         if(msg.sender != getContractOwner()){
@@ -63,6 +69,21 @@ contract CourseMarketplace {
             state: State.Purchased
         });
     }
+
+    function activateCourse(bytes32 courseHash) external onlyOwner {
+        if (!isCourseCreated(courseHash)){
+            revert CourseIsNotCreated();
+        }
+        //storage updates the changes, memory does not. If we make it here, it means we do have a course and we are getting from storage.
+        Course storage course = ownedCourses[courseHash];
+
+        //Course has to be in purchased state to be able to get activated so if not in purchased state then revert.
+        if(course.state != State.Purchased){
+            revert InvalidState();
+        }
+        //if all else goes well, the course state is finally changed to activated
+        course.state = State.Activated;
+    }
  
     function transferOwnership(address newOwner) external onlyOwner {
         setContractOwner(newOwner);
@@ -87,9 +108,13 @@ contract CourseMarketplace {
     }
  
     function setContractOwner(address newOwner) private {
-        owner = payable(newOwner);
-       
-       
+        owner = payable(newOwner);       
+    }
+
+    // this is a helper function for activateCourse function
+    function isCourseCreated(bytes32 courseHash) private view returns (bool) {
+        //If owner is not equal to 0 address then returns true which means course IS created
+        return ownedCourses[courseHash].owner != 0x0000000000000000000000000000000000000000;
     }
  
     // if course owner is same as msg.sender then it means sender already owns the course so it cannot be repurchased - reverts TX to error.

@@ -234,3 +234,5 @@
 #117. Created VerificationInput component to fix bug of all inputs having same email field values. Disabled manage courses data fetching for non-admin accounts.
 
 #118. Created new administrator function to retrieve accounts and check for admin, if not, then redirect. Created useAdmin function in web3/index.js. Hid managecourse breadcrumb. Created BreadCrumbItem function inside breadcrumbs.
+
+#119. Created activateCourse function inside CourseMarketplace.sol. Created isCourseCreated helper function and two errors.
