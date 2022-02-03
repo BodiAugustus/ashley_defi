@@ -226,3 +226,5 @@
 #113. Setup functonality of useManagedCOurses to fetch purchased course data from SC. Successfully returned owned courses data to console.
 
 #114. Displayed managed courses to UI. To do this created Managed.js inside card folder. c&p from OwnedCourseCard. Refactored to suit new purpose. Imported ManagedCourseCard component into manage.js for display. Styled ManagedCourseCard further.
+
+#115. Continued building out/styling ManagedCourseCard component. Created verifyCourse inside of managed.js. Setup verify button functonality. Console logged the email, hash and proof successfully.
