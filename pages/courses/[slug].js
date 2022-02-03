@@ -4,6 +4,7 @@ import { getAllCourses } from "@content/courses/fetcher"
 import { CourseHero, Curriculum, KeyPoints } from "@components/ui/course"
 import { Message, Modal } from "@components/ui/common"
 import { useAccount, useOwnedCourse } from "@components/hooks/web3"
+import { useWeb3 } from "@components/providers"
 
 
 
@@ -14,8 +15,12 @@ export default function Course({course}) {
   // console.log(ownedCourse);
   const courseState = ownedCourse?.data?.state
   // const courseState = "deactivated"
+  const { isLoading } = useWeb3()
 
-  const isLocked = courseState === "purchased" ||
+  //For curriculum 
+  const isLocked = 
+  !courseState ||
+  courseState === "purchased" ||
   courseState === "deactivated"
 
     return (
@@ -60,7 +65,9 @@ export default function Course({course}) {
             </div>          
             }
 
-            <Curriculum locked={isLocked}
+            <Curriculum 
+              isLoading={isLoading}
+              locked={isLocked}
               courseState={courseState}
 
             />

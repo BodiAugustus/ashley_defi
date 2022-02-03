@@ -218,3 +218,5 @@
 #109. Created hash.js inside of utils folder. Combined hexCourseId functionality from useOwnedCourses/s into one resuable function. Redistributed back to useOwnedCourses/s. Made all working as before. 
 
 #110. Current useEffect method of subscribing to events results in way too many function calls. Refactored to reduce in the useAccount and useNetwork useEffects. Tested for reduction in callbacks, successful.
+
+#111. Bug exist where non signed in meta user has unlocked access to Curriculum content. Fixed by updating isLocked in slug page.
