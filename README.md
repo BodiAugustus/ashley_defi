@@ -240,3 +240,5 @@
 #120. Created courseMarketplace.test.js file inside of test folder. Began setting up test file to run test on SC functions. Ran truffle test. Successful. 
 
 #121. Created more test for purchasing a new course. Test passed.
+
+#122. Created more testing for purchasing a new course. Tests passed.
