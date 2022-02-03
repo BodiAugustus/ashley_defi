@@ -238,3 +238,5 @@
 #119. Created activateCourse function inside CourseMarketplace.sol. Created isCourseCreated helper function and two errors.
 
 #120. Created courseMarketplace.test.js file inside of test folder. Began setting up test file to run test on SC functions. Ran truffle test. Successful. 
+
+#121. Created more test for purchasing a new course. Test passed.
