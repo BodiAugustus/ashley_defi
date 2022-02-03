@@ -1,12 +1,18 @@
 import { CourseFilter, OwnedCourseCard } from "@components/ui/course"
 import { BaseLayout } from "@components/ui/layout"
 import { MarketHeader } from "@components/ui/marketplace"
+import Head from "next/head"
 
 import { Button } from "@components/ui/common"
 
 const ManageCourses = () => {
     return(
         <>
+            <Head>
+            <meta name="viewport"
+            content="width=device-width, 
+            initial-scale=1"/>
+          </Head>
             <div className="fit pb-4">
                 <MarketHeader/>
                 <CourseFilter/>

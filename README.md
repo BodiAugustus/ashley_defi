@@ -202,3 +202,5 @@
 #101: Styled FtmPrice component.
 
 #102. Styled CourseCard and WalletBar components.
+
+#103. Styled Filter component. Styled OwnedCourseCard.

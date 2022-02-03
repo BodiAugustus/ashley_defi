@@ -17,7 +17,7 @@ const Button = ({
     return(
         <button
             {...rest} // Includes onClick and other events
-            className={`disabled:opacity-50 disabled:cursor-not-allowed rounded-lg shadow-2xl             
+            className={`disabled:opacity-50 disabled:cursor-not-allowed rounded-lg shadow-2xl p-2            
               
     ${className} ${variants[variant]}`}>
             {children}

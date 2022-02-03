@@ -8,7 +8,7 @@ const WalletBar = () => {
   return(
       <section className="text-white bg-indigo-600 rounded-bl-lg rounded-br-lg">
       <div className="p-8">
-        <h1 className="xs:text-sm md:text-2xl">Hello, {account ? account.data.slice(0,6) : "guest, you're not logged in!"}</h1>
+        <h1 className="xs:text-sm md:text-2xl">Hello, {account ? account.data?.slice(0,6) : "guest, you're not logged in!"}</h1>
         <h2 className="subtitle mb-5 xs:text-lg md:text-xl">I hope you are having a great day!</h2>
         <div className="flex justify-between items-center gap-2">
           <div className="sm:flex sm:justify-center lg:justify-start">
