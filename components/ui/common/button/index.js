@@ -9,6 +9,7 @@ const Button = ({
 }) => {
 
     const variants = {
+        white: `text-black bg-white `,
         blue: `text-white bg-blue-600 shadow-blue-600/75 ${hoverable && "hover:bg-indigo-700"}`,
         red: `text-white bg-red-600 shadow-red-600/75  ${hoverable && "hover:bg-red-700"}`,
         purple: `text-purple-700 bg-indigo-200 shadow-indigo-600/75  ${hoverable && "hover:bg-indigo-700"}`,
@@ -16,8 +17,8 @@ const Button = ({
     return(
         <button
             {...rest} // Includes onClick and other events
-            className={`disabled:opacity-50 disabled:cursor-not-allowed w-[40%] rounded-lg  p-2   shadow-2xl             
-             md:text-2xl 
+            className={`disabled:opacity-50 disabled:cursor-not-allowed rounded-lg shadow-2xl             
+              
     ${className} ${variants[variant]}`}>
             {children}
         </button>

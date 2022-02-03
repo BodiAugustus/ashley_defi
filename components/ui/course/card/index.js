@@ -24,9 +24,11 @@ export default function Card({course, Footer, disabled}) {
             <Link 
             href={`/courses/${course.slug}`} >
             <a                 
-            className="h-12 block mt-1 text-lg leading-tight font-medium text-black hover:underline">{course.title}</a>
+            className="h-12 block mt-1 xs:text-sm md:text-lg leading-tight font-medium text-black hover:underline">{course.title}</a>
             </Link>
-            <p className="mt-2 text-gray-500">{course.description.substring(0, 70)}...</p>
+            <p className="mt-2 text-gray-500 
+            xs:text-sm md:text-base
+            ">{course.description.substring(0, 70)}...</p>
             { Footer && 
                 <Footer/>
             }

@@ -200,3 +200,5 @@
 #100: Styled the OwnedCourseCard component. Added new flex extensions to tailwinds-config. 
 
 #101: Styled FtmPrice component.
+
+#102. Styled CourseCard and WalletBar components.
