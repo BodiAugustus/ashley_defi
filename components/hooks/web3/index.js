@@ -1,5 +1,6 @@
 import { useHooks } from "@components/providers/web3"
 
+// this function resolves to true or false depending on if dta is present - checks for all possible data types
 const _isEmpty = data => {
     return(
         data == null || 

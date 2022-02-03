@@ -22,6 +22,10 @@ export const handler = (web3, provider) => () => {
     return web3 ? "web3/network" : null}, 
     async () => {
         const chainId = await web3.eth.getChainId() //web3, fetches network ID as a normal number
+
+        if(!chainId){
+            throw new Error("Cannot retrieve Network! Please refresh browser or check your internet connection.")
+        }
         return NETWORKS[chainId] // Changes chainId to corresponding string.
         // When this async function finishes loading then isLoading will change to false. 
     }

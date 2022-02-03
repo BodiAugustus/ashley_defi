@@ -12,7 +12,12 @@ export const handler = (web3, provider) => () => { // This is a function that ca
         return web3 ? "web3/accounts" : null },
         async () => { //identifier and cb fetcher for retrieving data
             const accounts = await web3.eth.getAccounts() //Gets user MetaAccount
-            return accounts[0] 
+            const account = accounts[0]
+     
+            if(!account){  // this prevents the return of null/undefined from being possible and causing problems downstream
+                throw new Error("Cannot retrieve an account. Please refresh the browser or install MetaMask!")
+            }
+            return account
         } 
     )
 

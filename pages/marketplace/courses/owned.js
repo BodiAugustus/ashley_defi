@@ -7,11 +7,13 @@ import { getAllCourses } from "@content/courses/fetcher"
 import Head from "next/head"
 import { useRouter } from "next/router"
 import Link from "next/link"
+import { useWeb3 } from "@components/providers"
 
 
 
 const OwnedCourses = ({courses}) => {
   const router = useRouter()
+  const { requireInstall } = useWeb3()
         const { account } = useAccount()
     const { ownedCourses } = useOwnedCourses(courses, account.data)
     return(
@@ -39,7 +41,24 @@ const OwnedCourses = ({courses}) => {
             </div>
             
             }
+            { account.isEmpty &&
+            <div className="w-1/2 mx-auto">
+              <Message type="warning">
+               <div className="">Please connect to MetaMask!</div>
 
+              </Message>
+            </div>
+            
+            }
+            { requireInstall &&
+            <div className="w-1/2 mx-auto">
+              <Message type="warning">
+               <div className="">Please install MetaMask!</div>
+
+              </Message>
+            </div>
+            
+            }
             { ownedCourses.data?.map(course => 
             <OwnedCourseCard
             key={course.id}
