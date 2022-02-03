@@ -3,9 +3,15 @@ import Head from "next/head"
 import { getAllCourses } from "@content/courses/fetcher"
 import { CourseHero, Curriculum, KeyPoints } from "@components/ui/course"
 import { Modal } from "@components/ui/common"
+import { useAccount, useOwnedCourse } from "@components/hooks/web3"
 
 
 export default function Course({course}) {
+
+  const { account } = useAccount()
+  const { ownedCourse } = useOwnedCourse(course, account.data)
+  // console.log(ownedCourse);
+
 
     return (
         <div>
@@ -17,6 +23,7 @@ export default function Course({course}) {
   
           <div className="relative max-w-7xl mx-auto"> 
             <CourseHero    // Hero for each individual product
+              hasOwner={!!ownedCourse.data}
               title={course.title}
               description={course.description}
               image={course.coverImage}

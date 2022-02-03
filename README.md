@@ -204,3 +204,8 @@
 #102. Styled CourseCard and WalletBar components.
 
 #103. Styled Filter component. Styled OwnedCourseCard.
+
+#104. Created useOwnedCourse.js inside of web3/hooks. c&p over useOwnedCourses. Edited for use case. Added to setupHooks. Added to hooks/web3/index.js.
+
+#105. Passed ownedCourse as a prop through the courseHero component in the slug file. Used to display UI message to subscription purchasers.
+
