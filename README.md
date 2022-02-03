@@ -224,3 +224,5 @@
 #112. Created new hook function to fetch courses data for manage page. Created useManageCourses.js inside web3 folder. C&p from useOwnedCourse into new file. Refactored for new use case. Registered new hook inside of setupHooks. Added same functionality in hooks/web3/index. Imported new functionality to manage.js.
 
 #113. Setup functonality of useManagedCOurses to fetch purchased course data from SC. Successfully returned owned courses data to console.
+
+#114. Displayed managed courses to UI. To do this created Managed.js inside card folder. c&p from OwnedCourseCard. Refactored to suit new purpose. Imported ManagedCourseCard component into manage.js for display. Styled ManagedCourseCard further.
