@@ -236,3 +236,5 @@
 #118. Created new administrator function to retrieve accounts and check for admin, if not, then redirect. Created useAdmin function in web3/index.js. Hid managecourse breadcrumb. Created BreadCrumbItem function inside breadcrumbs.
 
 #119. Created activateCourse function inside CourseMarketplace.sol. Created isCourseCreated helper function and two errors.
+
+#120. Created courseMarketplace.test.js file inside of test folder. Began setting up test file to run test on SC functions. Ran truffle test. Successful. 
