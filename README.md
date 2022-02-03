@@ -211,3 +211,4 @@
 
 #106. Passed a UI message component depending on the COURSE_STATE through the KeyPoints component to register depending on each of the 3 states. Created isLocked constant and updated Curriculum component prop. Created conditional renders for Curriculum component to display different button messages/options depending on state value.
 
+#107. Handled situation when My Courses tab is empty. Added to enhanceHook in web3/index. Created _isEmpty function there. Used to refactor my conditionals in owned.js. Owned page still does not show anything when no metamask detected or when metamask is not connected. Will fix.

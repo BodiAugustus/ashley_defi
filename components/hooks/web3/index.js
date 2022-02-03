@@ -1,10 +1,26 @@
 import { useHooks } from "@components/providers/web3"
 
+const _isEmpty = data => {
+    return(
+        data == null || 
+        data === "" ||
+        //checks for empty array, !! won't work
+        (Array.isArray(data) && data.length === 0) ||
+        //checks for empty object, !! won't work
+        (Object.keys(data).length === 0 && data.constructor === Object)
+    )
+}
+
 const enhanceHook = (swrResponse) => { // This function uses swrResponse bc that is what will be wrapping the hook. The hook will get data and mutate it.
     // debugger
+
+    const { data, error } = swrResponse
+    const hasInitialResponse = !!(data || error)
+    const isEmpty = hasInitialResponse && _isEmpty(data)
     return {
         ...swrResponse,
-        hasInitialResponse: swrResponse.data || swrResponse.error// This is adding new data to swrResponse
+        isEmpty,
+        hasInitialResponse
     }
 }
 

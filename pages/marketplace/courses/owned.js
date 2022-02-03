@@ -6,6 +6,7 @@ import { useAccount, useOwnedCourses } from "@components/hooks/web3"
 import { getAllCourses } from "@content/courses/fetcher"
 import Head from "next/head"
 import { useRouter } from "next/router"
+import Link from "next/link"
 
 
 
@@ -25,6 +26,20 @@ const OwnedCourses = ({courses}) => {
                 <MarketHeader/>
             </div>
             <section className="grid grid-cols-1">
+            { ownedCourses.isEmpty &&
+            <div className="w-1/2 mx-auto">
+              <Message type="warning">
+               <div className=""> You don&apos;t own any courses!</div>
+               <Link href="/marketplace">
+                 <a className="font-normal hover:underline">
+                   <i>Purchase course</i>
+                 </a>
+               </Link>
+              </Message>
+            </div>
+            
+            }
+
             { ownedCourses.data?.map(course => 
             <OwnedCourseCard
             key={course.id}
