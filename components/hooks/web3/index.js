@@ -1,4 +1,7 @@
 import { useHooks } from "@components/providers/web3"
+import { useEffect } from "react"
+import { useWeb3 } from "@components/providers"
+import { useRouter } from "next/router"
 
 // this function resolves to true or false depending on if dta is present - checks for all possible data types
 const _isEmpty = data => {
@@ -40,6 +43,25 @@ export const useAccount = () => {
         account: swrResponse
     }
 }
+
+export const useAdmin = ({redirectTo}) => {
+    const { account } = useAccount()
+    const router = useRouter()
+    const { requireInstall } = useWeb3()
+
+    useEffect(() => {
+        if(
+            //requireInstall means there is no MetaMask. This redirects non admin accounts.
+        (requireInstall || 
+        account.hasInitialResponse && !account.isAdmin) ||
+        account.isEmpty){
+            router.push(redirectTo)
+        }
+    },[account])
+
+    return { account }
+}
+
 // ...args brings all the parameters in like courses and eventually passes them into the hook function where they can be used.
 export const useOwnedCourses = (...args) => {
     const swrRes = enhanceHook(useHooks((hooks) => hooks.useOwnedCourses)(...args))

@@ -1,12 +1,13 @@
-import { CourseFilter, ManagedCourseCard, OwnedCourseCard } from "@components/ui/course"
+import { CourseFilter, ManagedCourseCard } from "@components/ui/course"
 import { BaseLayout } from "@components/ui/layout"
 import { MarketHeader } from "@components/ui/marketplace"
 import Head from "next/head"
 
 import { Button, Message } from "@components/ui/common"
-import { useAccount, useManagedCourses } from "@components/hooks/web3"
+import {  useAdmin, useManagedCourses } from "@components/hooks/web3"
 import { useState } from "react"
 import { useWeb3 } from "@components/providers"
+
 
 const VerificationInput = ({onVerify}) => {
   const [email, setEmail] = useState("")
@@ -34,7 +35,7 @@ const ManagedCourses = () => {
   const [ proofedOwnership, setProofedOwnership] = useState({})
   const { web3} = useWeb3()
 
-  const { account } = useAccount()
+  const { account } = useAdmin({redirectTo: "/marketplace"})
   const { managedCourses } = useManagedCourses(account)
   // console.log(managedCourses.data);
   const verifyCourse = (email, {hash, proof}) => {
@@ -57,6 +58,10 @@ const ManagedCourses = () => {
       ...proofedOwnership,
       [hash]: false
     }) 
+  }
+
+  if (!account.isAdmin){
+    return null
   }
 
     return(

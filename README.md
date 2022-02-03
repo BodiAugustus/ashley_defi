@@ -232,3 +232,5 @@
 #116. Constructed prrof from email and course hash - compared with proof and if matching course is shown as verified using proofToCheck. Tested verification, successful.
 
 #117. Created VerificationInput component to fix bug of all inputs having same email field values. Disabled manage courses data fetching for non-admin accounts.
+
+#118. Created new administrator function to retrieve accounts and check for admin, if not, then redirect. Created useAdmin function in web3/index.js. Hid managecourse breadcrumb. Created BreadCrumbItem function inside breadcrumbs.

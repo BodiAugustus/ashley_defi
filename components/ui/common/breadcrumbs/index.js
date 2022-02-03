@@ -1,18 +1,40 @@
 import { ActiveLink } from "@components/ui/common"
+import React from "react"
 
-const Breadcrumbs = ({items}) => {
-    return(
-        <nav aria-label="breadcrumb" className="">
-<ol className="flex leading-none text-indigo-600 divide-x divide-indigo-400">
-  {items.map((item, i) =>
+const BreadCrumbItem = ({item, index}) => {
+  return(
     <li
-    key={item.href} 
-    className={`${i === 0 ? "pr-4" : "px-4"} text-gray-500 hover:text-gray-900`}>
+      
+    className={`${index === 0 ? "pr-4" : "px-4"} text-gray-500 hover:text-gray-900`}>
       <ActiveLink 
       href={item.href}>
         <a >{item.value}</a>
       </ActiveLink>
     </li>
+  )
+}
+
+const Breadcrumbs = ({items, isAdmin}) => {
+    return(
+        <nav aria-label="breadcrumb" className="">
+<ol className="flex leading-none text-indigo-600 divide-x divide-indigo-400">
+  {items.map((item, i) =>
+  <React.Fragment
+  key={item.href}
+  >
+  { !item.requireAdmin &&
+     <BreadCrumbItem
+       item={item}
+       index={i}
+     />
+  }
+  { item.requireAdmin && isAdmin && 
+    <BreadCrumbItem
+       item={item}
+       index={i}
+     />
+  }
+  </React.Fragment>
     )}
 </ol>
 </nav>
