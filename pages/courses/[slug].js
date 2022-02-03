@@ -2,8 +2,9 @@ import BaseLayout from "@components/ui/layout/baseLayout"
 import Head from "next/head"
 import { getAllCourses } from "@content/courses/fetcher"
 import { CourseHero, Curriculum, KeyPoints } from "@components/ui/course"
-import { Modal } from "@components/ui/common"
+import { Message, Modal } from "@components/ui/common"
 import { useAccount, useOwnedCourse } from "@components/hooks/web3"
+
 
 
 export default function Course({course}) {
@@ -11,7 +12,11 @@ export default function Course({course}) {
   const { account } = useAccount()
   const { ownedCourse } = useOwnedCourse(course, account.data)
   // console.log(ownedCourse);
+  const courseState = ownedCourse?.data?.state
+  // const courseState = "deactivated"
 
+  const isLocked = courseState === "purchased" ||
+  courseState === "deactivated"
 
     return (
         <div>
@@ -31,7 +36,34 @@ export default function Course({course}) {
             <KeyPoints
               points={course.wsl}
             />
-            <Curriculum locked={true}/>
+            { course && 
+            <div className="max-w-5xl mx-auto">
+            { courseState === "purchased" &&
+            <Message type="warning">
+              We wish you a Merry Christmas! Open subscribers soon!
+              <i className="block font-normal">If you have a donation, put it in the bag!</i>
+            </Message>           
+            }
+            { courseState === "activated" &&
+            <Message type="success">
+              We wish you a Merry Christmas! Open subscribers soon!
+              <i className="block font-normal">If you have a donation, put it in the bag!</i>
+            </Message>           
+            }
+            { courseState === "deactivated" &&
+            <Message type="danger">
+              We wish you a Merry Christmas! Open subscribers soon!
+              <i className="block font-normal">If you have a donation, put it in the bag!</i>
+            </Message>           
+            }
+
+            </div>          
+            }
+
+            <Curriculum locked={isLocked}
+              courseState={courseState}
+
+            />
 
             <Modal/>
           </div>          

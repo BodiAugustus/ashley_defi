@@ -209,3 +209,5 @@
 
 #105. Passed ownedCourse as a prop through the courseHero component in the slug file. Used to display UI message to subscription purchasers.
 
+#106. Passed a UI message component depending on the COURSE_STATE through the KeyPoints component to register depending on each of the 3 states. Created isLocked constant and updated Curriculum component prop. Created conditional renders for Curriculum component to display different button messages/options depending on state value.
+
