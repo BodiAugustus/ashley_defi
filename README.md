@@ -242,3 +242,5 @@
 #121. Created more test for purchasing a new course. Test passed.
 
 #122. Created more testing for purchasing a new course. Tests passed.
+
+#123. Created test for the activate course functionality. Test passed.
