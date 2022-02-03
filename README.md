@@ -230,3 +230,5 @@
 #115. Continued building out/styling ManagedCourseCard component. Created verifyCourse inside of managed.js. Setup verify button functonality. Console logged the email, hash and proof successfully.
 
 #116. Constructed prrof from email and course hash - compared with proof and if matching course is shown as verified using proofToCheck. Tested verification, successful.
+
+#117. Created VerificationInput component to fix bug of all inputs having same email field values. Disabled manage courses data fetching for non-admin accounts.
