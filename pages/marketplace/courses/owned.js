@@ -4,7 +4,7 @@ import { MarketHeader } from "@components/ui/marketplace"
 import { Button, Message } from "@components/ui/common"
 import { useAccount, useOwnedCourses } from "@components/hooks/web3"
 import { getAllCourses } from "@content/courses/fetcher"
-
+import Head from "next/head"
 
 
 const OwnedCourses = ({courses}) => {
@@ -12,8 +12,13 @@ const OwnedCourses = ({courses}) => {
     const { ownedCourses } = useOwnedCourses(courses, account.data)
     return(
         <>
+            <Head>
+            <meta name="viewport"
+            content="width=device-width, 
+            initial-scale=1"/>
+          </Head>
             {/* {JSON.stringify( ownedCourses?.data)} */}
-            <div className="fit pb-4">
+            <div className="fit ">
                 <MarketHeader/>
             </div>
             <section className="grid grid-cols-1">

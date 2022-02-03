@@ -197,4 +197,6 @@
 
 #99. Iterated courses and displayed to owned page on UI by passing ownedCourses data through the ownedCourseCard. swrRes was updated to change mycourse display when accounts are changed.
 
-#1o0: Styled the OwnedCourseCard component. Added new flex extensions to tailwinds-config. 
+#100: Styled the OwnedCourseCard component. Added new flex extensions to tailwinds-config. 
+
+#101: Styled FtmPrice component.
