@@ -2,6 +2,7 @@
 // we use contract bc through contract we will be calling the functions
 
 import useSWR from "swr"
+import { createCourseHash } from "utils/hash"
 import normalizeOwnedCourse from "utils/normalize"
 
 
@@ -11,14 +12,8 @@ export const handler = (web3, contract) => (course, account) => {
         (web3 && contract && account) ? `web3/ownedCourse/${account}` : null,
         async () => {
 
-                //This is courseId changed to hex format
-                const hexCourseId = web3.utils.utf8ToHex(course.id)
-
                 //This is made from the courseId and the account information
-                const courseHash = web3.utils.soliditySha3(
-                    { type: "bytes16", value: hexCourseId },
-                    { type: "address", value: account }
-                )
+                const courseHash = createCourseHash(web3)(course.id, account)
 
                 //Get our contract and call the function
                 const ownedCourse = await contract.methods.getCourseByHash(courseHash).call()

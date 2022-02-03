@@ -214,3 +214,5 @@
 #107. Handled situation when My Courses tab is empty. Added to enhanceHook in web3/index. Created _isEmpty function there. Used to refactor my conditionals in owned.js. Owned page still does not show anything when no metamask detected or when metamask is not connected. Will fix.
 
 #108. Added an error check to useAccount to check for undefined account return which was preventing UI message in owned.js from displaying. Added same check to useNetwork. 
+
+#109. Created hash.js inside of utils folder. Combined hexCourseId functionality from useOwnedCourses/s into one resuable function. Redistributed back to useOwnedCourses/s. Made all working as before. 
