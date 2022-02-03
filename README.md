@@ -220,3 +220,5 @@
 #110. Current useEffect method of subscribing to events results in way too many function calls. Refactored to reduce in the useAccount and useNetwork useEffects. Tested for reduction in callbacks, successful.
 
 #111. Bug exist where non signed in meta user has unlocked access to Curriculum content. Fixed by updating isLocked in slug page.
+
+#112. Created new hook function to fetch courses data for manage page. Created useManageCourses.js inside web3 folder. C&p from useOwnedCourse into new file. Refactored for new use case. Registered new hook inside of setupHooks. Added same functionality in hooks/web3/index. Imported new functionality to manage.js.

@@ -4,8 +4,12 @@ import { MarketHeader } from "@components/ui/marketplace"
 import Head from "next/head"
 
 import { Button } from "@components/ui/common"
+import { useAccount, useManagedCourses } from "@components/hooks/web3"
 
 const ManageCourses = () => {
+  const { account } = useAccount()
+  const { managedCourses } = useManagedCourses(account.data)
+  console.log(managedCourses.data);
     return(
         <>
             <Head>
