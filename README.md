@@ -280,3 +280,5 @@
 #140. Removed courseCard conditionals and moved into the component directly. Moved the card component message and state to the top of the card by refactoring the component. Installed npm i react-simple-animate. Imported in code to use marketplace index.
 
 #141. Added SIZE property to Button component, distributed in marketplace page.
+
+#142. Setup repurchase functionality in marketplace/index. Created new useState, iseNewPurchase. Adjusted order modal to deal with second use case.

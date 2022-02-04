@@ -18,6 +18,9 @@ export default function Marketplace({courses}) {
     const { ownedCourses } = useOwnedCourses(courses, account.data)
     const [selectedCourse, setSelectedCourse] = useState(null)
 
+    //isNewPurchase is for setting up the repurchase button functionality
+    const [iseNewPurchase, setIsNewPurchase] = useState(true)
+
     const { web3, contract, requireInstall } = useWeb3()
     
     // Calling this causes metamask to open in the browser
@@ -127,14 +130,17 @@ export default function Marketplace({courses}) {
                               variant="green"
                               disabled={true}                     
                               > 
-                              Owned
+                              Owned &#10003;
                               </Button>
                               { 
                                 owned.state === "deactivated" &&
                                 <Button 
                               variant="purple"
                               disabled={true} 
-                              onClick={() => alert("reactivating")}                    
+                              onClick={() => { 
+                                setIsNewPurchase(false)
+                                setSelectedCourse(course)
+                                }}                    
                               > 
                               Repurchase
                               </Button>
@@ -165,10 +171,13 @@ export default function Marketplace({courses}) {
                 {
                   selectedCourse &&
                 <OrderModal 
-
+                  isNewPurchase={isNewPurchase}
                   course={selectedCourse}
                   onSubmit={purchaseCourse}
-                  onClose={() => setSelectedCourse(null)}
+                  onClose={() => {
+                    setSelectedCourse(null)
+                    setIsNewPurchase(true)
+                    }}
                 /> 
                 }{/*This gets the selected course from the button click passed as a prop to ordermodal so the modal opens for the correct course. onClose was added to pass the null value to OrderModal so that the value is reset to null on modal close in order to allow useEffect to fire even when the same purchase button is clicked twice */}             
               </div>       
