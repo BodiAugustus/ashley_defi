@@ -79,6 +79,11 @@ const ManagedCourses = () => {
     changeCourseState(courseHash, "deactivateCourse")
   }
 
+  const searchCourse = (courseHash) => {
+    if(!courseHash) { return }
+    alert(courseHash)
+  } 
+
   if (!account.isAdmin){
     return null
   }
@@ -92,7 +97,9 @@ const ManagedCourses = () => {
           </Head>
             <div className="fit pb-4">
                 <MarketHeader/>
-                <CourseFilter/>
+                <CourseFilter
+                  onSearchSubmit={searchCourse}
+                />
             </div>
             <section className="grid grid-cols-1">
             { managedCourses.data?.map(course => 
