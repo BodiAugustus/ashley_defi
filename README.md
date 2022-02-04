@@ -296,3 +296,5 @@
 #148. Filtered search results and displayed to ui in renderCard. Created filteredCourses to clean up return statement, replaced.
 
 #149. Created stopContract in .sol file. Also created resumeContract. Created onlyWhenNotStopped modifier. Added where needed.
+
+#150. Added receive() to .sol. Created withdraw function. Created onlyWhenStopped modifier. Created emergencyWithdraw function. Created selfDestruct function.
