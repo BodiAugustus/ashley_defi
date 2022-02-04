@@ -54,7 +54,9 @@ export default function Marketplace({courses}) {
         console.error("Purchase course: Operation has failed!");
       }
     }
- 
+    //gets us owned courses
+
+
     return (
       <div>
         <div className="relative bg-white overflow-hidden">
@@ -66,104 +68,98 @@ export default function Marketplace({courses}) {
                 "Is Supported" {`${network.isSupported}`}  THESE ARE TESTING VALUES to make sure the UI message is displayed properly - change between networks and check UI message  */}      
                 <CourseList courses={courses}>
                   {
-                    (course) => <CourseCard 
-                    key={course.id} 
-                    disabled={!hasConnectedWallet}
-                    course={course}
-                    Footer={() => {
-                      if (requireInstall){
-                        return(
-                          <div className="mt-4">
-                          <Button 
-                          variant="purple"
-                          disabled={true}                    
-                          > 
-                            Install MetaMask
-                          </Button>
-                        </div>
-                        )
-                      }
-                      if(isConnecting){
-                        return(
-                          <div className="mt-4">
-                          <Button 
-                          variant="purple"
-                          disabled={true}                     
-                          > 
-                           <Loader size="sm"/>
-                          </Button>
-                        </div>
-                        )
-                      }
-                      if(!ownedCourses.hasInitialResponse){
-                        return(
-                          <div style={{height: "50px"}}></div>
-                        //   <div className="mt-4">
-                        //   <Button 
-                        //   variant="purple"
-                        //   disabled={true}                     
-                        //   > 
-                        //    Loading State
-                        //   </Button>
-                        // </div>
-                        )
-                      }
-                      //this shows the lookup table
-                      // console.log(ownedCourses.lookup)
-                      //[] is used bc we are searching in an object
+                    (course) => {
                       const owned = ownedCourses.lookup[course.id]
-
-                      if (owned) {
-                        return(
-                          <>
-                          <div className="mt-4">
+                      return(                   
+                        <CourseCard 
+                        key={course.id} 
+                        state={owned?.state}
+                        disabled={!hasConnectedWallet}
+                        course={course}
+                        Footer={() => {
+                        if (requireInstall){
+                          return(
+                            <div className="mt-4">
                             <Button 
-                            variant="green"
+                            variant="purple"
+                            disabled={true}                    
+                            > 
+                              Install MetaMask
+                            </Button>
+                          </div>
+                          )
+                        }
+                        if(isConnecting){
+                          return(
+                            <div className="mt-4">
+                            <Button 
+                            variant="purple"
                             disabled={true}                     
                             > 
-                            Owned
+                            <Loader size="sm"/>
                             </Button>
-                            <div className="mt-1">
-
-                            {owned.state === "activated" &&
-                            <Message size="sm">
-                              Activated
-                            </Message>
-                            }
-                            {owned.state === "deactivated" &&
-                            <Message 
-                            size="sm"
-                            type="red">
-                              Deactivated
-                            </Message>
-                            }
-                            {owned.state === "purchased" &&
-                            <Message 
-                            size="sm"
-                            type="warning">
-                              Waiting for Activation
-                            </Message>
-                            }
-                            </div>
                           </div>
-                        </>
+                          )
+                        }
+                        if(!ownedCourses.hasInitialResponse){
+                          return(
+                            <div style={{height: "50px"}}></div>
+                          //   <div className="mt-4">
+                          //   <Button 
+                          //   variant="purple"
+                          //   disabled={true}                     
+                          //   > 
+                          //    Loading State
+                          //   </Button>
+                          // </div>
+                          )
+                        }
+                        //this shows the lookup table
+                        // console.log(ownedCourses.lookup)
+                        //[] is used bc we are searching in an object
+                        
+
+                        if (owned) {
+                          return(
+                            <>
+                            <div className="mt-4">
+                              <Button 
+                              variant="green"
+                              disabled={true}                     
+                              > 
+                              Owned
+                              </Button>
+                              { 
+                                owned.state === "deactivated" &&
+                                <Button 
+                              variant="purple"
+                              disabled={true} 
+                              onClick={() => alert("reactivating")}                    
+                              > 
+                              Repurchase
+                              </Button>
+                              }
+        
+                            </div>
+                          </>
+                          )
+                        }
+                        return(
+                          <div className="mt-4">
+                            <Button 
+                            variant="purple"
+                            disabled={!hasConnectedWallet}
+                            onClick={() => setSelectedCourse(course)}                       
+                            > {/*Click the button will select a course to purchase so we need to keep a state for it - selectedCourse */}
+                              Purchase
+                            </Button>
+                          </div>
                         )
                       }
-                      return(
-                        <div className="mt-4">
-                          <Button 
-                          variant="purple"
-                          disabled={!hasConnectedWallet}
-                          onClick={() => setSelectedCourse(course)}                       
-                          > {/*Click the button will select a course to purchase so we need to keep a state for it - selectedCourse */}
-                            Purchase
-                          </Button>
-                        </div>
-                      )
-                    }
-        
-                      }
-                    />
+          
+                        }
+                      />
+                      )}
                   }
                 </CourseList>
                 {
