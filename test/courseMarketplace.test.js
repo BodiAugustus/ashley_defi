@@ -8,6 +8,19 @@ const { catchRevert} = require("./utils/exceptions")
 const getBalance = async (address) => web3.eth.getBalance(address)
 const toBN = value => web3.utils.toBN(value)
 
+const getGas = async (result) => {
+        //tx is to get the gas price
+        const tx = await web3.eth.getTransaction(result.tx)
+        // console.log(result.tx);
+        //how much was used
+        const gasUsed = toBN(result.receipt.gasUsed)
+        //how much it cost
+        const gasPrice = toBN(tx.gasPrice)   
+        //total amount using toBN multiply method.
+        const gas = gasUsed.mul(gasPrice)
+        return gas
+}
+
 // Creates an encapulated enviornment with the accounts metamask accoounts
 contract("CourseMarketplace", accounts => {
 
@@ -170,25 +183,15 @@ describe("Repurchase course", () => {
         const beforeTXBuyerBalance = await getBalance(buyer)
 
         const result = await _contract.repurchaseCourse(courseHash2, { from: buyer, value: value })
-        //tx is to get the gas price
-        // console.log(result.tx);
-        const tx = await web3.eth.getTransaction(result.tx)
         const afterTXBuyerBalance = await getBalance(buyer)
 
-  
-
-        //how much was used
-        const gasUsed = toBN(result.receipt.gasUsed)
-        //how much it cost
-        const gasPrice = toBN(tx.gasPrice)   
-        //total amount using toBN multiply method.
-        const gas = gasUsed.mul(gasPrice)
 
         // console.log(beforeTXBuyerBalance);
         // console.log(afterTXBuyerBalance);
 
         const course = await _contract.getCourseByHash(courseHash2)
         const expectedState = 0
+        const gas = await getGas(result)
 
         assert.equal(course.state, expectedState, "The course is not in purchased state!")
         assert.equal(course.price, value, `The course price is not equal to ${value}!`)
