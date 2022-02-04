@@ -8,10 +8,14 @@ import { OrderModal } from "@components/ui/order"
 import { useState } from "react"
 import { MarketHeader } from "@components/ui/marketplace"
 import { useWeb3 } from "@components/providers"
+import { useOwnedCourses } from "@components/hooks/web3"
 
 export default function Marketplace({courses}) {
     //  const { account, network, hasConnectedWallet} = useWalletInfo() // passes in active user network and account
     const {hasConnectedWallet, account, isConnecting} = useWalletInfo()
+
+    //ownedCourses is used to disable purchased courses in ui from user
+    const { ownedCourses } = useOwnedCourses(courses, account.data)
     const [selectedCourse, setSelectedCourse] = useState(null)
 
     const { web3, contract, requireInstall } = useWeb3()
@@ -87,6 +91,36 @@ export default function Marketplace({courses}) {
                           disabled={true}                     
                           > 
                            <Loader size="sm"/>
+                          </Button>
+                        </div>
+                        )
+                      }
+                      if(!ownedCourses.hasInitialResponse){
+                        return(
+                          <div style={{height: "50px"}}></div>
+                        //   <div className="mt-4">
+                        //   <Button 
+                        //   variant="purple"
+                        //   disabled={true}                     
+                        //   > 
+                        //    Loading State
+                        //   </Button>
+                        // </div>
+                        )
+                      }
+                      //this shows the lookup table
+                      // console.log(ownedCourses.lookup)
+                      //[] is used bc we are searching in an object
+                      const owned = ownedCourses.lookup[course.id]
+
+                      if (owned) {
+                        return(
+                          <div className="mt-4">
+                          <Button 
+                          variant="green"
+                          disabled={true}                     
+                          > 
+                           Owned
                           </Button>
                         </div>
                         )

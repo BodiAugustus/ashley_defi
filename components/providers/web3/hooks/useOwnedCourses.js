@@ -45,6 +45,14 @@ export const handler = (web3, contract) => (courses, account) => {
         }
     )
 
-    return swrRes
+    return {
+        ...swrRes,
+        //this creates the lookup table for mapping the purchased courses to the purchase buttons to disable already purchased courses
+        lookup:swrRes.data?.reduce((a, c) => {
+            a[c.id] = c
+            return a
+            // ?? {} is added in case the structure will be undefined or null it will use an empty object into the lookup table
+        },{}) ?? {}
+    }
 
 }

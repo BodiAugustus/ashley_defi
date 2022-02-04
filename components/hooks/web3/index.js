@@ -90,11 +90,12 @@ export const useManagedCourses = (...args) => {
 
 }
 
+//combines both useAccount and useNetwork into one
 export const useWalletInfo = () => {
     const { account } = useAccount()
     const { network } = useNetwork()
 
-    //tells if CONNECTING to metamask wallet
+    //tells if CONNECTING to metamask wallet - passed to marketindex to render button msg conditionally
     const isConnecting = !account.hasInitialResponse && !network.hasInitialResponse
 
     return {
