@@ -75,4 +75,35 @@ describe("Activate the purchased course", () => {
         assert.equal(course.state, expectedState, "Course should have 'activated' state")
     })
 })
+
+describe("Transfer Ownership", () => {
+    let currentOwner = null
+    before(async () => {
+        //here we are initiating the _contract, contractOwner, and buyer
+    currentOwner = await _contract.getContractOwner()
+})
+    
+    it("getContractOwner should return deployer address", async() => {
+    assert.equal(contractOwner, currentOwner, "Contract owners are not matching!")
+    })
+
+    it("should not transfer ownership when owner is not sending TX.", async () => {
+        await catchRevert(_contract.transferOwnership(accounts[3], {from: accounts[4]}))
+    })
+
+    it("should transfer ownership to 3rd address from 'accounts", async () => {
+        await _contract.transferOwnership(accounts[2], {from: contractOwner})
+        const owner = await _contract.getContractOwner()
+
+        assert.equal(owner, accounts[2], "New owner is not account 2!")
+    })
+
+    it("should transfer ownership from accounts[2] to initial owner", async () => {
+        await _contract.transferOwnership(contractOwner, {from: accounts[2]})
+        const owner = await _contract.getContractOwner()
+
+        assert.equal(owner, contractOwner, "New owner is not set!")
+    })
+
+})
 })
