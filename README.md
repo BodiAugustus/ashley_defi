@@ -244,3 +244,5 @@
 #122. Created more testing for purchasing a new course. Tests passed.
 
 #123. Created test for the activate course functionality. Test passed.
+
+#124. Created test to make sure activateCourse is only callable by owner. Created utils folder inside of test folder. Created exceptions.js inside of that. Imported an error revert document.
