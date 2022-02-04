@@ -181,9 +181,12 @@ describe("Repurchase course", () => {
 
     it("should be able to buy with original buyer", async() => {
         const beforeTXBuyerBalance = await getBalance(buyer)
+        const beforeTXContractBalance = await getBalance(_contract.address)
 
         const result = await _contract.repurchaseCourse(courseHash2, { from: buyer, value: value })
         const afterTXBuyerBalance = await getBalance(buyer)
+        
+        const afterTXContractBalance = await getBalance(_contract.address)
 
 
         // console.log(beforeTXBuyerBalance);
@@ -200,6 +203,11 @@ describe("Repurchase course", () => {
             //toBN unlocks methods like sub, but must also use BN
             toBN(beforeTXBuyerBalance).sub(toBN(value)).sub(gas).toString(), 
             afterTXBuyerBalance, "Client balance is incorrect!")
+
+        assert.equal(
+            //value is added to the contract so add is used
+            toBN(beforeTXContractBalance).add(toBN(value)).toString(), 
+            afterTXContractBalance, "Contract balance is incorrect!")
     })
     
     it("should not be able to repurchase purchased course", async() => {

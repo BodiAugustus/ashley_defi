@@ -260,3 +260,5 @@
 #130. Finished testing for repurchase course functionality. All passed.
 
 #131. Combined gasUsed, gasPrice and gas into a single abstraction getGas to use within the test file. Redistributed abstraction where needed.
+
+#132. Set up test to check the before/after contract balance after repurchase tx. Test passed.
