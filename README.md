@@ -290,3 +290,5 @@
 #145. Brought in regex expression inside of searchCourse function to check for hex value in the search input as validation. Returned search input to console.
 
 #146. Created renderCard function to refactor CourseCard and display search input to UI. Styled results container.
+
+#147. Set up filter search functionality. Created options for filter in filter/index.js. Mapped over OPTIONS to render each option to ui.Allowed option selected via onChange. Created onFilterSelect and passed via props to managed.

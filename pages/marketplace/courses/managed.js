@@ -38,6 +38,8 @@ const ManagedCourses = () => {
 
   //searchedCourse stores the course when a search is done in admin
   const [searchedCourse, setSearchedCourse] = useState(null)
+
+  const [filters, setFilters] = useState({ state: "all"})
   const { web3, contract } = useWeb3()
 
   const { account } = useAdmin({redirectTo: "/marketplace"})
@@ -159,6 +161,8 @@ const ManagedCourses = () => {
     return null
   }
 
+
+
     return(
         <>
             <Head>
@@ -169,7 +173,9 @@ const ManagedCourses = () => {
             <div className="fit pb-4">
                 <MarketHeader/>
                 <CourseFilter
-                  onSearchSubmit={searchCourse}
+
+                onFilterSelect={(value) => setFilters({state: value}) }
+                onSearchSubmit={searchCourse}
                 />
             </div>
             <section className="grid grid-cols-1">
