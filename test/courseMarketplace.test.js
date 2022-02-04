@@ -248,4 +248,22 @@ describe("Repurchase course", () => {
 
     
 })
+
+describe("Receive funds", async () => {
+
+    it("should have transacted funds", async () => {
+        const value = "10000000000000000"
+        const contractBeforeTx = await getBalance(_contract.address)
+
+        await web3.eth.sendTransaction({
+            from: buyer,
+            to: _contract.address,
+            value
+        })
+
+        const contractAfterTx = await getBalance(_contract.address)
+
+        assert.equal(toBN(contractBeforeTx).add(toBN(value)).toString(), toBN(contractAfterTx), "Value after TX is not matching!")
+    })
+})
 })

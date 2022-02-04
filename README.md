@@ -298,3 +298,5 @@
 #149. Created stopContract in .sol file. Also created resumeContract. Created onlyWhenNotStopped modifier. Added where needed.
 
 #150. Added receive() to .sol. Created withdraw function. Created onlyWhenStopped modifier. Created emergencyWithdraw function. Created selfDestruct function.
+
+#151. Setup test for receiving funds. Passed.
