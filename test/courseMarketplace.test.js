@@ -266,4 +266,41 @@ describe("Receive funds", async () => {
         assert.equal(toBN(contractBeforeTx).add(toBN(value)).toString(), toBN(contractAfterTx), "Value after TX is not matching!")
     })
 })
+
+    describe("Normal withdraw", async () => {
+        const fundsToDeposit = "10000000000000000"
+        const overLimitFunds = "99999990000000000000000"
+        let currentOwner = null
+
+        before(async () => {
+             currentOwner = await _contract.getContractOwner()
+            
+        await web3.eth.sendTransaction({
+            from: buyer,
+            to: _contract.address,
+            value: fundsToDeposit
+        })
+        })
+        //should fail bc of buyer
+        it("should fail when withdrawee is not owner", async () => {
+            const value = "1000000000000000"
+            await catchRevert(_contract.withdraw(value, {from: buyer}))
+        })
+
+        it("should fail when withdrawing over account balance", async () => {
+
+            await catchRevert(_contract.withdraw(overLimitFunds, {from: currentOwner}))
+        })
+
+        it("should have +0.1 ETH after withdraw", async () => {
+            const ownerBalance = await getBalance(currentOwner)
+            const result = await _contract.withdraw(fundsToDeposit, { from: currentOwner})
+            const newOwnerBalance = await getBalance(currentOwner)
+            const gas = await getGas(result)
+
+            assert.equal(toBN(ownerBalance).add(toBN(fundsToDeposit)).sub(toBN(gas)).toString(), toBN(newOwnerBalance), "New owner balance is not correct!")
+        })
+    })
+
+
 })

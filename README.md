@@ -300,3 +300,5 @@
 #150. Added receive() to .sol. Created withdraw function. Created onlyWhenStopped modifier. Created emergencyWithdraw function. Created selfDestruct function.
 
 #151. Setup test for receiving funds. Passed.
+
+#152. Setup test for withdrawing funds. Passed.
