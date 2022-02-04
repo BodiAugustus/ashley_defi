@@ -5,6 +5,9 @@ const { catchRevert} = require("./utils/exceptions")
 // Mocha - testing framework
 // Chai - assertion JS library
 
+const getBalance = async (address) => web3.eth.getBalance(address)
+const toBN = value => web3.utils.toBN(value)
+
 // Creates an encapulated enviornment with the accounts metamask accoounts
 contract("CourseMarketplace", accounts => {
 
@@ -164,13 +167,36 @@ describe("Repurchase course", () => {
     })
 
     it("should be able to buy with original buyer", async() => {
+        const beforeTXBuyerBalance = await getBalance(buyer)
 
-        await _contract.repurchaseCourse(courseHash2, { from: buyer, value: value })
+        const result = await _contract.repurchaseCourse(courseHash2, { from: buyer, value: value })
+        //tx is to get the gas price
+        // console.log(result.tx);
+        const tx = await web3.eth.getTransaction(result.tx)
+        const afterTXBuyerBalance = await getBalance(buyer)
+
+  
+
+        //how much was used
+        const gasUsed = toBN(result.receipt.gasUsed)
+        //how much it cost
+        const gasPrice = toBN(tx.gasPrice)   
+        //total amount using toBN multiply method.
+        const gas = gasUsed.mul(gasPrice)
+
+        // console.log(beforeTXBuyerBalance);
+        // console.log(afterTXBuyerBalance);
+
         const course = await _contract.getCourseByHash(courseHash2)
         const expectedState = 0
 
         assert.equal(course.state, expectedState, "The course is not in purchased state!")
         assert.equal(course.price, value, `The course price is not equal to ${value}!`)
+
+        assert.equal(
+            //toBN unlocks methods like sub, but must also use BN
+            toBN(beforeTXBuyerBalance).sub(toBN(value)).sub(gas).toString(), 
+            afterTXBuyerBalance, "Client balance is incorrect!")
     })
     
     it("should not be able to repurchase purchased course", async() => {

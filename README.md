@@ -256,3 +256,5 @@
 #128. Created deactivateCourse function in CourseMarketplace.sol. Created repurchaseCourse function as well. Set up testing for deactivateCourse.
 
 #129. Set up testing for repurchase course functionality. Tests passed.
+
+#130. Finished testing for repurchase course functionality. All passed.
