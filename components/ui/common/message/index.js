@@ -6,20 +6,27 @@ const TYPES = {
   danger: "blue",
 }
 
+const SIZES = {
+  sm: "text-sm",
+  md: "text-base",
+  lg: "text-lg",
+}
 
-export default function Message({children, type = "success"}) { //children is the text being pased in
+
+export default function Message({children, type = "success", size = "md"}) { //children is the text being pased in
   const [isDisplayed, setIsDisplayed] = useState(true)
 
   if (!isDisplayed) { return null }
 
   const messageType = TYPES[type]
+  const messageSizeClass = SIZES[size]
 
   return (
     <div className={`bg-${messageType}-200 rounded-xl mb-3`}>
-      <div className="max-w-5xl mx-auto py-3 px-3 sm:px-3 lg:px-3">
+      <div className="max-w-5xl mx-auto py-2 px-1">
         <div className="flex items-center justify-between flex-wrap">
           <div className="w-0 flex-1 flex items-center">
-            <div className={`ml-3 font-medium text-${messageType}-700`}>
+            <div className={`ml-3 ${messageSizeClass} font-medium text-${messageType}-700`}>
               <span className=" inline">
                 { children }
               </span>

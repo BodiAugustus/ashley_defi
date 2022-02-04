@@ -270,3 +270,5 @@
 #135. Updated purchase buttons to be disabled after purchase. Reworked the Footer in the CourseCard component in marketplace/index. Added isConnecting to useAccount, passed into marketplace/index. Used inside Buttons to add loading state during metamask loading.
 
 #136. Created lookup table in ownedCourses. Used to show owned buttons when purchased by refactoring the conditional in marketplace index under CourseCard.
+
+#137. Added UI message depending on activate state of purchased course by adding to conditional in CourseCard inside of marketplace/index. Added size classes in Message component. 
