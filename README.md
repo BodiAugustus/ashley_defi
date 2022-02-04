@@ -294,3 +294,5 @@
 #147. Set up filter search functionality. Created options for filter in filter/index.js. Mapped over OPTIONS to render each option to ui.Allowed option selected via onChange. Created onFilterSelect and passed via props to managed.
 
 #148. Filtered search results and displayed to ui in renderCard. Created filteredCourses to clean up return statement, replaced.
+
+#149. Created stopContract in .sol file. Also created resumeContract. Created onlyWhenNotStopped modifier. Added where needed.

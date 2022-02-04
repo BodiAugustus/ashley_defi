@@ -46,6 +46,9 @@ const ManagedCourses = () => {
   const { managedCourses } = useManagedCourses(account)
   // console.log(managedCourses.data);
   const verifyCourse = (email, {hash, proof}) => {
+    if (!email){
+      return
+    }
     // console.log(email, hash, proof);
     const emailHash = web3.utils.sha3(email)
 
