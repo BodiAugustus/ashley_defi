@@ -248,3 +248,5 @@
 #124. Created test to make sure activateCourse is only callable by owner. Created utils folder inside of test folder. Created exceptions.js inside of that. Imported an error revert document. Test passed.
 
 #125. Set up testing for TransferOwnership function. Test passed.
+
+#126. Set up testing for repurchase course functionality. Test passed.

@@ -34,6 +34,14 @@ describe("Purchase the new course", () => {
         value
     })
     })
+
+    it("should not allow repurchase of owned course", async() => {
+        await catchRevert(_contract.purchaseCourse(courseId, proof, {
+            from: buyer,
+            value
+        }))
+    })
+
        //it describes is what should happen in the test
     it("can get the purchased course hash by index", async () => {
     const index = 0
