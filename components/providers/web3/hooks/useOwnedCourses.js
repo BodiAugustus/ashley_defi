@@ -6,6 +6,7 @@ import { createCourseHash } from "utils/hash"
 import normalizeOwnedCourse from "utils/normalize"
 
 //courses and account are brought in from hooks/web3/index at useOwnedCourses (...args)
+//networkr was added to change ui state when network changes on buy page - changes button ui and hides messages about the state
 export const handler = (web3, contract) => (courses, account) => {
     // console.log(courses);
     // console.log(account);
@@ -14,7 +15,8 @@ export const handler = (web3, contract) => (courses, account) => {
 
     //must have all 3 true to call the function otherwise null.
     // the identifier being unique allows auto updates to my courses whenever meta account changed
-        (web3 && contract && account) ? `web3/ownedCourses/${account}` : null,
+        (web3 && contract && account) ? 
+        `web3/ownedCourses/${account}` : null,
         async () => {
             const ownedCourses = []
 

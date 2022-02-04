@@ -37,7 +37,7 @@ export const handler = (web3, provider) => () => {
     // },[web3])
 
     useEffect(() => { //used to keep track of active meta account
-        const mutator = (chainId) => mutate(NETWORKS[parseInt(chainId,16)])
+        const mutator = (chainId) => window.location.reload()
         provider?.on("chainChanged",  mutator)//changes user Meta account on accnt change
         // mutate reexecutes function and returns new data (the new account)
 

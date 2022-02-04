@@ -272,3 +272,5 @@
 #136. Created lookup table in ownedCourses. Used to show owned buttons when purchased by refactoring the conditional in marketplace index under CourseCard.
 
 #137. Added UI message depending on activate state of purchased course by adding to conditional in CourseCard inside of marketplace/index. Added size classes in Message component. 
+
+#138. Disabled UI messages when network changed by bringing in the network to useOwnedCourse and then reload the browser amending the useEffect in useNetwork.js.
