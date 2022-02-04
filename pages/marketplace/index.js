@@ -3,18 +3,18 @@ import BaseLayout from "@components/ui/layout/baseLayout"
 import { getAllCourses } from "@content/courses/fetcher"
 import { useWalletInfo } from "@components/hooks/web3"
 import { CourseCard, CourseList } from "@components/ui/course"
-import { Button } from "@components/ui/common"
+import { Button, Loader } from "@components/ui/common"
 import { OrderModal } from "@components/ui/order"
 import { useState } from "react"
 import { MarketHeader } from "@components/ui/marketplace"
 import { useWeb3 } from "@components/providers"
 
 export default function Marketplace({courses}) {
-    //  const { account, network, canPurchaseCourse} = useWalletInfo() // passes in active user network and account
-    const {canPurchaseCourse, account} = useWalletInfo()
+    //  const { account, network, hasConnectedWallet} = useWalletInfo() // passes in active user network and account
+    const {hasConnectedWallet, account, isConnecting} = useWalletInfo()
     const [selectedCourse, setSelectedCourse] = useState(null)
 
-    const { web3, contract } = useWeb3()
+    const { web3, contract, requireInstall } = useWeb3()
     
     // Calling this causes metamask to open in the browser
     const purchaseCourse = async (order) => { //passes order into Modal component
@@ -64,18 +64,46 @@ export default function Marketplace({courses}) {
                   {
                     (course) => <CourseCard 
                     key={course.id} 
-                    disabled={!canPurchaseCourse}
+                    disabled={!hasConnectedWallet}
                     course={course}
-                    Footer={() => 
-                      <div className="mt-4">
-                        <Button 
-                        variant="purple"
-                        disabled={!canPurchaseCourse}
-                        onClick={() => setSelectedCourse(course)}                       
-                        > {/*Click the button will select a course to purchase so we need to keep a state for it - selectedCourse */}
-                          Purchase
-                        </Button>
-                      </div>
+                    Footer={() => {
+                      if (requireInstall){
+                        return(
+                          <div className="mt-4">
+                          <Button 
+                          variant="purple"
+                          disabled={true}                    
+                          > 
+                            Install MetaMask
+                          </Button>
+                        </div>
+                        )
+                      }
+                      if(isConnecting){
+                        return(
+                          <div className="mt-4">
+                          <Button 
+                          variant="purple"
+                          disabled={true}                     
+                          > 
+                           <Loader size="sm"/>
+                          </Button>
+                        </div>
+                        )
+                      }
+                      return(
+                        <div className="mt-4">
+                          <Button 
+                          variant="purple"
+                          disabled={!hasConnectedWallet}
+                          onClick={() => setSelectedCourse(course)}                       
+                          > {/*Click the button will select a course to purchase so we need to keep a state for it - selectedCourse */}
+                            Purchase
+                          </Button>
+                        </div>
+                      )
+                    }
+        
                       }
                     />
                   }

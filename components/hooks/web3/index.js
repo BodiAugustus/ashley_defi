@@ -94,9 +94,13 @@ export const useWalletInfo = () => {
     const { account } = useAccount()
     const { network } = useNetwork()
 
+    //tells if CONNECTING to metamask wallet
+    const isConnecting = !account.hasInitialResponse && !network.hasInitialResponse
+
     return {
         account,
         network,
-        canPurchaseCourse: !!(account.data && network.isSupported)
+        isConnecting,
+        hasConnectedWallet: !!(account.data && network.isSupported)
     }
 }

@@ -266,3 +266,5 @@
 #133. Set up testing for deactivateCourse function. Test passed.
 
 #134. Setup deactivate course functionality in managed.js. Created deactivateCourse function. Created a shared implementation of deactivate and activate course functions called changeCourseState.
+
+#135. Updated purchase buttons to be disabled after purchase. Reworked the Footer in the CourseCard component in marketplace/index. Added isConnecting to useAccount, passed into marketplace/index. Used inside Buttons to add loading state during metamask loading.
