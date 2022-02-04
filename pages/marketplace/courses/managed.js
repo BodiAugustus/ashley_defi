@@ -162,6 +162,18 @@ const ManagedCourses = () => {
   }
 
 
+  const filterCourses = managedCourses.data
+  ?.filter((course) => {
+    if (filters.state === "all") {
+      return true
+    }
+    return course.state === filters.state
+  })
+  .map(course => 
+renderCard(course)        
+)
+
+
 
     return(
         <>
@@ -187,9 +199,16 @@ const ManagedCourses = () => {
               </div>
             }
             <h1 className="text-xl font-bold p-4">All Subscriptions</h1>
-            { managedCourses.data?.map(course => 
-            renderCard(course)        
-            )}
+            { 
+              //this sets up the search return results for the 3 filter methods in the options bar
+             filterCourses
+             }
+             {filterCourses?.length === 0 && 
+             <Message
+             type="warning">
+              Nothing to display.
+             </Message>
+             }
 
             {/* <OwnedCourseCard>
           <div className="flex mr-2 relative rounded-md">
