@@ -254,3 +254,5 @@
 #127. Implemented activation functionality in front end. Added activate and deactivate buttons to activate/deactivate course in manged.js. Created activateCourse function. Added onclick to activate button to connect activateCourse function. 
 
 #128. Created deactivateCourse function in CourseMarketplace.sol. Created repurchaseCourse function as well. Set up testing for deactivateCourse.
+
+#129. Set up testing for repurchase course functionality. Tests passed.

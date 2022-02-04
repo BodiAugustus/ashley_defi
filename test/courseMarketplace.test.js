@@ -145,4 +145,38 @@ describe("Deactivate course", async () => {
         await catchRevert(_contract.activateCourse(courseHash2, {from: contractOwner}))
     })
 })
+
+describe("Repurchase course", () => {
+    let courseHash2 = null
+
+    before(async () => {
+        courseHash2 = await _contract.getCourseHashAtIndex(1)
+    })
+
+    it("should not repurchase when the course doesn't exist", async() => {
+        const notExistingHash = "0xa147d9c2fe6f06ba212450bf07e204f078a327a82a944ccef3fdfb0d1eb95a31"
+        await catchRevert(_contract.repurchaseCourse(notExistingHash, { from: buyer}))
+    })
+
+    it("should not repurchase when not course owner", async() => {
+        const notOwner = accounts[2]
+        await catchRevert(_contract.repurchaseCourse(courseHash2, { from: notOwner}))
+    })
+
+    it("should be able to buy with original buyer", async() => {
+
+        await _contract.repurchaseCourse(courseHash2, { from: buyer, value: value })
+        const course = await _contract.getCourseByHash(courseHash2)
+        const expectedState = 0
+
+        assert.equal(course.state, expectedState, "The course is not in purchased state!")
+        assert.equal(course.price, value, `The course price is not equal to ${value}!`)
+    })
+    
+    it("should not be able to repurchase purchased course", async() => {
+        await catchRevert(_contract.repurchaseCourse(courseHash2, { from: buyer}))
+    })
+
+    
+})
 })
