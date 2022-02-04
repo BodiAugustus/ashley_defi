@@ -273,4 +273,6 @@
 
 #137. Added UI message depending on activate state of purchased course by adding to conditional in CourseCard inside of marketplace/index. Added size classes in Message component. 
 
-#138. Disabled UI messages when network changed by bringing in the network to useOwnedCourse and then reload the browser amending the useEffect in useNetwork.js.
+#138. Disabled UI messages when network changed by bringing in the network to useOwnedCourse and then reloading the browser by amending the useEffect in useNetwork.js.
+
+#139. Removed useEffect that was used to listen to network chsnges in useNetwork and moved inside of the provider file using setListeners.
