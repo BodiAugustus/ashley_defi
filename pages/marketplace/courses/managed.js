@@ -53,6 +53,8 @@ const ManagedCourses = () => {
       { type: "bytes32", value: hash},
     )
 
+
+
     // ...proofedOwnership saves the previous state which keeps the verify status bars open until they are exited by the admin
     proofToCheck === proof ? 
     setProofedOwnership({
@@ -84,9 +86,6 @@ const ManagedCourses = () => {
     changeCourseState(courseHash, "deactivateCourse")
   }
 
-  useEffect(() => {
-    console.log(searchCourse);
-  },[searchCourse])
 
   const searchCourse = async (hash) => {
 
@@ -106,6 +105,56 @@ const ManagedCourses = () => {
     setSearchedCourse(null)
   } 
 
+  const renderCard = (course, isSearched) => {
+    return(
+      <ManagedCourseCard
+      key={course.ownedCourseId}
+      isSearched={isSearched}
+      course={course}>
+      <VerificationInput
+      onVerify={(email) => {
+        verifyCourse(email, 
+        {hash: course.hash, proof: course.proof})
+      }}
+
+      />
+      { proofedOwnership[course.hash] &&
+      <div className="mt-2">
+        <Message>
+          Verified!
+        </Message>
+      </div>
+      }
+      { proofedOwnership[course.hash] === false &&
+      <div className="mt-2">
+        <Message type="danger">
+          Wrong Proof!
+        </Message>
+      </div>
+      }
+      { 
+        course.state === "purchased" &&
+      <div>
+        <Button 
+        onClick={() => activateCourse(course.hash)}
+        className="mt-3 mr-2"
+        variant="green"
+        >
+          Activate
+        </Button>
+        <Button 
+        onClick={() => deactivateCourse(course.hash)}
+        className="mt-3"
+        variant="red"
+        >
+        Deactivate
+        </Button>
+      </div>
+      }
+      </ManagedCourseCard>
+    )
+  }
+
   if (!account.isAdmin){
     return null
   }
@@ -124,51 +173,16 @@ const ManagedCourses = () => {
                 />
             </div>
             <section className="grid grid-cols-1">
-            { managedCourses.data?.map(course => 
-              <ManagedCourseCard
-              key={course.ownedCourseId}
-              course={course}>
-              <VerificationInput
-              onVerify={(email) => {
-                verifyCourse(email, 
-                {hash: course.hash, proof: course.proof})
-              }}
-
-              />
-              { proofedOwnership[course.hash] &&
-              <div className="mt-2">
-                <Message>
-                  Verified!
-                </Message>
-              </div>
-              }
-              { proofedOwnership[course.hash] === false &&
-              <div className="mt-2">
-                <Message type="danger">
-                  Wrong Proof!
-                </Message>
-              </div>
-              }
-              { 
-                course.state === "purchased" &&
+            {
+              searchedCourse &&
               <div>
-                <Button 
-                onClick={() => activateCourse(course.hash)}
-                className="mt-3 mr-2"
-                variant="green"
-                >
-                  Activate
-                </Button>
-                <Button 
-                onClick={() => deactivateCourse(course.hash)}
-                className="mt-3"
-                variant="red"
-                >
-                Deactivate
-                </Button>
+              <h1 className="text-xl font-bold p-4">Searched Subscription:</h1>
+                { renderCard(searchedCourse, true)}
               </div>
-              }
-              </ManagedCourseCard>
+            }
+            <h1 className="text-xl font-bold p-4">All Subscriptions</h1>
+            { managedCourses.data?.map(course => 
+            renderCard(course)        
             )}
 
             {/* <OwnedCourseCard>
