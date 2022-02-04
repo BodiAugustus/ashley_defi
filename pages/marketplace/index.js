@@ -32,21 +32,29 @@ export default function Marketplace({courses}) {
         {type: "address", value: account.data}
 
       )
-        // console.log(orderHash);
-        // this hashes the email
-        const emailHash = web3.utils.sha3(order.email)
-        
-        // console.log(emailHash);
-        
-        // emailHash + courseHash = proof
-      const proof = web3.utils.soliditySha3(
-        { type: "bytes32", value: emailHash},
-        { type: "bytes32", value: orderHash},
-      )
-      // console.log(proof);
+    
       
       const value = web3.utils.toWei(String(order.price))
 
+        if(isNewPurchase){
+          const emailHash = web3.utils.sha3(order.email)    
+          // console.log(emailHash);         
+          // emailHash + courseHash = proof
+        const proof = web3.utils.soliditySha3(
+          { type: "bytes32", value: emailHash},
+          { type: "bytes32", value: orderHash},
+        )
+
+          _purchaseCourse(hexCourseId, proof, value)
+        }
+
+        else {
+          _repurchaseCourse(orderHash, value)
+        }
+    }
+    //gets us owned courses
+
+    const _purchaseCourse = async (hexCourseId, proof, value) => {
       try {
         const result = await contract.methods.purchaseCourse(
           hexCourseId,
@@ -57,7 +65,17 @@ export default function Marketplace({courses}) {
         console.error("Purchase course: Operation has failed!");
       }
     }
-    //gets us owned courses
+
+    const _repurchaseCourse = async (courseHash, value) => {
+      try {
+        const result = await contract.methods.repurchaseCourse(
+          courseHash
+        ).send({from: account.data, value})
+        console.log(result);
+      } catch (error) {
+        console.error("Purchase course: Operation has failed!");
+      }
+    }
 
 
     return (
@@ -65,7 +83,7 @@ export default function Marketplace({courses}) {
         <div className="relative bg-white overflow-hidden">
           <div className="relative max-w-7xl mx-auto ">      
               <div className="fit pb-4">
-               <MarketHeader/>               
+              <MarketHeader/>               
                 {/* "Current" {`${network.data}`}
                 "Target" {`${network.target}`}
                 "Is Supported" {`${network.isSupported}`}  THESE ARE TESTING VALUES to make sure the UI message is displayed properly - change between networks and check UI message  */}      

@@ -282,3 +282,5 @@
 #141. Added SIZE property to Button component, distributed in marketplace page.
 
 #142. Setup repurchase functionality in marketplace/index. Created new useState, iseNewPurchase. Adjusted order modal to deal with second use case.
+
+#143. Handled repurchase submit data by amending purchaseCourse inside the marketplace into _purchase and _repurchase course functions.
