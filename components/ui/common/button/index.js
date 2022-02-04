@@ -1,13 +1,20 @@
 
+const SIZE = {
+    sm: "p-2 text-base xs:px-4",
+    md: "p-3 text-base xs:px-8",
+    lg: "p-3 text-lg xs:px-8",
+}
+
 
 const Button = ({
     children // Contains display text and events
     ,className,
+    size= "md",
     variant = "blue",
     hoverable = true,
     ...rest
 }) => {
-
+    const sizeClass = SIZE[size]
     const variants = {
         white: `text-black bg-white `,
         blue: `text-white bg-blue-600 shadow-blue-600/75 ${hoverable && "hover:bg-indigo-700"}`,
@@ -19,7 +26,7 @@ const Button = ({
     return(
         <button
             {...rest} // Includes onClick and other events
-            className={`disabled:opacity-50 disabled:cursor-not-allowed rounded-lg shadow-2xl p-2            
+            className={` ${sizeClass } disabled:opacity-50 disabled:cursor-not-allowed rounded-lg shadow-2xl p-2            
               
     ${className} ${variants[variant]}`}>
             {children}
