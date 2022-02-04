@@ -135,10 +135,12 @@ describe("Transfer Ownership", () => {
 
 describe("Deactivate course", async () => {
     let courseHash2 = null
+    let currentOwner = null
 
     before(async () => {
         await _contract.purchaseCourse(courseId2, proof2, {from: buyer, value})
         courseHash2 = await _contract.getCourseHashAtIndex(1)
+        currentOwner = await _contract.getContractOwner()
     })
 
     it("should not be able to deactivate the course unless is contract owner", async() => {
@@ -146,13 +148,43 @@ describe("Deactivate course", async () => {
     })
 
     it("should have status of deactivated and a price of 0", async() => {
-        await _contract.deactivateCourse(courseHash2, {from: contractOwner})
+        const beforeTXBuyerBalance = await getBalance(buyer)
+        const beforeTXContractBalance = await getBalance(_contract.address)
+        const beforeTXOwnerBalance = await getBalance(currentOwner)
+
+        const result = await _contract.deactivateCourse(courseHash2, {from: contractOwner})
+
+        const afterTXBuyerBalance = await getBalance(buyer) 
+        const afterTXContractBalance = await getBalance(_contract.address)
+        const afterTXOwnerBalance = await getBalance(currentOwner)
+        
         const course = await _contract.getCourseByHash(courseHash2)
         const expectedState = 2
         const expectedPrice = 0
+        const gas = await getGas(result)
 
         assert.equal(course.state, expectedState, "Course is not deactivated!")
         assert.equal(course.price, expectedPrice, "Course price is not 0!")
+        assert.equal(
+            //gas is already a big number so can just put it in directly
+            toBN(beforeTXOwnerBalance).sub(gas).toString(), 
+            afterTXOwnerBalance, 
+            "Contract owner balance is not correct!"
+            )
+
+        assert.equal(
+            //balance of client is  higher after deactivation bc money is returned
+            toBN(beforeTXBuyerBalance).add(toBN(value)).toString(), 
+            afterTXBuyerBalance, 
+            "Buyer balance is not correct!"
+            )
+
+        assert.equal(
+            //balance of client is  lower - contract owner responsible for sending tx so they pay gas fees
+            toBN(beforeTXContractBalance).sub(toBN(value)).toString(), 
+            afterTXContractBalance, 
+            "Contract balance is not correct!"
+            )
     })
 
     

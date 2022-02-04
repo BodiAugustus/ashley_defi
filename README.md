@@ -262,3 +262,7 @@
 #131. Combined gasUsed, gasPrice and gas into a single abstraction getGas to use within the test file. Redistributed abstraction where needed.
 
 #132. Set up test to check the before/after contract balance after repurchase tx. Test passed.
+
+#133. Set up testing for deactivateCourse function. Test passed.
+
+#134. Setup deactivate course functionality in managed.js. Created deactivateCourse function. Created a shared implementation of deactivate and activate course functions called changeCourseState.
