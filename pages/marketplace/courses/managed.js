@@ -5,12 +5,14 @@ import Head from "next/head"
 
 import { Button, Message } from "@components/ui/common"
 import {  useAdmin, useManagedCourses } from "@components/hooks/web3"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useWeb3 } from "@components/providers"
+import normalizeOwnedCourse from "utils/normalize"
 
 
 const VerificationInput = ({onVerify}) => {
   const [email, setEmail] = useState("")
+
   return(
     <div className="flex mr-2 relative rounded-md">
     <input
@@ -33,6 +35,9 @@ const VerificationInput = ({onVerify}) => {
 
 const ManagedCourses = () => {
   const [ proofedOwnership, setProofedOwnership] = useState({})
+
+  //searchedCourse stores the course when a search is done in admin
+  const [searchedCourse, setSearchedCourse] = useState(null)
   const { web3, contract } = useWeb3()
 
   const { account } = useAdmin({redirectTo: "/marketplace"})
@@ -79,9 +84,26 @@ const ManagedCourses = () => {
     changeCourseState(courseHash, "deactivateCourse")
   }
 
-  const searchCourse = (courseHash) => {
-    if(!courseHash) { return }
-    alert(courseHash)
+  useEffect(() => {
+    console.log(searchCourse);
+  },[searchCourse])
+
+  const searchCourse = async (hash) => {
+
+    //regex checks for hex
+    const re = /[0-9A-Fa-f]{6}/g;
+
+    //test for hex and hex length 66 0x + 32 bytes(64)
+    if(hash && hash.length === 66 && re.test(hash)) {
+      const course = await contract.methods.getCourseByHash(hash).call()
+      if(course.owner !== "0x0000000000000000000000000000000000000000"){
+        const normalized = normalizeOwnedCourse(web3)({hash}, course)
+        setSearchedCourse(normalized)
+        return
+      }        
+    } 
+    //if check does not pass then null is set
+    setSearchedCourse(null)
   } 
 
   if (!account.isAdmin){

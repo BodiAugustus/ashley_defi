@@ -286,3 +286,5 @@
 #143. Handled repurchase submit data by amending purchaseCourse inside the marketplace into _purchase and _repurchase course functions.
 
 #144. Set up the filters component search input functionality in CourseFilter. Created searchCourse function in marketplace/index. Displayed search input via alert to ui.
+
+#145. Brought in regex expression inside of searchCourse function to check for hex value in the search input as validation. Returned search input to console.
