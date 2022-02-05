@@ -304,3 +304,5 @@
 #152. Setup test for withdrawing funds. Passed.
 
 #153. Setup test for emergency withdraw. Passed.
+
+#154. Setup test for self destruct. Passed.
