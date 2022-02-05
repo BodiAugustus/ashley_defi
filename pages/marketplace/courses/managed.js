@@ -185,7 +185,7 @@ renderCard(course)
             content="width=device-width, 
             initial-scale=1"/>
           </Head>
-            <div className="fit pb-4">
+            <div className="fit pb-4 bg-black">
                 <MarketHeader/>
                 <CourseFilter
 
@@ -193,7 +193,7 @@ renderCard(course)
                 onSearchSubmit={searchCourse}
                 />
             </div>
-            <section className="grid grid-cols-1">
+            <section className="grid grid-cols-1 bg-black text-white">
             {
               searchedCourse &&
               <div>

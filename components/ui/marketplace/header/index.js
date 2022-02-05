@@ -2,6 +2,7 @@ import Walletbar from "@components/ui/web3/walletbar"
 import { FtmPrice } from "@components/ui/web3"
 import { Breadcrumbs } from "@components/ui/common"
 import { useAccount } from "@components/hooks/web3"
+import { MoveStuffAround } from '@components/ui/common'
 
 const LINKS = [{
     href: "/marketplace",
@@ -19,6 +20,7 @@ const Header = () => {
     const { account } = useAccount()
     return(
         <>
+            <MoveStuffAround/>
             <Walletbar/>
             <FtmPrice />
             <div className="flex flex-row-reverse pb-4 px-4 sm:px-6 lg:px-8">

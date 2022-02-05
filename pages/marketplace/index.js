@@ -19,7 +19,7 @@ export default function Marketplace({courses}) {
     const [selectedCourse, setSelectedCourse] = useState(null)
 
     //isNewPurchase is for setting up the repurchase button functionality
-    const [iseNewPurchase, setIsNewPurchase] = useState(true)
+    const [isNewPurchase, setIsNewPurchase] = useState(true)
 
     const { web3, contract, requireInstall } = useWeb3()
     

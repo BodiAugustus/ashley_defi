@@ -318,3 +318,5 @@
 #159. Styled Marketplace page, coursecards and FtmPrice components.
 
 #160. Styled Footer, Banner, Keypoints and Curriculum.
+
+#161. npm i react-ticker. Created sliding ticker component to display in home page UI.

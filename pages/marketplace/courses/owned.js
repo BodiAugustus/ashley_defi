@@ -24,12 +24,12 @@ const OwnedCourses = ({courses}) => {
             initial-scale=1"/>
           </Head>
             {/* {JSON.stringify( ownedCourses?.data)} */}
-            <div className="fit ">
+            <div className="fit bg-black">
                 <MarketHeader/>
             </div>
-            <section className="grid grid-cols-1">
+            <section className="grid grid-cols-1 bg-black ">
             { ownedCourses.isEmpty &&
-            <div className="w-1/2 mx-auto">
+            <div className="w-1/2 mx-auto bg-black min-h-[30vh] mt-20">
               <Message type="warning">
                <div className=""> You don&apos;t own any courses!</div>
                <Link href="/marketplace">
