@@ -310,3 +310,7 @@
 #155. Setup truffle-config for deployment to Ropsten. npm i @truffle/hdwallet-provider --save-dev.
 
 #156. Created keys.json file and added to git ignore. Set up variables for infura. Imported to truffle-config. Connected to ropsten using truffle console --network ropsten. Ran const accounts = await web3.eth.getAccounts() to check possible accounts to deploy from. Will use accounts[ 0].first-letter. Used await web3.eth.getBalance(accounts[ 0] to ensure account balance exist on 0 account.
+
+#157. deployed to ropsten testnet using truffle migrate --network ropsten.
+
+#158. Styled WalletBar. npm i dayjs for WalletBar use.
