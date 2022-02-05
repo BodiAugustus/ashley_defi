@@ -306,3 +306,5 @@
 #153. Setup test for emergency withdraw. Passed.
 
 #154. Setup test for self destruct. Passed.
+
+#155. Setup truffle-config for deployment to Ropsten. npm i @truffle/hdwallet-provider --save-dev.
