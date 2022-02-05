@@ -302,5 +302,39 @@ describe("Receive funds", async () => {
         })
     })
 
+    describe("Emergency withdraw", async () => {
+        let currentOwner;
+
+        before( async () => {
+            currentOwner = await _contract.getContractOwner()
+        })
+
+        it("should fail when the contract is not stopped", async () => {
+            await catchRevert(_contract.emergencyWithdraw({from: currentOwner}))
+        })
+
+        it("should have added contract funds on the contract owner", async () => {
+            await _contract.stopContract({from: contractOwner})
+
+            const contractBalance = await getBalance(_contract.address)
+            const ownerBalance = await getBalance(currentOwner)
+
+            const result = await _contract.emergencyWithdraw({from: currentOwner})
+            const gas = await getGas(result)
+
+
+            const newOwnerBalance = await getBalance(currentOwner)
+
+            assert.equal(toBN(ownerBalance).add(toBN(contractBalance)).sub(toBN(gas)), newOwnerBalance, "Owner balance is not correct!")
+
+        })
+    })
+
+    it("should have contract balance of zero", async () => {
+        const contractBalance = await getBalance(_contract.address)
+
+        assert.equal(contractBalance, 0, "Contract balance is not zero!")
+    })
+
 
 })

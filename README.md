@@ -302,3 +302,5 @@
 #151. Setup test for receiving funds. Passed.
 
 #152. Setup test for withdrawing funds. Passed.
+
+#153. Setup test for emergency withdraw. Passed.
