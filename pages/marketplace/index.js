@@ -80,7 +80,7 @@ export default function Marketplace({courses}) {
 
     return (
       <div>
-        <div className="relative bg-white overflow-hidden">
+        <div className="relative bg-black overflow-hidden">
           <div className="relative max-w-7xl mx-auto ">      
               <div className="fit pb-4">
               <MarketHeader/>               
@@ -171,7 +171,7 @@ export default function Marketplace({courses}) {
                         return(
                           <div className="mt-4">
                             <Button 
-                            variant="purple"
+                            variant="white"
                             disabled={!hasConnectedWallet}
                             onClick={() => setSelectedCourse(course)}                       
                             > {/*Click the button will select a course to purchase so we need to keep a state for it - selectedCourse */}

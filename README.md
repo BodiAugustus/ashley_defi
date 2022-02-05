@@ -314,3 +314,5 @@
 #157. deployed to ropsten testnet using truffle migrate --network ropsten.
 
 #158. Styled WalletBar. npm i dayjs for WalletBar use.
+
+#159. Styled Marketplace page, coursecards and FtmPrice components.

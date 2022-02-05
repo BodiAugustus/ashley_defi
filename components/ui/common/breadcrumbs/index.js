@@ -5,7 +5,7 @@ const BreadCrumbItem = ({item, index}) => {
   return(
     <li
       
-    className={`${index === 0 ? "pr-4" : "px-4"} text-gray-500 hover:text-gray-900`}>
+    className={`${index === 0 ? "pr-4" : "px-4"} text-white hover:text-yellow-400`}>
       <ActiveLink 
       href={item.href}>
         <a >{item.value}</a>
@@ -17,7 +17,7 @@ const BreadCrumbItem = ({item, index}) => {
 const Breadcrumbs = ({items, isAdmin}) => {
     return(
         <nav aria-label="breadcrumb" className="">
-<ol className="flex leading-none text-indigo-600 divide-x divide-indigo-400">
+<ol className="flex leading-none text-sky-400 divide-x divide-indigo-400">
   {items.map((item, i) =>
   <React.Fragment
   key={item.href}
