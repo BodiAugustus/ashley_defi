@@ -14,18 +14,22 @@ const lectures = [
   
     const statusClass = "px-2 inline-flex text-xs leading-5 font-semibold rounded-full"
     return (
-      <section className="max-w-5xl mx-auto">
+      <section className="max-w-5xl mx-auto bg-black pb-10">
         <div className="flex flex-col">
-          <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-            <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-              <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-                <table className="min-w-full divide-y divide-gray-200">
-                  <thead className="bg-gray-50">
+          <div className="-my-2 overflow-x-auto 
+          sm:-mx-6 
+          lg:-mx-8">
+            <div className="py-2 align-middle inline-block min-w-full 
+            sm:px-6 
+            lg:px-8">
+              <div className="shadow overflow-hidden border-2 border-gray-200 sm:rounded-lg">
+                <table className="min-w-full divide-y divide-gray-200 border-2 rounded-lg">
+                  <thead className="bg-indigo-600 ">
                     <tr>
-                      <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
                         Section 1
                       </th>
-                      <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
                         Status
                       </th>
                       <th scope="col" className="relative px-6 py-3">
@@ -33,13 +37,13 @@ const lectures = [
                       </th>
                     </tr>
                   </thead>
-                  <tbody className="bg-white divide-y divide-gray-200">
+                  <tbody className="bg-[#2b2b2b] divide-y divide-white">
                     { lectures.map(lec =>
                       <tr key={lec}>
                         <td className="px-6 py-4 whitespace-nowrap">
                           <div className="flex items-center">
                             <div className="ml-4">
-                              <div className="text-sm font-medium text-gray-900">
+                              <div className="text-sm font-medium text-white">
                                 {lec}
                               </div>
                             </div>

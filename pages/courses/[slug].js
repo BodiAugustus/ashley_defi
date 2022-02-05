@@ -31,7 +31,7 @@ export default function Course({course}) {
             initial-scale=1"/>
           </Head>
   
-          <div className="relative max-w-7xl mx-auto"> 
+          <div className="relative max-w-7xl mx-auto bg-black"> 
             <CourseHero    // Hero for each individual product
               hasOwner={!!ownedCourse.data}
               title={course.title}

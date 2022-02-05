@@ -316,3 +316,5 @@
 #158. Styled WalletBar. npm i dayjs for WalletBar use.
 
 #159. Styled Marketplace page, coursecards and FtmPrice components.
+
+#160. Styled Footer, Banner, Keypoints and Curriculum.

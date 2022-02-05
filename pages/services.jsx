@@ -16,7 +16,7 @@ export default function Info({courses}) {
 
     return (
       <div>
-        <div className="relative bg-white overflow-hidden">
+        <div className="relative bg-black overflow-hidden text-white">
           <div className="relative max-w-7xl mx-auto ">      
               <div className="fit">
                 <Banner/>
