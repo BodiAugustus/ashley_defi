@@ -20,6 +20,9 @@ export default function Marketplace({courses}) {
     const { ownedCourses } = useOwnedCourses(courses, account.data)
     const [selectedCourse, setSelectedCourse] = useState(null)
 
+    //busyCourse if for changing the purchase button message during metamask tx
+    const [busyCourseId, setBusyCourseId] = useState(null)
+
     //isNewPurchase is for setting up the repurchase button functionality
     const [isNewPurchase, setIsNewPurchase] = useState(true)
 
@@ -27,9 +30,9 @@ export default function Marketplace({courses}) {
     
     // Calling this causes metamask to open in the browser
     const purchaseCourse = async (order, course) => { //passes order into Modal component
-      console.log(order);
-      console.log(course);
-      return;
+      // console.log(order);
+      // console.log(course);
+ 
       const hexCourseId = web3.utils.utf8ToHex(course.id) //gets selected course id in hex format
       // console.log(hexCourseId);
       const orderHash = web3.utils.soliditySha3(
@@ -40,6 +43,8 @@ export default function Marketplace({courses}) {
     
       
       const value = web3.utils.toWei(String(order.price))
+
+      setBusyCourseId(course.id)
 
         if(isNewPurchase){
           const emailHash = web3.utils.sha3(order.email)    
@@ -68,8 +73,10 @@ export default function Marketplace({courses}) {
         // console.log(result);
         return result
       } catch (error) {
-        throw new Error(error.message)
-        
+        throw new Error(error.message)  
+      }
+      finally {
+        setBusyCourseId(null)
       }
     }
 
@@ -81,8 +88,11 @@ export default function Marketplace({courses}) {
         // console.log(result);
         return result
       } catch (error) {
-        throw new Error(error.message)
-        
+        throw new Error(error.message)    
+      }
+      finally {
+        setBusyCourse(null)
+        //after finally we still have to compare course id of what we are buying to course id's to figure which one is being purchased.
       }
     }
  //the resolve sends the transatrion hash into toastjs as a promise which then gets resolved as the data
@@ -169,7 +179,8 @@ export default function Marketplace({courses}) {
                         // console.log(ownedCourses.lookup)
                         //[] is used bc we are searching in an object
                         
-
+                        // const isBusy = true
+                        const isBusy = busyCourseId === course.id
                         if (owned) {
                           return(
                             <>
@@ -202,10 +213,17 @@ export default function Marketplace({courses}) {
                           <div className="mt-4">
                             <Button 
                             variant="white"
-                            disabled={!hasConnectedWallet}
+                            disabled={!hasConnectedWallet || isBusy}
                             onClick={() => setSelectedCourse(course)}                       
                             > {/*Click the button will select a course to purchase so we need to keep a state for it - selectedCourse */}
-                              Purchase
+                              {isBusy ? 
+                              <div className="flex">
+                                <Loader
+                                  size="sm"
+                                />
+                                <div className="ml-2">In progress..</div>
+                              </div> : <div>Purchase</div>
+                              }
                             </Button>
                           </div>
                         )
