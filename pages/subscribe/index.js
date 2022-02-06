@@ -9,6 +9,7 @@ import { useState } from "react"
 import { MarketHeader } from "@components/ui/marketplace"
 import { useWeb3 } from "@components/providers"
 import { useOwnedCourses } from "@components/hooks/web3"
+import { toast } from 'react-toastify';
 
 export default function Marketplace({courses}) {
     //  const { account, network, hasConnectedWallet} = useWalletInfo() // passes in active user network and account
@@ -77,13 +78,45 @@ export default function Marketplace({courses}) {
       }
     }
 
+    const notify = () => {
+      // const resolveWithSomeData = new Promise(resolve => setTimeout(() => resolve("world"), 3000));
+      const resolveWithSomeData = new Promise((resolve, reject) => setTimeout(() => reject(new Error("some error 2")), 3000));
+      toast.promise(
+        resolveWithSomeData,
+          {
+            pending: {
+              render(){
+                return "I'm loading"
+              },
+              icon: false,
+            },
+            success: {
+              render({data}){
+                return `Hello ${data}`
+              },
+              // other options
+              icon: "🟢",
+            },
+            error: {
+              render({data}){
+                // When the promise reject, data will contains the error
+                return <div>{data.message ?? "Transaction has failed!"}</div>
+              }
+            }
+          }
+      )
+    }
+
 
     return (
       <div>
         <div className="relative bg-black overflow-hidden">
           <div className="relative max-w-7xl mx-auto ">      
               <div className="fit pb-4">
-              <MarketHeader/>               
+              <MarketHeader/>       
+              <Button onClick={notify}>
+                Nofity
+              </Button>        
                 {/* "Current" {`${network.data}`}
                 "Target" {`${network.target}`}
                 "Is Supported" {`${network.isSupported}`}  THESE ARE TESTING VALUES to make sure the UI message is displayed properly - change between networks and check UI message  */}      

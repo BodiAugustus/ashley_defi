@@ -324,3 +324,5 @@
 #162. Updated styling at XL size. Changed some link named/folder names. Updated routes. Made all working as before.
 
 #163. Tested purchase and activate/deactivate functonality. Successful.
+
+#164. Displayed loader during purchases using react-toastify. npm i react-toastify. Tested functionality for promise return, working.
