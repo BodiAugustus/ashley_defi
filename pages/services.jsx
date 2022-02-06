@@ -3,6 +3,7 @@ import BaseLayout from "@components/ui/layout/baseLayout"
 import Banner from "@components/ui/order/banner/Banner"
 import { getAllCourses } from "@content/courses/fetcher"
 import { Intro } from "@components/ui/services"
+import { Body1 } from "@components/ui/services"
 
 
 
@@ -21,6 +22,7 @@ export default function Info({courses}) {
               <div className="fit">
                 <Banner/>
                 <Intro/>
+                <Body1/>
 
   
               </div>       

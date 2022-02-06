@@ -38,7 +38,7 @@ export const withToast = (promise) => {
                     <div>
                         <p className='font-bold'>TX: {data.transactionHash.slice(0,18)}...</p>
                         <p>TX was successful!</p>
-                        <a target="_blank" rel='noreferrer' href={`https://etherscan.io/tx/${data.transactionHash}`}>
+                        <a target="_blank" rel='noreferrer' href={`https://ftmscan.com/tx/${data.transactionHash}`}>
                             <i className='text-sky-400 underline'>See TX details</i>
                         </a>
                     </div>
