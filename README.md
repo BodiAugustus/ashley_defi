@@ -338,3 +338,5 @@
 #169. Refactored button conditions to set loading state on purchase buttons during repurchase TX using mutate.
 
 #170. Fixed improper styling in Message component. Checked application states. Tested. Checked. All passing and working as expected.
+
+#171. Edited Banner. Created services folder inside of ui. Created index.js and intro folder. Inside intro folder created index.js. Constructed Intro component. Finished Intro.

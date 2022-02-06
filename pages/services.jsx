@@ -1,8 +1,8 @@
 
-import { CourseCard, CourseList } from "@components/ui/course"
 import BaseLayout from "@components/ui/layout/baseLayout"
 import Banner from "@components/ui/order/banner/Banner"
 import { getAllCourses } from "@content/courses/fetcher"
+import { Intro } from "@components/ui/services"
 
 
 
@@ -20,6 +20,7 @@ export default function Info({courses}) {
           <div className="relative max-w-7xl mx-auto ">      
               <div className="fit">
                 <Banner/>
+                <Intro/>
 
   
               </div>       
