@@ -4,9 +4,9 @@ const Banner = ({title, description, image}) => {
     return(
         <section className="h-[85vh] text-left 
         lg:my-28 lg:2/6">
-        <div className="text-6xl font-semibold text-white text-center leading-none
+        <div className="text-6xl px-2 font-semibold text-white text-center leading-none
         xs:text-3xl xs:mt-4
-        ">We help you invest in the future of finance</div>
+        ">Let us introduce you to the future of finance</div>
         <div className="text-xl font-light text-true-gray-500 antialiased text-center
         xs:text-base xs:mt-2
         lg:mt-6  

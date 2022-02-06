@@ -342,3 +342,5 @@
 #171. Edited Banner. Created services folder inside of ui. Created index.js and intro folder. Inside intro folder created index.js. Constructed Intro component. Finished Intro.
 
 #172. Created body1 folder inside services. Created index.js. Created Body1 component. Finished Body1.
+
+#173. Created setup folder inside services. Created index.js. Created Setup component. Finished Setup.
