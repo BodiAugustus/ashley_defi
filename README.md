@@ -328,3 +328,5 @@
 #164. Displayed loader during purchases using react-toastify. npm i react-toastify. Tested functionality for promise return, working.
 
 #165. Improved Toast UI message. Created toast.js in utils folder. Moved toast functionality to that file. Exported to index. Made working.
+
+#166. Displayed the TX hash to the toast message with link to etherscan by wrapping in _purchase and _repurchaseCourse functions. Made purchase modal to close when puchase button clicked. Created cleanupModal function to achieve. Also displayed buttons when state is loading.

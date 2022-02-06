@@ -6,6 +6,7 @@ export const withToast = (promise) => {
         promise,
           {
             pending: {
+                position: toast.POSITION.TOP_LEFT,
               render(){
                 return (
                     <div className='p-6 py-2 '>
@@ -22,6 +23,7 @@ export const withToast = (promise) => {
               icon: false,
             },
             success: {
+                position: toast.POSITION.TOP_LEFT,
               render({data}){
                 return (
                     <div>
@@ -37,6 +39,7 @@ export const withToast = (promise) => {
               icon: "🟢",
             },
             error: {
+                position: toast.POSITION.TOP_LEFT,
               render({data}){
                 // When the promise reject, data will contains the error
                 return <div>{data.message ?? "Transaction has failed!"}</div>

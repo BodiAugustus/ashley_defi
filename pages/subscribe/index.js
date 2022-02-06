@@ -26,8 +26,11 @@ export default function Marketplace({courses}) {
     const { web3, contract, requireInstall } = useWeb3()
     
     // Calling this causes metamask to open in the browser
-    const purchaseCourse = async (order) => { //passes order into Modal component
-      const hexCourseId = web3.utils.utf8ToHex(selectedCourse.id) //gets selected course id in hex format
+    const purchaseCourse = async (order, course) => { //passes order into Modal component
+      console.log(order);
+      console.log(course);
+      return;
+      const hexCourseId = web3.utils.utf8ToHex(course.id) //gets selected course id in hex format
       // console.log(hexCourseId);
       const orderHash = web3.utils.soliditySha3(
         {type: "bytes16", value: hexCourseId},
@@ -47,11 +50,11 @@ export default function Marketplace({courses}) {
           { type: "bytes32", value: orderHash},
         )
 
-          _purchaseCourse(hexCourseId, proof, value)
+         withToast( _purchaseCourse(hexCourseId, proof, value))
         }
-
+              //when this resolves it sends the data to toast.js which receives the data and as a result we get the transactionHash which is then displayed
         else {
-          _repurchaseCourse(orderHash, value)
+          withToast(_repurchaseCourse(orderHash, value))
         }
     }
     //gets us owned courses
@@ -62,9 +65,11 @@ export default function Marketplace({courses}) {
           hexCourseId,
           proof
         ).send({from: account.data, value})
-        console.log(result);
+        // console.log(result);
+        return result
       } catch (error) {
-        console.error("Purchase course: Operation has failed!");
+        throw new Error(error.message)
+        
       }
     }
 
@@ -73,18 +78,24 @@ export default function Marketplace({courses}) {
         const result = await contract.methods.repurchaseCourse(
           courseHash
         ).send({from: account.data, value})
-        console.log(result);
+        // console.log(result);
+        return result
       } catch (error) {
-        console.error("Purchase course: Operation has failed!");
+        throw new Error(error.message)
+        
       }
     }
  //the resolve sends the transatrion hash into toastjs as a promise which then gets resolved as the data
-    const notify = () => {
-      const resolveWithSomeData = new Promise(resolve => setTimeout(() => resolve({transactionHash: "0x35c762db6d151ab1907089f5ef0c38f827ff85d971589a6fd0adfa7189e691b9"}), 3000));
-      // const resolveWithSomeData = new Promise((resolve, reject) => setTimeout(() => reject(new Error("some error 2")), 3000))
-      withToast(resolveWithSomeData)
-    }
+    // const notify = () => {
+    //   const resolveWithSomeData = new Promise(resolve => setTimeout(() => resolve({transactionHash: "0x35c762db6d151ab1907089f5ef0c38f827ff85d971589a6fd0adfa7189e691b9"}), 3000));
+    //   // const resolveWithSomeData = new Promise((resolve, reject) => setTimeout(() => reject(new Error("some error 2")), 3000))
+    //   withToast(resolveWithSomeData)
+    // }
 
+    const cleanupModal = () => {
+      setSelectedCourse(null)
+      setIsNewPurchase(true)
+    }
 
     return (
       <div>
@@ -92,9 +103,9 @@ export default function Marketplace({courses}) {
           <div className="relative max-w-7xl mx-auto ">      
               <div className="fit pb-4">
               <MarketHeader/>       
-              <Button onClick={notify}>
-                Nofity
-              </Button>        
+              {/* <Button onClick={notify}>
+                Nofity     for toast
+              </Button>         */}
                 {/* "Current" {`${network.data}`}
                 "Target" {`${network.target}`}
                 "Is Supported" {`${network.isSupported}`}  THESE ARE TESTING VALUES to make sure the UI message is displayed properly - change between networks and check UI message  */}      
@@ -135,7 +146,15 @@ export default function Marketplace({courses}) {
                         }
                         if(!ownedCourses.hasInitialResponse){
                           return(
-                            <div style={{height: "50px"}}></div>
+                            <Button
+                            size="sm"
+                            disabled={true}
+                            variant="green"
+                            className="mt-2"
+                            >
+                              Data Loading..
+                            </Button>
+                            // <div style={{height: "50px"}}></div>
                           //   <div className="mt-4">
                           //   <Button 
                           //   variant="purple"
@@ -202,11 +221,11 @@ export default function Marketplace({courses}) {
                 <OrderModal 
                   isNewPurchase={isNewPurchase}
                   course={selectedCourse}
-                  onSubmit={purchaseCourse}
-                  onClose={() => {
-                    setSelectedCourse(null)
-                    setIsNewPurchase(true)
+                  onSubmit={(formData, course) => {
+                    purchaseCourse(formData, course)
+                    cleanupModal()
                     }}
+                  onClose={cleanupModal}
                 /> 
                 }{/*This gets the selected course from the button click passed as a prop to ordermodal so the modal opens for the correct course. onClose was added to pass the null value to OrderModal so that the value is reset to null on modal close in order to allow useEffect to fire even when the same purchase button is clicked twice */}             
               </div>       
