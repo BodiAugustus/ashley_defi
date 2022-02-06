@@ -10,6 +10,7 @@ import { MarketHeader } from "@components/ui/marketplace"
 import { useWeb3 } from "@components/providers"
 import { useOwnedCourses } from "@components/hooks/web3"
 import { toast } from 'react-toastify';
+import { withToast } from "@utils/toast"
 
 export default function Marketplace({courses}) {
     //  const { account, network, hasConnectedWallet} = useWalletInfo() // passes in active user network and account
@@ -77,34 +78,11 @@ export default function Marketplace({courses}) {
         console.error("Purchase course: Operation has failed!");
       }
     }
-
+ //the resolve sends the transatrion hash into toastjs as a promise which then gets resolved as the data
     const notify = () => {
-      // const resolveWithSomeData = new Promise(resolve => setTimeout(() => resolve("world"), 3000));
-      const resolveWithSomeData = new Promise((resolve, reject) => setTimeout(() => reject(new Error("some error 2")), 3000));
-      toast.promise(
-        resolveWithSomeData,
-          {
-            pending: {
-              render(){
-                return "I'm loading"
-              },
-              icon: false,
-            },
-            success: {
-              render({data}){
-                return `Hello ${data}`
-              },
-              // other options
-              icon: "🟢",
-            },
-            error: {
-              render({data}){
-                // When the promise reject, data will contains the error
-                return <div>{data.message ?? "Transaction has failed!"}</div>
-              }
-            }
-          }
-      )
+      const resolveWithSomeData = new Promise(resolve => setTimeout(() => resolve({transactionHash: "0x35c762db6d151ab1907089f5ef0c38f827ff85d971589a6fd0adfa7189e691b9"}), 3000));
+      // const resolveWithSomeData = new Promise((resolve, reject) => setTimeout(() => reject(new Error("some error 2")), 3000))
+      withToast(resolveWithSomeData)
     }
 
 

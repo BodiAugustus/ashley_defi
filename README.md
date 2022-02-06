@@ -326,3 +326,5 @@
 #163. Tested purchase and activate/deactivate functonality. Successful.
 
 #164. Displayed loader during purchases using react-toastify. npm i react-toastify. Tested functionality for promise return, working.
+
+#165. Improved Toast UI message. Created toast.js in utils folder. Moved toast functionality to that file. Exported to index. Made working.
