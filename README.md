@@ -332,3 +332,7 @@
 #166. Displayed the TX hash to the toast message with link to etherscan by wrapping in _purchase and _repurchaseCourse functions. Made purchase modal to close when puchase button clicked. Created cleanupModal function to achieve. Also displayed buttons when state is loading.
 
 #167. Created setBusyCourse state value. Refactored purchaseCourse and purchase buttons to make use of to change UI message during purchase. Tested. Success.
+
+#168. Refetched courses in index, used mutate to refetch data when purchase is made to update button UI after success TX.
+
+#169. Refactored button conditions to set loading state on purchase buttons during repurchase TX using mutate.

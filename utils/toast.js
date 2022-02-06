@@ -1,3 +1,4 @@
+import { Loader } from '@components/ui/common';
 import { toast } from 'react-toastify';
 
 
@@ -9,13 +10,21 @@ export const withToast = (promise) => {
                 position: toast.POSITION.TOP_LEFT,
               render(){
                 return (
-                    <div className='p-6 py-2 '>
+                    <div className='p-4 py-2 '>
+                    
+                   <div className="flex items-center">
+                   <Loader
+                        size='sm'
+                    />
+                    <div className="pl-3">
                     <p className="mb-2">
-                        Your TX is being processed!
+                        Your TX is processing!
                     </p>
                     <p>
                         One moment please...
                     </p>
+                    </div>
+                   </div>
 
                     </div>
                 )

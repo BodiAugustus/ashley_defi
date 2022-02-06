@@ -55,21 +55,32 @@ export default function Marketplace({courses}) {
           { type: "bytes32", value: orderHash},
         )
 
-         withToast( _purchaseCourse(hexCourseId, proof, value))
+         withToast( _purchaseCourse({hexCourseId, proof, value}, course))
         }
               //when this resolves it sends the data to toast.js which receives the data and as a result we get the transactionHash which is then displayed
         else {
-          withToast(_repurchaseCourse(orderHash, value))
+          withToast(_repurchaseCourse({courseHash: orderHash, value}, course))
         }
     }
     //gets us owned courses
 
-    const _purchaseCourse = async (hexCourseId, proof, value) => {
+    const _purchaseCourse = async ({hexCourseId, proof, value}, course) => {
       try {
         const result = await contract.methods.purchaseCourse(
           hexCourseId,
           proof
         ).send({from: account.data, value})
+        //mutate is being used to refetch data after purchase to update purchase button ui
+        
+        ownedCourses.mutate([
+          ...ownedCourses.data, {
+            ...course,
+            proof,
+            state: "purchased",
+            owner: account.data,
+            price: value
+          }
+        ])
         // console.log(result);
         return result
       } catch (error) {
@@ -80,18 +91,27 @@ export default function Marketplace({courses}) {
       }
     }
 
-    const _repurchaseCourse = async (courseHash, value) => {
+    const _repurchaseCourse = async ({courseHash, value}, course) => {
       try {
         const result = await contract.methods.repurchaseCourse(
           courseHash
         ).send({from: account.data, value})
         // console.log(result);
+        //need t locate course in ownedcourses array and change state from deact to activate.
+        const index = ownedCourses.data.findIndex(c => c.id === course.id)
+        if(index >= 0){
+          ownedCourses.data[index].state = "purchased"
+          ownedCourses.mutate(ownedCourses.data)
+        }else{
+
+          ownedCourses.mutate()
+        }
         return result
       } catch (error) {
         throw new Error(error.message)    
       }
       finally {
-        setBusyCourse(null)
+        setBusyCourseId(null)
         //after finally we still have to compare course id of what we are buying to course id's to figure which one is being purchased.
       }
     }
@@ -195,13 +215,21 @@ export default function Marketplace({courses}) {
                                 owned.state === "deactivated" &&
                                 <Button 
                               variant="purple"
-                              disabled={true} 
+                              disabled={isBusy} 
+                              
                               onClick={() => { 
                                 setIsNewPurchase(false)
                                 setSelectedCourse(course)
                                 }}                    
                               > 
-                              Repurchase
+                              {isBusy ? 
+                              <div className="flex">
+                                <Loader
+                                  size="sm"
+                                />
+                                <div className="ml-2 ">Loading...</div>
+                              </div> : <div>ReSubscribe</div>
+                              }
                               </Button>
                               }
         

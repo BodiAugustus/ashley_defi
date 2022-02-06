@@ -22,7 +22,7 @@ const FtmPrice = () => {
               src="/images/FTM.png"
               alt="FTM Logo"
             />
-            <span className="text-xl font-bold pl-1"> = ${ftm.data}</span>
+            <span className="text-xl font-bold pl-1"> = ${ftm.data.toFixed(2)}</span>
           </> :
             <div className="w-full flex justify-center">
             <Loader/>

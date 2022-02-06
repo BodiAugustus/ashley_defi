@@ -94,7 +94,7 @@ export const useFtmPrice = () => {
         fetcherFTM,
         {refreshInterval: 100000}
     )
-    const perItem = (data && (COURSE_PRICE / Number(data)).toFixed(5)) ?? null
+    const perItem = (data && (COURSE_PRICE / Number(data)).toFixed(3)) ?? null
     return { ftm: {data, perItem, ...rest} }
 }
 
