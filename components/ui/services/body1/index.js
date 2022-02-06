@@ -5,7 +5,7 @@ const Body1 = () => {
     return (
         
         <div className="h-[100vh] bg-black text-white px-3">
-            <h1 className="text-3xl text-center mb-2">We help you understand the risk, such as:</h1>
+            <h1 className="text-3xl text-center mb-3">We help you understand the risk, such as:</h1>
             <div className="flex items-center mb-2 font-economica">
             <FaSkullCrossbones className='text-2xl mr-1 '/>
             <h2>Bots driving up the price at an ICO event before you even have time to make an initial offer and click trade. </h2>
