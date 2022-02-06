@@ -55,7 +55,7 @@ export default function Card({course, Footer, disabled, state}) {
             </div>
 
             <Link 
-            href={`/courses/${course.slug}`} >
+            href="subscribe/subscriptions/owned" >
             <a                 
             className="h-12 block mt-1 xs:text-sm md:text-lg leading-tight font-medium text-white hover:underline">{course.title}</a>
             </Link>

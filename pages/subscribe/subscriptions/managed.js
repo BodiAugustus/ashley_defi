@@ -42,7 +42,7 @@ const ManagedCourses = () => {
   const [filters, setFilters] = useState({ state: "all"})
   const { web3, contract } = useWeb3()
 
-  const { account } = useAdmin({redirectTo: "/marketplace"})
+  const { account } = useAdmin({redirectTo: "/subscribe"})
   const { managedCourses } = useManagedCourses(account)
   // console.log(managedCourses.data);
   const verifyCourse = (email, {hash, proof}) => {

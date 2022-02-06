@@ -32,7 +32,7 @@ const OwnedCourses = ({courses}) => {
             <div className="w-1/2 mx-auto bg-black min-h-[30vh] mt-20">
               <Message type="warning">
                <div className=""> You don&apos;t own any courses!</div>
-               <Link href="/marketplace">
+               <Link href="/subscribe">
                  <a className="font-normal hover:underline">
                    <i>Purchase course</i>
                  </a>
@@ -68,7 +68,7 @@ const OwnedCourses = ({courses}) => {
                     My custom message!
                 </Message> */}
 
-                <Button onClick={() => router.push(`/courses/${course.slug}`)}>
+                <Button onClick={() => router.push(`/subscriptions/${course.slug}`)}>
                     Watch the course
                 </Button>
             </OwnedCourseCard>
