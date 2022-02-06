@@ -336,3 +336,5 @@
 #168. Refetched courses in index, used mutate to refetch data when purchase is made to update button UI after success TX.
 
 #169. Refactored button conditions to set loading state on purchase buttons during repurchase TX using mutate.
+
+#170. Fixed improper styling in Message component. Checked application states. Tested. Checked. All passing and working as expected.

@@ -182,7 +182,7 @@ export default function Marketplace({courses}) {
                             variant="green"
                             className="mt-2"
                             >
-                              Data Loading..
+                            {hasConnectedWallet ? "Loading State..." : "Connect MetaMask"}
                             </Button>
                             // <div style={{height: "50px"}}></div>
                           //   <div className="mt-4">
