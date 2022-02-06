@@ -320,3 +320,5 @@
 #160. Styled Footer, Banner, Keypoints and Curriculum.
 
 #161. npm i react-ticker. Created sliding ticker component to display in home page UI.
+
+#162. Updated styling at XL size. Changed some link named/folder names. Updated routes. Made all working as before.

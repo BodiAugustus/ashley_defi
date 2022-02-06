@@ -1,10 +1,10 @@
-import useEthPrice, { COURSE_PRICE } from "@components/hooks/useEthPrice"
+import { COURSE_PRICE, useFtmPrice } from "@components/hooks/useEthPrice"
 import { Loader } from "@components/ui/common"
 import Image from "next/image"
 
 
 const FtmPrice = () => {
-  const { eth } = useEthPrice()
+  const { ftm } = useFtmPrice()
   return (
     <div className="flex text-center bg-black pl-2 p-4
     xs:flex-col 
@@ -13,38 +13,38 @@ const FtmPrice = () => {
         <div className="p-6 border-2 border-[#ffe400] drop-shadow rounded-md mr-2 ">
           <div className="flex items-center justify-center text-white">
           {
-            eth.data ?
+            ftm.data ?
             <>
             <Image
               layout="fixed"
               height="35"
               width="35"
-              src="/images/XMR1.png"
-              alt="XMR Logo"
+              src="/images/FTM.png"
+              alt="FTM Logo"
             />
-            <span className="text-xl font-bold pl-1"> = ${eth.data}</span>
+            <span className="text-xl font-bold pl-1"> = ${ftm.data}</span>
           </> :
             <div className="w-full flex justify-center">
             <Loader/>
             </div>    
           }
           </div>
-          <p className="text-lg text-white">Current eth Price</p>
+          <p className="text-lg text-white">Current FTM Price</p>
         </div>
         <div className="p-6 border-2 border-yellow-400 drop-shadow rounded-md">
           <div className="flex items-center justify-center text-white">
            {
-             eth.data ?
+             ftm.data ?
            <>
             <span className="text-xl font-bold pr-1">
-            ${eth.perItem} 
+            {ftm.perItem} 
             </span>
             <Image
             layout="fixed"
             height="35"
             width="35"
-            src="/images/XMR1.png"
-            alt="XMR Logo"
+            src="/images/FTM.png"
+            alt="FTM Logo"
           />
             <span className="text-xl font-bold pl-1">
               = ${COURSE_PRICE}
@@ -55,7 +55,7 @@ const FtmPrice = () => {
             </div>    
            }
           </div>
-          <p className="text-lg text-white">Price per course</p>
+          <p className="text-lg text-white">Price per month</p>
         </div>
     
     </div>

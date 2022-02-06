@@ -5,14 +5,14 @@ import { useAccount } from "@components/hooks/web3"
 import { MoveStuffAround } from '@components/ui/common'
 
 const LINKS = [{
-    href: "/marketplace",
-    value: "Buy"
+    href: "/subscribe",
+    value: "Subscribe"
 },{
-    href: "/marketplace/courses/owned",
-    value: "My Courses"
+    href: "/subscribe/subscriptions/owned",
+    value: "My Subscription"
 },{
-    href: "/marketplace/courses/managed",
-    value: "Manage Courses",
+    href: "/subscribe/subscriptions/managed",
+    value: "Manage Subscriptions",
     requireAdmin: true
 }]
 

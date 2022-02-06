@@ -20,11 +20,8 @@ export default function Info({courses}) {
           <div className="relative max-w-7xl mx-auto ">      
               <div className="fit">
                 <Banner/>
-                <CourseList courses={courses}>
-                  {
-                    (course) => <CourseCard key={course.id} course={course}/>
-                  }
-                </CourseList>
+
+  
               </div>       
           </div>
         </div>

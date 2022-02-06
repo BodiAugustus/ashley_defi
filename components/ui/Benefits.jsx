@@ -7,7 +7,7 @@ const Benefits = () => {
             <h2 className="text-4xl text-center pt-0 mb-1
             md:text-5xl
             lg:text-4xl
-            xl:text-5xl
+            xl:text-4xl
             ">Member Benefits</h2>
             <div className="h-[88vh] w-[90vw] bg-[#2b2b2b] mx-auto  white-glassmorphism grid grid-rows-6 transition-all font-economica
             md:w-[80vw]
@@ -16,7 +16,7 @@ const Benefits = () => {
             sm:text-3xl
             md:text-4xl
             lg:text-3xl
-            xl:text-4xl
+            xl:text-3xl
              ">
                 <h2 className="mt-5 
                 sm:mt-8
@@ -29,7 +29,7 @@ const Benefits = () => {
             sm:text-3xl
             md:text-4xl
             lg:text-3xl
-            xl:text-4xl
+            xl:text-3xl
             ">
                 <h2 className="mt-5 
                 sm:mt-8
@@ -42,7 +42,7 @@ const Benefits = () => {
             sm:text-3xl
             md:text-4xl
             lg:text-3xl
-            xl:text-4xl
+            xl:text-3xl
             ">
                 <h2 className="mt-5 
                 sm:mt-8
@@ -55,7 +55,7 @@ const Benefits = () => {
             sm:text-3xl
             md:text-4xl
             lg:text-3xl
-            xl:text-4xl
+            xl:text-3xl
             ">
                 <h2 className="mt-5 
                 sm:mt-8
@@ -68,7 +68,7 @@ const Benefits = () => {
             sm:text-3xl
             md:text-4xl
             lg:text-3xl
-            xl:text-4xl
+            xl:text-3xl
              rounded-bl-lg rounded-br-lg">
                 <h2 className="mt-5 
                 sm:mt-8
@@ -81,7 +81,7 @@ const Benefits = () => {
             sm:text-3xl
             md:text-4xl
             lg:text-3xl
-            xl:text-4xl
+            xl:text-3xl
             ">
                 <h2 className="mt-5 
                 sm:mt-8

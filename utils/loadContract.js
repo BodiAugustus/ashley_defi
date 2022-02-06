@@ -1,7 +1,7 @@
 //this file loads the contract to the front end
 const NETWORK_ID = process.env.NEXT_PUBLIC_NETWORK_ID
 
-export const loadContract = async (name, web3) => { //web3 is brought in from the provider file
+export const loadContract = async (name, web3) => { //web3 is brought in from the 
     const res = await fetch(`/contracts/${name}.json`)
     const Artifact = await res.json()
 

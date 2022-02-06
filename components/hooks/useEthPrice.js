@@ -45,7 +45,7 @@ const URLCRV = "https://api.coingecko.com/api/v3/coins/curve-dao-token?localizat
 
 const URLDUSK = "https://api.coingecko.com/api/v3/coins/dusk-network?localization=false&tickers=false&community_data=false&developer_data=false&sparkline=false"
 
-export const COURSE_PRICE  = 15
+export const COURSE_PRICE  = 30
 
 const fetcher = async (url) => {
  const res = await fetch(url)
@@ -89,12 +89,13 @@ const fetcherFTM = async (url) => {
 }
 
 export const useFtmPrice = () => {
-    const swrRes = useSWR(
+    const {data, ...rest} = useSWR(
         URLFTM,
         fetcherFTM,
         {refreshInterval: 100000}
     )
-    return { ftm: { ...swrRes}}
+    const perItem = (data && (COURSE_PRICE / Number(data)).toFixed(5)) ?? null
+    return { ftm: {data, perItem, ...rest} }
 }
 
 const fetcherSPIRIT = async (url) => {

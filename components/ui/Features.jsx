@@ -12,7 +12,7 @@ const Features = () => {
             <h2 className="text-center text-4xl pt-4 mb-1
             md:text-5xl md:mb-3
             lg:text-4xl lg:mr-[53%] lg:mb-2
-            xl:text-5xl xl:mb-3 xl:mr-[54%]
+            xl:text-4xl xl:mb-2 xl:mr-[54%]
             
             ">The Ashley Way</h2>
             <div className="h-[89vh] w-[90vw] mx-auto
@@ -21,7 +21,7 @@ const Features = () => {
                 <div className="white-glassmorphism h-[30vh] mb-6 text-lg p-3 sm:text-xl sm:leading-loose
                 md:text-2xl md:leading-loose md:w-[70%] md:mx-auto
                 lg:text-xl lg:leading-loose lg:col-span-2 lg:row-span-2 lg:h-[57vh] lg:w-[80%] lg:pt-8
-                xl:text-2xl xl:leading-loose xl:h-[49vh] xl:p-7
+                xl:text-xl xl:leading-loose xl:h-[49vh] xl:p-7
                 xl:w-[85%]
                 ">
                     <h4 className='flex justify-evenly items-center
@@ -68,19 +68,19 @@ const Features = () => {
                     lg:text-3xl
                     xl:text-4xl
                     
-                    '/> Where there&apos;s a will, there&apos;s a way.</h4>
+                    '/> Where there&apos;s a will, there&apos;s a way!</h4>
                 </div>
 
                 <h2 className='text-4xl mb-1 text-center
                 md:text-5xl md:mt-8
                 lg:col-span-3 lg:mt-4 lg:text-4xl lg:-mb-12
-                xl:text-5xl xl:mt-12 xl:-mb-20
+                xl:text-4xl xl:mt-4 xl:-mb-20
                 '>2022 DeFi Focus</h2>
                 <div className="white-glassmorphism h-[30vh] mb-8 
                 sm:text-xl sm:leading-loose
                 md:text-2xl md:leading-loose md:h-[31vh] md:w-[90%] md:mx-auto
                 lg:col-span-3 lg:h-[47vh] lg:leading-relaxed
-                xl:h-[36vh]
+                xl:h-[41vh] xl:text-xl
                 ">
                     <ul>
                     <li>

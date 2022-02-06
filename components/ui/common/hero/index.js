@@ -46,7 +46,7 @@ const { account } = useAccount()
             <div className="h-14 w-14 rounded-full bg-[#2b2b2b] absolute right-[48%] top-[22%] border-4 border-[#2b2b2b] sm:top-[20%]
             md:right-[40%] md:top-[18%]
             lg:right-[4%] lg:top-[4%]
-            xl:right-[47%] xl:top-[43%]
+            xl:hidden
             ">
                 <a href="https://www.getmonero.org/">
                 <Image
@@ -81,8 +81,12 @@ const { account } = useAccount()
             :
             account.data ?
             <Button
-            className="cursor-default"
+            className="cursor-default absolute 
+            xl:left-[45%] xl:top-[38%]"
+
+        
             hoverable={false}
+            variant="blue"
             >
             Hello {account.isAdmin ? "Bodi" : `${account.data.slice(0,4)}...${account.data.slice(38)}` }
             </Button>
@@ -168,18 +172,19 @@ const { account } = useAccount()
             sm:-mt-4
             md:text-3xl md:mb-8
             lg:mb-6 lg:-mt-8
-            xl:mt-0 xl:mb-12 xl:text-4xl
+            xl:-mt-48 xl:mb-6 xl:text-4xl
             ">The Future Is Digital.
             </h1>   
 
             <div className="text-white mt-3">
 
-                <div className="flex justify-between h-[20vh]">
+                <div className="flex justify-between h-[20vh]
+                ">
                     <div className="bg-[#2b2b2b] text-xs w-[31%] rounded-lg white-glassmorphism
                     sm:text-base sm:h-[25vh] sm:w-[31%]
                     md:text-2xl
                     lg:text-xl lg:w-[32%]
-                    xl:text-2xl
+                    xl:text-2xl xl:h-[30vh]
                     ">               
                         <div className="flex justify-between p-2 items-center">
                             <h4>Our Job</h4>
@@ -201,7 +206,7 @@ const { account } = useAccount()
                     sm:text-base sm:h-[25vh] sm:w-[31%]
                     md:text-2xl
                     lg:text-xl lg:w-[32%]
-                    xl:text-2xl
+                    xl:text-2xl xl:h-[30vh]
                     ">
                         <div className="flex justify-between p-2 items-center">
                             <h4>Why Us?</h4>        
@@ -223,7 +228,7 @@ const { account } = useAccount()
                     sm:text-base sm:h-[25vh] sm:w-[31%]
                     md:text-2xl
                     lg:text-xl lg:w-[32%]
-                    xl:text-2xl
+                    xl:text-2xl xl:h-[30vh]
                     ">
                         <div className="flex justify-between p-2 items-center">
                             <h4>What Else?</h4>       

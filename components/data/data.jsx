@@ -1,4 +1,6 @@
-import {AiFillGithub, AiFillTwitterCircle, AiFillLinkedin} from 'react-icons/ai'
+import { AiFillTwitterCircle } from 'react-icons/ai'
+import { BsDiscord } from "react-icons/bs"
+import { FaTelegramPlane } from 'react-icons/fa'
 
 
 export const links = [{
@@ -9,21 +11,22 @@ export const links = [{
     howLong: "w-[74%] "
 },
 {
-    id: "13gfgg",
-    name: "market",
-    url: "/marketplace",
-    howLong: "w-[81%] "
-},
-{
     id: "13gfss",
     name: "Services",
     url: "/services",
     howLong: "w-[114%] "
 },
 {
+    id: "13gfgg",
+    name: "subscribe",
+    url: "/subscribe",
+    // url: "/marketplace",
+    howLong: "w-[81%] "
+},
+{
     id: "13gfssdf",
-    name: "Extras",
-    url: "/extras",
+    name: "Contact",
+    url: "/contact",
     howLong: "w-[89%] "
 }
 ]
@@ -32,22 +35,22 @@ export const socials = [{
     
     id: "23gfdd",
     name: "Twitter",
-    url: "https://twitter.com/BodiAugustus",
+    url: "https://twitter.com/AshleyDeFi",
     icon: <AiFillTwitterCircle/>,
     color: "text-sky-400"
 },
 {
     id: "23gfgg",
     name: "GitHub",
-    url: "https://github.com/BodiAugustus",
-    icon: <AiFillGithub/>,
-    color: "text-white"
+    url: "https://discord.com/channels/939647986856767570/939647986856767573",
+    icon: <BsDiscord/>,
+    color: "text-yellow-400"
 },
 {
     id: "23gfss",
     name: "LinkedIn",
-    url: "https://github.com/BodiAugustus",
-    icon: <AiFillLinkedin/>,
-    color: "text-yellow-400"
+    url: "https://t.me/BodiAugustus",
+    icon: <FaTelegramPlane/>,
+    color: "text-white"
 }
 ]

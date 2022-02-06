@@ -63,7 +63,7 @@ const lectures = [
                             locked ?
                             <>
                                 { courseState === "deactivated" &&
-                                <Link href="/marketplace" >
+                                <Link href="/subscribe" > 
                                   <a className="text-red-600 hover:text-red-900">
                                     Get Access
                                   </a>

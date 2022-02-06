@@ -6,7 +6,7 @@ const Info = () => {
             <h2 className="text-center text-4xl pt-4 mb-1
             md:text-5xl md:mb-3
             lg:text-4xl lg:mb-2
-            xl:text-5xl xl:mb-3
+            xl:text-4xl xl:mb-2
             "><span className="text-yellow-400">Enter</span> Ashley DeFi</h2>
             <div className="h-[90vh] w-[90vw] bg-[#2b2b2b] mx-auto border-2 rounded-xl border-stone-500 grid grid-cols-1 grid-rows-4
             lg:w-[45vw] lg:h-[89vh]
@@ -25,7 +25,7 @@ const Info = () => {
                 sm:text-xl sm:p-4
                 md:text-3xl md:p-8
                 lg:text-lg lg:p-3 lg:mt-2
-                xl:text-2xl xl:p-6 xl:mt-3
+                xl:text-xl xl:p-4 xl:mt-3
                 ">
                     <h2 className="indent-4
                     md:indent-8 
@@ -33,7 +33,7 @@ const Info = () => {
                     xl:leading-6
                     ">Ashley Capital & DeFi was created by <a
                      className="cursor-pointer"
-                     href="www.bodiaugustus.com" target="_blank"><b>Bodi Augustus</b></a>, a web3 and blockchain developer who has been working in crypto since 2017. </h2><br/>
+                     href="bodiaugustus.com" target="_blank"><b>Bodi Augustus</b></a>, a web3 and blockchain developer who has been working in crypto since 2017. </h2><br/>
                     <h2 className="md:indent-8 
                     lg:leading-5
                     xl:leading-6">Our aim is to bridge the knowledge gap between the general public and those who code on the blockchains and interact with its protocols daily.</h2><br/>
@@ -43,7 +43,7 @@ const Info = () => {
                 sm:text-xl sm:p-4 sm:mt-5
                 md:text-3xl md:p-8
                 lg:text-lg lg:p-3 lg:leading-5
-                xl:text-2xl xl:p-6 xl:leading-6
+                xl:text-xl xl:p-4 xl:leading-6
                 ">
                     <h2 className="indent-4
                     md:indent-8 ">We do not tell you what to think, we show you how to know. Understanding and using the technology is paramount for long-term successful DeFi investing.</h2><br/>
