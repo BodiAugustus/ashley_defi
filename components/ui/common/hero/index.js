@@ -45,7 +45,7 @@ const { account } = useAccount()
 
             <div className="h-14 w-14 rounded-full bg-[#2b2b2b] absolute right-[48%] top-[22%] border-4 border-[#2b2b2b]
             xs:top-[35%]
-            sm:top-[27%]
+            sm:top-[29%]
             md:right-[42%] md:top-[38%]
             lg:hidden
             xl:hidden
@@ -78,6 +78,7 @@ const { account } = useAccount()
             {isLoading ? 
             <Button
             className="
+            sm:left-[5%] sm:top-[45%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
             xl:left-[42%] xl:top-[38%]
@@ -89,7 +90,7 @@ const { account } = useAccount()
             account.data ?
             <Button
             className="cursor-default absolute 
-            sm:left-[5%] sm:top-[45%]
+            sm:left-[5%] sm:top-[48%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
             xl:left-[42%] xl:top-[38%]"
@@ -190,8 +191,8 @@ const { account } = useAccount()
             </div>
 
             <h1 className="text-center text-white -mt-8 font-bold
-            xs:mt-14
-            sm:mt-10 sm:text-2xl
+            xs:mt-18
+            sm:mt-4 sm:text-2xl
             md:text-3xl md:mt-10
             lg:mb-0 lg:mt-28
             xl:mt-20 xl:mb-6 xl:text-4xl

@@ -107,7 +107,7 @@ const Features = () => {
                     md:justify-center
                     '><GiDiamondHard className='mr-2
                     md:text-4xl
-                    '/> NFT&apos;s and Game Tokenization&nbsp; <i className='text-sm'>(Ex. Enjin)</i></h4></li>
+                    '/> NFT&apos;s and Gaming nbsp; <i className='text-sm'>(Ex. Enjin)</i></h4></li>
                     </ul>          
                 </div>
 
