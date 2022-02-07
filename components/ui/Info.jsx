@@ -2,13 +2,13 @@ import Image from "next/image"
 
 const Info = () => {
     return(
-        <div className="h-[100vh] bg-black text-white ">
+        <div className="h-[110vh] bg-black text-white ">
             <h2 className="text-center text-4xl pt-4 mb-1
             md:text-5xl md:mb-3
             lg:text-4xl lg:mb-2
             xl:text-4xl xl:mb-2
             "><span className="text-yellow-400">Enter</span> Ashley DeFi</h2>
-            <div className="h-[90vh] w-[90vw] bg-[#2b2b2b] mx-auto border-2 rounded-xl border-stone-500 grid grid-cols-1 grid-rows-4
+            <div className="h-[110vh] w-[90vw] bg-[#2b2b2b] mx-auto border-2 rounded-xl border-stone-500 grid grid-cols-1 grid-rows-4
             lg:w-[45vw] lg:h-[89vh]
             ">
             <div className="col-span-2 row-span-1 relative rounded-md border-b-2 border-stone-500">

@@ -88,7 +88,7 @@ const Benefits = () => {
                 md:mt-10
                 lg:mt-3
                 xl:mt-5
-                ">Access to members-only Telegram Chat</h2>
+                ">Members-only Telegram Chat</h2>
             </div>
 
 

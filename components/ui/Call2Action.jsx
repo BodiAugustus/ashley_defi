@@ -13,7 +13,7 @@ const Call2Action = () => {
             lg:text-4xl lg:mb-1 lg:pt-4
             xl:text-4xl
             ">What does it cost?</h2>
-            <div className="h-[83vh] w-[90vw] bg-[#2b2b2b] mx-auto rounded-lg white-glassmorphism p-3
+            <div className="h-[88vh] w-[90vw] bg-[#2b2b2b] mx-auto rounded-lg white-glassmorphism p-3
             sm:p-5
             md:h-[65vh]
             lg:h-[70vh]

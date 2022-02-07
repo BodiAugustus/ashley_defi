@@ -5,7 +5,7 @@ const Body1 = () => {
     return (
         
         <div className="h-[100vh] bg-black text-white px-3
-        sm:h-[87vh]
+        sm:h-[100vh]
         md:h-[65vh]
         lg:h-[85vh]
         ">

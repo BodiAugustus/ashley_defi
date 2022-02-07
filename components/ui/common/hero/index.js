@@ -89,6 +89,7 @@ const { account } = useAccount()
             account.data ?
             <Button
             className="cursor-default absolute 
+            sm:left-[5%] sm:top-[45%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
             xl:left-[42%] xl:top-[38%]"
@@ -103,6 +104,7 @@ const { account } = useAccount()
             requireInstall ?
             <Button
             className="cursor-default absolute 
+            sm:left-[5%] sm:top-[45%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
             xl:left-[42%] xl:top-[38%]"
@@ -112,6 +114,7 @@ const { account } = useAccount()
             :
             <Button
             className="cursor-default absolute 
+            sm:left-[5%] sm:top-[45%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
             xl:left-[42%] xl:top-[38%]"
@@ -188,7 +191,7 @@ const { account } = useAccount()
 
             <h1 className="text-center text-white -mt-8 font-bold
             xs:mt-14
-            sm:mt-20 sm:text-2xl
+            sm:mt-10 sm:text-2xl
             md:text-3xl md:mt-10
             lg:mb-0 lg:mt-28
             xl:mt-20 xl:mb-6 xl:text-4xl
@@ -218,7 +221,7 @@ const { account } = useAccount()
                             md:mt-4
                             lg:mt-0
                             xl:w-[90%] xl:mx-auto xl:mt-2
-                            ">To teach you how to make your own well informed and educated investing decisions.</p>
+                            ">To teach you how to make your own well informed investing decisions.</p>
                     </div>
 
                     <div className="bg-[#2b2b2b] text-xs w-[30%] rounded-lg white-glassmorphism

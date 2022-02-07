@@ -16,7 +16,7 @@ const Terms = () => {
             ">Good for 30 days</h1>
             <div className="bg-[#2b2b2b] h-[90vh] mx-3 rounded-lg
             xs:h-[15vh] 
-            sm:h-[12vh]
+            sm:h-[14vh]
             md:h-[13vh] md:w-[60%] md:mx-auto
             
             

@@ -3,7 +3,7 @@
 const Intro = () => {
     return(
         <div className="bg-black h-[100vh] text-white
-        sm:h-[85vh]
+        sm:h-[95vh]
         md:h-[68vh]
         lg:h-[85vh]
         ">

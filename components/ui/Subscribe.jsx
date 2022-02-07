@@ -41,20 +41,20 @@ const Subscribe = () => {
                         '>All members, all access. <span className='text-amber-900 font-bold'>No bull.</span></h4>
                 </div>
                 <div className="col-span-1 bg-blue-600 text-center hover:bg-blue-500 font-thin 
-                sm:text-lg sm:pt-2
+                sm:text-lg sm:pt-4
                 md:text-2xl md:p-3 md:pt-5
                 lg:text-base
                 xl:text-lg xl:p-5
                 ">
-                    <h2>Individualized risk assessments custom tailored to you and your desired levels of exposure.</h2>
+                    <h2>Individualized risk assessments custom tailored to your desired level of exposure.</h2>
                 </div>
                 <div className="col-span-1 bg-blue-600 text-center hover:bg-blue-500 font-thin 
-                sm:text-lg sm:pt-2
+                sm:text-lg sm:pt-4
                 md:text-2xl md:p-3
                 lg:text-base lg:pt-5
                 xl:text-lg xl:p-4 xl:pt-6
                 ">
-                    <h2>Personal portfolio management and recommendations with regular reporting & updates.</h2>
+                    <h2>Personal portfolio management and recommendations with regular updates.</h2>
                 </div>
                 <div className="col-span-1 bg-blue-600 text-center pt-3 hover:bg-blue-500 font-thin 
                 sm:text-lg sm:pt-6
@@ -70,7 +70,7 @@ const Subscribe = () => {
                 lg:text-base
                 xl:text-lg xl:p-4 xl:pt-6
                 ">
-                    <h2>Market outlooks and projections compiled in house using real-time market metrics.</h2>
+                    <h2>Market outlooks and projections compiled using real-time market metrics.</h2>
                 </div>
                 <div className="col-span-1 bg-blue-600 text-center hover:bg-blue-500 font-thin pt-2
                 sm:text-lg
@@ -78,7 +78,7 @@ const Subscribe = () => {
                 lg:text-base
                 xl:text-lg xl:p-4 xl:pt-6
                 ">
-                    <h2>Advanced technical expertise and knowledge from real world blockchain developers.</h2>
+                    <h2>Advanced technical expertise from real world blockchain developers.</h2>
                 </div>
                 <div className="col-span-1 bg-blue-600 text-center hover:bg-blue-500 font-thin 
                 sm:text-lg sm:pt-2
@@ -86,7 +86,7 @@ const Subscribe = () => {
                 lg:text-base lg:pt-1
                 xl:text-lg xl:p-4 xl:pt-4
                 ">
-                    <h2>Alpha news drops & the latest tech unveilings revealed though our cultivated list of proven affiliates.</h2>
+                    <h2>Alpha news drops & tech unveilings revealed though our cultivated list of proven affiliates.</h2>
                 </div>
                 <div className="col-span-2 bg-blue-400 rounded-bl-lg rounded-br-lg">
                     <h2 className='text-center text-3xl pt-4
