@@ -45,7 +45,7 @@ const { account } = useAccount()
 
             <div className="h-14 w-14 rounded-full bg-[#2b2b2b] absolute right-[48%] top-[22%] border-4 border-[#2b2b2b]
             xs:top-[35%]
-            sm:top-[29%]
+            sm:top-[30%]
             md:right-[42%] md:top-[38%]
             lg:hidden
             xl:hidden
@@ -78,7 +78,7 @@ const { account } = useAccount()
             {isLoading ? 
             <Button
             className="
-            sm:left-[5%] sm:top-[45%]
+            sm:left-[5%] sm:top-[48%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
             xl:left-[42%] xl:top-[38%]
@@ -105,7 +105,7 @@ const { account } = useAccount()
             requireInstall ?
             <Button
             className="cursor-default absolute 
-            sm:left-[5%] sm:top-[45%]
+            sm:left-[5%] sm:top-[48%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
             xl:left-[42%] xl:top-[38%]"
@@ -115,7 +115,7 @@ const { account } = useAccount()
             :
             <Button
             className="cursor-default absolute 
-            sm:left-[5%] sm:top-[45%]
+            sm:left-[5%] sm:top-[48%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
             xl:left-[42%] xl:top-[38%]"
