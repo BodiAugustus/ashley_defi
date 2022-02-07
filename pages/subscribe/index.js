@@ -9,7 +9,7 @@ import { useState } from "react"
 import { MarketHeader } from "@components/ui/marketplace"
 import { useWeb3 } from "@components/providers"
 import { useOwnedCourses } from "@components/hooks/web3"
-import { toast } from 'react-toastify';
+import { Terms } from "@components/ui/order"
 import { withToast } from "@utils/toast"
 
 export default function Marketplace({courses}) {
@@ -209,7 +209,7 @@ export default function Marketplace({courses}) {
                               variant="green"
                               disabled={true}                     
                               > 
-                              Owned &#10003;
+                              Subscribed &#10003;
                               </Button>
                               { 
                                 owned.state === "deactivated" &&
@@ -250,7 +250,7 @@ export default function Marketplace({courses}) {
                                   size="sm"
                                 />
                                 <div className="ml-2">In progress..</div>
-                              </div> : <div>Purchase</div>
+                              </div> : <div>Subscribe</div>
                               }
                             </Button>
                           </div>
@@ -262,6 +262,7 @@ export default function Marketplace({courses}) {
                       )}
                   }
                 </CourseList>
+                <Terms/>
                 {
                   selectedCourse &&
                 <OrderModal 

@@ -36,7 +36,7 @@ const Benefits = () => {
                 md:mt-10
                 lg:mt-3
                 xl:mt-5
-                ">1-on-1 Discussions</h2>
+                ">1-on-1 Consultations</h2>
             </div>
             <div className="hover:bg-slate-100 hover:text-black text-2xl text-center p-3
             sm:text-3xl
@@ -88,7 +88,7 @@ const Benefits = () => {
                 md:mt-10
                 lg:mt-3
                 xl:mt-5
-                ">Access to Discord Chat</h2>
+                ">Access to members-only Telegram Chat</h2>
             </div>
 
 

@@ -27,7 +27,8 @@ const Navbar = () => {
            {showMenu && 
             <h1 className='absolute text-white -right-[30%] top-[45%] rotate-90 text-7xl'>Ashley DeFi</h1>
            }
-                <div className="  flex justify-between h-[12vh] p-2 items-center w-full md:w-auto bg-[#2b2b2b] md:rounded-tr md:rounded-bl md:rounded-br
+                <div className="  flex justify-between h-[12vh] p-2 items-center w-full md:w-auto bg-[#2b2b2b] md:rounded-tr md:rounded-bl 
+                md:rounded-br
                 lg:ml-2">
                 <a href="www.bodiaugustus.com"
                 className='mt-1
@@ -36,12 +37,15 @@ const Navbar = () => {
                 '
                 target="_blank"
                 >
+                    <div className="">
                     <Image
                         src="/android-chrome-192x192.png"
                         alt="Ashley Capital & DeFi Logo"                        
                         height="65%"
                         width="65%"
+                        layout=''
                         />
+                    </div>
                 </a>
                     <button
                     onClick={() => setShowMenu(!showMenu)}

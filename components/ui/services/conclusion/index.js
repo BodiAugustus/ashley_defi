@@ -1,6 +1,9 @@
 import { Button } from "@components/ui/common"
+import Router from "next/router"
+import { useRouter } from "next/router"
 
 const Conclude = () => {
+  const router = useRouter()
     return(
         <div className="">
         <div className="bg-[#2b2b2b] h-[100vh] text-white mx-2 rounded-lg
@@ -49,7 +52,9 @@ const Conclude = () => {
             </div>
         </div>
             <div className="my-12 text-center">
-            <Button className="xs:p-4 xs:text-xl
+            <Button 
+            onClick={() => router.push("/subscribe")}
+            className="xs:p-4 xs:text-xl
             md:mt-10
             "
             

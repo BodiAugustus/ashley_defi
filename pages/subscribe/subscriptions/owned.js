@@ -69,7 +69,7 @@ const OwnedCourses = ({courses}) => {
                 </Message> */}
 
                 <Button onClick={() => router.push(`/subscriptions/${course.slug}`)}>
-                    Watch the course
+                    Members Only
                 </Button>
             </OwnedCourseCard>
             )}

@@ -31,8 +31,8 @@ const { account } = useAccount()
                 md:text-center md:relative
             ">
                     <h1 className="text-white text-5xl w-[50%]  font-playfair
-                    md:w-[75%] md:text-6xl
-                    lg:w-[100%]
+                    md:w-[75%] md:text-6xl md:mt-10
+                    lg:w-[100%] lg:mt-0
                     xl:text-7xl
                     ">Ashley Capital & DeFi 
                     </h1>
@@ -43,9 +43,11 @@ const { account } = useAccount()
                     </h4>     
             </div>
 
-            <div className="h-14 w-14 rounded-full bg-[#2b2b2b] absolute right-[48%] top-[22%] border-4 border-[#2b2b2b] sm:top-[20%]
-            md:right-[40%] md:top-[18%]
-            lg:right-[4%] lg:top-[4%]
+            <div className="h-14 w-14 rounded-full bg-[#2b2b2b] absolute right-[48%] top-[22%] border-4 border-[#2b2b2b]
+            xs:top-[35%]
+            sm:top-[27%]
+            md:right-[42%] md:top-[38%]
+            lg:hidden
             xl:hidden
             ">
                 <a href="https://www.getmonero.org/">
@@ -59,7 +61,7 @@ const { account } = useAccount()
             </div>
 
                 <div className="w-full   text-white  bg-[#2b2b2b] p-3 mt-4
-                md:mr-2 md:w-[40%]
+                md:mr-2 md:w-[40%] 
                 lg:hidden
                 xl:
                 ">
@@ -82,7 +84,9 @@ const { account } = useAccount()
             account.data ?
             <Button
             className="cursor-default absolute 
-            xl:left-[45%] xl:top-[38%]"
+            md:left-[15%] md:top-[45%]
+            lg:left-[42%] lg:top-[43%]
+            xl:left-[42%] xl:top-[38%]"
 
         
             hoverable={false}
@@ -105,6 +109,7 @@ const { account } = useAccount()
       
             }                      
             <div className=" h-20 sepia opacity-30 mt-7 text-center flex justify-between 
+            xs:hidden
             sm:mt-10
             lg:mt-28
             xl:mt-48
@@ -169,10 +174,11 @@ const { account } = useAccount()
             </div>
 
             <h1 className="text-center text-white -mt-8 font-bold
-            sm:-mt-4
-            md:text-3xl md:mb-8
-            lg:mb-6 lg:-mt-8
-            xl:-mt-48 xl:mb-6 xl:text-4xl
+            xs:mt-14
+            sm:mt-20 sm:text-2xl
+            md:text-3xl md:mt-10
+            lg:mb-0 lg:mt-28
+            xl:mt-20 xl:mb-6 xl:text-4xl
             ">The Future Is Digital.
             </h1>   
 

@@ -13,7 +13,7 @@ const normalizeOwnedCourse = (web3) => (course, ownedCourse) => {
         ownedCourseId: ownedCourse.id, // this is created to prevent overwriting the ORIGINAL id in the json file
         proof: ownedCourse.proof,
         owned: ownedCourse.owner,
-        price: web3.utils.fromWei(ownedCourse.price),
+        price: "$30",
         state: COURSE_STATES[ownedCourse.state]
     }
 }

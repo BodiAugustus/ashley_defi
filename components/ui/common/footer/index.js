@@ -21,7 +21,9 @@ const Footer = () => {
 
 
         <p className='bg-black text-sm 
-        md:relative md:top-14
+        xs:relative xs:top-3
+        sm:top-12
+        md:top-14
         xl:top-12
 
         

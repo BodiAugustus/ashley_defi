@@ -30,8 +30,8 @@ const CourseHero = ({title, description, image, hasOwner}) => {
               xl:mt-28">
                 <div className="sm:text-center lg:text-left">
                 {hasOwner &&
-                <div className="text-lg inline-block p-4 py-2 rounded-full font-bold bg-green-200 text-green-700">
-                  You are owner of:
+                <div className="text-lg inline-block p-4 py-2 rounded-full font-bold bg-green-300 text-green-700">
+                  Current Member of:
                 </div>
                 }
                   <h1 className="text-4xl tracking-tight font-extrabold text-white
@@ -40,30 +40,25 @@ const CourseHero = ({title, description, image, hasOwner}) => {
                     <span className="block xl:inline">
                     {title.substring(0, title.length/2)}
                     </span>
-                    <span className="block text-[#ffe400] xl:inline">
+                    <span className="block text-indigo-600 xl:inline">
                     {title.substring(title.length / 2)}
                     </span>
                   </h1>
                   <p className="mt-3 text-base text-white 
                   sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl 
                   lg:mx-0">
-                  {description}
+                  Welcome and hello friends, members, and fellow DeFi and crypto enthusiast! This month looks to be another exciting and eventful time in the space as Bitcoin and Ethereum continue to move volumes and alt-coins rebound strong off their recent devaluations.
                   </p>
                   <div className="mt-5 sm:mt-8 
                   sm:flex sm:justify-center 
                   lg:justify-start">
                     <div className="rounded-md shadow">
-                      <a href="#" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 
+                      <a href="https://t.me/+89dQjvU76cwxZGU9" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 
                       md:py-4 md:text-lg md:px-10">
-                        Get started
+                        Speak to a Consultant
                       </a>
                     </div>
-                    <div className="mt-3 sm:mt-0 sm:ml-3">
-                      <a href="#" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200
-                      md:py-4 md:text-lg md:px-10">
-                        Watch
-                      </a>
-                    </div>
+
                   </div>
                 </div>
               </main>
