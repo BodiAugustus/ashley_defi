@@ -3,7 +3,7 @@ import { IoMdRocket } from 'react-icons/io'
 const Setup = () => {
     return(
         <div className="bg-black h-[120vh] text-white
-        sm:h-[115vh]
+        sm:h-[125vh]
         md:h-[95vh]
         lg:h-[120vh]
         xl:h-[110vh]
@@ -13,7 +13,7 @@ const Setup = () => {
             md:text-4xl
             ">We help you setup</h1>
             <div className="bg-[#2b2b2b] h-[110vh] mx-3 rounded-lg p-3
-            sm:text-xl sm:h-[100vh]
+            sm:text-xl sm:h-[105vh]
             md:text-2xl md:h-[80vh]
             lg:h-[91vh] lg:text-lg lg:text-center lg:w-[70vw] lg:mx-auto
             xl:h-[95vh]
