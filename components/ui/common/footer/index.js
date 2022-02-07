@@ -5,7 +5,8 @@ const Footer = () => {
    
     return (
         <footer className="h-[26vh] flex flex-col justify-center items-center  text-white bg-black pt-8 pb-2
-        lg:h-[35vh]
+        xs:h-[35vh]
+        lg:h-[52vh]
         xl:relative">
         
         <Link href="/" className="transition-all">
@@ -20,7 +21,10 @@ const Footer = () => {
 
 
         <p className='bg-black text-sm 
-        xl:relative top-3
+        md:relative md:top-14
+        xl:top-12
+
+        
         
         '>Crypto Consulting & Wealth Management -	
 &#169; {time.getFullYear()} </p>

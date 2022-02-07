@@ -344,3 +344,7 @@
 #172. Created body1 folder inside services. Created index.js. Created Body1 component. Finished Body1.
 
 #173. Created setup folder inside services. Created index.js. Created Setup component. Finished Setup.
+
+#174. Created conclusion folder. Created index.js. Created Conclusion component. Finished Conclusion component.
+
+#175. Styled services page for different screen sizes. Page finished.

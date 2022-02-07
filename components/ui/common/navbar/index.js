@@ -27,7 +27,7 @@ const Navbar = () => {
            {showMenu && 
             <h1 className='absolute text-white -right-[30%] top-[45%] rotate-90 text-7xl'>Ashley DeFi</h1>
            }
-                <div className="  flex justify-between h-[12vh] p-2 items-center w-full md:w-auto bg-[#2b2b2b] md:rounded-lg
+                <div className="  flex justify-between h-[12vh] p-2 items-center w-full md:w-auto bg-[#2b2b2b] md:rounded-tr md:rounded-bl md:rounded-br
                 lg:ml-2">
                 <a href="www.bodiaugustus.com"
                 className='mt-1
@@ -52,7 +52,8 @@ const Navbar = () => {
                 
                 <div 
                 // ref={linksContainerRef}
-                className={`bg-[#2b2b2b] transition-all md:h-auto overflow-hidden  w-[55vw]  
+                className={`bg-[#2b2b2b] transition-all md:h-auto overflow-hidden  w-[55vw] 
+                xs:w-[60vw]
                 md:w-[55%] md:p-3 md:rounded-xl ${showMenu ? 'links-container show-container' : 'links-container'}
                 lg:w-[45%]
                 `}>
