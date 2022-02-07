@@ -354,3 +354,5 @@
 #177. Worked on subscription slug page as well as curriculum component.
 
 #178. Ran npm build. Added style classes to Hero buttons. Deployed to Vercel.
+
+#179. Removed unneeded conditional in the Hero.

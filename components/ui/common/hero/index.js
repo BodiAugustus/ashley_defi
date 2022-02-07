@@ -19,9 +19,9 @@ const { account } = useAccount()
         md:h-[85vh]
         xl:h-[90vh]
         ">
-        {account.data &&
+        
             <MoveStuffAround/>
-        }
+        
             <div className="flex justify-between w-full
             lg:w-[100vw]  
             lg:flex-col
