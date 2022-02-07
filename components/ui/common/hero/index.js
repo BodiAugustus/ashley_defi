@@ -77,6 +77,11 @@ const { account } = useAccount()
 
             {isLoading ? 
             <Button
+            className="
+            md:left-[15%] md:top-[45%]
+            lg:left-[42%] lg:top-[43%]
+            xl:left-[42%] xl:top-[38%]
+            "
             disabled={true}>
                 Loading...
             </Button> 
@@ -97,11 +102,19 @@ const { account } = useAccount()
             :
             requireInstall ?
             <Button
+            className="cursor-default absolute 
+            md:left-[15%] md:top-[45%]
+            lg:left-[42%] lg:top-[43%]
+            xl:left-[42%] xl:top-[38%]"
             onClick={() => window.open("https://metamask.io/", "_blank")}>
                 Install Metamask
             </Button>
             :
             <Button
+            className="cursor-default absolute 
+            md:left-[15%] md:top-[45%]
+            lg:left-[42%] lg:top-[43%]
+            xl:left-[42%] xl:top-[38%]"
             onClick={connect}
             >
             Connect Wallet
