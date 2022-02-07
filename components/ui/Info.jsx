@@ -33,7 +33,7 @@ const Info = () => {
                     xl:leading-6
                     ">Ashley Capital & DeFi was created by <a
                      className="cursor-pointer"
-                     href="bodiaugustus.com" target="_blank"><b>Bodi Augustus</b></a>, a web3 and blockchain developer who has been working in crypto since 2017. </h2><br/>
+                     href="https://www.bodiaugustus.com/" target="_blank" rel="noreferrer"><b>Bodi Augustus</b></a>, a web3 and blockchain developer who has been working in crypto since 2017. </h2><br/>
                     <h2 className="md:indent-8 
                     lg:leading-5
                     xl:leading-6">Our aim is to bridge the knowledge gap between the general public and those who code on the blockchains and interact with its protocols daily.</h2><br/>

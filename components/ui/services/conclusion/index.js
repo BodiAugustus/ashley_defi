@@ -7,7 +7,7 @@ const Conclude = () => {
     return(
         <div className="">
         <div className="bg-[#2b2b2b] h-[100vh] text-white mx-2 rounded-lg
-        sm:h-[120vh]
+        sm:h-[110vh]
         md:h-[75vh]
         lg:h-[85vh]
         xl:mx-6 xl:h-[75vh]

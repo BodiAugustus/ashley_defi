@@ -63,7 +63,7 @@ const Navbar = () => {
                 `}>
                     <ul 
                     // ref={linksRef}
-                    className='text-5xl p-8 transition-all uppercase md:flex md:justify-between md:text-3xl md:p-0 text-white font-economica tracking-wide md:h-9
+                    className='text-5xl text-center p-8 transition-all uppercase md:flex md:justify-between md:text-3xl md:p-0 text-white font-economica tracking-wide md:h-9
                     sm:leading-loose
                     lg:text-3xl
                     xl:text-4xl
@@ -84,7 +84,7 @@ const Navbar = () => {
                         {showMenu && 
                        <>
                        <div className="flex justify-around text-2xl text-white mt-8 cursor-pointer
-                       sm:text-3xl sm:mt-12
+                       sm:text-3xl sm:mt-2
                          ">
                             <FaTwitter className='hover:scale-110 active:scale-100 transition-all'/>
                             <FaGithub className='hover:scale-110 active:scale-100 transition-all'/>
