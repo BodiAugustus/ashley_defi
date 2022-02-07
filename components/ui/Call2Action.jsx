@@ -3,7 +3,7 @@ import Link from "next/link"
 const Call2Action = () => {
     return(
         <div className="h-[125vh] bg-black text-white
-        sm:h-[110vh]
+        sm:h-[120vh]
         md:h-[95vh]
         lg:h-[110vh]
         xl:h-[100vh]

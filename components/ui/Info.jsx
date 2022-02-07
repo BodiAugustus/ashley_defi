@@ -8,7 +8,7 @@ const Info = () => {
             lg:text-4xl lg:mb-2
             xl:text-4xl xl:mb-2
             "><span className="text-yellow-400">Enter</span> Ashley DeFi</h2>
-            <div className="h-[110vh] w-[90vw] bg-[#2b2b2b] mx-auto border-2 rounded-xl border-stone-500 grid grid-cols-1 grid-rows-4
+            <div className="h-[113vh] w-[90vw] bg-[#2b2b2b] mx-auto border-2 rounded-xl border-stone-500 grid grid-cols-1 grid-rows-4
             lg:w-[45vw] lg:h-[89vh]
             ">
             <div className="col-span-2 row-span-1 relative rounded-md border-b-2 border-stone-500">

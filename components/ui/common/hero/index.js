@@ -78,7 +78,7 @@ const { account } = useAccount()
             {isLoading ? 
             <Button
             className="
-            sm:left-[5%] sm:top-[48%]
+            sm:left-[5%] sm:top-[50%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
             xl:left-[42%] xl:top-[38%]
@@ -90,7 +90,7 @@ const { account } = useAccount()
             account.data ?
             <Button
             className="cursor-default absolute 
-            sm:left-[5%] sm:top-[48%]
+            sm:left-[5%] sm:top-[50%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
             xl:left-[42%] xl:top-[38%]"
@@ -105,7 +105,7 @@ const { account } = useAccount()
             requireInstall ?
             <Button
             className="cursor-default absolute 
-            sm:left-[5%] sm:top-[48%]
+            sm:left-[5%] sm:top-[50%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
             xl:left-[42%] xl:top-[38%]"
@@ -115,7 +115,7 @@ const { account } = useAccount()
             :
             <Button
             className="cursor-default absolute 
-            sm:left-[5%] sm:top-[48%]
+            sm:left-[5%] sm:top-[50%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
             xl:left-[42%] xl:top-[38%]"
@@ -192,7 +192,7 @@ const { account } = useAccount()
 
             <h1 className="text-center text-white -mt-8 font-bold
             xs:mt-18
-            sm:mt-4 sm:text-2xl
+            sm:mt-4 sm:text-2xl sm:-mb-2
             md:text-3xl md:mt-10
             lg:mb-0 lg:mt-28
             xl:mt-20 xl:mb-6 xl:text-4xl
