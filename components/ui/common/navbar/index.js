@@ -25,7 +25,7 @@ const Navbar = () => {
         <nav className=''>
             <div className="flex flex-wrap justify-between items-center p-1 bg-black relative ">
            {showMenu && 
-            <h1 className='absolute text-white -right-[30%] top-[45%] rotate-90 text-7xl'>Ashley DeFi</h1>
+            <h1 className='absolute text-white -right-[30%] top-[40%] rotate-90 text-7xl'>Ashley DeFi</h1>
            }
                 <div className="  flex justify-between h-[12vh] p-2 items-center w-full md:w-auto bg-[#2b2b2b] md:rounded-tr md:rounded-bl 
                 md:rounded-br
@@ -72,7 +72,7 @@ const Navbar = () => {
                            const {id, name, url, howLong} = item
                            return (
                                <li
-                                className={`mt-[30%] w-auto md:mt-0 transition-all hover:bg-black hover:p-1 md:hover:text-2xl hover:items-center md:hover:p-1
+                                className={`mt-[00%] w-auto md:mt-0 transition-all hover:bg-black hover:p-1 md:hover:text-2xl hover:items-center md:hover:p-1
                                 hover:rounded-lg
                                  ${howLong} md:w-auto `}
                                 key={id}>
