@@ -7,9 +7,9 @@ import { useState } from "react"
 // }
 
 const BG_CLASSES = {
-  success: "bg-green-200",
-  warning: "bg-yellow-200",
-  danger: "bg-red-200",
+  success: "bg-green-400",
+  warning: "bg-yellow-400",
+  danger: "bg-red-400",
 }
 
 const TEXT_CLASSES = {

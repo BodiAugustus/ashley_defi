@@ -2,32 +2,42 @@ import { Loader } from "@components/ui/common"
 import Link from "next/link"
 
 const lectures = [
-    "How to init App",
-    "How to get a help",
-    "Introduction to Solidity",
-    "Programing in C++",
-    "How to write For Loops",
-    "Safe operator",
+    "Beginners Onboarding - Start Here!",
+    "Carrying out transactions",
+    "Farming on SpiritSwap",
+    "Using Multibridges",
+    "Blockchain Interoperability",
+    "Luna Protocol - A Guide",
   ]
   
   export default function Curriculum({locked, courseState, isLoading}) {
   
     const statusClass = "px-2 inline-flex text-xs leading-5 font-semibold rounded-full"
     return (
-      <section className="max-w-5xl mx-auto bg-black pb-10">
-        <div className="flex flex-col">
-          <div className="-my-2 overflow-x-auto 
+      <section className="max-w-5xl mx-auto bg-black pb-10
+      xs:w-[95vw]
+      ">
+        <div className="flex flex-col 
+        
+        ">
+          <div className="-my-2 
+   
           sm:-mx-6 
           lg:-mx-8">
             <div className="py-2 align-middle inline-block min-w-full 
+            xs:w-[95vw]
             sm:px-6 
             lg:px-8">
               <div className="shadow overflow-hidden border-2 border-gray-200 sm:rounded-lg">
-                <table className="min-w-full divide-y divide-gray-200 border-2 rounded-lg">
-                  <thead className="bg-indigo-600 ">
-                    <tr>
+                <table className="min-w-full divide-y divide-gray-200 border-2 rounded-lg
+                xs:w-[94vw]
+                ">
+                  <thead className="bg-indigo-600
+                  
+                   ">
+                    <tr className="">
                       <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
-                        Section 1
+                        Procured Content
                       </th>
                       <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
                         Status
@@ -70,7 +80,7 @@ const lectures = [
                                 </Link>
                                 }
                                 { courseState === "purchased" &&
-                                <Link href="faq" >
+                                <Link href="#" >
                                   <a className="text-indigo-600 hover:text-indigo-900">
                                     Waiting for Activation
                                   </a>
@@ -78,9 +88,9 @@ const lectures = [
                                 }
                 
                             </> :                       
-                                <Link href="/watch" >
+                                <Link href="https://www.google.com" >
                                   <a className="text-green-600 hover:text-green-900">
-                                    Watch!
+                                    Read!
                                   </a>
                                 </Link>                            
                           }

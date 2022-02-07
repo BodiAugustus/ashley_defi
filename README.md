@@ -350,3 +350,5 @@
 #175. Styled services page for different screen sizes. Page finished.
 
 #176. Carried out styling across the pages. Made various additions to return statements for UI changes.
+
+#177. Worked on subscription slug page as well as curriculum component.

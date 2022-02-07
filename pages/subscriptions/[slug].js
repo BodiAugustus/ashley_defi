@@ -40,25 +40,29 @@ export default function Course({course}) {
             />
             <KeyPoints
               points={course.wsl}
+              link1={course.link1}
+              link2={course.link2}
+              link3={course.link3}
+              link4={course.link4}
             />
             { course && 
             <div className="max-w-5xl mx-auto">
             { courseState === "purchased" &&
             <Message type="warning">
-              We wish you a Merry Christmas! Open subscribers soon!
-              <i className="block font-normal">If you have a donation, put it in the bag!</i>
+              Warning: The crypto market is volatile!
+              <i className="block font-normal">Always make sure you have an exit strategy in place!</i>
             </Message>           
             }
             { courseState === "activated" &&
             <Message type="success">
-              We wish you a Merry Christmas! Open subscribers soon!
-              <i className="block font-normal">If you have a donation, put it in the bag!</i>
+              It&apos;s a lovely day in the market&apos;s!
+              <i className="block font-normal">If you want a day off, today would be a good choice!</i>
             </Message>           
             }
             { courseState === "deactivated" &&
             <Message type="danger">
-              We wish you a Merry Christmas! Open subscribers soon!
-              <i className="block font-normal">If you have a donation, put it in the bag!</i>
+              A downturn appears imminent, take the proper precautions to protect your gains!
+              <i className="block font-normal">Stable goins are a safe place to go in times of downturns!</i>
             </Message>           
             }
 

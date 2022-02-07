@@ -3,28 +3,32 @@
 const KeyPoints = ({points}) => {
     return(
         <section>
-        <div className="py-12 bg-black">
+        <div className="py-12 bg-black
+        xs:mx-2
+        ">
           <div className="max-w-7xl mx-auto px-4 bg-[#2b2b2b]
-          sm:px-6 
+          xs:px-4 
           lg:px-8">
             <div className="mt-10 ">
-              <dl className="space-y-10 pt-4 last:only:pb-4
+              <dl className="space-y-8 pt-4 last:only:pb-4
               md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10 bg-[#2b2b2b]">
               { points.map((point, i) => 
                 
                   <div key={point} className="relative bg-black p-2 rounded-lg">
                   <dt>
-                    <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-[#ffe400] text-indigo-600">
+                    <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-600 text-sky-400">
                       <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                       </svg>
                     </div>
                     <p className="ml-16 text-lg leading-6 font-medium text-white">
-                     Keypoint: {i + 1}
+                     Daily Headline: {i + 1}
                     </p>
                   </dt>
                   <dd className="mt-2 ml-16 text-base text-white">
-                    {point}
+                  <a href="">
+                  {point}
+                  </a>
                   </dd>
                 </div>
                 
