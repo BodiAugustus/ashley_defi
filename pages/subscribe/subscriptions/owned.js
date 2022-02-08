@@ -8,14 +8,20 @@ import Head from "next/head"
 import { useRouter } from "next/router"
 import Link from "next/link"
 import { useWeb3 } from "@components/providers"
+import normalizeOwnedCourse, { COURSE_STATES } from "@utils/normalize"
+
 
 
 
 const OwnedCourses = ({courses}) => {
   const router = useRouter()
-  const { requireInstall } = useWeb3()
+  const { requireInstall, web3 } = useWeb3()
         const { account } = useAccount()
     const { ownedCourses } = useOwnedCourses(courses, account.data)
+    // const data = normalizeOwnedCourse(web3)
+    // console.log(ownedCourses?.data[0]?.state);
+   
+  
     return(
         <>
             <Head>
@@ -67,10 +73,15 @@ const OwnedCourses = ({courses}) => {
                 {/* <Message type="success"> 
                     My custom message!
                 </Message> */}
-
+                
+                {(ownedCourses?.data[0]?.state === 'purchased' || ownedCourses?.data[0]?.state === 'activated') &&
+                
                 <Button onClick={() => router.push(`/subscriptions/${course.slug}`)}>
                     Members Only
                 </Button>
+                }
+                
+                
             </OwnedCourseCard>
             )}
 

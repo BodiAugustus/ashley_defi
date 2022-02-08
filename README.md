@@ -356,3 +356,5 @@
 #178. Ran npm build. Added style classes to Hero buttons. Deployed to Vercel.
 
 #179. Removed unneeded conditional in the Hero.
+
+#180. Added a new conditional to the members only button to hide if from UI when course is in deactivated state inside owned.js.

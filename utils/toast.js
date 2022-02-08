@@ -35,7 +35,7 @@ export const withToast = (promise) => {
                 position: toast.POSITION.TOP_LEFT,
               render({data}){
                 return (
-                    <div>
+                    <div className=''>
                         <p className='font-bold'>TX: {data.transactionHash.slice(0,18)}...</p>
                         <p>TX was successful!</p>
                         <a target="_blank" rel='noreferrer' href={`https://ftmscan.com/tx/${data.transactionHash}`}>
@@ -51,7 +51,7 @@ export const withToast = (promise) => {
                 position: toast.POSITION.TOP_LEFT,
               render({data}){
                 // When the promise reject, data will contains the error
-                return <div>{data.message ?? "Transaction has failed!"}</div>
+                return <div className=''>{data.message ?? "Transaction has failed!"}</div>
               }
             }
           },

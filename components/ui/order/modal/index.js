@@ -88,7 +88,7 @@ const OrderModal = ({course, onClose, onSubmit, isNewPurchase}) => {     //When 
                         className="form-checkbox"
                       />
                     </label>
-                    <span>Adjust Price - avg cost of our competitors is $250 per month</span>
+                    <span>Adjust Price - the avg cost of our competitors is $250 per month in case you are feeling more generous 🙂</span>
                   </div>
                 </div>
                 <input

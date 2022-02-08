@@ -83,7 +83,7 @@ const { account } = useAccount()
             sm:left-[5%] sm:top-[50%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
-            xl:left-[42%] xl:top-[38%]
+            xl:left-[44%] xl:top-[38%]
             "
             disabled={true}>
                 Loading...
@@ -95,7 +95,7 @@ const { account } = useAccount()
             sm:left-[5%] sm:top-[50%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
-            xl:left-[42%] xl:top-[38%]"
+            xl:left-[44%] xl:top-[38%]"
 
         
             hoverable={false}
@@ -110,7 +110,7 @@ const { account } = useAccount()
             sm:left-[5%] sm:top-[50%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
-            xl:left-[42%] xl:top-[38%]"
+            xl:left-[44%] xl:top-[38%]"
             onClick={() => window.open("https://metamask.io/", "_blank")}>
                 Install Metamask
             </Button>
@@ -120,7 +120,7 @@ const { account } = useAccount()
             sm:left-[5%] sm:top-[50%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
-            xl:left-[42%] xl:top-[38%]"
+            xl:left-[44%] xl:top-[38%]"
             onClick={connect}
             >
             Connect Wallet
