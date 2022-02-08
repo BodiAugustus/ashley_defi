@@ -3,6 +3,7 @@
 const Banner = ({title, description, image}) => {
     return(
         <section className=" text-left 
+        xs:h-[100vh]
         sm:h-[105vh]
         lg:my-28 lg:2/6 lg:h-[73vh]
         ">
@@ -17,7 +18,7 @@ const Banner = ({title, description, image}) => {
         md:text-2xl md:px-8 md:mb-20
         lg:mt-2  lg:mx-10 lg:mb-4
         ">Ashley DeFi guide&apos;s you every step of the way so that you can learn how to invest instead of gamble.</div>
-        <div className="mt-5 flex bg-[#2b2b2b] h-[70vh] p-2 mx-3 rounded-lg
+        <div className="mt-5 flex bg-[#2b2b2b] sm:h-[70vh] p-2 mx-3 rounded-lg
         xs:mt-5 
         md:h-[50vh]
         lg:h-[55vh]

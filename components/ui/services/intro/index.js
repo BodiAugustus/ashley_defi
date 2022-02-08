@@ -12,7 +12,7 @@ const Intro = () => {
             sm:-mt-5 xs:mb-2
             md:text-4xl
             ">We help you decide</h1>
-            <div className="bg-[#2b2b2b] h-[90vh] mx-3 rounded-lg
+            <div className="bg-[#2b2b2b] xs:h-[80vh] mx-3 rounded-lg
             sm:h-[85vh]
             md:h-[55vh] md:p-4
             lg:h-[70vh] lg:p-6

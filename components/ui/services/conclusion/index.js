@@ -6,7 +6,7 @@ const Conclude = () => {
   const router = useRouter()
     return(
         <div className="">
-        <div className="bg-[#2b2b2b] h-[100vh] text-white mx-2 rounded-lg
+        <div className="bg-[#2b2b2b] xs:h-[90vh] text-white mx-2 rounded-lg
         sm:h-[110vh]
         md:h-[75vh]
         lg:h-[85vh]

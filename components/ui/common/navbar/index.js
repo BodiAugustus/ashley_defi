@@ -91,6 +91,7 @@ const Navbar = () => {
                             <FaLinkedin className='hover:scale-110 active:scale-100 transition-all'/>
                         </div>
                         <div className="flex flex-col text-center mt-20 text-xs text-white 
+                        xs:mt-40
                         sm:mt-32 ">
                             <h4>Ashley Capital & DeFi -  &#169; {time.getFullYear()}</h4>
                         </div>
