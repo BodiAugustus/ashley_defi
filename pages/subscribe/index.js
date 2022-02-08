@@ -26,7 +26,7 @@ export default function Marketplace({courses}) {
     //isNewPurchase is for setting up the repurchase button functionality
     const [isNewPurchase, setIsNewPurchase] = useState(true)
 
-    const { web3, contract, requireInstall } = useWeb3()
+    const { web3, contract, requireInstall, connect } = useWeb3()
     
     // Calling this causes metamask to open in the browser
     const purchaseCourse = async (order, course) => { //passes order into Modal component
@@ -155,7 +155,8 @@ export default function Marketplace({courses}) {
                             <div className="mt-4">
                             <Button 
                             variant="purple"
-                            disabled={true}                    
+                            disabled={false}    
+                            onClick={() => window.open("https://metamask.io/", "_blank")}                
                             > 
                               Install MetaMask
                             </Button>
@@ -178,9 +179,10 @@ export default function Marketplace({courses}) {
                           return(
                             <Button
                             size="sm"
-                            disabled={true}
+                            disabled={false}
                             variant="green"
                             className="mt-2"
+                            onClick={connect}
                             >
                             {hasConnectedWallet ? "Loading State..." : "Connect MetaMask"}
                             </Button>
@@ -204,8 +206,9 @@ export default function Marketplace({courses}) {
                         if (owned) {
                           return(
                             <>
-                            <div className="mt-4">
+                            <div className="mt-4 ">
                               <Button 
+                              className="mx-4"
                               variant="green"
                               disabled={true}                     
                               > 

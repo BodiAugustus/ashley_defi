@@ -19,7 +19,7 @@ const Button = ({
         white: ` text-black bg-white ${hoverable && "hover:bg-[#ffe400]"} active:scale-90  transition-all `,
         blue: `text-white bg-blue-600 shadow-blue-600/75 ${hoverable && "hover:bg-indigo-700"} active:scale-90  transition-all`,
         red: `text-red-200 bg-red-600 shadow-red-600/75 ${hoverable && "hover:bg-red-300 hover:text-red-700"} active:scale-90  transition-all`,
-        purple: `text-purple-700 bg-indigo-200 shadow-indigo-600/75  ${hoverable && "hover:bg-indigo-700"} active:scale-90  transition-all`,
+        purple: `text-sky-400 bg-indigo-700 shadow-indigo-600/75  ${hoverable && "hover:bg-indigo-200 hover:text-purple-700"} active:scale-90  transition-all`,
         green: `text-green-200 bg-green-700 shadow-green-600/75  ${hoverable && "hover:bg-green-200 hover:text-green-700"}
         active:scale-90  transition-all `,
 

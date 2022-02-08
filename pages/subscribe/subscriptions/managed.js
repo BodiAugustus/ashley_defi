@@ -140,8 +140,7 @@ const ManagedCourses = () => {
         </Message>
       </div>
       }
-      { 
-        course.state === "purchased" &&
+    
       <div>
         <Button 
         onClick={() => activateCourse(course.hash)}
@@ -158,7 +157,7 @@ const ManagedCourses = () => {
         Deactivate
         </Button>
       </div>
-      }
+      
       </ManagedCourseCard>
     )
   }

@@ -79,7 +79,7 @@ const { account } = useAccount()
 
             {isLoading ? 
             <Button
-            className="
+            className="cursor-default absolute
             sm:left-[5%] sm:top-[50%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]

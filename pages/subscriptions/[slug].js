@@ -49,20 +49,20 @@ export default function Course({course}) {
             <div className="max-w-5xl mx-auto">
             { courseState === "purchased" &&
             <Message type="warning">
-              Warning: The crypto market is volatile!
-              <i className="block font-normal">Always make sure you have an exit strategy in place!</i>
+              Pending: This account is still awaiting activation.
+              <i className="block font-normal">Your account privledges are already completely unlocked however with no restrictions!</i>
             </Message>           
             }
             { courseState === "activated" &&
             <Message type="success">
-              It&apos;s a lovely day in the market&apos;s!
-              <i className="block font-normal">If you want a day off, today would be a good choice!</i>
+              It&apos;s another lovely day here at Ashley Capital & DeFi!
+              <i className="block font-normal">Be sure to check in with one of the consultants if you have any questions!</i>
             </Message>           
             }
             { courseState === "deactivated" &&
             <Message type="danger">
-              A downturn appears imminent, take the proper precautions to protect your gains!
-              <i className="block font-normal">Stable goins are a safe place to go in times of downturns!</i>
+              You should not be seeing this message!
+              <i className="block font-normal">If you are then you are hacking and that is very impolite!</i>
             </Message>           
             }
 

@@ -88,7 +88,7 @@ const OrderModal = ({course, onClose, onSubmit, isNewPurchase}) => {     //When 
                         className="form-checkbox"
                       />
                     </label>
-                    <span>Adjust Price - the avg cost of our competitors is $250 per month in case you are feeling more generous 🙂</span>
+                    <span>Adjust Price - the avg cost of our competitors is $250 per month in case you are feeling more generous 🙂 (Putting less than the subscription price will result in a failed transaction!)</span>
                   </div>
                 </div>
                 <input
@@ -130,7 +130,7 @@ const OrderModal = ({course, onClose, onSubmit, isNewPurchase}) => {     //When 
                     placeholder="x@y.com"
                   />
                   <p className="text-xs text-gray-700 mt-1">
-                  It&apos;s important to fill a correct email, otherwise the order cannot be verified. We are not storing your email anywhere
+                  It&apos;s important to remember the email address you use. Emails are NOT stored anywhere in our system and are only used by yourself in case a transaction needs to be verified. You do not need to use your actual email, any correctly formatted email will do.
                   </p>
                 </div>
                 <div className="my-2 relative rounded-md">
@@ -161,11 +161,11 @@ const OrderModal = ({course, onClose, onSubmit, isNewPurchase}) => {     //When 
                     type="checkbox"
                     className="form-checkbox" />
                 </label>
-                <span>I accept that my order can be rejected in the case data provided above is not correct</span>
+                <span>I accept that my order can be rejected in the case that the data provided above is not correct.</span>
               </div>
               {
                 formState.message &&
-                <div className="p-4 my-3 text-yellow-700 bg-yellow-200 rounded-lg text-sm">
+                <div className="p-4 my-3 text-sky-700 bg-yellow-400 rounded-lg text-sm">
                   { formState.message }
                 </div>
               }

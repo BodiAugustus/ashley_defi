@@ -1,12 +1,13 @@
 import Image from "next/image"
 
+
 const STATE_COLORS = {
-  purchased: "indigo",
-  activated: "green",
-  deactivated: "red"
+  purchased: "bg-indigo-500",
+  activated: "bg-green-400",
+  deactivated: "bg-red-400"
 }
 
-export default function OwnedCourseCard({children, course}) {
+export default function OwnedCourseCard({children, course, type = "purchased"}) {
 
   const stateColor = STATE_COLORS[course.state]
 
@@ -30,7 +31,7 @@ export default function OwnedCourseCard({children, course}) {
             <div className="px-1 py-5 sm:px-6">
               <h3 className="text-lg leading-6 font-medium text-white ">
                 <span className="mr-2">{course.title}</span>
-                <span className={`text-xs text-${stateColor}-700 bg-${stateColor}-200 rounded-full p-2 `}>{course.state}</span>
+                <span className={`text-xs ${STATE_COLORS[type]}  rounded-full p-2 `}>{course.state}</span>
               </h3>
               <p className="mt-1 max-w-2xl text-sm text-gray-500">
                 {course.price} USD
