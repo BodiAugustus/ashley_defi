@@ -2,7 +2,9 @@ import Image from "next/image"
 
 const Info = () => {
     return(
-        <div className="sm:h-[125vh] bg-black text-white ">
+        <div className="bg-black text-white 
+        xs:h-[105vh]
+        sm:h-[125vh] ">
             <h2 className="text-center text-4xl pt-4 mb-1
             md:text-5xl md:mb-3
             lg:text-4xl lg:mb-2

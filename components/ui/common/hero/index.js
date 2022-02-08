@@ -15,7 +15,7 @@ const { account } = useAccount()
 
 
     return(
-        <div className="h-[87vh] bg-black p-4 relative
+        <div className="h-[84vh] bg-black p-4 relative
         md:h-[85vh]
         xl:h-[90vh]
         ">

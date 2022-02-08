@@ -6,7 +6,9 @@ import Image from 'next/image'
 
 const Features = () => {
     return(
-        <div className="sm:h-[115vh] bg-black text-white
+        <div className=" bg-black text-white
+        xs:h-[110vh]
+        sm:h-[115vh]
         
         ">
             <h2 className="text-center text-4xl pt-4 mb-1
@@ -107,7 +109,7 @@ const Features = () => {
                     md:justify-center
                     '><GiDiamondHard className='mr-2
                     md:text-4xl
-                    '/> NFT&apos;s and Gaming nbsp; <i className='text-sm'>(Ex. Enjin)</i></h4></li>
+                    '/> NFT&apos;s and Gaming &nbsp; <i className='text-sm'>(Ex. Enjin)</i></h4></li>
                     </ul>          
                 </div>
 
