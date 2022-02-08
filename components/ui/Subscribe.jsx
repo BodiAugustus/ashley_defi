@@ -67,7 +67,7 @@ const Subscribe = () => {
                     <h2>Timely feedback from an actual consultant, not a customer service representitve.</h2>
                 </div>
                 <div className="col-span-1 bg-blue-600 text-center p-2 hover:bg-blue-500 font-thin 
-                xs:pt-7
+                xs:pt-5
                 sm:text-lg sm:pt-6
                 md:text-2xl md:p-3
                 lg:text-base
@@ -83,7 +83,8 @@ const Subscribe = () => {
                 ">
                     <h2>Advanced technical expertise from real world blockchain developers.</h2>
                 </div>
-                <div className="col-span-1 bg-blue-600 text-center hover:bg-blue-500 font-thin 
+                <div className="col-span-1 bg-blue-600 text-center hover:bg-blue-500 font-thin
+                xs:mt-4 
                 sm:text-lg sm:pt-2
                 md:text-2xl md:p-3
                 lg:text-base lg:pt-1

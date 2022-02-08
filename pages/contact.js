@@ -3,7 +3,7 @@ import { BaseLayout } from "@components/ui/layout"
 
 const Contact = () => {
     return(
-        <div className="bg-black h-[100vh] px-4 py-2 text-white
+        <div className="bg-black xs:h-[90vh] px-4 py-2 text-white
         sm:h-[100vh]
         md:h-[70vh]
         lg:h-[115vh]
