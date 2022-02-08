@@ -7,7 +7,7 @@ import Image from 'next/image'
 const Features = () => {
     return(
         <div className=" bg-black text-white
-        xs:h-[110vh]
+        xs:h-[100vh]
         sm:h-[115vh]
         
         ">
