@@ -5,13 +5,16 @@ import {AiFillTwitterCircle} from 'react-icons/ai'
 const Main = () => {
     return (
         <div className="h-[100vh] bg-black text-white text-center
+        xl:h-[125vh]
         ">
             <h2 className="text-4xl pt-4 mb-1
             md:text-5xl md:mb-3
             lg:text-4xl lg:mb-2
             xl:text-4xl xl:mb-2
             "><span className="text-red-500">Stop</span> Taking the Bait</h2>
-            <div className="bg-[#2b2b2b] w-[90%] h-[89%] mx-auto grid grid-cols-2 gap-2 grid-rows-3 p-2 rounded-lg white-glassmorphism">
+            <div className="bg-[#2b2b2b] w-[90%] h-[89%] mx-auto grid grid-cols-2 gap-2 grid-rows-3 p-2 rounded-lg white-glassmorphism
+            xl:h-[100vh]
+            ">
             <div className="border-4 border-black rounded-lg col-span-2 white-glassmorphism">
                 <div className="">
                     <Image

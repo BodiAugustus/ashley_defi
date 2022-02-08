@@ -7,7 +7,7 @@ const Example = () => {
             <h2 className="text-center text-4xl pt-4 mb-1
             md:text-5xl md:mb-3
             lg:text-4xl lg:mb-1 lg:pt-8
-            xl:text-4xl
+            xl:text-4xl 
             ">Take an Example</h2>
             <div className="h-[89vh] w-[90vw] bg-[#2b2b2b] mx-auto border-2 rounded-xl border-stone-500 grid grid-cols-1 
             sm:text-lg
@@ -17,7 +17,8 @@ const Example = () => {
             ">
            
        
-                <div className=" rounded-lg p-2 mt-1 overflow-y-scroll">
+                <div className=" rounded-lg p-2 mt-1 overflow-y-scroll
+                xl:mt-5">
                     <div className="relative">
                     <div className="indent-4
                     md:indent-8

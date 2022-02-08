@@ -37,7 +37,8 @@ const Call2Action = () => {
                 xl:text-2xl
                 ">That&apos;s it. No annual subscriptions, no hidden fees or extra costs of any kind. Just one flat fee per month to gain unlimited access to your very own DeFi consultant and wealth manager.<br/><br/><div className="indent-4"> We live and breath DeFi and we code on, develop, and use the technologies that we write every day.</div><br/> &nbsp;&nbsp;&nbsp;&nbsp;We are real blockchain developers using the latest technologies to build a more decentralized future for all. Let us show you the ropes so that you can also learn how to take advantage of the financial revolution that is happening all around you.</h4>
             </div>
-            <div className="flex flex-col lg:flex-row lg:items-center">
+            <div className="flex flex-col lg:flex-row lg:items-center
+            xl:mt-8">
            <Link href="/subscribe">
            <a 
             className="p-2 text-center bg-blue-500 rounded-lg shadow-lg shadow-sky-500 hover:scale-110 active:scale-100 w-[32%] mx-auto mt-8 cursor-pointer transition-all text-xl tracking-wide

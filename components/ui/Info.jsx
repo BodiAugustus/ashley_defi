@@ -13,6 +13,7 @@ const Info = () => {
             <div className=" w-[90vw] bg-[#2b2b2b] mx-auto border-2 rounded-xl border-stone-500 grid grid-cols-1 grid-rows-4
             sm:h-[113vh]
             lg:w-[45vw] lg:h-[89vh]
+            xl:h-[100vh]
             ">
             <div className="col-span-2 row-span-1 relative rounded-md border-b-2 border-stone-500">
             <Image
@@ -33,13 +34,13 @@ const Info = () => {
                     <h2 className="indent-4
                     md:indent-8 
                     lg:leading-5
-                    xl:leading-6
+                    xl:leading-7
                     ">Ashley Capital & DeFi was created by <a
                      className="cursor-pointer"
                      href="https://www.bodiaugustus.com/" target="_blank" rel="noreferrer"><b>Bodi Augustus</b></a>, a web3 and blockchain developer who has been working in crypto since 2017. </h2><br/>
                     <h2 className="md:indent-8 
                     lg:leading-5
-                    xl:leading-6">Our aim is to bridge the knowledge gap between the general public and those who code on the blockchains and interact with its protocols daily.</h2><br/>
+                    xl:leading-7">Our aim is to bridge the knowledge gap between the general public and those who code on the blockchains and interact with its protocols daily.</h2><br/>
                     <h2></h2>
                 </div>
                 <div className="bg-black rounded-lg p-2 mt-4 border-2 border-stone-500 
@@ -49,7 +50,8 @@ const Info = () => {
                 xl:text-xl xl:p-4 xl:leading-6
                 ">
                     <h2 className="indent-4
-                    md:indent-8 ">We do not tell you what to think, we show you how to know. Understanding and using the technology is paramount for long-term successful DeFi investing.</h2><br/>
+                    md:indent-8 
+                    xl:leading-8">We do not tell you what to think, we show you how to know. Understanding and using the technology is paramount for long-term successful DeFi investing.</h2><br/>
                   
                 </div>
             </div>

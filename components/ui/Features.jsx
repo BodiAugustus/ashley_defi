@@ -9,6 +9,7 @@ const Features = () => {
         <div className=" bg-black text-white
         xs:h-[90vh]
         sm:h-[115vh]
+        xl:h-[100vh]
         
         ">
             <h2 className="text-center text-4xl pt-4 mb-1
@@ -76,7 +77,7 @@ const Features = () => {
                 <h2 className='text-4xl mb-1 text-center
                 md:text-5xl md:mt-8
                 lg:col-span-3 lg:mt-4 lg:text-4xl lg:-mb-12
-                xl:text-4xl xl:mt-4 xl:-mb-20
+                xl:text-4xl xl:mt-4 xl:-mb-10
                 '>2022 DeFi Focus</h2>
                 <div className="white-glassmorphism sm:h-[35vh] mb-8 
                 sm:text-xl sm:leading-loose
