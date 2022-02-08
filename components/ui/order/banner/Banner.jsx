@@ -3,7 +3,7 @@
 const Banner = ({title, description, image}) => {
     return(
         <section className=" text-left 
-        xs:h-[100vh]
+        xs:h-[75vh]
         sm:h-[105vh]
         lg:my-28 lg:2/6 lg:h-[73vh]
         ">

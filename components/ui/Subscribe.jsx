@@ -41,6 +41,7 @@ const Subscribe = () => {
                         '>All members, all access. <span className='text-amber-900 font-bold'>No bull.</span></h4>
                 </div>
                 <div className="col-span-1 bg-blue-600 text-center hover:bg-blue-500 font-thin 
+                xs:pt-4
                 sm:text-lg sm:pt-4
                 md:text-2xl md:p-3 md:pt-5
                 lg:text-base
@@ -49,6 +50,7 @@ const Subscribe = () => {
                     <h2>Individualized risk assessments custom tailored to your desired level of exposure.</h2>
                 </div>
                 <div className="col-span-1 bg-blue-600 text-center hover:bg-blue-500 font-thin 
+                xs:pt-4
                 sm:text-lg sm:pt-4
                 md:text-2xl md:p-3
                 lg:text-base lg:pt-5
@@ -65,6 +67,7 @@ const Subscribe = () => {
                     <h2>Timely feedback from an actual consultant, not a customer service representitve.</h2>
                 </div>
                 <div className="col-span-1 bg-blue-600 text-center p-2 hover:bg-blue-500 font-thin 
+                xs:mt-7
                 sm:text-lg sm:pt-6
                 md:text-2xl md:p-3
                 lg:text-base

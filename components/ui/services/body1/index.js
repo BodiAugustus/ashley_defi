@@ -4,7 +4,7 @@ import { IoMdRocket } from 'react-icons/io'
 const Body1 = () => {
     return (
         
-        <div className="xs:h-[95vh] bg-black text-white px-3
+        <div className="xs:h-[85vh] bg-black text-white px-3
         sm:h-[102vh]
         md:h-[65vh]
         lg:h-[85vh]
