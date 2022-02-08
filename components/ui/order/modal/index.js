@@ -72,7 +72,7 @@ const OrderModal = ({course, onClose, onSubmit, isNewPurchase}) => {     //When 
               </h3>
               <div className="mt-1 relative rounded-md">
                 <div className="mb-1">
-                  <label className="mb-2 font-bold">Price(eth)</label>
+                  <label className="mb-2 font-bold">Price(ftm)</label>
                   <div className="text-xs text-gray-700 flex">
                     <label className="flex items-center mr-2">
                       <input
@@ -88,7 +88,7 @@ const OrderModal = ({course, onClose, onSubmit, isNewPurchase}) => {     //When 
                         className="form-checkbox"
                       />
                     </label>
-                    <span>Adjust Price - only when the price is not correct</span>
+                    <span>Adjust Price - avg cost of our competitors is $250 per month</span>
                   </div>
                 </div>
                 <input
@@ -161,7 +161,7 @@ const OrderModal = ({course, onClose, onSubmit, isNewPurchase}) => {     //When 
                     type="checkbox"
                     className="form-checkbox" />
                 </label>
-                <span>I accept Eincode &apos;terms of service&apos; and I agree that my order can be rejected in the case data provided above are not correct</span>
+                <span>I accept that my order can be rejected in the case data provided above is not correct</span>
               </div>
               {
                 formState.message &&
