@@ -39,18 +39,22 @@ export default function Course({course}) {
               image={course.coverImage}
             />
                { course && 
-            <div className="max-w-5xl mx-auto">
+            <div className="
+            xs:w-[95vw]
+            md:w-[80%]
+            max-w-5xl mx-auto">
             { courseState === "purchased" &&
-            <Message type="warning">
-              Pending: This account is still awaiting activation.
-              <i className="block font-normal">Your account privledges are already completely unlocked however with no restrictions!</i>
-            </Message>           
+            <Message 
+            type="success">
+              It&apos;s a lovely day at Ashley Capital & DeFi!
+              <i className="block font-normal">Be sure to check in with one of our consultants if you have any questions!</i>
+            </Message>          
             }
             { courseState === "activated" &&
             <Message 
             type="success">
-              It&apos;s another lovely day here at Ashley Capital & DeFi!
-              <i className="block font-normal">Be sure to check in with one of the consultants if you have any questions!</i>
+              It&apos;s a lovely day at Ashley Capital & DeFi!
+              <i className="block font-normal">Be sure to check in with one of our consultants if you have any questions!</i>
             </Message>           
             }
             { courseState === "deactivated" &&

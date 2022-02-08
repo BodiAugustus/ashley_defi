@@ -212,7 +212,8 @@ export default function Marketplace({courses}) {
                               variant="green"
                               disabled={true}                     
                               > 
-                              Subscribed &#10003;
+                              { owned.state === "deactivated" ? "Inactive" :
+                                "Subscribed" }
                               </Button>
                               { 
                                 owned.state === "deactivated" &&
@@ -231,7 +232,7 @@ export default function Marketplace({courses}) {
                                   size="sm"
                                 />
                                 <div className="ml-2 ">Loading...</div>
-                              </div> : <div>ReSubscribe</div>
+                              </div> : <div className="font-semibold">Resubscribe</div>
                               }
                               </Button>
                               }

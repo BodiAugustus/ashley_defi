@@ -1,5 +1,6 @@
 import { Loader } from '@components/ui/common';
 import { toast } from 'react-toastify';
+import { backgroundColor } from 'tailwindcss/defaultTheme';
 
 
 export const withToast = (promise) => {
@@ -8,13 +9,14 @@ export const withToast = (promise) => {
           {
             pending: {
                 position: toast.POSITION.TOP_LEFT,
+                
               render(){
                 return (
                     <div className='p-4 py-2 '>
                     
-                   <div className="flex items-center">
+                   <div className="flex items-center  ">
                    <Loader
-                        size='sm'
+                        size='md'
                     />
                     <div className="pl-3">
                     <p className="mb-2">

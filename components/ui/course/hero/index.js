@@ -29,6 +29,11 @@ const CourseHero = ({title, description, image, hasOwner}) => {
               lg:mt-0 lg:px-8 
               xl:mt-0">
                 <div className="sm:text-center lg:text-left">
+                <div className="text-lg inline-block p-4 py-2 rounded-md font-bold bg-red-300 text-red-700 float-left
+                xs:-mt-10 xs:mb-10
+                lg:hidden ">
+                  Current Forecast: Wait / Sell
+                </div>
                 {hasOwner &&
                 <div className="text-lg inline-block p-4 py-2 rounded-full font-bold bg-green-300 text-green-700
                 sm:mb-4">
@@ -47,7 +52,8 @@ const CourseHero = ({title, description, image, hasOwner}) => {
                   </h1>
                   <p className="mt-3 text-base text-white 
                   
-                  sm:mt-5 sm:text-xl sm:max-w-xl sm:mx-auto md:mt-5 md:text-2xl 
+                  sm:mt-5 sm:text-xl sm:max-w-xl sm:mx-auto 
+                  md:mt-5 md:text-2xl 
                   lg:mx-0 lg:text-xl">
                   Welcome and hello friends, members, and fellow DeFi and crypto enthusiast! This month looks to be another exciting and eventful time in the space as Bitcoin and Ethereum continue to move volumes and alt-coins rebound strong off their recent devaluations.
                   </p>

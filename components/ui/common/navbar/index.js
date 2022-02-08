@@ -30,12 +30,13 @@ const Navbar = () => {
                 <div className="  flex justify-between h-[12vh] p-2 items-center w-full md:w-auto bg-[#2b2b2b] md:rounded-tr md:rounded-bl 
                 md:rounded-br
                 lg:ml-2">
-                <a href="www.bodiaugustus.com"
+                <a href="https://www.bodiaugustus.com/"
                 className='mt-1
                 md:p-4
                 lg:
                 '
                 target="_blank"
+                rel="noreferrer"
                 >
                     <div className="">
                     <Image

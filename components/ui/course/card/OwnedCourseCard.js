@@ -56,6 +56,7 @@ export default function OwnedCourseCard({children, course, type = "purchased"}) 
                   {course.proof}
                   </dd>
                 </div>
+
                 <div className="bg-black px-4 py-5 sm:px-6">
                   {children}
                 </div>

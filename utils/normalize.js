@@ -10,6 +10,7 @@ export const COURSE_STATES = {
 const normalizeOwnedCourse = (web3) => (course, ownedCourse) => {
     return {
         ...course,
+        
         ownedCourseId: ownedCourse.id, // this is created to prevent overwriting the ORIGINAL id in the json file
         proof: ownedCourse.proof,
         owned: ownedCourse.owner,

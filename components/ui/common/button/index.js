@@ -1,7 +1,7 @@
 
 const SIZE = {
     sm: "p-2 text-base xs:px-4",
-    md: "p-3 text-base xs:px-8",
+    md: "p-3 text-base xs:px-4",
     lg: "p-3 text-lg xs:px-8",
 }
 

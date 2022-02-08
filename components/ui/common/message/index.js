@@ -7,13 +7,13 @@ import { useState } from "react"
 // }
 
 const BG_CLASSES = {
-  success: "bg-green-400",
+  success: "bg-indigo-600",
   warning: "bg-yellow-400",
   danger: "bg-red-400",
 }
 
 const TEXT_CLASSES = {
-  success: "text-green-900",
+  success: "text-white",
   warning: "text-yellow-900",
   danger: "text-red-900",
 }
@@ -34,7 +34,7 @@ export default function Message({children, type = "success", size = "md"}) { //c
   const messageSizeClass = SIZES[size]
 
   return (
-    <div className={`${BG_CLASSES[type]} rounded-xl  mt-5`}>
+    <div className={`${BG_CLASSES[type]} rounded-xl  mt-5 xl:mt-10 xl:`}>
       <div className="max-w-5xl mx-auto py-2 px-1">
         <div className="flex items-center justify-between flex-wrap">
           <div className="w-0 flex-1 flex items-center">

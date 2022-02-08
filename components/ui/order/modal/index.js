@@ -1,4 +1,4 @@
-import useEthPrice from "@components/hooks/useEthPrice"
+import useEthPrice, { useFtmPrice } from "@components/hooks/useEthPrice"
 import { Modal, Button } from "@components/ui/common"
 import { useEffect, useState } from "react"
 
@@ -25,7 +25,7 @@ const createFormState = ({price, email, confirmationEmail}, hasAgreedTOS, isNewP
     }
   }
   if(!hasAgreedTOS){
-    return _createFormState(true, "You must accept the terms & conditions to subit the form.")
+    return _createFormState(true, "You must accept the terms & conditions to submit the form.")
   }
 
   return _createFormState()
@@ -37,7 +37,7 @@ const OrderModal = ({course, onClose, onSubmit, isNewPurchase}) => {     //When 
     const [order, setOrder] = useState(defaultOrder)
     const [enablePrice, setEnablePrice] = useState(false) // for the modal checkbox
     const [hasAgreedTOS, setHasAgreedTOS] = useState(false) // for TOS checkbox in modal
-
+    const { ftm } = useFtmPrice()
     const { eth } = useEthPrice()
 
     //the useEffect is used to respond to changes, like a change in course eing selected from a purchase button
@@ -63,12 +63,12 @@ const OrderModal = ({course, onClose, onSubmit, isNewPurchase}) => {     //When 
 
     return(
         <Modal isOpen={isOpen}>
-      <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+      <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle xs:max-w-lg xs:w-full">
         <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
           <div className="sm:flex sm:items-start">
             <div className="mt-3 sm:mt-0 sm:ml-4 sm:text-left">
               <h3 className="mb-7 text-lg font-bold leading-6 text-gray-900" id="modal-title">
-                {course?.title}
+                {course?.title} Member Pass
               </h3>
               <div className="mt-1 relative rounded-md">
                 <div className="mb-1">
@@ -165,7 +165,7 @@ const OrderModal = ({course, onClose, onSubmit, isNewPurchase}) => {     //When 
               </div>
               {
                 formState.message &&
-                <div className="p-4 my-3 text-sky-700 bg-yellow-400 rounded-lg text-sm">
+                <div className="p-4 my-3 text-sky-700 bg-yellow-200 rounded-lg text-sm">
                   { formState.message }
                 </div>
               }
@@ -174,9 +174,11 @@ const OrderModal = ({course, onClose, onSubmit, isNewPurchase}) => {     //When 
         </div>
         <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex">
           <Button 
+          className="mr-2"
             disabled={formState.isDisabled}
             onClick={() => {
             onSubmit(order, course)
+            
           }}>
             Submit
           </Button>

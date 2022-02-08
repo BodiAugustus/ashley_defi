@@ -8,7 +8,7 @@ const SIZES = {
 const Loader = ({size = 'md'}) => {
     return(
         <>
-            <div className={`sk-circle ${SIZES[size]}`}>
+            <div className={`sk-circle ${SIZES[size]} ` }>
             { Array.from({length:12 }).map((_, i) => 
                 <div 
                 key={`dot-${i}`}
