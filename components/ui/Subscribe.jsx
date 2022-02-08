@@ -27,6 +27,7 @@ const Subscribe = () => {
                             md:text-6xl
                             '/>
                             <AiOutlineStop className='absolute -top-[28%] -right-[40%] text-5xl fill-red-500
+                            sm:-right-[20%] sm:-top-[15%]
                             md:top-[10%] md:-right-[0%]
                             lg:right-[1%]
                             '/>
