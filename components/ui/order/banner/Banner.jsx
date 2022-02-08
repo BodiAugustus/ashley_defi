@@ -3,12 +3,12 @@
 const Banner = ({title, description, image}) => {
     return(
         <section className=" text-left 
-        xs:h-[75vh]
+        xs:h-[70vh]
         sm:h-[105vh]
         lg:my-28 lg:2/6 lg:h-[73vh]
         ">
         <div className="text-6xl px-2 font-semibold text-white text-center leading-none
-        xs:text-3xl xs:mt-4
+        xs:text-3xl xs:mt-14
         md:text-5xl md:mt-10 md:mb-5
         lg:px-6 lg:-mt-20
         ">Let us introduce you to the future of finance</div>
