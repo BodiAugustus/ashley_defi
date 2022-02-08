@@ -84,7 +84,7 @@ const Subscribe = () => {
                     <h2>Advanced technical expertise from real world blockchain developers.</h2>
                 </div>
                 <div className="col-span-1 bg-blue-600 text-center hover:bg-blue-500 font-thin
-                xs:mt-4 
+                xs:pt-3 
                 sm:text-lg sm:pt-2
                 md:text-2xl md:p-3
                 lg:text-base lg:pt-1
