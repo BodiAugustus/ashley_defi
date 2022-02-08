@@ -34,7 +34,7 @@ export default function Message({children, type = "success", size = "md"}) { //c
   const messageSizeClass = SIZES[size]
 
   return (
-    <div className={`${BG_CLASSES[type]} rounded-xl mb-3`}>
+    <div className={`${BG_CLASSES[type]} rounded-xl  mt-5`}>
       <div className="max-w-5xl mx-auto py-2 px-1">
         <div className="flex items-center justify-between flex-wrap">
           <div className="w-0 flex-1 flex items-center">

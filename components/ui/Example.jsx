@@ -23,11 +23,7 @@ const Example = () => {
                     <div className="indent-4
                     md:indent-8
                     ">Have you been wondering why Bitcoin and Ethereum have been going down instead of up lately? Follow along with us here at Ashley DeFi and let us show you one side of the coin.
-                    <GiTwoCoins className='absolute bottom-[4%] left-[37%] sm:left-[37%]
-                    md:invisible
-                    lg:visible lg:left-[25%]
-                    xl:left-[48%]
-                    '/> 
+
                     </div>
                      
                     </div> 

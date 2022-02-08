@@ -38,14 +38,7 @@ export default function Course({course}) {
               description={course.description}
               image={course.coverImage}
             />
-            <KeyPoints
-              points={course.wsl}
-              link1={course.link1}
-              link2={course.link2}
-              link3={course.link3}
-              link4={course.link4}
-            />
-            { course && 
+               { course && 
             <div className="max-w-5xl mx-auto">
             { courseState === "purchased" &&
             <Message type="warning">
@@ -54,7 +47,8 @@ export default function Course({course}) {
             </Message>           
             }
             { courseState === "activated" &&
-            <Message type="success">
+            <Message 
+            type="success">
               It&apos;s another lovely day here at Ashley Capital & DeFi!
               <i className="block font-normal">Be sure to check in with one of the consultants if you have any questions!</i>
             </Message>           
@@ -68,6 +62,14 @@ export default function Course({course}) {
 
             </div>          
             }
+            <KeyPoints
+              points={course.wsl}
+              link1={course.link1}
+              link2={course.link2}
+              link3={course.link3}
+              link4={course.link4}
+            />
+         
 
             <Curriculum 
               isLoading={isLoading}
