@@ -84,7 +84,7 @@ const { account } = useAccount()
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
             xl:left-[44%] xl:top-[38%]
-            2xl:left-[44%] 2xl:top-[35%]
+            2xl:left-[46%] 2xl:top-[30%]
             "
             disabled={true}>
                 Loading...
@@ -97,7 +97,7 @@ const { account } = useAccount()
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
             xl:left-[44%] xl:top-[38%]
-            2xl:left-[44%] 2xl:top-[35%]"
+            2xl:left-[46%] 2xl:top-[30%]"
 
         
             hoverable={false}
@@ -113,7 +113,7 @@ const { account } = useAccount()
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
             xl:left-[44%] xl:top-[38%]
-            2xl:left-[44%] 2xl:top-[35%]"
+            2xl:left-[46%] 2xl:top-[30%]"
             onClick={() => window.open("https://metamask.io/", "_blank")}>
                 Install Metamask
             </Button>
@@ -124,7 +124,7 @@ const { account } = useAccount()
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
             xl:left-[44%] xl:top-[38%]
-            2xl:left-[44%] 2xl:top-[35%]"
+            2xl:left-[46%] 2xl:top-[30%]"
             onClick={connect}
             >
             Connect Wallet
@@ -202,6 +202,7 @@ const { account } = useAccount()
             md:text-3xl md:mt-10
             lg:mb-0 lg:mt-28
             xl:mt-20 xl:mb-6 xl:text-4xl
+            2xl:mt-32
             ">The Future Is Digital.
             </h1>   
 
