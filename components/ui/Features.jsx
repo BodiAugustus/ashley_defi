@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 const Features = () => {
     return(
-        <div className="h-[115vh] bg-black text-white
+        <div className="sm:h-[115vh] bg-black text-white
         
         ">
             <h2 className="text-center text-4xl pt-4 mb-1
@@ -18,7 +18,7 @@ const Features = () => {
             <div className="h-[89vh] w-[90vw] mx-auto
             lg:grid lg:grid-cols-5 lg:h-[90vh]
             ">
-                <div className="white-glassmorphism h-[35vh] mb-6 text-lg p-3 sm:text-xl sm:leading-loose
+                <div className="white-glassmorphism sm:h-[35vh] mb-6 text-lg p-3 sm:text-xl sm:leading-loose
                 md:text-2xl md:leading-loose md:w-[70%] md:mx-auto
                 lg:text-xl lg:leading-loose lg:col-span-2 lg:row-span-2 lg:h-[57vh] lg:w-[80%] lg:pt-8
                 xl:text-xl xl:leading-loose xl:h-[49vh] xl:p-7
@@ -76,7 +76,7 @@ const Features = () => {
                 lg:col-span-3 lg:mt-4 lg:text-4xl lg:-mb-12
                 xl:text-4xl xl:mt-4 xl:-mb-20
                 '>2022 DeFi Focus</h2>
-                <div className="white-glassmorphism h-[35vh] mb-8 
+                <div className="white-glassmorphism sm:h-[35vh] mb-8 
                 sm:text-xl sm:leading-loose
                 md:text-2xl md:leading-loose md:h-[31vh] md:w-[90%] md:mx-auto
                 lg:col-span-3 lg:h-[47vh] lg:leading-relaxed

@@ -64,7 +64,7 @@ const Navbar = () => {
                     <ul 
                     // ref={linksRef}
                     className='text-5xl text-center p-8 transition-all uppercase md:flex md:justify-between md:text-3xl md:p-0 text-white font-economica tracking-wide md:h-9
-                    sm:leading-loose
+                    xs:leading-loose
                     lg:text-3xl
                     xl:text-4xl
                     '>

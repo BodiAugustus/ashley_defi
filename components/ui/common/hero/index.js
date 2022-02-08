@@ -44,7 +44,7 @@ const { account } = useAccount()
             </div>
 
             <div className="h-14 w-14 rounded-full bg-[#2b2b2b] absolute right-[48%] top-[22%] border-4 border-[#2b2b2b]
-            xs:top-[35%]
+            xs:top-[30%]
             sm:top-[30%]
             md:right-[42%] md:top-[38%]
             lg:hidden
@@ -191,7 +191,7 @@ const { account } = useAccount()
             </div>
 
             <h1 className="text-center text-white -mt-8 font-bold
-            xs:mt-18
+            xs:mt-14
             sm:mt-4 sm:text-2xl sm:-mb-2
             md:text-3xl md:mt-10
             lg:mb-0 lg:mt-28
