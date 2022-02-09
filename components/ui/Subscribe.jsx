@@ -62,7 +62,7 @@ const Subscribe = () => {
                     <h2>Personal portfolio management and recommendations with regular updates.</h2>
                 </div>
                 <div className="col-span-1 bg-blue-600 text-center pt-3 hover:bg-blue-500 font-thin 
-                xs:text-lg xs:pt-7
+                 xs:pt-3 xs:px-1
                 sm:text-lg sm:pt-6
                 md:text-2xl md:p-3
                 lg:text-base
@@ -80,7 +80,7 @@ const Subscribe = () => {
                     <h2>Market outlooks and projections compiled using real-time market metrics.</h2>
                 </div>
                 <div className="col-span-1 bg-blue-600 text-center hover:bg-blue-500 font-thin pt-2
-                xs:text-lg xs:pt-8 xs:px-3
+                xs:pt-3 xs:px-3
                 sm:pt-7 
                 sm:text-lg
                 md:text-2xl md:p-3
@@ -96,7 +96,7 @@ const Subscribe = () => {
                 lg:text-base lg:pt-1
                 xl:text-lg xl:p-4 xl:pt-4
                 ">
-                    <h2>Alpha news drops & tech unveilings revealed though our cultivated list of proven affiliates.</h2>
+                    <h2>Alpha news drops revealed though our cultivated list of proven affiliates.</h2>
                 </div>
                 <div className="col-span-2 bg-indigo-600 rounded-bl-lg rounded-br-lg">
                     <h2 className='text-center text-3xl pt-4
