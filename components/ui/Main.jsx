@@ -26,7 +26,7 @@ const Main = () => {
                     />
                     <h2 className="absolute w-[80%] left-[10%] mt-4 text-xl 
                     xxs:text-lg
-                    xs:text-2xl
+                    xs:text-xl
                     sm:text-2xl sm:w-[90%] sm:left-[5%] sm:mt-6
                     md:text-3xl md:mt-10
                     lg:text-xl lg:mt-3 lg:w-[60%] lg:left-[20%] lg:leading-5
@@ -36,7 +36,7 @@ const Main = () => {
                     <h2 className="absolute top-[40%] w-[80%] left-[10%] mt-4 
                     text-lg 
                     xxs:text-lg
-                    xs:text-2xl
+                    xs:text-lg
                     sm:text-xl sm:mt-6
                     md:text-2xl md:mt-8 md:w-[60%] md:left-[20%]
                     lg:text-lg lg:mt-4 lg:leading-tight lg:w-[80%] lg:left-[9%]
@@ -56,7 +56,7 @@ const Main = () => {
                     />
                     <h2 className="absolute w-[80%] left-[10%] mt-4 text-xl 
                     xxs:text-lg
-                    xs:text-2xl
+                    xs:text-xl
                     sm:text-2xl sm:w-[90%] sm:left-[6%] sm:mt-8
                     md:text-3xl md:mt-14
                     lg:text-lg lg:-mt-0 lg:leading-2
@@ -79,7 +79,7 @@ const Main = () => {
                     />
                     <h2 className="absolute w-[80%] left-[10%] mt-8 text-xl 
                     xxs:text-lg
-                    xs:text-2xl
+                    xs:text-xl
                     sm:text-2xl sm:mt-10
                     md:text-3xl md:mt-16 md:leading-relaxed
                     lg:text-xl lg:leading-6 lg:mt-8
@@ -99,7 +99,7 @@ const Main = () => {
                     />
                     <h2 className="absolute w-[80%] left-[10%] mt-8 text-xl 
                     xxs:text-lg
-                    xs:text-2xl
+                    xs:text-xl
                     sm:text-2xl sm:mt-10
                     md:text-3xl md:mt-16 md:leading-relaxed
                     lg:text-xl lg:mt-7 lg:leading-5
@@ -133,7 +133,7 @@ const Main = () => {
                     />
                     <h2 className="absolute w-[80%] left-[10%] mt-8 text-xl 
                     xxs:text-lg
-                    xs:text-2xl
+                    xs:text-xl
                     sm:text-2xl sm:mt-10
                     md:text-3xl md:leading-relaxed md:mt-16
                     lg:text-xl lg:mt-7
