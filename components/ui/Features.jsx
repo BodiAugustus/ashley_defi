@@ -26,7 +26,7 @@ const Features = () => {
                 lg:text-xl lg:leading-loose lg:col-span-2 lg:row-span-2 lg:h-[57vh] lg:w-[80%] lg:pt-8
                 xl:text-xl xl:leading-loose xl:h-[49vh] xl:p-7
                 xl:w-[85%]
-                2xl:text-2xl 2xl:leading-relaxed
+                2xl:text-2xl 2xl:leading-relaxed 2xl:h-[42vh]
                 ">
                     <h4 className='flex justify-evenly items-center
                     md:justify-center

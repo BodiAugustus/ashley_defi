@@ -7,6 +7,7 @@ const Call2Action = () => {
         md:h-[95vh]
         lg:h-[110vh]
         xl:h-[100vh]
+        2xl-[90vh]
         ">
             <h2 className="text-4xl text-center pt-0 mb-1
             md:text-5xl
@@ -17,6 +18,7 @@ const Call2Action = () => {
             sm:p-5
             md:h-[65vh]
             lg:h-[70vh]
+            2xl:h-[60vh]
             ">
                 <h3 className="text-center text-3xl
                 sm:mt-1

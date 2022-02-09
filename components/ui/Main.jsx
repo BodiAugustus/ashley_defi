@@ -29,14 +29,14 @@ const Main = () => {
                     md:text-3xl md:mt-10
                     lg:text-xl lg:mt-3 lg:w-[60%] lg:left-[20%] lg:leading-5
                     xl:text-2xl xl:w-[70%] xl:left-[15%]
-                    2xl:mt-5
+                    2xl:mt-6
                     ">A <span className="text-yellow-400">new</span> financial era requires <span className="text-yellow-400">new</span> financial experts.</h2>
                     <h2 className="absolute top-[40%] w-[80%] left-[10%] mt-4 text-lg 
                     sm:text-xl sm:mt-6
                     md:text-2xl md:mt-8 md:w-[60%] md:left-[20%]
                     lg:text-lg lg:mt-4 lg:leading-tight lg:w-[80%] lg:left-[9%]
                     xl:text-2xl xl:mt-5
-                    2xl:mt-6
+                    2xl:mt-7
                     ">The old ways of doing things <i>just doesn&apos;t work anymore</i>.</h2>
                 </div>
             </div>

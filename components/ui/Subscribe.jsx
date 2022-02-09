@@ -9,6 +9,7 @@ const Subscribe = () => {
             md:text-5xl
             lg:text-4xl
             xl:text-4xl
+            2xl:mb-2
             ">What we Offer</h2>
             <div className="grid grid-cols-2 grid-rows-5 h-[89vh] white-glassmorphism w-[90vw] mx-auto
             md:w-[80vw]

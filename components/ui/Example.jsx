@@ -8,6 +8,7 @@ const Example = () => {
             md:text-5xl md:mb-3
             lg:text-4xl lg:mb-1 lg:pt-8
             xl:text-4xl 
+            2xl:mt-8
             ">Take an Example</h2>
             <div className="h-[89vh] w-[90vw] bg-[#2b2b2b] mx-auto border-2 rounded-xl border-stone-500 grid grid-cols-1 
             sm:text-lg

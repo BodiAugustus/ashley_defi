@@ -8,6 +8,7 @@ const Benefits = () => {
             md:text-5xl
             lg:text-4xl
             xl:text-4xl
+            2xl:mb-2
             ">Member Benefits</h2>
             <div className="h-[88vh] w-[90vw] bg-[#2b2b2b] mx-auto  white-glassmorphism grid grid-rows-6 transition-all font-economica
             md:w-[80vw]
