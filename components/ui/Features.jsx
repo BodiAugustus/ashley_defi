@@ -79,7 +79,7 @@ const Features = () => {
                 md:text-5xl md:mt-8
                 lg:col-span-3 lg:mt-4 lg:text-4xl lg:-mb-12
                 xl:text-4xl xl:mt-1 xl:-mb-12  
-                2xl:mb-0 2xl:-mt-11
+                2xl:mb-2 2xl:-mt-11 
              
                 '>2022 DeFi Focus</h2>
                 <div className="white-glassmorphism sm:h-[35vh] mb-8 
@@ -87,7 +87,7 @@ const Features = () => {
                 md:text-2xl md:leading-loose md:h-[31vh] md:w-[90%] md:mx-auto
                 lg:col-span-3 lg:h-[47vh] lg:leading-relaxed
                 xl:h-[41vh] xl:text-xl xl:-mt-1 
-                2xl:w-[60%] 2xl:-mt-28
+                2xl:w-[60%] 2xl:-mt-28 2xl:h-[37vh]
                 ">
                     <ul className='2xl:mt-4'>
                     <li>
