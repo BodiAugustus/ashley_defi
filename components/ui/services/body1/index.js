@@ -17,6 +17,7 @@ const Body1 = () => {
            md:text-2xl md:px-4
            lg:text-xl
            xl:text-2xl
+           2xl:text-3xl
            ">
            <div className="flex items-center mb-2 font-economica">
             <FaSkullCrossbones className='text-2xl mr-1 '/>
@@ -63,6 +64,7 @@ const Body1 = () => {
             <h2 className='md:px-4 md:text-2xl
             lg:mx-10
             xl:mt-4
+            2xl:text-3xl
             '>Despite these risk and more however there really is no question, DeFi is the future and the future has begun - Come join with us!</h2>
             </div>
             

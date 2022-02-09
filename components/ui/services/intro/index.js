@@ -23,6 +23,7 @@ const Intro = () => {
                 md:text-2xl
                 lg:text-xl
                 xl:text-2xl
+                2xl:text-3xl
                 ">Whether you are interested in becoming a blockchain wizard or you simply want to diversify your portfolio with minimal time investment, Ashley Capital & DeFi is right for you!</h2>
                 <h2 className="p-3 text-center 
                 sm:text-lg

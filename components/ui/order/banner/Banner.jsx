@@ -35,6 +35,7 @@ const Banner = ({title, description, image}) => {
           md:text-2xl md:p-5 md:mx-6
           lg:text-xl lg:mx-3 lg:mb-3
           xl:text-2xl xl:mb-6
+          2xl:text-3xl
           ">DeFi is supposed to be both fun <span className="underline underline-offset-2">and</span> revolutionary. However for far too many looking in from the outside it feels more than a little overwhelming at first glance, or even second!</h4>
 
           <h4 className="p-1 indent-4 bg-black rounded-lg mt-3
@@ -42,6 +43,7 @@ const Banner = ({title, description, image}) => {
           md:text-2xl md:p-5 md:mx-6
           lg:text-xl lg:mx-3
           xl:text-2xl
+          2xl:text-3xl
           ">It can be very difficult for someone with no or limited experience with cryptocurreny and blockchain technology to figure out the difference between POS or POW, between Algorand and Avalanche, or even how to get a MetaMask wallet up and running for the first time so that wise investment decisions can be made.</h4>
           </div>
 

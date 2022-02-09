@@ -25,26 +25,31 @@ const Conclude = () => {
             sm:text-lg sm:mb-5
             md:text-2xl md:px-4
             lg:text-lg
+            2xl:text-xl
             ">We are very much aware that our membership is well below the average industry rate. While our monthly membership is one flat fee with no-strings attached, those members who gain much from our services and who can afford to contribute more are encouraged to do so, though certainly never obligated. </p>
             <p className="indent-5 mb-2 
             sm:text-lg sm:mb-5
             md:text-2xl md:px-4
             lg:text-lg
+            2xl:text-xl
             ">Our aim is to help prevent another mass acquisition of wealth by only a privledged few and we recognize that many people cannot afford expensive monthly subscriptions and be profitable at the same time when starting out.</p>
             <p className="indent-5 mb-2
             sm:text-lg sm:mb-5
             md:text-2xl md:px-4
             lg:text-lg
+            2xl:text-xl
             ">Therefore we have decided to make as low an entrance fee as possible with the goal of maximum inclusivity in mind.</p>
             <p className="indent-5 mb-5
             sm:text-lg
             md:text-2xl md:px-4
             lg:text-lg
+            2xl:text-xl
             ">So whether you work on Wall St, or on Main St, come and give Ashley Capital & DeFi a chance, we won&apos;t let you down.</p>
           <div className="ml-8
           sm:text-xl
           md:text-2xl md:px-4 md:mt-7
           lg:text-lg
+          2xl:text-xl
           ">
           <p>- <i>Bodi Augustus, Founder</i></p>
             <p className="indent-2"><i>Ashley Capital & DeFi</i></p>
