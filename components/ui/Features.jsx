@@ -89,7 +89,7 @@ const Features = () => {
                 xl:h-[41vh] xl:text-xl xl:-mt-1 
                 2xl:w-[60%] 2xl:-mt-28 2xl:h-[37vh]
                 ">
-                    <ul className='2xl:mt-4'>
+                    <ul className='2xl:mt-2'>
                     <li>
                     <h4 className='flex items-center p-2
                     md:justify-center'><GiDiamondHard className='mr-2

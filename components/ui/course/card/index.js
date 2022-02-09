@@ -8,7 +8,8 @@ export default function Card({course, Footer, disabled, state}) {
         lg:text-center'>
         <h1 className='text-white text-center mb-1
         xs:text-3xl md:mt-4
-        lg:text-4xl 
+        lg:text-4xl  
+        2xl:mb-2
         '>Membership Pass</h1>
         <div className="bg-[#2b2b2b] rounded-xl shadow-md overflow-hidden border-2 p-4 mx-auto
         xs:w-[95vw] xs:mb-8
