@@ -7,6 +7,7 @@ const Footer = () => {
         <footer className="h-[26vh] flex flex-col justify-center items-center  text-white bg-black pt-8 pb-2
         xxs:h-[33vh]
         xs:h-[34vh]
+        sm:h-[35vh]
         lg:h-[52vh]
         xl:relative
         2xl:h-[48vh]">

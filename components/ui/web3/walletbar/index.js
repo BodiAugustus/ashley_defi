@@ -19,7 +19,9 @@ const WalletBar = () => {
         
         ">
         <h2 className="subtitle mb-5
-        xs:text-lg 
+        
+        xs:text-lg xs:mb-6
+        sm:mb-3
         md:text-xl">I hope you are having a great day!</h2>
         <h1 className="text-4xl font-playfair underline underline-offset-1
         xxs:text-3xl xxs:mb-5 xxs:-mt-3

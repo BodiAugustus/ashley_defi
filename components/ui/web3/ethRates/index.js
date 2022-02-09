@@ -13,7 +13,7 @@ const FtmPrice = () => {
     ">
         <div className="p-6 border-2 border-sky-400 drop-shadow rounded-md mr-2 
         xxs:w-[60%] xxs:mx-auto xxs:mb-2
-        xs:w-[50%] xs:p-1 xs:ml-2
+        xs:w-[50%] xs:p-1 
         md:w-[25%]
         lg:w-[20%]
         xl:w-[15%]
