@@ -31,8 +31,8 @@ const Subscribe = () => {
                             xxs:-left-[10%] xxs:-top-[15%]
                             xs:-left-[10%] xs:-top-[15%]
                             sm:-right-[20%] sm:-top-[15%]
-                            md:top-[10%] md:-right-[0%]
-                            lg:right-[1%]
+                            md:left-[20%] md:top-[10%]
+                            lg:-right-[10%]
                             '/>
                         </div>
                         <h3 className='mx-auto'>No Tier systems!</h3>
@@ -50,7 +50,7 @@ const Subscribe = () => {
                 sm:text-lg sm:pt-4
                 md:text-2xl md:p-3 md:pt-5
                 lg:text-base
-                xl:text-lg xl:p-5
+                xl:text-xl xl:p-5
                 ">
                     <h2>Individualized risk assessments custom tailored to your desired level of exposure.</h2>
                 </div>
@@ -60,7 +60,7 @@ const Subscribe = () => {
                 sm:text-lg sm:pt-4
                 md:text-2xl md:p-3
                 lg:text-base lg:pt-5
-                xl:text-lg xl:p-4 xl:pt-6
+                xl:text-xl xl:p-4 xl:pt-6
                 ">
                     <h2>Personal portfolio management and recommendations with regular updates.</h2>
                 </div>
@@ -70,7 +70,7 @@ const Subscribe = () => {
                 sm:text-lg sm:pt-6
                 md:text-2xl md:p-3
                 lg:text-base
-                xl:text-lg xl:p-4 xl:pt-6
+                xl:text-xl xl:p-4 xl:pt-6
                 ">
                     <h2>Timely feedback from an actual consultant, not a customer service representitve.</h2>
                 </div>
@@ -80,7 +80,7 @@ const Subscribe = () => {
                 sm:text-lg sm:pt-6
                 md:text-2xl md:p-3
                 lg:text-base
-                xl:text-lg xl:p-4 xl:pt-6
+                xl:text-xl xl:p-4 xl:pt-6
                 ">
                     <h2>Market outlooks and projections compiled using real-time market metrics.</h2>
                 </div>
@@ -91,7 +91,7 @@ const Subscribe = () => {
                 sm:text-lg
                 md:text-2xl md:p-3
                 lg:text-base
-                xl:text-lg xl:p-4 xl:pt-6
+                xl:text-xl xl:p-4 xl:pt-6
                 ">
                     <h2>Advanced technical expertise from real world blockchain developers.</h2>
                 </div>
@@ -101,7 +101,7 @@ const Subscribe = () => {
                 sm:text-lg sm:pt-2
                 md:text-2xl md:p-3
                 lg:text-base lg:pt-1
-                xl:text-lg xl:p-4 xl:pt-4
+                xl:text-xl xl:p-4 xl:pt-4
                 ">
                     <h2>Alpha news drops revealed though our cultivated list of proven affiliates.</h2>
                 </div>
