@@ -5,7 +5,7 @@ const Banner = ({title, description, image}) => {
         <section className=" text-left 
         xxs:h-[80vh]
         xs:h-[75vh]
-        sm:h-[105vh]
+        sm:h-[103vh]
         lg:my-28 lg:2/6 lg:h-[73vh]
         ">
         <div className="text-6xl px-2 font-semibold text-white text-center leading-none
