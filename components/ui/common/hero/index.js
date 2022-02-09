@@ -215,6 +215,7 @@ const { account } = useAccount()
                     md:text-2xl
                     lg:text-xl lg:w-[32%]
                     xl:text-2xl xl:h-[30vh]
+                    2xl:w[-32%]
                     ">               
                         <div className="flex justify-between p-2 items-center">
                             <h4>Our Job</h4>
@@ -237,6 +238,7 @@ const { account } = useAccount()
                     md:text-2xl
                     lg:text-xl lg:w-[32%]
                     xl:text-2xl xl:h-[30vh]
+                    2xl:w[-32%]
                     ">
                         <div className="flex justify-between p-2 items-center">
                             <h4>Why Us?</h4>        
@@ -259,6 +261,7 @@ const { account } = useAccount()
                     md:text-2xl
                     lg:text-xl lg:w-[32%]
                     xl:text-2xl xl:h-[30vh]
+                    2xl:w[-32%]
                     ">
                         <div className="flex justify-between p-2 items-center">
                             <h4>What Else?</h4>       
