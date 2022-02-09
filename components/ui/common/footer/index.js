@@ -8,7 +8,7 @@ const Footer = () => {
         xs:h-[35vh]
         lg:h-[52vh]
         xl:relative
-        2xl:h-[49vh]">
+        2xl:h-[48vh]">
         
         <Link href="/" className="transition-all">
           <a className="neontext neonP cursor-pointer mb-4 text-5xl

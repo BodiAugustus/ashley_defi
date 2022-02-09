@@ -17,7 +17,7 @@ const Setup = () => {
             md:text-2xl md:h-[80vh]
             lg:h-[91vh] lg:text-lg lg:text-center lg:w-[70vw] lg:mx-auto
             xl:h-[95vh]
-            2xl:text-2xl 2xl:mt-5
+            2xl:text-2xl  2xl:h-[92vh]
             ">
                 <div className="flex items-center">
                     <div className="flex items-center mb-2 font-economica">

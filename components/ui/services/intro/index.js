@@ -17,6 +17,7 @@ const Intro = () => {
             md:h-[55vh] md:p-4
             lg:h-[70vh] lg:p-6
             xl:mx-6
+            2xl:h-[67vh]
             ">
                 <h2 className="p-3 text-center
                 sm:text-lg

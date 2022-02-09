@@ -11,6 +11,7 @@ const Conclude = () => {
         md:h-[75vh]
         lg:h-[85vh]
         xl:mx-6 xl:h-[75vh]
+        2xl:h-[80vh]
         ">
             <h1 className="text-2xl text-center mb-2 p-2
             sm:text-3xl sm:p-2
