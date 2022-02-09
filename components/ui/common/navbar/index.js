@@ -25,7 +25,9 @@ const Navbar = () => {
         <nav className=''>
             <div className="flex flex-wrap justify-between items-center p-1 bg-black relative ">
            {showMenu && 
-            <h1 className='absolute text-white -right-[30%] top-[40%] rotate-90 text-7xl'>Ashley DeFi</h1>
+            <h1 className='absolute text-white -right-[30%] top-[40%] rotate-90 text-7xl
+            xxs:-right-[35%]
+            '>Ashley DeFi</h1>
            }
                 <div className="  flex justify-between h-[12vh] p-2 items-center w-full md:w-auto bg-[#2b2b2b] md:rounded-tr md:rounded-bl 
                 md:rounded-br
@@ -58,6 +60,7 @@ const Navbar = () => {
                 <div 
                 // ref={linksContainerRef}
                 className={`bg-[#2b2b2b] transition-all md:h-auto overflow-hidden  w-[55vw] 
+                xxs:w-[65vw]
                 xs:w-[60vw]
                 md:w-[55%] md:p-3 md:rounded-xl ${showMenu ? 'links-container show-container' : 'links-container'}
                 lg:w-[45%]
@@ -65,7 +68,7 @@ const Navbar = () => {
                     <ul 
                     // ref={linksRef}
                     className='text-5xl text-center p-8 transition-all uppercase md:flex md:justify-between md:text-3xl md:p-0 text-white font-economica tracking-wide md:h-9
-                    xs:leading-loose
+                    xxs:leading-loose
                     lg:text-3xl
                     xl:text-4xl
                     '>
