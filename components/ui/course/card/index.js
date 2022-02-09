@@ -15,7 +15,7 @@ export default function Card({course, Footer, disabled, state}) {
         <div className="bg-[#2b2b2b] rounded-xl shadow-md overflow-hidden border-2 p-4 mx-auto
         xs:w-[95vw] xs:mb-8
         md:max-w-xl 
-        2xl:h-[85vh]
+        2xl:h-[82vh]
         
         ">
         <div className=" "> {/* This is the flex element containing the two children with flex-1 properties - but we dont want that - so we use flex-1 and flex-2 which means flex-2 takes 66% of availavle div. */}
@@ -80,7 +80,7 @@ export default function Card({course, Footer, disabled, state}) {
             <p className="mt-2 text-white 
             xs:text-base xs:leading-5 
             md:text-lg 
-            2xl:mt-4
+            2xl:mt-4 2xl:mb-4
             ">{course.description}.</p>
             { Footer && 
                 <Footer/>
