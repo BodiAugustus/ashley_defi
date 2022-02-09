@@ -16,6 +16,7 @@ const { account } = useAccount()
 
     return(
         <div className="bg-black p-4 relative overflow-hidden
+        
         xs:h-[81vh]
         sm:h-[87vh] 
         md:h-[85vh]
@@ -48,7 +49,7 @@ const { account } = useAccount()
             <div className="h-14 w-14 rounded-full bg-[#2b2b2b] absolute right-[48%] top-[22%] border-4 border-[#2b2b2b]
             xxs:top-[54%] xxs:left-[70%]
             xs:top-[32%] xs:left-[37%]
-            sm:top-[29%]
+            sm:top-[31%]
             md:right-[42%] md:top-[38%]
             lg:hidden
             xl:hidden
@@ -216,7 +217,7 @@ const { account } = useAccount()
                 <div className="flex justify-between h-[20vh]
                 ">
                     <div className="bg-[#2b2b2b] text-xs w-[31%] rounded-lg white-glassmorphism
-                    xs:h-[15vh]
+                    xs:h-[17vh]
                     sm:text-base sm:h-[25vh] sm:w-[31%]
                     md:text-2xl
                     lg:text-xl lg:w-[32%]
@@ -240,7 +241,7 @@ const { account } = useAccount()
                     </div>
 
                     <div className="bg-[#2b2b2b] text-xs w-[30%] rounded-lg white-glassmorphism
-                    xs:h-[15vh]
+                    xs:h-[17vh]
                     sm:text-base sm:h-[25vh] sm:w-[31%]
                     md:text-2xl
                     lg:text-xl lg:w-[32%]
@@ -264,7 +265,7 @@ const { account } = useAccount()
                     </div>
 
                     <div className="bg-[#2b2b2b] text-xs w-[30%] rounded-lg white-glassmorphism 
-                    xs:h-[15vh]
+                    xs:h-[17vh]
                     sm:text-base sm:h-[25vh] sm:w-[31%]
                     md:text-2xl
                     lg:text-xl lg:w-[32%]
