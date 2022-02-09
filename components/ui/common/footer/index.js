@@ -5,6 +5,7 @@ const Footer = () => {
    
     return (
         <footer className="h-[26vh] flex flex-col justify-center items-center  text-white bg-black pt-8 pb-2
+        xxs:h-[33vh]
         xs:h-[35vh]
         lg:h-[52vh]
         xl:relative

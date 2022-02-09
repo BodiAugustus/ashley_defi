@@ -28,7 +28,7 @@ const Navbar = () => {
             <h1 className='absolute text-white -right-[30%] top-[40%] rotate-90 text-7xl
             xxs:-right-[35%]
             xs:-right-[30%]
-            sm:-right[27%]
+            sm:-right[25%]
             '>Ashley DeFi</h1>
            }
                 <div className="  flex justify-between h-[12vh] p-2 items-center w-full md:w-auto bg-[#2b2b2b] md:rounded-tr md:rounded-bl 

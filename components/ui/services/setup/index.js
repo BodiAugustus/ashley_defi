@@ -2,7 +2,9 @@ import { IoMdRocket } from 'react-icons/io'
 
 const Setup = () => {
     return(
-        <div className="bg-black xs:h-[100vh] text-white
+        <div className="bg-black text-white
+        xxs:h-[110vh]
+        xs:h-[100vh] 
         sm:h-[120vh]
         md:h-[95vh]
         lg:h-[120vh]
@@ -129,7 +131,7 @@ const Setup = () => {
                 sm:mt-6
                 md:text-3xl
                 xl:mt-2
-                '>As well as so much more!</h2>
+                '>And so much more!</h2>
             </div>
         </div>
     )
