@@ -6,14 +6,14 @@ import Image from "next/image"
 const FtmPrice = () => {
   const { ftm } = useFtmPrice()
   return (
-    <div className="flex text-center bg-black pl-2 p-4
+    <div className="flex text-center bg-black p-4
     xxs:flex-col
-    xs:flex 
+    xs:flex-row 
     md:flex-row
     ">
         <div className="p-6 border-2 border-sky-400 drop-shadow rounded-md mr-2 
         xxs:w-[60%] xxs:mx-auto xxs:mb-2
-        xs:w-[50%] xs:p-1 
+        xs:w-[48%] xs:p-2
         md:w-[25%]
         lg:w-[20%]
         xl:w-[15%]
@@ -40,7 +40,7 @@ const FtmPrice = () => {
         </div>
         <div className="p-6 border-2 border-sky-400 drop-shadow rounded-md
          xxs:w-[60%] xxs:mx-auto xxs:mb-2
-         xs:w-[50%] xs:p-1
+         xs:w-[48%] xs:p-2 xs:mb-2
          md:w-[25%]
          lg:w-[20%]
          xl:w-[15%]
