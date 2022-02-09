@@ -73,7 +73,7 @@ const Main = () => {
                     md:text-3xl md:mt-16 md:leading-relaxed
                     lg:text-xl lg:leading-6 lg:mt-8
                     xl:text-2xl xl:mt-5 xl:leading-relaxed
-                    2xl:mt-9
+                    2xl:mt-12
                     ">Hedge fund managers don&apos;t <u className="underline-offset-2 text-green-400">use</u> crypto.</h2>                
                 </div>
             </div>
@@ -90,7 +90,7 @@ const Main = () => {
                     md:text-3xl md:mt-16 md:leading-relaxed
                     lg:text-xl lg:mt-7 lg:leading-5
                     xl:text-2xl xl:mt-5
-                    2xl:mt-9
+                    2xl:mt-11
                     ">Influencers influence poorly.
                     <AiFillTwitterCircle
                         className="mx-auto text-4xl fill-blue-400
@@ -121,7 +121,7 @@ const Main = () => {
                     md:text-3xl md:leading-relaxed md:mt-16
                     lg:text-xl lg:mt-7
                     xl:text-2xl xl:leading-relaxed xl:mt-7
-                    2xl:mt-9
+                    2xl:mt-12
                     ">Your gut&apos;s <span className="tracking-wider">FOMO</span> only leads to losses.
                     </h2>                
                 </div>
