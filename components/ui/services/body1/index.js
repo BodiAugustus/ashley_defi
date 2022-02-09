@@ -20,41 +20,48 @@ const Body1 = () => {
            2xl:text-3xl
            ">
            <div className="flex items-center mb-2 font-economica">
-            <FaSkullCrossbones className='text-2xl mr-1 '/>
+            <FaSkullCrossbones className='text-2xl mr-1 
+            2xl:text-xl 2xl:mr-3 '/>
             <h2>Bots driving up the price at an ICO event when the ticker stops before you even have time to make an initial offer and click trade. </h2>
             </div>
             <div className="flex items-center mb-2 font-economica">
-            <FaSkullCrossbones className='text-xl mr-1'/>
+            <FaSkullCrossbones className='text-xl mr-1
+            2xl:text-xl 2xl:mr-3 '/>
             <h2>That anybody can make a crypto token and a website that looks legitimate to scam money.</h2>
             </div>
             <div className="flex items-center mb-2 font-economica">
             <FaSkullCrossbones className='text-4xl mr-1
             md:text-3xl
             lg:text-xl
+            2xl:text-xl 2xl:mr-3 
             '/>
             <h2>How phishing sites can look identicle to your trading platforms and hack your data before stealing your funds if you&apos;re not aware of what to look for.</h2>
             </div>
             <div className="flex items-center mb-2 font-economica">
             <FaSkullCrossbones className='text-4xl mr-1
+            lg:text-xl
+            2xl:text-xl 2xl:mr-3 '/>
             
-            lg:text-xl'/>
             <h2>That most Twitter crypto influencers get paid by developers to shill projects before liquidating their coins as the newcomers arrive and drive the price up before the crash.</h2>
             </div>
             <div className="flex items-center mb-2 font-economica">
             <FaSkullCrossbones className='text-lg mr-1
             md:text-xl
+            2xl:text-xl 2xl:mr-3 
             '/>
             <h2>Projects, protocols and entire chains can be hacked and some projects rug pull.</h2>
             </div>
             <div className="flex items-center mb-2 font-economica">
             <FaSkullCrossbones className='text-base mr-1
             md:text-xl
+            2xl:text-xl 2xl:mr-3 
             '/>
             <h2>Sudden and large swings in market and token prices can happen quickly and often.</h2>
             </div>
             <div className="flex items-center mb-5 font-economica">
             <FaSkullCrossbones className='text-base mr-1
             md:text-xl
+            2xl:text-xl 2xl:mr-3 
             '/>
             <h2>That there are very few regulations - you&apos;re in the Wild West now!</h2>
             </div>

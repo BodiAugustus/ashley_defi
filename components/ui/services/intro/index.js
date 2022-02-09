@@ -43,6 +43,7 @@ const Intro = () => {
                 md:text-2xl
                 lg:text-2xl
                 xl:text-3xl
+                2xl:mt-4
                 ">Let us help you develop a winning strategy.</h2>
             </div>
         </div>
