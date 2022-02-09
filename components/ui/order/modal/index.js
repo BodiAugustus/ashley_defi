@@ -63,10 +63,10 @@ const OrderModal = ({course, onClose, onSubmit, isNewPurchase}) => {     //When 
 
     return(
         <Modal isOpen={isOpen}>
-      <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-scroll shadow-xl transform transition-all sm:my-8 sm:align-middle xs:max-w-lg xs:w-full">
-        <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 overflow-scroll">
-          <div className="sm:flex sm:items-start overflow-scroll">
-            <div className="mt-3 sm:mt-0 sm:ml-4 sm:text-left overflow-scroll">
+      <div className="inline-block align-bottom bg-white rounded-lg text-left  shadow-xl transform transition-all sm:my-8 sm:align-middle xs:max-w-lg xs:w-full">
+        <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 ">
+          <div className="sm:flex sm:items-start ">
+            <div className="mt-3 sm:mt-0 sm:ml-4 sm:text-left ">
               <h3 className="mb-7 text-lg font-bold leading-6 text-gray-900" id="modal-title">
                 {course?.title} Member Pass
               </h3>
