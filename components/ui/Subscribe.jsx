@@ -28,6 +28,7 @@ const Subscribe = () => {
                             md:text-6xl
                             '/>
                             <AiOutlineStop className='absolute -top-[28%] -right-[40%] text-5xl fill-red-500
+                            xs:-left-[10%] xs:-top-[15%]
                             sm:-right-[20%] sm:-top-[15%]
                             md:top-[10%] md:-right-[0%]
                             lg:right-[1%]
@@ -61,6 +62,7 @@ const Subscribe = () => {
                     <h2>Personal portfolio management and recommendations with regular updates.</h2>
                 </div>
                 <div className="col-span-1 bg-blue-600 text-center pt-3 hover:bg-blue-500 font-thin 
+                xs:text-lg xs:pt-7
                 sm:text-lg sm:pt-6
                 md:text-2xl md:p-3
                 lg:text-base
@@ -78,6 +80,8 @@ const Subscribe = () => {
                     <h2>Market outlooks and projections compiled using real-time market metrics.</h2>
                 </div>
                 <div className="col-span-1 bg-blue-600 text-center hover:bg-blue-500 font-thin pt-2
+                xs:text-lg xs:pt-8 xs:px-3
+                sm:pt-7 
                 sm:text-lg
                 md:text-2xl md:p-3
                 lg:text-base
@@ -86,7 +90,7 @@ const Subscribe = () => {
                     <h2>Advanced technical expertise from real world blockchain developers.</h2>
                 </div>
                 <div className="col-span-1 bg-blue-600 text-center hover:bg-blue-500 font-thin
-                xs:pt-3 
+                xs:pt-3 xs:px-3
                 sm:text-lg sm:pt-2
                 md:text-2xl md:p-3
                 lg:text-base lg:pt-1
