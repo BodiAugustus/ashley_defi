@@ -244,7 +244,7 @@ export default function Marketplace({courses}) {
                         return(
                           <div className="mt-4">
                             <Button 
-                            variant="white"
+                            variant="green"
                             disabled={!hasConnectedWallet || isBusy}
                             onClick={() => setSelectedCourse(course)}                       
                             > {/*Click the button will select a course to purchase so we need to keep a state for it - selectedCourse */}
