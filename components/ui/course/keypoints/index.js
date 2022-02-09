@@ -4,7 +4,7 @@ const KeyPoints = ({points}) => {
     return(
         <section>
         <div className="py-12 bg-black
-        xs:mx-2
+        xxs:mx-2 xxs:pb-10 xxs:py-0
         xl:py-0 xl:pb-10
         ">
           <div className="max-w-7xl mx-auto px-4 bg-[#2b2b2b]

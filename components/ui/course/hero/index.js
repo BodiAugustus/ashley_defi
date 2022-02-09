@@ -30,7 +30,7 @@ const CourseHero = ({title, description, image, hasOwner}) => {
               xl:mt-0">
                 <div className="sm:text-center lg:text-left">
                 <div className="text-lg inline-block p-4 py-2 rounded-md font-bold bg-red-300 text-red-700 float-left
-                xs:-mt-10 xs:mb-10
+                xxs:-mt-10 xxs:mb-10
                 lg:hidden ">
                   Current Forecast: Wait / Sell
                 </div>

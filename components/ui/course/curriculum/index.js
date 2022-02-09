@@ -23,8 +23,8 @@ import Link from "next/link"
     const statusClass = "px-2 inline-flex text-xs leading-5 font-semibold rounded-full"
     return (
      
-      <section className="mx-auto bg-black pb-10
-      xs:w-[95vw]
+      <section className="mx-auto rounded-lg bg-black pb-10
+      xxs:w-[95vw]
       
       ">
         <div className="flex flex-col 
@@ -253,6 +253,6 @@ import Link from "next/link"
           </div>
         </div>
       </section>
-
+     
     )
   }

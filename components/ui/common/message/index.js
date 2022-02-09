@@ -14,7 +14,7 @@ const BG_CLASSES = {
 
 const TEXT_CLASSES = {
   success: "text-white",
-  warning: "text-yellow-900",
+  warning: "text-white",
   danger: "text-red-900",
 }
 

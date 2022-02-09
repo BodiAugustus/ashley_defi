@@ -40,7 +40,7 @@ export default function Course({course}) {
             />
                { course && 
             <div className="
-            xs:w-[95vw]
+            xxs:w-[95vw]
             md:w-[80%]
             max-w-5xl mx-auto">
             { courseState === "purchased" &&
