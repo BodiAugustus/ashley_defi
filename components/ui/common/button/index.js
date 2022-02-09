@@ -27,7 +27,8 @@ const Button = ({
     return(
         <button
             {...rest} // Includes onClick and other events
-            className={` ${sizeClass } disabled:opacity-50 disabled:cursor-not-allowed rounded-lg shadow-2xl p-2    active:scale-90         
+            className={` ${sizeClass } disabled:opacity-50 disabled:cursor-not-allowed rounded-lg shadow-2xl p-2    active:scale-90    
+            2xl:text-3xl     
               
     ${className} ${variants[variant]}`}>
             {children}

@@ -15,7 +15,7 @@ const Subscribe = () => {
             md:w-[80vw]
             lg:w-[47vw] lg:h-[88vh]
             ">
-                <div className="col-span-2 bg-blue-400 rounded-tl-lg rounded-tr-lg">
+                <div className="col-span-2 bg-indigo-500 rounded-tl-lg rounded-tr-lg">
                     <div className="flex items-center text-3xl p-3
                     sm:text-4xl
                     md:mr-12
@@ -94,13 +94,13 @@ const Subscribe = () => {
                 ">
                     <h2>Alpha news drops & tech unveilings revealed though our cultivated list of proven affiliates.</h2>
                 </div>
-                <div className="col-span-2 bg-blue-400 rounded-bl-lg rounded-br-lg">
+                <div className="col-span-2 bg-indigo-600 rounded-bl-lg rounded-br-lg">
                     <h2 className='text-center text-3xl pt-4
                     sm:text-4xl
                     md:text-5xl md:pt-8
                     lg:text-4xl lg:pt-2
                     xl:text-4xl xl:p-4
-                    '>Come & join us, <br/> the future is <span className='text-blue-700 '>now.</span></h2>
+                    '>Come & join us, <br/> the future is <span className='text-sky-400 '>now.</span></h2>
                 </div>
             </div>
         </div>
