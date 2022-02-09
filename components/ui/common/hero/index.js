@@ -47,8 +47,8 @@ const { account } = useAccount()
 
             <div className="h-14 w-14 rounded-full bg-[#2b2b2b] absolute right-[48%] top-[22%] border-4 border-[#2b2b2b]
             xxs:top-[54%] xxs:left-[70%]
-            xs:top-[32%]
-            sm:top-[30%]
+            xs:top-[36%] xs:left-[37%]
+            sm:top-[25%]
             md:right-[42%] md:top-[38%]
             lg:hidden
             xl:hidden
