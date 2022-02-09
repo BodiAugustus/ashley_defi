@@ -7,10 +7,12 @@ const FtmPrice = () => {
   const { ftm } = useFtmPrice()
   return (
     <div className="flex text-center bg-black pl-2 p-4
+    xxs:flex-col
     xs:flex 
     md:flex-row
     ">
         <div className="p-6 border-2 border-sky-400 drop-shadow rounded-md mr-2 
+        xxs:w-[60%] xxs:mx-auto xxs:mb-2
         xs:w-[50%] xs:p-1 xs:ml-2
         md:w-[25%]
         lg:w-[20%]
@@ -37,6 +39,7 @@ const FtmPrice = () => {
           <p className="text-lg text-white">Current FTM Price</p>
         </div>
         <div className="p-6 border-2 border-sky-400 drop-shadow rounded-md
+         xxs:w-[60%] xxs:mx-auto xxs:mb-2
          xs:w-[50%] xs:p-1
          md:w-[25%]
          lg:w-[20%]

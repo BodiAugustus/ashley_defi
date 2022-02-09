@@ -14,7 +14,7 @@ const WalletBar = () => {
       
       ">
         <h1 className="xs:text-sm md:text-2xl">Hello, {account ? account.data?.slice(0,6) : "guest, you're not logged in!"}</h1>
-        <div className="flex xs:flex-col
+        <div className="flex xxs:flex-col
         md:flex-row
         
         ">
@@ -22,6 +22,7 @@ const WalletBar = () => {
         xs:text-lg 
         md:text-xl">I hope you are having a great day!</h2>
         <h1 className="text-4xl font-playfair underline underline-offset-1
+        xxs:text-3xl xxs:mb-5 xxs:-mt-3
         xs:invisible 
         md:ml-14 md:-mt-14 md:underline-offset-2 md:visible 
         lg:mx-10 lg:mt-4
@@ -36,6 +37,7 @@ const WalletBar = () => {
         
         ">
           <div className="bg-black p-4 rounded-lg border-2 border-sky-400
+          xxs:mb-2
           xs:w-[50%] xs:mb-2 xs:-mt-16
           sm:-mt-10
           md:w-[25%] md:mt-0
