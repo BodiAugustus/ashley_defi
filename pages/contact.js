@@ -8,7 +8,7 @@ const Contact = () => {
         md:h-[70vh]
         lg:h-[115vh]
         xl:h-[100vh]
-        2xl:h-[90vh]
+        2xl:h-[85vh]
         ">
             <h1 className="text-3xl text-center mb-4
             sm:text-4xl sm:mb-6 sm:mt-8 
@@ -46,6 +46,7 @@ const Contact = () => {
                 </div>
             <h2 className="ml-10
             md:text-xl
+            2xl:ml-32 2xl:mt-6
             "> - <i>Ashley Capital & DeFi</i></h2>
         </div>
     )
