@@ -9,6 +9,7 @@ const Info = () => {
             md:text-5xl md:mb-3
             lg:text-4xl lg:mb-2
             xl:text-4xl xl:mb-2
+            2xl:mb-3
             "><span className="text-yellow-400">Enter</span> Ashley DeFi</h2>
             <div className=" w-[90vw] bg-[#2b2b2b] mx-auto border-2 rounded-xl border-stone-500 grid grid-cols-1 grid-rows-4
             sm:h-[113vh]
@@ -30,6 +31,7 @@ const Info = () => {
                 md:text-3xl md:p-8
                 lg:text-lg lg:p-3 lg:mt-2
                 xl:text-xl xl:p-4 xl:mt-3
+                2xl:text-2xl
                 ">
                     <h2 className="indent-4
                     md:indent-8 
@@ -48,6 +50,7 @@ const Info = () => {
                 md:text-3xl md:p-8
                 lg:text-lg lg:p-3 lg:leading-5
                 xl:text-xl xl:p-4 xl:leading-6
+                2xl:text-2xl
                 ">
                     <h2 className="indent-4
                     md:indent-8 
