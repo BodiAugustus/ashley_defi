@@ -50,7 +50,7 @@ const { account } = useAccount()
             xxs:top-[54%] xxs:left-[70%]
             xs:top-[32%] xs:left-[37%]
             sm:top-[31%]
-            md:right-[42%] md:top-[38%]
+            md:hidden
             lg:hidden
             xl:hidden
             ">
@@ -205,7 +205,7 @@ const { account } = useAccount()
             xxs:mt-28
             xs:mt-14 xs:mb-4
             sm:mt-8 sm:text-2xl sm:-mb-2
-            md:text-3xl md:mt-10
+            md:text-3xl md:mt-10 md:mb-10
             lg:mb-0 lg:mt-28
             xl:mt-20 xl:mb-6 xl:text-4xl
             2xl:mt-32
