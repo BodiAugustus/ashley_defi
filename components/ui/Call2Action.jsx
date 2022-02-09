@@ -7,18 +7,19 @@ const Call2Action = () => {
         md:h-[95vh]
         lg:h-[110vh]
         xl:h-[100vh]
-        2xl-[90vh]
+        2xl-[85vh]
         ">
             <h2 className="text-4xl text-center pt-0 mb-1
             md:text-5xl
             lg:text-4xl lg:mb-1 lg:pt-4
             xl:text-4xl
+            2xl:mb-2
             ">What does it cost?</h2>
             <div className="sm:h-[88vh] w-[90vw] bg-[#2b2b2b] mx-auto rounded-lg white-glassmorphism p-3
             sm:p-5
             md:h-[65vh]
             lg:h-[70vh]
-            2xl:h-[60vh]
+            2xl:h-[55vh]
             ">
                 <h3 className="text-center text-3xl
                 sm:mt-1

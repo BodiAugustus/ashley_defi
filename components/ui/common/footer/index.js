@@ -25,6 +25,7 @@ const Footer = () => {
         sm:top-12
         md:top-14
         xl:top-12
+        2xl:top-16
 
         
         
