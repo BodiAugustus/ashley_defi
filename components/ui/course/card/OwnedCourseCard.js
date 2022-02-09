@@ -13,7 +13,7 @@ export default function OwnedCourseCard({children, course, type = "purchased"}) 
 
   return (
     <div className="bg-black border border-[#2b2b2b] shadow overflow-hidden sm:rounded-lg mb-16 
-    xs:w-[95vw] xs:mx-auto">
+    xxs:w-[95vw] xxs:mx-auto">
       <div className="xs:block md:flex">
         <div className="flex-1">
           <div className="xs:h-52 md:h-full next-image-wrapper ">
@@ -31,7 +31,9 @@ export default function OwnedCourseCard({children, course, type = "purchased"}) 
             <div className="px-1 py-5 sm:px-6">
               <h3 className="text-lg leading-6 font-medium text-white ">
                 <span className="mr-2">{course.title}</span>
-                <span className={`text-xs ${STATE_COLORS[type]}  rounded-full p-2 `}>{course.state}</span>
+                <span className={`text-xs ${STATE_COLORS[type]}  rounded-full xxs:p-1
+                xs:p-2 
+                `}>{course.state}</span>
               </h3>
               <p className="mt-1 max-w-2xl text-sm text-gray-500">
                 {course.price} USD

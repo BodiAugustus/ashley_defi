@@ -57,7 +57,10 @@ const OwnedCourses = ({courses}) => {
             
             }
             { requireInstall &&
-            <div className="w-1/2 mx-auto">
+            <div className="
+            xxs:w-[70%]
+            md:w-[50%]
+            w-1/2 mx-auto">
               <Message type="warning">
                <div className="">Please install MetaMask!</div>
 
