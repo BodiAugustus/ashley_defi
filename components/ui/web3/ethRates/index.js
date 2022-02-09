@@ -10,11 +10,12 @@ const FtmPrice = () => {
     xxs:flex-col
     xs:flex-row 
     md:flex-row
+   
     ">
         <div className="p-6 border-2 border-sky-400 drop-shadow rounded-md mr-2 
         xxs:w-[60%] xxs:mx-auto xxs:mb-2
         xs:w-[48%] xs:p-2
-        md:w-[25%]
+        md:w-[25%] md:mx-4 md:mr-2
         lg:w-[20%]
         xl:w-[15%]
         ">
@@ -41,7 +42,7 @@ const FtmPrice = () => {
         <div className="p-6 border-2 border-sky-400 drop-shadow rounded-md
          xxs:w-[60%] xxs:mx-auto xxs:mb-2
          xs:w-[48%] xs:p-2 xs:mb-2
-         md:w-[25%]
+         md:w-[25%] md:mx-0
          lg:w-[20%]
          xl:w-[15%]
         ">
