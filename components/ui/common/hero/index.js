@@ -216,7 +216,7 @@ const { account } = useAccount()
                 <div className="flex justify-between h-[20vh]
                 ">
                     <div className="bg-[#2b2b2b] text-xs w-[31%] rounded-lg white-glassmorphism
-                    xs:h-[22vh]
+                    xs:h-[15vh]
                     sm:text-base sm:h-[25vh] sm:w-[31%]
                     md:text-2xl
                     lg:text-xl lg:w-[32%]
@@ -240,7 +240,7 @@ const { account } = useAccount()
                     </div>
 
                     <div className="bg-[#2b2b2b] text-xs w-[30%] rounded-lg white-glassmorphism
-                    xs:h-[22vh]
+                    xs:h-[15vh]
                     sm:text-base sm:h-[25vh] sm:w-[31%]
                     md:text-2xl
                     lg:text-xl lg:w-[32%]
@@ -264,7 +264,7 @@ const { account } = useAccount()
                     </div>
 
                     <div className="bg-[#2b2b2b] text-xs w-[30%] rounded-lg white-glassmorphism 
-                    xs:h-[22vh]
+                    xs:h-[15vh]
                     sm:text-base sm:h-[25vh] sm:w-[31%]
                     md:text-2xl
                     lg:text-xl lg:w-[32%]
