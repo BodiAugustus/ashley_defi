@@ -46,6 +46,7 @@ const { account } = useAccount()
             </div>
 
             <div className="h-14 w-14 rounded-full bg-[#2b2b2b] absolute right-[48%] top-[22%] border-4 border-[#2b2b2b]
+            xxs:top-[54%] xxs:left-[70%]
             xs:top-[32%]
             sm:top-[30%]
             md:right-[42%] md:top-[38%]
@@ -93,6 +94,7 @@ const { account } = useAccount()
             account.data ?
             <Button
             className="cursor-default absolute 
+            xxs:top-[55%]
             sm:left-[5%] sm:top-[50%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
@@ -120,6 +122,8 @@ const { account } = useAccount()
             :
             <Button
             className="cursor-default absolute 
+ 
+            xs:left-[5%] xs:top-[50%]
             sm:left-[5%] sm:top-[50%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
@@ -132,7 +136,7 @@ const { account } = useAccount()
       
             }                      
             <div className=" h-20 sepia opacity-30 mt-7 text-center flex justify-between 
-            xs:hidden
+            xxs:hidden
             sm:mt-10
             lg:mt-28
             xl:mt-48
@@ -197,6 +201,7 @@ const { account } = useAccount()
             </div>
 
             <h1 className="text-center text-white -mt-8 font-bold
+            xxs:mt-28
             xs:mt-14
             sm:mt-4 sm:text-2xl sm:-mb-2
             md:text-3xl md:mt-10
