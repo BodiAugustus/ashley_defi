@@ -31,7 +31,7 @@ const Info = () => {
                 md:text-3xl md:p-8
                 lg:text-lg lg:p-3 lg:mt-2
                 xl:text-xl xl:p-4 xl:mt-3
-                2xl:text-2xl
+                2xl:text-2xl 2xl:p-5
                 ">
                     <h2 className="indent-4
                     md:indent-8 
@@ -52,7 +52,7 @@ const Info = () => {
                 md:text-3xl md:p-8
                 lg:text-lg lg:p-3 lg:leading-5
                 xl:text-xl xl:p-4 xl:leading-6
-                2xl:text-2xl
+                2xl:text-2xl 2xl:p-5
                 ">
                     <h2 className="indent-4
                     md:indent-8 
