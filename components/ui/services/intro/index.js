@@ -32,6 +32,7 @@ const Intro = () => {
                 lg:text-xl
                 xl:text-2xl
                 ">We provide the tools, the one-on-one counseling, as well as a vibrant and flourishing community of like-minded individuals who are all in pursuit of the same goal - <span className="underline underline-offset-[3px]
+                2xl:underline-offset-[4px]
                 ">not being left behind</span>.</h2>
                 <h2 className="p-3 text-center indent-4
                 sm:text-lg

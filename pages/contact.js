@@ -8,11 +8,13 @@ const Contact = () => {
         md:h-[70vh]
         lg:h-[115vh]
         xl:h-[100vh]
+        2xl:h-[90vh]
         ">
             <h1 className="text-3xl text-center mb-4
             sm:text-4xl sm:mb-6 sm:mt-8 
             md:text-5xl
             xl:mt-0
+            2xl:mt-10
              ">Contact Information</h1>
                 <div className="sm:text-lg
                 md:text-2xl md:text-center

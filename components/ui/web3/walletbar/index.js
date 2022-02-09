@@ -26,7 +26,7 @@ const WalletBar = () => {
         md:ml-14 md:-mt-14 md:underline-offset-2 md:visible 
         lg:mx-10 lg:mt-4
         xl:mx-32 
-        2xl:mx-44
+        2xl:mx-40
         ">Subscription Area</h1>
         </div>
         <div className=" justify-between items-center gap-2
