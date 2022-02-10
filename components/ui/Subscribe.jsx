@@ -87,8 +87,8 @@ const Subscribe = () => {
                 <div className="col-span-1 bg-blue-600 text-center hover:bg-blue-500 font-thin pt-2
                 xxs:text-base
                 xs:pt-3 xs:px-3
-                sm:pt-7 
-                sm:text-lg
+               
+                sm:text-lg sm:pt-2
                 md:text-2xl md:p-3
                 lg:text-base
                 xl:text-xl xl:p-4 xl:pt-6

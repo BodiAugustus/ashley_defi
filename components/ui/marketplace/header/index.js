@@ -23,7 +23,11 @@ const Header = () => {
             <MoveStuffAround/>
             <Walletbar/>
             <FtmPrice />
-            <div className="flex flex-row-reverse pb-4 px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-row-reverse pb-4 px-4 
+            xxs:px-12
+            xs:px-14 xs:mb-3
+            sm:px-[20%]
+            lg:px-8">
             <Breadcrumbs 
             items={LINKS}
             isAdmin={account.isAdmin}

@@ -1,7 +1,6 @@
 import Image from "next/image"
 import {GiAbstract070, GiConcentricCrescents, GiHalfTornado} from 'react-icons/gi'
 import Button from "../button"
-
 import { useWeb3 } from "@components/providers"
 import { useAccount } from "@components/hooks/web3"
 import { MoveStuffAround } from '@components/ui/common'
@@ -11,7 +10,6 @@ const Hero = () => {
 const { connect, isLoading, requireInstall } = useWeb3() // Brings in these 3 properties from _web3Api using the provider context (useWeb3) -- connect opens MetaMask
 const { account } = useAccount()
 // console.log(account.data);
-
 
 
     return(
@@ -24,7 +22,7 @@ const { account } = useAccount()
         ">
         
             <MoveStuffAround/>
-        
+
             <div className="flex justify-between w-full
             lg:w-[100vw]  
             lg:flex-col
@@ -82,6 +80,7 @@ const { account } = useAccount()
             {isLoading ? 
             <Button
             className="cursor-default absolute
+            xxs:top-[56%]
             sm:left-[5%] sm:top-[50%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
@@ -95,7 +94,7 @@ const { account } = useAccount()
             account.data ?
             <Button
             className="cursor-default absolute 
-            xxs:top-[55%]
+            xxs:top-[56%]
             sm:left-[5%] sm:top-[50%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
@@ -112,6 +111,7 @@ const { account } = useAccount()
             requireInstall ?
             <Button
             className="cursor-default absolute 
+            xxs:top-[56%]
             sm:left-[5%] sm:top-[50%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
@@ -123,7 +123,7 @@ const { account } = useAccount()
             :
             <Button
             className="cursor-default absolute 
- 
+            xxs:top-[56%]
             xs:left-[5%] xs:top-[50%]
             sm:left-[5%] sm:top-[50%]
             md:left-[15%] md:top-[45%]

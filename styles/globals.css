@@ -184,3 +184,33 @@
             transform: scale(1);
   }
 }
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    display: grid;
+    place-items: center;
+    transition: all .3s linear;
+    transition: var(--transition);
+    visibility: hidden;
+    z-index: -1;
+}
+
+.modal-container {
+    background: #fff;
+    background: var(--clr-white);
+    border-radius: 0.25rem;
+    border-radius: var(--radius);
+    width: 90vw;
+    height: 30vh;
+    max-width: 620px;
+    max-width: var(--fixed-width);
+    text-align: center;
+    display: grid;
+    place-items: center;
+    position: relative;
+}

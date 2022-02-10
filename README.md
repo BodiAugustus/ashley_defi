@@ -358,3 +358,5 @@
 #179. Removed unneeded conditional in the Hero.
 
 #180. Added a new conditional to the members only button to hide if from UI when course is in deactivated state inside owned.js.
+
+#181. Created infomodal file with index.js. Created InfoModal component with required functions to open/close it. Imported to walletbar where I added UI button to replace the Subscriptions area string. Made all working as before.

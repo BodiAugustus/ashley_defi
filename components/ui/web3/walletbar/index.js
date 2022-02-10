@@ -1,13 +1,16 @@
 import { useWalletInfo } from "@components/hooks/web3"
 import { useWeb3 } from "@components/providers"
 import dayjs from "dayjs"
-
-
+import { AiOutlineWarning } from 'react-icons/ai'
+import { useGlobalContext } from "@components/providers/web3/otherContext"
+import { InfoModal } from "@components/ui/order"
 
 
 const WalletBar = () => {
+  const { openModal} = useGlobalContext()
   const { requireInstall } = useWeb3()
   const { account, network} = useWalletInfo()
+
   return(
       <section className="text-white bg-[#2b2b2b] rounded-bl-lg rounded-br-lg">
       <div className="p-8 
@@ -23,14 +26,18 @@ const WalletBar = () => {
         xs:text-lg xs:mb-7
         sm:mb-3
         md:text-xl">I hope you are having a great day!</h2>
-        <h1 className="text-4xl font-playfair underline underline-offset-1
-        xxs:text-3xl xxs:mb-5 xxs:-mt-3
-        xs:invisible 
-        md:ml-14 md:-mt-14 md:underline-offset-2 md:visible 
-        lg:mx-10 lg:mt-4
-        xl:mx-32 
-        2xl:mx-36
-        ">Subscription Area</h1>
+
+            <InfoModal/>
+            <button 
+            onClick={openModal}
+            className="flex items-center p-2 text-center bg-yellow-500 rounded-lg shadow-lg shadow-yellow-500 hover:scale-110 active:scale-100  mx-auto cursor-pointer transition-all text-xl tracking-wide            
+            xxs:w-[50%] xxs:mb-7
+            xs:mb-[32%]
+            sm:mb-[18%]
+            md:w-[32%] md:text-3xl md:mb-0 md:-mt-2
+            lg:w-[22%] ml-[15%]
+            xl:w-[18%]
+            "><AiOutlineWarning className="mr-2"/> Read First!</button>
         </div>
         <div className=" justify-between items-center gap-2
         xs:flex-col xs:flex

@@ -35,7 +35,9 @@ const OwnedCourses = ({courses}) => {
             </div>
             <section className="grid grid-cols-1 bg-black ">
             { ownedCourses.isEmpty &&
-            <div className="w-1/2 mx-auto bg-black min-h-[30vh] mt-20">
+            <div className="w-1/2 mx-auto bg-black min-h-[30vh] mt-20
+            xxs:w-[80%]
+            md:w-[50%]">
               <Message type="warning">
                <div className=""> You don&apos;t own any courses!</div>
                <Link href="/subscribe">
@@ -48,7 +50,9 @@ const OwnedCourses = ({courses}) => {
             
             }
             { account.isEmpty &&
-            <div className="w-1/2 mx-auto">
+            <div className="w-1/2 mx-auto
+            xxs:w-[80%]
+            md:w-[50%]">
               <Message type="warning">
                <div className="">Please connect to MetaMask!</div>
 

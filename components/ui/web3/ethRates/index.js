@@ -1,9 +1,11 @@
 import { COURSE_PRICE, useFtmPrice } from "@components/hooks/useEthPrice"
 import { Loader } from "@components/ui/common"
 import Image from "next/image"
+import { InfoModal } from "../walletbar"
 
 
 const FtmPrice = () => {
+ 
   const { ftm } = useFtmPrice()
   return (
     <div className="flex text-center bg-black p-4
