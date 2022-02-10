@@ -8,8 +8,8 @@ const {closeModal, isModalOpen} = useGlobalContext()
         <div className={`${isModalOpen ? "visible z-10" : "invisible -z-10"} fixed top-0 left-0 w-[100%] h-[100%] bg-[#2b2b2b] grid items-center transition-all `}>
             <div className="bg-black rounded-lg w-[90vw]  max-w-[700px] mx-auto p-2  items-center relative
             xxs:h-[90vh]
-            xs:h-[95vh]
-            sm:text-lg sm:h-[80vh]
+            xs:h-[88vh]
+            sm:text-lg sm:h-[90vh]
             md:text-xl md:h-[65vh]
             lg:text-base lg:h-[85vh]
             xl:h-[75vh] xl:text-base
