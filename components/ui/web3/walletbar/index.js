@@ -32,11 +32,12 @@ const WalletBar = () => {
             onClick={openModal}
             className="flex items-center p-2 text-center bg-yellow-500 rounded-lg shadow-lg shadow-yellow-500 hover:scale-110 active:scale-100  mx-auto cursor-pointer transition-all text-xl tracking-wide            
             xxs:w-[50%] xxs:mb-7
-            xs:mb-[32%]
+            xs:mb-[32%] xs:mx-auto
             sm:mb-[18%]
             md:w-[32%] md:text-3xl md:mb-0 md:-mt-2
-            lg:w-[22%] ml-[15%]
-            xl:w-[18%]
+            lg:w-[22%] lg:mx-[12%]
+            xl:w-[18%]  xl:mx-[17%]
+    
             "><AiOutlineWarning className="mr-2"/> Read First!</button>
         </div>
         <div className=" justify-between items-center gap-2
