@@ -25,7 +25,7 @@ const Header = () => {
             <FtmPrice />
             <div className="flex flex-row-reverse pb-4 px-4 
             xxs:px-12
-            xs:px-14 xs:mb-3
+            xs:px-14 xs:pb-3
             sm:px-[20%]
             lg:px-8">
             <Breadcrumbs 
