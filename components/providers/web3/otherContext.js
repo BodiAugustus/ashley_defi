@@ -5,7 +5,7 @@ const AppContext = createContext()
 
 const AppProvider = ({children}) => {
 
-    const [isModalOpen, setIsModalOpen] = useState(true)
+    const [isModalOpen, setIsModalOpen] = useState(false)
 
     const closeModal = () => {
         setIsModalOpen(false)
