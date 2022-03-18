@@ -12,7 +12,7 @@ const {closeModal, isModalOpen} = useGlobalContext()
             sm:text-lg sm:h-[90vh]
             md:text-xl md:h-[65vh]
             lg:text-base lg:h-[85vh]
-            xl:h-[80vh] xl:text-lg
+            xl:h-[76vh] xl:text-base
             
             ">
                <div className="">
