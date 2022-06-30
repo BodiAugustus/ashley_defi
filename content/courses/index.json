@@ -1,22 +1,22 @@
 [
-    {
-      "id": "1410474",
-      "type": "Membership Pass",
-      "title": "Fantastically Fabulous February",
-      "description": "This is your monthly pass to Ashley Capital & DeFi's Member's Only area! After your purchase is complete, click on the link 'Fantastically Fabulous February' above or the 'My Subscription' link. Once there, click on the button titled 'Member's Area'",
-      "coverImage": "https://res.cloudinary.com/bodi-web3/image/upload/v1644254954/Nyan-Cat_wvv2r1.jpg",
-      "author": "Bodi Augustus",
-      "link1": "https://google.com",
-      "link2": "https://yahoo.com",
-      "link3": "https://twitter.com",
-      "link4": "https://facebook.com",
-      "slug": "fantastically-fabulous-february-members-only-area",
-      "wsl": [
-        "Bitcoin Rebounds",
-        "Feds announce Rate Hike",
-        "Polygon Hacked for 100 Million",
-        "NFT Sells for 100 Million"
-      ],
-      "createdAt": ""
-    }
-  ]
+  {
+    "id": "1410474",
+    "type": "Membership Pass",
+    "title": "Fantastically Fabulous February",
+    "description": "This is your monthly pass to Ashley Capital & DeFi's Member's Only area! After your purchase is complete, click on the link 'Fantastically Fabulous February' above or the 'My Subscription' link. Once there, click on the button titled 'Member's Area'",
+    "coverImage": "../../public/images/Nyan-Cat.jpeg",
+    "author": "Bodi Augustus",
+    "link1": "https://google.com",
+    "link2": "https://yahoo.com",
+    "link3": "https://twitter.com",
+    "link4": "https://facebook.com",
+    "slug": "fantastically-fabulous-february-members-only-area",
+    "wsl": [
+      "Bitcoin Rebounds",
+      "Feds announce Rate Hike",
+      "Polygon Hacked for 100 Million",
+      "NFT Sells for 100 Million"
+    ],
+    "createdAt": ""
+  }
+]

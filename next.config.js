@@ -3,8 +3,9 @@ module.exports = {
 
   images: {
     domains: [
-      'res.cloudinary.com',
-      'thrangra.sirv.com'
+      "res.cloudinary.com",
+      "thrangra.sirv.com",
+      "googleusercontent.com",
     ],
   },
-}
+};
