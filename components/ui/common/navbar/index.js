@@ -26,7 +26,7 @@ const Navbar = () => {
   // },[showMenu])
 
   return (
-    <nav className="h-[100vh]">
+    <nav className={showMenu && 'h-[100vh]'}>
       <div className="flex flex-wrap justify-between items-center p-1 bg-black relative ">
         {showMenu && (
           <h1
