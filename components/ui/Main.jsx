@@ -1,12 +1,12 @@
-import Image from "next/image";
-import { MdDoNotDisturb } from "react-icons/md";
-import { AiFillTwitterCircle } from "react-icons/ai";
-import header2 from "../../public/images/ashley-defi-header-2.jpg";
-import header4 from "../../public/images/ashley-defi-pic-4.jpg";
-import header3 from "../../public/images/ashley-defi-pic-5.jpg";
-import header5 from "../../public/images/ashley-defi-pic-2 (1).jpg";
-import header1 from "../../public/images/ashley-defi-pic-1.jpg";
-import header6 from "../../public/images/ashley-defi-pic-3.jpg";
+import Image from 'next/image';
+import { MdDoNotDisturb } from 'react-icons/md';
+import { AiFillTwitterCircle } from 'react-icons/ai';
+import header2 from '../../public/images/ashley-defi-header-2.jpg';
+import header4 from '../../public/images/ashley-defi-pic-4.jpg';
+import header3 from '../../public/images/ashley-defi-pic-5.jpg';
+import header5 from '../../public/images/ashley-defi-pic-22.jpg';
+import header1 from '../../public/images/ashley-defi-pic-1.jpg';
+import header6 from '../../public/images/ashley-defi-pic-3.jpg';
 
 const Main = () => {
   return (
@@ -27,11 +27,11 @@ const Main = () => {
       </h2>
       <div
         className="bg-[#2b2b2b] w-[90%] h-[89%] mx-auto grid grid-cols-2 gap-2 grid-rows-3 p-2 rounded-lg white-glassmorphism
-            xl:h-[100vh]
+            xl:h-[90vh]
             "
       >
         <div className="border-4 border-black rounded-lg col-span-2 white-glassmorphism">
-          <div className="">
+          <div className="relative h-full">
             <Image
               src={header2}
               layout="fill"
@@ -72,7 +72,7 @@ const Main = () => {
         </div>
 
         <div className="border-4  border-black rounded-lg white-glassmorphism">
-          <div className="">
+          <div className="relative h-full">
             <Image
               src={header4}
               layout="fill"
@@ -90,22 +90,22 @@ const Main = () => {
                     2xl:mt-6
                     "
             >
-              Stock brokers{" "}
+              Stock brokers{' '}
               <span className="text-red-600 text-4xl r-[20%]">
                 <MdDoNotDisturb
                   className="mx-auto mt-3
                     md:text-5xl
                     lg:text-5xl lg:-mb-1
                     "
-                />{" "}
-              </span>{" "}
+                />{' '}
+              </span>{' '}
               know DeFi.
             </h2>
           </div>
         </div>
 
         <div className="border-4  border-black rounded-lg white-glassmorphism">
-          <div className="">
+          <div className="relative h-full">
             <Image
               src={header6}
               layout="fill"
@@ -123,14 +123,14 @@ const Main = () => {
                     2xl:mt-14
                     "
             >
-              Hedge fund managers don&apos;t{" "}
+              Hedge fund managers don&apos;t{' '}
               <u className="underline-offset-2 text-green-400">use</u> crypto.
             </h2>
           </div>
         </div>
 
         <div className="border-4  border-black rounded-lg white-glassmorphism">
-          <div className="">
+          <div className="relative h-full">
             <Image
               src={header5}
               layout="fill"
@@ -169,10 +169,11 @@ const Main = () => {
         </div>
 
         <div className="border-4  border-black rounded-xl white-glassmorphism">
-          <div className="">
+          <div className="relative h-full">
             <Image
               src={header1}
               layout="fill"
+              sizes="300px"
               alt="Roulette wheel"
               className="relative brightness-50 rounded-xl"
             />

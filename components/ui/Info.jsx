@@ -1,12 +1,13 @@
-import Image from "next/image";
-import header1 from "../../public/images/ashley-defi-header1.jpg";
+import Image from 'next/image';
+import header1 from '../../public/images/ashley-defi-header1.jpg';
 
 const Info = () => {
   return (
     <div
       className="bg-black text-white 
         xs:h-[90vh]
-        sm:h-[125vh] "
+        sm:h-[125vh] 
+        "
     >
       <h2
         className="text-center text-4xl pt-4 mb-1
@@ -22,10 +23,10 @@ const Info = () => {
         className=" w-[90vw] bg-[#2b2b2b] mx-auto border-2 rounded-xl border-stone-500 grid grid-cols-1 grid-rows-4
             sm:h-[113vh]
             lg:w-[45vw] lg:h-[89vh]
-            xl:h-[100vh]
+            xl:h-[90vh]
             "
       >
-        <div className="col-span-2 row-span-1 relative rounded-md border-b-2 border-stone-500">
+        <div className="col-span-2 row-span-1 relative rounded-md border-b-2 border-b-stone-500">
           <Image
             src={header1}
             layout="fill"
@@ -33,13 +34,13 @@ const Info = () => {
             className="relative brightness-100 rounded-xl "
           />
         </div>
-        <div className="col-span-2 row-span-3 rounded-xl p-4 font-light ">
+        <div className="col-span-2 row-span-3 rounded-xl px-4 font-light xl:pt-2">
           <div
-            className="bg-black rounded-lg p-2 -mt-0 border-2 border-stone-500 
+            className="bg-black rounded-lg -mt-0 border-2 border-stone-500 
                 sm:text-xl sm:p-4
                 md:text-3xl md:p-8
                 lg:text-lg lg:p-3 lg:mt-2
-                xl:text-xl xl:p-4 xl:mt-3
+                xl:text-lg xl:p-3 xl:mt-3
                 2xl:text-2xl 2xl:p-5
                 "
           >
@@ -51,7 +52,7 @@ const Info = () => {
                     2xl:leading-8
                     "
             >
-              Ashley Capital & DeFi was created by{" "}
+              Ashley Capital & DeFi was created by{' '}
               <a
                 className="cursor-pointer"
                 href="https://www.bodiaugustus.com/"
@@ -61,9 +62,9 @@ const Info = () => {
                 <b>Bodi Augustus</b>
               </a>
               , a web3 and blockchain developer who has been working in crypto
-              since 2017.{" "}
+              since 2017.{' '}
             </h2>
-            <br />
+
             <h2
               className="md:indent-8 
                     lg:leading-5
@@ -78,11 +79,11 @@ const Info = () => {
             <h2></h2>
           </div>
           <div
-            className="bg-black rounded-lg p-2 mt-4 border-2 border-stone-500 
+            className="bg-black rounded-lg mt-4 border-2 border-stone-500 
                 sm:text-xl sm:p-4 sm:mt-5
                 md:text-3xl md:p-8
                 lg:text-lg lg:p-3 lg:leading-5
-                xl:text-xl xl:p-4 xl:leading-6
+                xl:text-lg xl:p-3 xl:leading-6
                 2xl:text-2xl 2xl:p-5
                 "
           >
