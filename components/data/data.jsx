@@ -46,11 +46,11 @@ export const socials = [
     icon: <BsDiscord />,
     color: 'text-yellow-400',
   },
-  // {
-  //   id: '23gfss',
-  //   name: 'LinkedIn',
-  //   url: 'https://t.me/BodiAugustus',
-  //   icon: <FaTelegramPlane />,
-  //   color: 'text-white',
-  // },
+  {
+    id: '23gfss',
+    name: 'Telegram',
+    url: 'https://t.me/BodiAugustus',
+    icon: <FaTelegramPlane />,
+    color: 'text-white',
+  },
 ];

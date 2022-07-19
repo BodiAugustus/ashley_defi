@@ -18,8 +18,10 @@ const Hero = () => {
     <div
       className="bg-black p-4 relative overflow-hidden
         
-        xs:h-[81vh]
-        sm:h-[87vh] 
+        xxs:h-[89vh]
+        xs:h-[90vh]
+        xp:h-[85vh]
+        sm:h-[86vh] 
         md:h-[85vh]
         xl:h-[90vh]
         "
@@ -59,8 +61,9 @@ const Hero = () => {
         <div
           className="h-14 w-14 rounded-full bg-[#2b2b2b] absolute right-[48%] top-[22%] border-4 border-[#2b2b2b]
             xxs:top-[28vh] xxs:left-[40%]
-            xs:top-[32%] xs:left-[37%]
-            sm:top-[31%]
+            xs:top-[33%] xs:left-[37%]
+            xp:top-[28%]
+            sm:top-[27%]
             md:hidden
             lg:hidden
             xl:hidden
@@ -96,8 +99,10 @@ const Hero = () => {
       {isLoading ? (
         <Button
           className="cursor-default absolute
-            xxs:top-[56%]
-            sm:left-[5%] sm:top-[50%]
+            xxs:top-[52%]
+            xs:top-[57%]
+            xp:top-[47%]
+            sm:left-[5%] sm:top-[45%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
             xl:left-[44%] xl:top-[38%]
@@ -110,8 +115,10 @@ const Hero = () => {
       ) : account.data ? (
         <Button
           className="cursor-default absolute 
-            xxs:top-[56%]
-            sm:left-[5%] sm:top-[50%]
+            xxs:top-[52%]
+            xs:top-[57%]
+            xp:top-[47%]
+            sm:left-[5%] sm:top-[45%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
             xl:left-[44%] xl:top-[38%]
@@ -127,8 +134,10 @@ const Hero = () => {
       ) : requireInstall ? (
         <Button
           className="cursor-default absolute 
-            xxs:top-[56%]
-            sm:left-[5%] sm:top-[50%]
+            xxs:top-[52%]
+            xs:top-[57%]
+            xp:top-[47%]
+            sm:left-[5%] sm:top-[45%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
             xl:left-[44%] xl:top-[38%]
@@ -140,9 +149,10 @@ const Hero = () => {
       ) : (
         <Button
           className="cursor-default absolute 
-            xxs:top-[56%]
-            xs:left-[5%] xs:top-[50%]
-            sm:left-[5%] sm:top-[50%]
+            xxs:top-[52%]
+            xs:left-[5%] xs:top-[57%]
+            xp:top-[47%]
+            sm:left-[5%] sm:top-[45%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
             xl:left-[44%] xl:top-[38%]
@@ -219,9 +229,10 @@ const Hero = () => {
 
       <h1
         className="text-center text-white -mt-8 font-bold
-            xxs:mt-28
-            xs:mt-14 xs:mb-4
-            sm:mt-8 sm:text-2xl sm:-mb-2
+            xxs:mt-28 xxs:text-2xl
+            xs:mt-16 xs:mb-4 xs:text-xl
+            xp:text-3xl
+            sm:mt-12 sm:text-3xl sm:-mb-0
             md:text-3xl md:mt-10 md:mb-10
             lg:mb-0 lg:mt-28
             xl:mt-20 xl:mb-6 xl:text-4xl
@@ -238,8 +249,9 @@ const Hero = () => {
         >
           <div
             className="bg-[#2b2b2b] text-xs w-[31%] rounded-lg white-glassmorphism
-                    xs:h-[17vh]
-                    sm:text-base sm:h-[25vh] sm:w-[31%]
+                    xs:h-[19vh]
+                    xp:h-[25vh] xp:text-base
+                    sm:text-lg sm:h-[27vh] sm:w-[31%]
                     md:text-2xl
                     lg:text-xl lg:w-[32%]
                     xl:text-2xl xl:h-[30vh]
@@ -269,8 +281,9 @@ const Hero = () => {
 
           <div
             className="bg-[#2b2b2b] text-xs w-[30%] rounded-lg white-glassmorphism
-                    xs:h-[17vh]
-                    sm:text-base sm:h-[25vh] sm:w-[31%]
+                    xs:h-[19vh]
+                    xp:h-[25vh] xp:text-base
+                    sm:text-lg sm:h-[27vh] sm:w-[31%]
                     md:text-2xl
                     lg:text-xl lg:w-[32%]
                     xl:text-2xl xl:h-[30vh]
@@ -299,8 +312,9 @@ const Hero = () => {
 
           <div
             className="bg-[#2b2b2b] text-xs w-[30%] rounded-lg white-glassmorphism 
-                    xs:h-[17vh]
-                    sm:text-base sm:h-[25vh] sm:w-[31%]
+                    xs:h-[19vh]
+                    xp:h-[25vh] xp:text-base
+                    sm:text-lg sm:h-[27vh] sm:w-[31%]
                     md:text-2xl
                     lg:text-xl lg:w-[32%]
                     xl:text-2xl xl:h-[30vh]
@@ -308,7 +322,7 @@ const Hero = () => {
                     "
           >
             <div className="flex justify-between p-2 items-center">
-              <h4>What Else?</h4>
+              <h4>Extras</h4>
               <GiHalfTornado
                 className="fill-red-400 text-2xl sm:text-sm
                                     md:text-4xl

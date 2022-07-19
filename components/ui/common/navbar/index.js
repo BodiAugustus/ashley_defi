@@ -1,5 +1,7 @@
 import Image from 'next/image';
-import { FaBars, FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaBars, FaTwitter } from 'react-icons/fa';
+import { BsDiscord } from 'react-icons/bs';
+import { FaTelegramPlane } from 'react-icons/fa';
 import { links, socials } from '@components/data/data';
 import { useEffect, useRef, useState } from 'react';
 import { ActiveLink } from '..';
@@ -73,7 +75,7 @@ const Navbar = () => {
 
         <div
           // ref={linksContainerRef}
-          className={`bg-[#2b2b2b] transition-all md:h-auto overflow-hidden  w-[55vw] 
+          className={`bg-[#2b2b2b] transition-all md:h-auto overflow-hidden  w-[75vw] 
                 xxs:w-[65vw]
                 xs:w-[60vw]
                 md:w-[55%] md:p-3 md:rounded-xl ${
@@ -124,20 +126,22 @@ const Navbar = () => {
             <>
               <div
                 className="flex justify-around  text-white mt-8 cursor-pointer
-                       xxs:text-5xl 
+                       xxs:text-4xl 
                     xs:mt-4
-                       sm:mt-14 sm:text-6xl
+                    xp:text-5xl
+                       sm:mt-14 sm:text-5xl
                          "
               >
                 <FaTwitter className="hover:scale-110 active:scale-100 transition-all" />
-                <FaGithub className="hover:scale-110 active:scale-100 transition-all" />
-                {/* <FaLinkedin className="hover:scale-110 active:scale-100 transition-all" /> */}
+                <FaTelegramPlane className="hover:scale-110 active:scale-100 transition-all" />
+                <BsDiscord className="hover:scale-110 active:scale-100 transition-all" />
               </div>
               <div
                 className="flex flex-col text-center mt-20 text-xs text-white 
-                        xxs:mt-24
-                        xs:mt-12
-                        sm:mt-[23vh] "
+                        xxs:mt-[15vh]
+                        xs:mt-[10vh]
+                        xp:mt-[24vh]
+                        sm:mt-[24vh] "
               >
                 <h4>Ashley Capital & DeFi - &#169; {time.getFullYear()}</h4>
               </div>

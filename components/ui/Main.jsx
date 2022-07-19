@@ -16,7 +16,7 @@ const Main = () => {
         "
     >
       <h2
-        className="text-4xl pt-4 mb-1
+        className="text-4xl pt-4 mb-2
             md:text-5xl md:mb-3
             lg:text-4xl lg:mb-2
             xl:text-4xl xl:mb-2
