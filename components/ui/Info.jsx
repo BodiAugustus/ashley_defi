@@ -5,6 +5,7 @@ const Info = () => {
   return (
     <div
       className="bg-black text-white 
+        xxs:h-[85vh]
         xs:h-[90vh]
         sm:h-[125vh] 
         "
@@ -21,6 +22,7 @@ const Info = () => {
       </h2>
       <div
         className=" w-[90vw] bg-[#2b2b2b] mx-auto border-2 rounded-xl border-stone-500 grid grid-cols-1 grid-rows-4
+        
             sm:h-[113vh]
             lg:w-[45vw] lg:h-[89vh]
             xl:h-[90vh]
@@ -34,7 +36,7 @@ const Info = () => {
             className="relative brightness-100 rounded-xl "
           />
         </div>
-        <div className="col-span-2 row-span-3 rounded-xl px-4 font-light xl:pt-2">
+        <div className="col-span-2 row-span-3 rounded-xl px-4 font-light pt-2 pb-2">
           <div
             className="bg-black rounded-lg -mt-0 border-2 border-stone-500 
                 sm:text-xl sm:p-4
@@ -46,6 +48,7 @@ const Info = () => {
           >
             <h2
               className="indent-4
+                    xxs:px-2
                     md:indent-8 
                     lg:leading-5
                     xl:leading-7
@@ -61,12 +64,15 @@ const Info = () => {
               >
                 <b>Bodi Augustus</b>
               </a>
-              , a web3 and blockchain developer who has been working in crypto
-              since 2017.{' '}
+              , a web3 and blockchain developer who has been working in the
+              crypto space since 2017.{' '}
             </h2>
-
-            <h2
-              className="md:indent-8 
+            <br />
+            <blockquote
+              className="
+              indent-4
+              xxs:px-2
+              md:indent-8 
                     lg:leading-5
                     xl:leading-7
                     2xl:leading-8"
@@ -74,22 +80,24 @@ const Info = () => {
               Our aim is to bridge the knowledge gap between the general public
               and those who code on the blockchains and interact with its
               protocols daily.
-            </h2>
+            </blockquote>
             <br />
             <h2></h2>
           </div>
           <div
-            className="bg-black rounded-lg mt-4 border-2 border-stone-500 
+            className="bg-black rounded-lg  border-2 border-stone-500 
                 sm:text-xl sm:p-4 sm:mt-5
                 md:text-3xl md:p-8
                 lg:text-lg lg:p-3 lg:leading-5
-                xl:text-lg xl:p-3 xl:leading-6
+                xl:text-lg xl:p-3 xl:leading-6 xl:mt-2
                 2xl:text-2xl 2xl:p-5
                 "
           >
             <h2
               className="indent-4
-                    md:indent-8 
+              xxs:px-2 xxs:pt-2
+
+                    md:indent-8 md:pt-0
                     xl:leading-8"
             >
               We do not tell you what to think, we show you how to know.

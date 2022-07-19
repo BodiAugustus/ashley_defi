@@ -1,36 +1,35 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     screens: {
-      'xxs': '359px',
-      'xs': '374px',
+      xxs: '280px',
+      xs: '374px',
       ...defaultTheme.screens,
     },
-  
+
     extend: {
       fontFamily: {
-        economica: "Economica, sans-serif",
-        playfair: "Playfair Display SC, serif"
+        economica: 'Economica, sans-serif',
+        playfair: 'Playfair Display SC, serif',
       },
       screens: {
-        'sm': '400px',
+        sm: '400px',
         // 'ms': '539px',
         // 'mx': '767px',
       },
-      flex : {
-        "2": "2 2 0%",
-        "3": "3 3 0%",
-        "4": "4 4 0%"
+      flex: {
+        2: '2 2 0%',
+        3: '3 3 0%',
+        4: '4 4 0%',
       },
-      opacity: ["disabled"],
-      cursor: ["disabled"],
-
+      opacity: ['disabled'],
+      cursor: ['disabled'],
     },
   },
   plugins: [],
-}
+};
