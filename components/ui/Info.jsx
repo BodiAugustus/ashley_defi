@@ -5,7 +5,7 @@ const Info = () => {
   return (
     <div
       className="bg-black text-white 
-        xxs:h-[85vh]
+        xxs:h-[90vh]
         xs:h-[90vh]
         sm:h-[125vh] 
         "
@@ -22,7 +22,8 @@ const Info = () => {
       </h2>
       <div
         className=" w-[90vw] bg-[#2b2b2b] mx-auto border-2 rounded-xl border-stone-500 grid grid-cols-1 grid-rows-4
-        
+            xxs:h-[80vh]
+            xs:h-[90vh]
             sm:h-[113vh]
             lg:w-[45vw] lg:h-[89vh]
             xl:h-[90vh]
@@ -36,9 +37,14 @@ const Info = () => {
             className="relative brightness-100 rounded-xl "
           />
         </div>
-        <div className="col-span-2 row-span-3 rounded-xl px-4 font-light pt-2 pb-2">
+        <div
+          className="col-span-2 row-span-3 rounded-xl px-4 font-light  pb-2
+        xxs:pt-4
+        md:pt-2"
+        >
           <div
             className="bg-black rounded-lg -mt-0 border-2 border-stone-500 
+                xxs:p-1 xxs:mb-2
                 sm:text-xl sm:p-4
                 md:text-3xl md:p-8
                 lg:text-lg lg:p-3 lg:mt-2

@@ -4,21 +4,22 @@ import {
   GiBrain,
   GiTeamIdea,
   GiDiamondHard,
-} from "react-icons/gi";
-import { FaHandshake } from "react-icons/fa";
-import { AiFillLock } from "react-icons/ai";
-import Image from "next/image";
-import image1 from "../../public/images/ashley-defi-pic-6.jpg";
-import image2 from "../../public/images/ashley-defi-pic-7.jpg";
-import image3 from "../../public/images/ashley-defi-pic-8.jpg";
-import image4 from "../../public/images/ashley-defi-pic-9.jpg";
-import image5 from "../../public/images/ashley-defi-pic-10.jpg";
-import image6 from "../../public/images/ashley-defi-pic-12 (1).jpg";
+} from 'react-icons/gi';
+import { FaHandshake } from 'react-icons/fa';
+import { AiFillLock } from 'react-icons/ai';
+import Image from 'next/image';
+import image1 from '../../public/images/ashley-defi-pic-6.jpg';
+import image2 from '../../public/images/ashley-defi-pic-7.jpg';
+import image3 from '../../public/images/ashley-defi-pic-8.jpg';
+import image4 from '../../public/images/ashley-defi-pic-9.jpg';
+import image5 from '../../public/images/ashley-defi-pic-10.jpg';
+import image6 from '../../public/images/ashley-defi-pic-12 (1).jpg';
 
 const Features = () => {
   return (
     <div
       className=" bg-black text-white
+        xxs:h-[92vh]
         xs:h-[90vh]
         sm:h-[115vh]
         xl:h-[100vh]
@@ -26,7 +27,7 @@ const Features = () => {
         "
     >
       <h2
-        className="text-center text-4xl pt-4 mb-1
+        className="text-center text-4xl pt-4 mb-2
             md:text-5xl md:mb-3
             lg:text-4xl lg:mr-[53%] lg:mb-2
             xl:text-4xl xl:mb-2 xl:mr-[54%]
@@ -60,7 +61,7 @@ const Features = () => {
                     lg:text-3xl
                     xl:text-4xl
                     "
-            />{" "}
+            />{' '}
             Every member is a friend.
           </h4>
           <h4
@@ -74,7 +75,7 @@ const Features = () => {
                     lg:text-3xl
                     xl:text-4xl
                     "
-            />{" "}
+            />{' '}
             People over profits.
           </h4>
           <h4
@@ -88,7 +89,7 @@ const Features = () => {
                     lg:text-3xl
                     xl:text-4xl
                     "
-            />{" "}
+            />{' '}
             Freedom is everything.
           </h4>
           <h4
@@ -102,7 +103,7 @@ const Features = () => {
                     lg:text-3xl
                     xl:text-4xl
                     "
-            />{" "}
+            />{' '}
             Privacy is your right.
           </h4>
           <h4
@@ -116,7 +117,7 @@ const Features = () => {
                     lg:text-3xl
                     xl:text-4xl
                     "
-            />{" "}
+            />{' '}
             Knowledge is power.
           </h4>
           <h4
@@ -133,7 +134,7 @@ const Features = () => {
                     xl:text-4xl
                     
                     "
-            />{" "}
+            />{' '}
             Where there&apos;s a will, there&apos;s a way!
           </h4>
         </div>
@@ -168,8 +169,8 @@ const Features = () => {
                   className="mr-2
                     md:text-4xl
                     "
-                />{" "}
-                POS Blockchain Projects &nbsp;{" "}
+                />{' '}
+                POS Blockchain Projects &nbsp;{' '}
                 <i className="text-sm"> (Proof of Stake)</i>
               </h4>
             </li>
@@ -183,8 +184,8 @@ const Features = () => {
                   className="mr-2
                     md:text-4xl
                     "
-                />{" "}
-                Decentralized Oracles &nbsp;{" "}
+                />{' '}
+                Decentralized Oracles &nbsp;{' '}
                 <i className="text-sm">(Ex. Chainlink)</i>
               </h4>
             </li>
@@ -198,8 +199,8 @@ const Features = () => {
                   className="mr-2
                     md:text-4xl
                     "
-                />{" "}
-                Privacy Coins | Chains &nbsp;{" "}
+                />{' '}
+                Privacy Coins | Chains &nbsp;{' '}
                 <i className="text-sm">(Ex. XMR/SCRT)</i>
               </h4>
             </li>
@@ -213,8 +214,8 @@ const Features = () => {
                   className="mr-2
                     md:text-4xl
                     "
-                />{" "}
-                Metaverse Projects&nbsp;{" "}
+                />{' '}
+                Metaverse Projects&nbsp;{' '}
                 <i className="text-sm">(Ex. SAND/MANA)</i>
               </h4>
             </li>
@@ -228,8 +229,8 @@ const Features = () => {
                   className="mr-2
                     md:text-4xl
                     "
-                />{" "}
-                NFT&apos;s and Gaming &nbsp;{" "}
+                />{' '}
+                NFT&apos;s and Gaming &nbsp;{' '}
                 <i className="text-sm">(Ex. Enjin)</i>
               </h4>
             </li>
