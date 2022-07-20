@@ -143,7 +143,7 @@ const Navbar = () => {
                         xp:mt-[24vh]
                         sm:mt-[24vh] "
               >
-                <h4>Ashley Capital & DeFi - &#169; {time.getFullYear()}</h4>
+                {/* <h4>Ashley Capital & DeFi - &#169; {time.getFullYear()}</h4> */}
               </div>
             </>
           )}
