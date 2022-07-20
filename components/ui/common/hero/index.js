@@ -20,7 +20,7 @@ const Hero = () => {
         
         xxs:h-[89vh]
         xs:h-[88vh]
-        xp:h-[85vh]
+        xp:h-[90vh]
         sm:h-[98vh] 
         md:h-[85vh]
         xl:h-[90vh]
@@ -60,7 +60,7 @@ const Hero = () => {
 
         <div
           className="h-14 w-14 rounded-full bg-[#2b2b2b] absolute right-[48%] top-[22%] border-4 border-[#2b2b2b]
-            xxs:top-[32vh] xxs:left-[40%]
+            xxs:top-[28vh] xxs:left-[40%]
             xs:top-[33%] xs:left-[37%]
             xp:top-[30%]
             sm:top-[27%]
@@ -115,9 +115,9 @@ const Hero = () => {
       ) : account.data ? (
         <Button
           className="cursor-default absolute 
-            xxs:top-[57%]
+            xxs:top-[46vh]
             xs:top-[50vh]
-            xp:top-[48vh]
+            xp:top-[41vh]
             sm:left-[5%] sm:top-[45%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
@@ -245,7 +245,7 @@ const Hero = () => {
 
       <div className="text-white mt-3">
         <div
-          className="flex justify-between h-[20vh]
+          className="flex justify-between h-[20vh] 
                 "
         >
           <div

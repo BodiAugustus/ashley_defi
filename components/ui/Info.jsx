@@ -24,7 +24,7 @@ const Info = () => {
       <div
         className=" w-[90vw] bg-[#2b2b2b] mx-auto border-2 rounded-xl border-stone-500 grid grid-cols-1 grid-rows-4
             xxs:h-[80vh]
-            xs:h-[82vh]
+            xs:h-[84vh]
             xp:h-[73vh]
             sm:h-[113vh]
             lg:w-[45vw] lg:h-[89vh]
