@@ -8,7 +8,7 @@ const Example = () => {
             md:text-5xl md:mb-3
             lg:text-4xl lg:mb-1 lg:pt-8
             xl:text-4xl xl:relative xl:top-4
-            2xl:mt-8
+            2xl:mt-8 2xl:top-0
             "
       >
         For an Example
