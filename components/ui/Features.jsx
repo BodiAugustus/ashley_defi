@@ -90,7 +90,7 @@ const Features = () => {
                     xl:text-4xl
                     "
             />{' '}
-            Freedom is everything.
+            Freedom is paramount.
           </h4>
           <h4
             className="flex justify-evenly items-center

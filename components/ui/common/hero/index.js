@@ -116,7 +116,7 @@ const Hero = () => {
         <Button
           className="cursor-default absolute 
             xxs:top-[57%]
-            xs:top-[50vh]
+            xs:top-[48vh]
             xp:top-[47%]
             sm:left-[5%] sm:top-[45%]
             md:left-[15%] md:top-[45%]
