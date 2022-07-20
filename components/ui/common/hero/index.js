@@ -99,8 +99,8 @@ const Hero = () => {
       {isLoading ? (
         <Button
           className="cursor-default absolute
-            xxs:top-[52%]
-            xs:top-[57%]
+            xxs:top-[46vh]
+            xs:top-[50vh]
             xp:top-[47%]
             sm:left-[5%] sm:top-[45%]
             md:left-[15%] md:top-[45%]
@@ -117,7 +117,7 @@ const Hero = () => {
           className="cursor-default absolute 
             xxs:top-[46vh]
             xs:top-[50vh]
-            xp:top-[41vh]
+            xp:top-[47vh]
             sm:left-[5%] sm:top-[45%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
@@ -134,9 +134,9 @@ const Hero = () => {
       ) : requireInstall ? (
         <Button
           className="cursor-default absolute 
-            xxs:top-[52%]
-            xs:top-[57%]
-            xp:top-[47%]
+            xxs:top-[46vh]
+            xs:top-[50vh]
+            xp:top-[47vh]
             sm:left-[5%] sm:top-[45%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
@@ -149,9 +149,9 @@ const Hero = () => {
       ) : (
         <Button
           className="cursor-default absolute 
-            xxs:top-[52%]
-            xs:left-[5%] xs:top-[57%]
-            xp:top-[47%]
+            xxs:top-[46vh]
+            xs:left-[5%] xs:top-[50vh]
+            xp:top-[47vh]
             sm:left-[5%] sm:top-[45%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
