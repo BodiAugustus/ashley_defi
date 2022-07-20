@@ -136,7 +136,7 @@ const Hero = () => {
           className="cursor-default absolute 
             xxs:top-[46vh]
             xs:top-[50vh]
-            xp:top-[47vh]
+            xp:top-[45vh]
             sm:left-[5%] sm:top-[45%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
