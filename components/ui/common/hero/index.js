@@ -21,7 +21,7 @@ const Hero = () => {
         xxs:h-[89vh]
         xs:h-[90vh]
         xp:h-[85vh]
-        sm:h-[95vh] 
+        sm:h-[98vh] 
         md:h-[85vh]
         xl:h-[90vh]
         "
@@ -324,7 +324,7 @@ const Hero = () => {
             <div className="flex justify-between p-2 items-center">
               <h4>Extras</h4>
               <GiHalfTornado
-                className="fill-red-400 text-2xl sm:text-sm
+                className="fill-red-400 text-2xl 
                                     md:text-4xl
                                     xl:text-5xl"
               />
