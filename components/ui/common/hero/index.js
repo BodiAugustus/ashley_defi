@@ -231,7 +231,7 @@ const Hero = () => {
         className="text-center text-white -mt-8 font-bold
             xxs:mt-28 xxs:text-2xl
             xs:mt-16 xs:mb-4 xs:text-xl
-            xp:text-3xl
+            xp:text-sm
             sm:mt-12 sm:text-3xl sm:-mb-0
             md:text-3xl md:mt-10 md:mb-10
             lg:mb-0 lg:mt-28
