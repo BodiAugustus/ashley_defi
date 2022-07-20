@@ -61,7 +61,7 @@ const Hero = () => {
         <div
           className="h-14 w-14 rounded-full bg-[#2b2b2b] absolute right-[48%] top-[22%] border-4 border-[#2b2b2b]
             xxs:top-[32vh] xxs:left-[40%]
-            xs:top-[33%] xs:left-[37%]
+            xs:top-[38%] xs:left-[37%]
             xp:top-[28%]
             sm:top-[27%]
             md:hidden
@@ -116,7 +116,7 @@ const Hero = () => {
         <Button
           className="cursor-default absolute 
             xxs:top-[57%]
-            xs:top-[57%]
+            xs:top-[65%]
             xp:top-[47%]
             sm:left-[5%] sm:top-[45%]
             md:left-[15%] md:top-[45%]
