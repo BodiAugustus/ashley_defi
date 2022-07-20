@@ -6,6 +6,7 @@ const Call2Action = () => {
       className="bg-black text-white
         xxs:h-[112vh]
         xs:h-[120vh] 
+        xp:h-[110vh]
         sm:h-[120vh]
         md:h-[95vh]
         lg:h-[110vh]
