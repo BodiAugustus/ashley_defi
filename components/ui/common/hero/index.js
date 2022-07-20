@@ -19,7 +19,7 @@ const Hero = () => {
       className="bg-black p-4 relative overflow-hidden
         
         xxs:h-[89vh]
-        xs:h-[82vh]
+        xs:h-[88vh]
         xp:h-[85vh]
         sm:h-[98vh] 
         md:h-[85vh]
