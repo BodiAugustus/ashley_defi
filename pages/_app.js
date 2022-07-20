@@ -1,19 +1,18 @@
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import '@styles/globals.css'
+import '@styles/globals.css';
 
-const NoOperation = ({children}) => <>{children}</>
+const NoOperation = ({ children }) => <>{children}</>;
 
 function MyApp({ Component, pageProps }) {
-
-  const Layout = Component.Layout ?? NoOperation
+  const Layout = Component.Layout ?? NoOperation;
 
   return (
-    <Layout>
-      <ToastContainer/>
+    <Layout className="">
+      <ToastContainer />
       <Component {...pageProps} />
     </Layout>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;

@@ -32,5 +32,9 @@ module.exports = {
       cursor: ['disabled'],
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar')],
+  variants: {
+    // ...
+    scrollbar: ['dark'],
+  },
 };

@@ -48,7 +48,7 @@ const Info = () => {
                 sm:text-xl sm:p-4
                 md:text-3xl md:p-8
                 lg:text-lg lg:p-3 lg:mt-2
-                xl:text-lg xl:p-3 xl:mt-3
+                xl:text-lg xl:p-3 xl:mt-1
                 2xl:text-2xl 2xl:p-5
                 "
           >

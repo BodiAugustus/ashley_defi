@@ -151,7 +151,7 @@ const Features = () => {
           2022 DeFi Focus
         </h2>
         <div
-          className="white-glassmorphism sm:h-[35vh] mb-8 
+          className="white-glassmorphism sm:h-[35vh] mb-8  
                 sm:text-xl sm:leading-loose
                 md:text-2xl md:leading-loose md:h-[31vh] md:w-[90%] md:mx-auto
                 lg:col-span-3 lg:h-[47vh] lg:leading-relaxed
@@ -160,7 +160,7 @@ const Features = () => {
                 "
         >
           <ul className="2xl:mt-2">
-            <li>
+            <li className="">
               <h4
                 className="flex items-center p-2
                     md:justify-center"

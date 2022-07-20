@@ -4,7 +4,7 @@ import { AiOutlineStop } from 'react-icons/ai';
 const Subscribe = () => {
   return (
     <div
-      className="h-[100vh] bg-black text-[#02270E]
+      className="h-[100vh] bg-black text-[#222]
         lg:pt-2 "
     >
       <h2
@@ -49,10 +49,10 @@ const Subscribe = () => {
                             "
               />
             </div>
-            <h3 className="mx-auto">No Tiered systems!</h3>
+            <h3 className="mx-auto text-white">No Tier systems!</h3>
           </div>
           <h4
-            className="text-center text-xl mt-2
+            className="text-center text-white text-xl mt-2
                         sm:text-2xl sm:w-[70%] sm:mx-auto
                         md:text-3xl md:w-[55%]
                         lg:text-2xl lg:w-[80%] lg:-mt-3
@@ -64,7 +64,7 @@ const Subscribe = () => {
           </h4>
         </div>
         <div
-          className="col-span-1 bg-[#51F588] text-center hover:bg-[#63fb96]  font-thin 
+          className="col-span-1 bg-[#43fc80] text-center hover:bg-[#63fb96]  font-thin 
                 xxs:text-base xxs:pt-4
                 xs:pt-4 
                 sm:text-lg sm:pt-4
@@ -79,7 +79,7 @@ const Subscribe = () => {
           </h2>
         </div>
         <div
-          className="col-span-1 bg-[#51F588] text-center hover:bg-[#63fb96] font-thin 
+          className="col-span-1 bg-[#43fc80] text-center hover:bg-[#63fb96] font-thin 
                 xxs:text-base xxs:pt-4
                 xs:pt-4
                 sm:text-lg sm:pt-4
@@ -94,7 +94,7 @@ const Subscribe = () => {
           </h2>
         </div>
         <div
-          className="col-span-1 bg-[#51F588] text-center pt-3 hover:bg-[#63fb96] font-thin 
+          className="col-span-1 bg-[#43fc80] text-center pt-3 hover:bg-[#63fb96] font-thin 
                 xxs:text-base
                 xs:pt-3 xs:px-1
                 sm:text-lg sm:pt-6
@@ -109,7 +109,7 @@ const Subscribe = () => {
           </h2>
         </div>
         <div
-          className="col-span-1 bg-[#51F588] text-center p-2 hover:bg-[#63fb96] font-thin 
+          className="col-span-1 bg-[#43fc80] text-center p-2 hover:bg-[#63fb96] font-thin 
                 xxs:text-base xxs:pt-4
                 xs:pt-4
                 sm:text-lg sm:pt-6
@@ -124,7 +124,7 @@ const Subscribe = () => {
           </h2>
         </div>
         <div
-          className="col-span-1 bg-[#51F588] text-center hover:bg-[#63fb96] font-thin pt-2
+          className="col-span-1 bg-[#43fc80] text-center hover:bg-[#63fb96] font-thin pt-2
                 xxs:text-base
                 xs:pt-3 xs:px-3
                
@@ -139,7 +139,7 @@ const Subscribe = () => {
           </h2>
         </div>
         <div
-          className="col-span-1 bg-[#51F588] text-center hover:bg-[#63fb96] font-thin
+          className="col-span-1 bg-[#43fc80] text-center hover:bg-[#63fb96] font-thin
                 xxs:text-base xxs:pt-3
                 xs:pt-3 xs:px-3
                 sm:text-lg sm:pt-2
@@ -155,7 +155,7 @@ const Subscribe = () => {
         </div>
         <div className="col-span-2 bg-[#0AC244]  rounded-bl-lg rounded-br-lg">
           <h2
-            className="text-center text-3xl pt-4
+            className="text-center text-white text-3xl pt-4
                     sm:text-4xl
                     md:text-5xl md:pt-8
                     lg:text-4xl lg:pt-2
@@ -163,7 +163,10 @@ const Subscribe = () => {
                     "
           >
             Come & join us, <br /> the future is{' '}
-            <span className="text-[#a4f9c0] ">now</span>.
+            <span className="text-[#04491b] ">
+              <b>now</b>
+            </span>
+            .
           </h2>
         </div>
       </div>

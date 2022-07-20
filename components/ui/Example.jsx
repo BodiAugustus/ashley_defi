@@ -7,14 +7,14 @@ const Example = () => {
         className="text-center text-4xl pt-4 mb-2
             md:text-5xl md:mb-3
             lg:text-4xl lg:mb-1 lg:pt-8
-            xl:text-4xl 
+            xl:text-4xl xl:relative xl:top-4
             2xl:mt-8
             "
       >
         For an Example
       </h2>
       <div
-        className="h-[89vh] w-[90vw] bg-[#2b2b2b] mx-auto border-2 rounded-xl border-stone-500 grid grid-cols-1 
+        className="h-[89vh] w-[90vw] bg-[#2b2b2b] mx-auto border-2 rounded-xl border-stone-500 grid grid-cols-1  
             sm:text-lg
             md:text-2xl
             lg:h-[84vh]
@@ -22,7 +22,7 @@ const Example = () => {
             "
       >
         <div
-          className=" rounded-lg p-2 mt-1 overflow-y-scroll
+          className=" rounded-lg p-2 mt-1 overflow-y-scroll scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100
                 xl:mt-5"
         >
           <div className="relative">
