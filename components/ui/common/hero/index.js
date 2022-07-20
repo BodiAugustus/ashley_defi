@@ -101,7 +101,7 @@ const Hero = () => {
           className="cursor-default absolute
             xxs:top-[46vh]
             xs:top-[50vh]
-            xp:top-[47%]
+            xp:top-[45%]
             sm:left-[5%] sm:top-[45%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
@@ -117,7 +117,7 @@ const Hero = () => {
           className="cursor-default absolute 
             xxs:top-[46vh]
             xs:top-[50vh]
-            xp:top-[47vh]
+            xp:top-[45vh]
             sm:left-[5%] sm:top-[45%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
@@ -151,7 +151,7 @@ const Hero = () => {
           className="cursor-default absolute 
             xxs:top-[46vh]
             xs:left-[5%] xs:top-[50vh]
-            xp:top-[47vh]
+            xp:top-[45vh]
             sm:left-[5%] sm:top-[45%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
@@ -229,11 +229,11 @@ const Hero = () => {
 
       <h1
         className="text-center text-white -mt-8 font-bold
-            xxs:mt-28 xxs:text-2xl xxs:text-red-500
-            xs:mt-16 xs:mb-4 xs:text-2xl xs:text-blue-500
-             xp:text-pink-500
-            sm:mt-12 sm:text-3xl sm:-mb-0 sm:text-yellow-500
-            smm:text-purple-700
+            xxs:mt-28 xxs:text-2xl 
+            xs:mt-16 xs:mb-4 xs:text-2xl 
+             
+            sm:mt-12 sm:text-3xl sm:-mb-0 
+            
             md:text-3xl md:mt-10 md:mb-10
             lg:mb-0 lg:mt-28
             xl:mt-20 xl:mb-6 xl:text-4xl
