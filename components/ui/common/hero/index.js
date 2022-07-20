@@ -19,7 +19,7 @@ const Hero = () => {
       className="bg-black p-4 relative overflow-hidden
         
         xxs:h-[89vh]
-        xs:h-[90vh]
+        xs:h-[85vh]
         xp:h-[85vh]
         sm:h-[98vh] 
         md:h-[85vh]
@@ -61,7 +61,7 @@ const Hero = () => {
         <div
           className="h-14 w-14 rounded-full bg-[#2b2b2b] absolute right-[48%] top-[22%] border-4 border-[#2b2b2b]
             xxs:top-[32vh] xxs:left-[40%]
-            xs:top-[38%] xs:left-[37%]
+            xs:top-[35%] xs:left-[37%]
             xp:top-[28%]
             sm:top-[27%]
             md:hidden
@@ -116,7 +116,7 @@ const Hero = () => {
         <Button
           className="cursor-default absolute 
             xxs:top-[57%]
-            xs:top-[65%]
+            xs:top-[59%]
             xp:top-[47%]
             sm:left-[5%] sm:top-[45%]
             md:left-[15%] md:top-[45%]
@@ -252,7 +252,7 @@ const Hero = () => {
             className="bg-[#2b2b2b] text-xs w-[31%] rounded-lg white-glassmorphism
                     xs:h-[19vh]
                     xp:h-[25vh] xp:text-base
-                    sm:text-lg sm:h-[27vh] sm:w-[31%]
+                    sm:text-lg sm:h-[28vh] sm:w-[31%]
                     md:text-2xl
                     lg:text-xl lg:w-[32%]
                     xl:text-2xl xl:h-[30vh]
@@ -284,7 +284,7 @@ const Hero = () => {
             className="bg-[#2b2b2b] text-xs w-[30%] rounded-lg white-glassmorphism
                     xs:h-[19vh]
                     xp:h-[25vh] xp:text-base
-                    sm:text-lg sm:h-[27vh] sm:w-[31%]
+                    sm:text-lg sm:h-[28vh] sm:w-[31%]
                     md:text-2xl
                     lg:text-xl lg:w-[32%]
                     xl:text-2xl xl:h-[30vh]
@@ -315,7 +315,7 @@ const Hero = () => {
             className="bg-[#2b2b2b] text-xs w-[30%] rounded-lg white-glassmorphism 
                     xs:h-[19vh]
                     xp:h-[25vh] xp:text-base
-                    sm:text-lg sm:h-[27vh] sm:w-[31%]
+                    sm:text-lg sm:h-[28vh] sm:w-[31%]
                     md:text-2xl
                     lg:text-xl lg:w-[32%]
                     xl:text-2xl xl:h-[30vh]
