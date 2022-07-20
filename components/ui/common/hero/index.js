@@ -231,8 +231,9 @@ const Hero = () => {
         className="text-center text-white -mt-8 font-bold
             xxs:mt-28 xxs:text-2xl xxs:text-red-500
             xs:mt-16 xs:mb-4 xs:text-xl xs:text-blue-500
-            xp:text-sm xp:text-pink-500
+             xp:text-pink-500
             sm:mt-12 sm:text-3xl sm:-mb-0 sm:text-yellow-500
+            smm:text-purple-700
             md:text-3xl md:mt-10 md:mb-10
             lg:mb-0 lg:mt-28
             xl:mt-20 xl:mb-6 xl:text-4xl
@@ -336,8 +337,7 @@ const Hero = () => {
                             xl:w-[90%] xl:mx-auto xl:mt-2
                             "
             >
-              Discussions, classes, updates, reports, one-on-one chats and much
-              more!
+              Discussions, updates, reports, one-on-one chats and much more!
             </p>
           </div>
         </div>

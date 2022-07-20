@@ -10,6 +10,7 @@ module.exports = {
       xxs: '260px',
       xs: '374px',
       xp: '389px',
+
       ...defaultTheme.screens,
     },
 
@@ -20,6 +21,7 @@ module.exports = {
       },
       screens: {
         sm: '400px',
+        smm: '410px',
         // 'ms': '539px',
         // 'mx': '767px',
       },
