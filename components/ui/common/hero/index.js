@@ -21,7 +21,7 @@ const Hero = () => {
         xxs:h-[89vh]
         xs:h-[90vh]
         xp:h-[85vh]
-        sm:h-[86vh] 
+        sm:h-[95vh] 
         md:h-[85vh]
         xl:h-[90vh]
         "
