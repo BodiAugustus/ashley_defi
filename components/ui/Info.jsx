@@ -7,6 +7,7 @@ const Info = () => {
       className="bg-black text-white 
         xxs:h-[90vh]
         xs:h-[95vh]
+        xp:h-[80vh]
         sm:h-[125vh] 
         "
     >
@@ -24,6 +25,7 @@ const Info = () => {
         className=" w-[90vw] bg-[#2b2b2b] mx-auto border-2 rounded-xl border-stone-500 grid grid-cols-1 grid-rows-4
             xxs:h-[80vh]
             xs:h-[82vh]
+            xp:h-[70vh]
             sm:h-[113vh]
             lg:w-[45vw] lg:h-[89vh]
             xl:h-[90vh]

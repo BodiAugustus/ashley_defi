@@ -62,7 +62,7 @@ const Hero = () => {
           className="h-14 w-14 rounded-full bg-[#2b2b2b] absolute right-[48%] top-[22%] border-4 border-[#2b2b2b]
             xxs:top-[32vh] xxs:left-[40%]
             xs:top-[33%] xs:left-[37%]
-            xp:top-[28%]
+            xp:top-[30%]
             sm:top-[27%]
             md:hidden
             lg:hidden
@@ -117,7 +117,7 @@ const Hero = () => {
           className="cursor-default absolute 
             xxs:top-[57%]
             xs:top-[50vh]
-            xp:top-[39vh]
+            xp:top-[41vh]
             sm:left-[5%] sm:top-[45%]
             md:left-[15%] md:top-[45%]
             lg:left-[42%] lg:top-[43%]
