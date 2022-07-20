@@ -19,7 +19,7 @@ const Hero = () => {
       className="bg-black p-4 relative overflow-hidden
         
         xxs:h-[89vh]
-        xs:h-[85vh]
+        xs:h-[82vh]
         xp:h-[85vh]
         sm:h-[98vh] 
         md:h-[85vh]
@@ -116,7 +116,7 @@ const Hero = () => {
         <Button
           className="cursor-default absolute 
             xxs:top-[57%]
-            xs:top-[55%]
+            xs:top-[52vh]
             xp:top-[47%]
             sm:left-[5%] sm:top-[45%]
             md:left-[15%] md:top-[45%]

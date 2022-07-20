@@ -127,7 +127,7 @@ const Navbar = () => {
               <div
                 className="flex justify-around  text-white mt-8 cursor-pointer
                        xxs:text-4xl 
-                    xs:mt-4
+                    xs:mt-4 xs:text-5xl
                     xp:text-5xl
                        sm:mt-14 sm:text-5xl
                          "
