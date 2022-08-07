@@ -6,6 +6,7 @@ const Banner = ({ title, description, image }) => {
         xs:h-[75vh]
         sm:h-[103vh]
         lg:my-28 lg:2/6 lg:h-[73vh]
+        xl:h-[85vh] 
         "
     >
       <div
@@ -34,6 +35,7 @@ const Banner = ({ title, description, image }) => {
         xs:mt-5 
         md:h-[50vh]
         lg:h-[55vh]
+        xl:w-[70%] xl:h-[75vh] xl:mx-auto
         
         "
       >
@@ -43,7 +45,7 @@ const Banner = ({ title, description, image }) => {
           sm:text-xl sm:w-[47%] sm:pb-1 sm:mt-3
           md:text-3xl md:w-[35%]
           lg:w-[25%] lg:mt-1
-          xl:w-[18%]
+          xl:w-[28%]
           "
           >
             Look, we get it.

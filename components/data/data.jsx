@@ -41,7 +41,7 @@ export const socials = [
   },
   {
     id: '23gfgg',
-    name: 'GitHub',
+    name: 'Discord',
     url: 'https://discord.com/channels/939647986856767570/939647986856767573',
     icon: <BsDiscord />,
     color: 'text-yellow-400',

@@ -132,9 +132,27 @@ const Navbar = () => {
                        sm:mt-14 sm:text-5xl
                          "
               >
-                <FaTwitter className="hover:scale-110 active:scale-100 transition-all" />
-                <FaTelegramPlane className="hover:scale-110 active:scale-100 transition-all" />
-                <BsDiscord className="hover:scale-110 active:scale-100 transition-all" />
+                <a
+                  href="https://twitter.com/AshleyDeFi"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaTwitter className="hover:scale-110 active:scale-100 transition-all" />
+                </a>
+                <a
+                  href="https://t.me/BodiAugustus"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaTelegramPlane className="hover:scale-110 active:scale-100 transition-all" />
+                </a>
+                <a
+                  href="https://discord.com/channels/939647986856767570/939647986856767573"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <BsDiscord className="hover:scale-110 active:scale-100 transition-all" />
+                </a>
               </div>
               <div
                 className="flex flex-col text-center mt-20 text-xs text-white 

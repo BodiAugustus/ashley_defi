@@ -83,7 +83,7 @@ export default function Card({ course, Footer, disabled, state }) {
 
             <Link href="/subscribe/subscriptions/owned">
               <a
-                className=" block mt-1 leading-tight font-medium text-white hover:underline 
+                className=" block mt-1 leading-tight font-medium text-white hover:underline underline-offset-4
             xs:text-base xs:mt-2
             md:text-xl
             xl:underline-offset-4
