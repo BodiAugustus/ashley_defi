@@ -22,8 +22,9 @@ export default function Curriculum({ locked, courseState, isLoading }) {
     'px-2 inline-flex text-xs leading-5 font-semibold rounded-full';
   return (
     <section
-      className="mx-auto rounded-lg bg-black pb-10
+      className="mx-auto rounded-lg bg-black pb-10 
       xxs:w-[95vw]
+      
       
       
       "
@@ -62,16 +63,16 @@ export default function Curriculum({ locked, courseState, isLoading }) {
                   <div className="">
                     <div
                       scope="col"
-                      className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider"
+                      className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider lg:text-center lg:text-2xl"
                     >
-                      Procured Content
+                      Featured Content
                     </div>
-                    <div
+                    {/* <div
                       scope="col"
                       className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider"
                     >
                       Status
-                    </div>
+                    </div> */}
                     <div scope="col" className="relative px-6 py-3">
                       <span className="sr-only">Edit</span>
                     </div>
@@ -86,11 +87,11 @@ export default function Curriculum({ locked, courseState, isLoading }) {
                             <span
                               className={
                                 locked
-                                  ? `bg-red-100 text-red-800 ${statusClass}`
+                                  ? `bg-green-100 text-green-800 ${statusClass}`
                                   : `bg-green-100 text-green-800 ${statusClass}`
                               }
                             >
-                              {locked ? 'Locked' : 'Featured'}
+                              {locked ? 'Featured' : 'Featured'}
                             </span>
                           </div>
                           <div className="text-sm font-medium text-white">
@@ -141,11 +142,11 @@ export default function Curriculum({ locked, courseState, isLoading }) {
                             <span
                               className={
                                 locked
-                                  ? `bg-red-100 text-red-800 ${statusClass}`
+                                  ? `bg-green-100 text-green-800 ${statusClass}`
                                   : `bg-green-100 text-green-800 ${statusClass}`
                               }
                             >
-                              {locked ? 'Locked' : 'Featured'}
+                              {locked ? 'Featured' : 'Featured'}
                             </span>
                           </div>
                           <div className="text-sm font-medium text-white">
@@ -196,11 +197,11 @@ export default function Curriculum({ locked, courseState, isLoading }) {
                             <span
                               className={
                                 locked
-                                  ? `bg-red-100 text-red-800 ${statusClass}`
+                                  ? `bg-green-100 text-green-800 ${statusClass}`
                                   : `bg-green-100 text-green-800 ${statusClass}`
                               }
                             >
-                              {locked ? 'Locked' : 'Featured'}
+                              {locked ? 'Featured' : 'Featured'}
                             </span>
                           </div>
                           <div className="text-sm font-medium text-white">
@@ -251,11 +252,11 @@ export default function Curriculum({ locked, courseState, isLoading }) {
                             <span
                               className={
                                 locked
-                                  ? `bg-red-100 text-red-800 ${statusClass}`
+                                  ? `bg-green-100 text-green-800 ${statusClass}`
                                   : `bg-green-100 text-green-800 ${statusClass}`
                               }
                             >
-                              {locked ? 'Locked' : 'Featured'}
+                              {locked ? 'Featured' : 'Featured'}
                             </span>
                           </div>
                           <div className="text-sm font-medium text-white">

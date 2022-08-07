@@ -4,10 +4,10 @@ import { BsDiscord } from 'react-icons/bs';
 import { FaTelegramPlane } from 'react-icons/fa';
 import { links, socials } from '@components/data/data';
 import { useEffect, useRef, useState } from 'react';
-import { ActiveLink } from '..';
+// import { ActiveLink } from '..';
 
 import { useAccount, useOwnedCourses } from '@components/hooks/web3';
-import { getAllCourses } from '@content/courses/fetcher';
+import { getAllCourses } from '@content/monthlyPass/fetcher';
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -97,7 +97,7 @@ const Navbar = () => {
             {links.map(item => {
               const { id, name, url, howLong } = item;
               {
-                if (id === '13gfgg' && ownedCourses.isEmpty) {
+                if (id === '13gfgg' && ownedCourses?.isEmpty) {
                   return (
                     <li
                       className={`mt-[00%] w-auto md:mt-0 transition-all hover:bg-black hover:p-1 md:hover:text-2xl hover:items-center md:hover:p-1

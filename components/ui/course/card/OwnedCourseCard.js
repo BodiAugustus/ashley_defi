@@ -1,16 +1,16 @@
-import Image from "next/image";
-import cat from "../../../../public/images/Nyan-Cat.jpeg";
+import Image from 'next/image';
+import cat from '../../../../public/images/Nyan-Cat.jpeg';
 
 const STATE_COLORS = {
-  purchased: "bg-indigo-500",
-  activated: "bg-green-400",
-  deactivated: "bg-red-400",
+  purchased: 'bg-indigo-500',
+  activated: 'bg-green-400',
+  deactivated: 'bg-red-400',
 };
 
 export default function OwnedCourseCard({
   children,
   course,
-  type = "purchased",
+  type = 'purchased',
 }) {
   const stateColor = STATE_COLORS[course.state];
 
@@ -45,7 +45,7 @@ export default function OwnedCourseCard({
               </span>
             </h3>
             <p className="mt-1 max-w-2xl text-sm text-gray-500">
-              {course.price} USD
+              {course.price} FTM
             </p>
           </div>
 
@@ -53,7 +53,7 @@ export default function OwnedCourseCard({
             <dl>
               <div className="bg-black px-4 py-5 ">
                 <dt className="text-sm font-medium text-gray-500">
-                  February Fact:
+                  August Fact:
                 </dt>
                 <dd className="mt-1 text-sm text-white sm:mt-0 sm:col-span-2">
                   70% of the total value of Bitcoin is owned by only 2% of

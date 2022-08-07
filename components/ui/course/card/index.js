@@ -1,7 +1,9 @@
-import Image from "next/image";
-import cat from "../../../../public/images/Nyan-Cat.jpeg";
-import Link from "next/link";
-import { AnimateKeyframes } from "react-simple-animate";
+//this is the membership card on subscribe/members page
+
+import Image from 'next/image';
+import cat from '../../../../public/images/Nyan-Cat.jpeg';
+import Link from 'next/link';
+import { AnimateKeyframes } from 'react-simple-animate';
 
 export default function Card({ course, Footer, disabled, state }) {
   return (
@@ -28,7 +30,7 @@ export default function Card({ course, Footer, disabled, state }) {
         "
       >
         <div className=" ">
-          {" "}
+          {' '}
           {/* This is the flex element containing the two children with flex-1 properties - but we dont want that - so we use flex-1 and flex-2 which means flex-2 takes 66% of availavle div. */}
           <div
             className="flex-1 h-full next-image-wrapper
@@ -37,10 +39,10 @@ export default function Card({ course, Footer, disabled, state }) {
             
             "
           >
-            {" "}
+            {' '}
             {/*flex-1 and flex-1 makes each half of the card try to be the same size - fills in the picture though Tailwinds has no flex-2 class so has to be extended in tailwind.config****/}
             <Image
-              className={`object-cover ${disabled && "filter grayscale"}`}
+              className={`object-cover ${disabled && 'filter grayscale'}`}
               src={cat}
               layout="responsive"
               width="200"
@@ -54,21 +56,21 @@ export default function Card({ course, Footer, disabled, state }) {
                 {course.type}
               </div>
               <div className="mt-1">
-                {state === "activated" && (
+                {state === 'activated' && (
                   <div className="text-xs text-white bg-green-600 p-1 px-3 rounded-full">
                     Activated
                   </div>
                 )}
-                {state === "deactivated" && (
+                {state === 'deactivated' && (
                   <div className="text-xs text-white bg-red-600 p-1 px-3 rounded-full">
                     Deactivated
                   </div>
                 )}
-                {state === "purchased" && (
+                {state === 'purchased' && (
                   <AnimateKeyframes
                     play
                     duration={2.8}
-                    keyframes={["opacity: .1", "opacity: 1"]}
+                    keyframes={['opacity: .1', 'opacity: 1']}
                     iterationCount="infinite"
                   >
                     <div className="text-xs text-black bg-yellow-400 p-1 px-3 rounded-full">
@@ -84,6 +86,7 @@ export default function Card({ course, Footer, disabled, state }) {
                 className=" block mt-1 leading-tight font-medium text-white hover:underline 
             xs:text-base xs:mt-2
             md:text-xl
+            xl:underline-offset-4
             2xl:mt-4"
               >
                 {course.title}

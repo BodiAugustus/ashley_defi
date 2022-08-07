@@ -17,7 +17,10 @@ export default function Home() {
       </Head>
       {/* <BaseLayout>       */}
       <Hero className="" />
-      <div className="lg:grid lg:grid-cols-2 xl:h-[110vh] ">
+      <div
+        className="lg:grid lg:grid-cols-2 
+      xl:h-[100vh] "
+      >
         <Main />
         <Info />
       </div>

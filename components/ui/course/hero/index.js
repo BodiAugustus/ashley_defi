@@ -1,5 +1,5 @@
-import Image from "next/image";
-import cat from "../../../../public/images/Nyan-Cat.jpeg";
+import Image from 'next/image';
+import cat from '../../../../public/images/Nyan-Cat.jpeg';
 
 const CourseHero = ({ title, description, image, hasOwner }) => {
   return (
@@ -92,13 +92,14 @@ const CourseHero = ({ title, description, image, hasOwner }) => {
                   sm:flex sm:justify-center 
                   lg:justify-start"
                 >
-                  <div className="rounded-md shadow">
+                  <div className="rounded-md shadow xl:mx-auto">
                     <a
                       href="https://t.me/+89dQjvU76cwxZGU9"
                       target="_blank"
                       rel="noreferrer"
-                      className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 
-                      md:py-4 md:text-lg md:px-10"
+                      className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 hover:scale-105 active:scale-100 transition-all
+                      md:py-4 md:text-lg md:px-10
+                      xl:px-4 "
                     >
                       Speak to a Consultant
                     </a>

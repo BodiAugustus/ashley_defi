@@ -7,7 +7,7 @@ const Example = () => {
         className="text-center text-4xl pt-4 mb-2
             md:text-5xl md:mb-3
             lg:text-4xl lg:mb-1 lg:pt-8
-            xl:text-4xl xl:relative xl:top-4
+            xl:text-4xl xl:relative xl:-top-1
             2xl:mt-8 2xl:top-0
             "
       >

@@ -1,24 +1,23 @@
 //this file loads the contract to the front end
-const NETWORK_ID = process.env.NEXT_PUBLIC_NETWORK_ID
+const NETWORK_ID = process.env.NEXT_PUBLIC_NETWORK_ID;
 
-export const loadContract = async (name, web3) => { //web3 is brought in from the 
-    const res = await fetch(`/contracts/${name}.json`)
-    const Artifact = await res.json()
+export const loadContract = async (name, web3) => {
+  //web3 is brought in from the web3 provider to load the contract
+  const res = await fetch(`/contracts/${name}.json`);
+  const Artifact = await res.json();
 
-    let contract = null
-    try {
-        contract = new web3.eth.Contract(
-            Artifact.abi,
-            Artifact.networks[NETWORK_ID].address //taken from public/contract/marketplace.json networks object. 
-        )
-    } catch (error) {
-        console.error(`Contract ${name} can not be loaded`);
+  let contract = null;
+  try {
+    contract = new web3.eth.Contract(
+      Artifact.abi,
+      Artifact.networks[NETWORK_ID].address //taken from public/contract/marketplace.json networks object.
+    );
+  } catch (error) {
+    console.error(`Contract ${name} can not be loaded`);
+  }
 
-    }
-
-    return contract
-}
-
+  return contract;
+};
 
 // export const loadContract = async (name, provider) => {
 //     const res = await fetch(`/contracts/${name}.json`)

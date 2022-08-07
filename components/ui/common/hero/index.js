@@ -126,6 +126,7 @@ const Hero = () => {
           hoverable={false}
           variant="blue"
         >
+          {/* account.isAdmin and account.data is coming from useAccount. It is using the account data fetched from the useSWR response there */}
           Hello{' '}
           {account.isAdmin
             ? 'Bodi'
@@ -157,6 +158,7 @@ const Hero = () => {
             lg:left-[42%] lg:top-[43%]
             xl:left-[44%] xl:top-[38%]
             2xl:left-[42%] 2xl:top-[36%]"
+          //connect is coming from _web3Api to open MetaMask
           onClick={connect}
         >
           Connect Wallet
@@ -246,6 +248,7 @@ const Hero = () => {
       <div className="text-white mt-3">
         <div
           className="flex justify-between h-[20vh] 
+          lg:max-w-6xl lg:mx-auto lg:gap-10
                 "
         >
           <div

@@ -1,7 +1,7 @@
 const Banner = ({ title, description, image }) => {
   return (
     <section
-      className=" text-left 
+      className=" text-left max-w-7xl
         xxs:h-[80vh]
         xs:h-[75vh]
         sm:h-[103vh]
@@ -23,7 +23,7 @@ const Banner = ({ title, description, image }) => {
         xs:text-base xs:mt-2 xs:w-[70%] xs:mx-auto
         sm:px-2 sm:text-lg
         md:text-2xl md:px-8 md:mb-20
-        lg:mt-2  lg:mx-10 lg:mb-4
+        lg:mt-2  lg:mx-10 lg:mb-4 lg:w-full
         "
       >
         Ashley DeFi guide&apos;s you every step of the way so that you can learn
@@ -34,6 +34,7 @@ const Banner = ({ title, description, image }) => {
         xs:mt-5 
         md:h-[50vh]
         lg:h-[55vh]
+        
         "
       >
         <div className="">

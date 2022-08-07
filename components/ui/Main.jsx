@@ -12,7 +12,8 @@ const Main = () => {
   return (
     <div
       className="h-[100vh] bg-black text-white text-center
-        xl:h-[125vh]
+      
+        xl:h-[110vh]
         "
     >
       <h2

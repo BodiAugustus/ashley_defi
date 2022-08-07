@@ -9,6 +9,7 @@ const Info = () => {
         xs:h-[95vh]
         xp:h-[82vh]
         sm:h-[125vh] 
+        xl:h-[105vh]
         "
     >
       <h2
@@ -27,7 +28,7 @@ const Info = () => {
             xs:h-[84vh]
             xp:h-[73vh]
             sm:h-[113vh]
-            lg:w-[45vw] lg:h-[89vh]
+            lg:w-[45vw] lg:h-[89vh] 
             xl:h-[90vh]
             "
       >
@@ -49,7 +50,7 @@ const Info = () => {
                 xxs:p-1 xxs:mb-2
                 sm:text-xl sm:p-4
                 md:text-3xl md:p-8
-                lg:text-lg lg:p-3 lg:mt-2
+                lg:text-xl lg:p-3 lg:mt-2
                 xl:text-lg xl:p-3 xl:mt-1
                 2xl:text-2xl 2xl:p-5
                 "
@@ -58,7 +59,7 @@ const Info = () => {
               className="indent-4
                     xxs:px-2
                     md:indent-8 
-                    lg:leading-5
+                    lg:leading-6
                     xl:leading-7
                     2xl:leading-8
                     "
@@ -81,7 +82,7 @@ const Info = () => {
               indent-4
               xxs:px-2
               md:indent-8 
-                    lg:leading-5
+                    lg:leading-6
                     xl:leading-7
                     2xl:leading-8"
             >
@@ -96,7 +97,7 @@ const Info = () => {
             className="bg-black rounded-lg  border-2 border-stone-500 
                 sm:text-xl sm:p-4 sm:mt-5
                 md:text-3xl md:p-8
-                lg:text-lg lg:p-3 lg:leading-5
+                lg:text-xl lg:p-3 lg:leading-7
                 xl:text-lg xl:p-3 xl:leading-6 xl:mt-2
                 2xl:text-2xl 2xl:p-5
                 "

@@ -153,15 +153,6 @@ contract CourseMarketplace {
 
         Course storage course = ownedCourses[courseHash];
 
-
-        if(course.state != State.Purchased){
-            revert InvalidState();
-        }
-
-        //Transfers ether back to owner
-        (bool success, ) = course.owner.call{value: course.price}("");
-        require(success, "Transfer failed!");
-
         course.state = State.Deactivated;
         course.price = 0;
     }

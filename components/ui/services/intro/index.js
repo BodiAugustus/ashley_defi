@@ -51,8 +51,8 @@ const Intro = () => {
           and flourishing community of like-minded individuals who are all in
           pursuit of the same goal -{' '}
           <span
-            className="underline underline-offset-[3px]
-                2xl:underline-offset-[4px]
+            className="underline underline-offset-[5px]
+                
                 "
           >
             not being left behind
