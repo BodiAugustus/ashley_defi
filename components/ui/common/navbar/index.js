@@ -97,7 +97,7 @@ const Navbar = () => {
             {links.map(item => {
               const { id, name, url, howLong } = item;
               {
-                if (id === '13gfgg' && !ownedCourses?.isEmpty) {
+                if (id === '13gfgg' && gitownedCourses?.isEmpty) {
                   return (
                     <li
                       className={`mt-[00%] w-auto md:mt-0 transition-all hover:bg-black hover:p-1 md:hover:text-2xl hover:items-center md:hover:p-1
