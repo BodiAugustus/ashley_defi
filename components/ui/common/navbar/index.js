@@ -182,7 +182,7 @@ const Navbar = () => {
                 key={id}
                 className={`${color} hover:scale-110 transition-all active:scale-100`}
               >
-                <a className="" href={url}>
+                <a className="" href={url} target="_blank" rel="noreferrer">
                   {icon}
                 </a>
               </li>

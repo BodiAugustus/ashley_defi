@@ -33,9 +33,6 @@ const URLATOM =
 const URLMANA =
   'https://api.coingecko.com/api/v3/coins/decentraland?localization=false&tickers=false&community_data=false&developer_data=false&sparkline=false';
 
-const URLLUNA =
-  'https://api.coingecko.com/api/v3/coins/terra-luna?localization=false&tickers=false&community_data=false&developer_data=false&sparkline=false';
-
 const URLAVAX =
   'https://api.coingecko.com/api/v3/coins/avalanche-2?localization=false&tickers=false&community_data=false&developer_data=false&sparkline=false';
 
@@ -47,9 +44,6 @@ const URLLINK =
 
 const URLSAND =
   'https://api.coingecko.com/api/v3/coins/the-sandbox?localization=false&tickers=false&community_data=false&developer_data=false&sparkline=false';
-
-const URLZOO =
-  'https://api.coingecko.com/api/v3/coins/zoo-coin?localization=false&tickers=false&community_data=false&developer_data=false&sparkline=false';
 
 const URLBOO =
   'https://api.coingecko.com/api/v3/coins/spookyswap?localization=false&tickers=false&community_data=false&developer_data=false&sparkline=false';
@@ -65,6 +59,22 @@ const URLCRV =
 
 const URLDUSK =
   'https://api.coingecko.com/api/v3/coins/dusk-network?localization=false&tickers=false&community_data=false&developer_data=false&sparkline=false';
+
+const URLTRON = 'https://api.coingecko.com/api/v3/coins/tron';
+
+const URLUNISWAP = 'https://api.coingecko.com/api/v3/coins/uniswap';
+
+const URLLITE = 'https://api.coingecko.com/api/v3/coins/litecoin';
+
+const URLNEAR = 'https://api.coingecko.com/api/v3/coins/near';
+
+const URLSTELLAR = 'https://api.coingecko.com/api/v3/coins/stellar';
+
+const URLFLOW = 'https://api.coingecko.com/api/v3/coins/flow';
+
+const URLALGO = 'https://api.coingecko.com/api/v3/coins/algorand';
+
+const URLZCASH = 'https://api.coingecko.com/api/v3/coins/zcash';
 
 export const COURSE_PRICE = 30;
 
@@ -209,18 +219,6 @@ export const useMANAPrice = () => {
   return { mana: { ...swrRes } };
 };
 
-const fetcherLUNA = async url => {
-  const res = await fetch(url);
-  const json = await res.json();
-  //  console.log(json);
-  return json.market_data.current_price.usd ?? null;
-};
-
-export const useLUNAPrice = () => {
-  const swrRes = useSWR(URLLUNA, fetcherLUNA, { refreshInterval: 100000 });
-  return { luna: { ...swrRes } };
-};
-
 const fetcherAVAX = async url => {
   const res = await fetch(url);
   const json = await res.json();
@@ -267,18 +265,6 @@ const fetcherSAND = async url => {
 export const useSANDPrice = () => {
   const swrRes = useSWR(URLSAND, fetcherSAND, { refreshInterval: 100000 });
   return { sand: { ...swrRes } };
-};
-
-const fetcherZOO = async url => {
-  const res = await fetch(url);
-  const json = await res.json();
-  //  console.log(json);
-  return json.market_data.current_price.usd ?? null;
-};
-
-export const useZOOPrice = () => {
-  const swrRes = useSWR(URLZOO, fetcherZOO, { refreshInterval: 100000 });
-  return { zoo: { ...swrRes } };
 };
 
 const fetcherBOO = async url => {
@@ -339,4 +325,114 @@ const fetcherDUSK = async url => {
 export const useDUSKPrice = () => {
   const swrRes = useSWR(URLDUSK, fetcherDUSK, { refreshInterval: 100000 });
   return { dusk: { ...swrRes } };
+};
+
+const fetcherTron = async url => {
+  const res = await fetch(url);
+  const json = await res.json();
+  //  console.log(json);
+  return json.market_data.current_price.usd ?? null;
+};
+
+export const useTronPrice = () => {
+  const swrRes = useSWR(URLTRON, fetcherTron, { refreshInterval: 100000 });
+  return { tron: { ...swrRes } };
+};
+
+const fetcherUniSwap = async url => {
+  const res = await fetch(url);
+  const json = await res.json();
+  //  console.log(json);
+  return json.market_data.current_price.usd ?? null;
+};
+
+export const useUniSwapPrice = () => {
+  const swrRes = useSWR(URLUNISWAP, fetcherUniSwap, {
+    refreshInterval: 100000,
+  });
+  return { uni: { ...swrRes } };
+};
+
+const fetcherLite = async url => {
+  const res = await fetch(url);
+  const json = await res.json();
+  //  console.log(json);
+  return json.market_data.current_price.usd ?? null;
+};
+
+export const useLitePrice = () => {
+  const swrRes = useSWR(URLLITE, fetcherLite, {
+    refreshInterval: 100000,
+  });
+  return { lite: { ...swrRes } };
+};
+
+const fetcherNear = async url => {
+  const res = await fetch(url);
+  const json = await res.json();
+  //  console.log(json);
+  return json.market_data.current_price.usd ?? null;
+};
+
+export const useNearPrice = () => {
+  const swrRes = useSWR(URLNEAR, fetcherNear, {
+    refreshInterval: 100000,
+  });
+  return { near: { ...swrRes } };
+};
+
+const fetcherStellar = async url => {
+  const res = await fetch(url);
+  const json = await res.json();
+  //  console.log(json);
+  return json.market_data.current_price.usd ?? null;
+};
+
+export const useStellarPrice = () => {
+  const swrRes = useSWR(URLSTELLAR, fetcherStellar, {
+    refreshInterval: 100000,
+  });
+  return { stellar: { ...swrRes } };
+};
+
+const fetcherFlow = async url => {
+  const res = await fetch(url);
+  const json = await res.json();
+  //  console.log(json);
+  return json.market_data.current_price.usd ?? null;
+};
+
+export const useFlowPrice = () => {
+  const swrRes = useSWR(URLFLOW, fetcherFlow, {
+    refreshInterval: 100000,
+  });
+  return { flow: { ...swrRes } };
+};
+
+const fetcherAlgo = async url => {
+  const res = await fetch(url);
+  const json = await res.json();
+  //  console.log(json);
+  return json.market_data.current_price.usd ?? null;
+};
+
+export const useAlgoPrice = () => {
+  const swrRes = useSWR(URLALGO, fetcherAlgo, {
+    refreshInterval: 100000,
+  });
+  return { algo: { ...swrRes } };
+};
+
+const fetcherZCash = async url => {
+  const res = await fetch(url);
+  const json = await res.json();
+  //  console.log(json);
+  return json.market_data.current_price.usd ?? null;
+};
+
+export const useZCashPrice = () => {
+  const swrRes = useSWR(URLZCASH, fetcherZCash, {
+    refreshInterval: 100000,
+  });
+  return { zcash: { ...swrRes } };
 };
