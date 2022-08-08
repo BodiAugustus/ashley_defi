@@ -35,7 +35,7 @@ const OwnedCourses = ({ courses }) => {
         />
       </Head>
       {/* {JSON.stringify( ownedCourses?.data)} */}
-      <div className="fit bg-black">
+      <div className="fit bg-black max-w-7xl">
         <MarketHeader />
       </div>
       <section className="grid grid-cols-1 bg-black ">

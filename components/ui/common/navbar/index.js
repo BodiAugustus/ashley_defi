@@ -98,7 +98,7 @@ const Navbar = () => {
             {links.map(item => {
               const { id, name, url, howLong } = item;
               {
-                if (id === '13gfgg' && ownedCourses?.isEmpty) {
+                if (id === '13gfgg' && !ownedCourses?.isEmpty) {
                   return (
                     <li
                       className={`mt-[00%] w-auto md:mt-0 transition-all hover:bg-black hover:p-1 md:hover:text-2xl hover:items-center md:hover:p-1
@@ -172,6 +172,7 @@ const Navbar = () => {
           className="hidden bg-[#2b2b2b] 
                     md:flex md:items-center md:justify-between md:p-2  md:mr-1 md:text-3xl md:w-[17%] md:rounded-xl
                     lg:w-[13%] lg:mr-2 xl:text-4xl
+                    2xl:w-[10%]
                     "
         >
           {socials.map(item => {

@@ -87,7 +87,7 @@ const Call2Action = () => {
             className="p-2 text-center bg-blue-500 rounded-lg shadow-lg shadow-sky-500 hover:scale-110 active:scale-100 w-[32%] mx-auto mt-8 cursor-pointer transition-all text-xl tracking-wide
             md:w-[25%] md:text-3xl
             lg:w-[20%]
-            2xl:w-[15%]
+            2xl:w-[14%]
             "
           >
             Join Now!
@@ -104,7 +104,7 @@ const Call2Action = () => {
             className="p-2 text-center bg-indigo-500 rounded-lg shadow-lg shadow-indigo-500 hover:scale-110 active:scale-100 w-[35%] mx-auto mt-4 cursor-pointer transition-all text-xl tracking-wide
             md:text-3xl md:w-[28%]
             lg:w-[20%]
-            2xl:w-[15%]
+            2xl:w-[14%]
             "
           >
             Contact Us!
