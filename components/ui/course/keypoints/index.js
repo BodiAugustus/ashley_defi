@@ -71,7 +71,7 @@ const KeyPoints = ({ points, link1, link2, link3, link4 }) => {
                 </dt>
                 <dd className="mt-2 ml-16 text-base text-white">
                   <a href={link1} target="_blank" rel="noreferrer">
-                    Point 1
+                    Bankless Token Ratings - August 2022
                   </a>
                 </dd>
               </div>
@@ -100,7 +100,7 @@ const KeyPoints = ({ points, link1, link2, link3, link4 }) => {
                 </dt>
                 <dd className="mt-2 ml-16 text-base text-white">
                   <a href={link2} target="_blank" rel="noreferrer">
-                    Point 1
+                    How a Crypto Dev Faked an Ecosystem
                   </a>
                 </dd>
               </div>
@@ -129,7 +129,7 @@ const KeyPoints = ({ points, link1, link2, link3, link4 }) => {
                 </dt>
                 <dd className="mt-2 ml-16 text-base text-white">
                   <a href={link3} target="_blank" rel="noreferrer">
-                    Point 1
+                    In-Depth Look at Nouns DAO
                   </a>
                 </dd>
               </div>
@@ -158,7 +158,7 @@ const KeyPoints = ({ points, link1, link2, link3, link4 }) => {
                 </dt>
                 <dd className="mt-2 ml-16 text-base text-white">
                   <a href={link4} target="_blank" rel="noreferrer">
-                    Point 1
+                    The Complete Guide to Rollups
                   </a>
                 </dd>
               </div>

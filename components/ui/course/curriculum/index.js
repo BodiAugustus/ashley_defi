@@ -95,7 +95,7 @@ export default function Curriculum({ locked, courseState, isLoading }) {
                             </span>
                           </div>
                           <div className="text-sm font-medium text-white">
-                            Featured News Article 1
+                            The Alchemy of NFT: Pricing 101
                           </div>
                         </div>
                       </div>
@@ -127,7 +127,7 @@ export default function Curriculum({ locked, courseState, isLoading }) {
                       <a
                         target="_blank"
                         rel="noreferrer"
-                        href="https://www.google.com"
+                        href="https://en.0xzx.com/nft-alchemy-pricing-pricing-101-134/"
                         className="text-green-600 hover:text-green-900"
                       >
                         Read Now
@@ -150,7 +150,7 @@ export default function Curriculum({ locked, courseState, isLoading }) {
                             </span>
                           </div>
                           <div className="text-sm font-medium text-white">
-                            Featured News Article 2
+                            Who will Mine Ethereum in 2.0?
                           </div>
                         </div>
                       </div>
@@ -182,7 +182,7 @@ export default function Curriculum({ locked, courseState, isLoading }) {
                       <a
                         target="_blank"
                         rel="noreferrer"
-                        href="https://www.google.com"
+                        href="https://www.coindesk.com/layer2/2022/08/03/who-will-mine-ethereum-after-its-gone/"
                         className="text-green-600 hover:text-green-900"
                       >
                         Read now
@@ -205,7 +205,7 @@ export default function Curriculum({ locked, courseState, isLoading }) {
                             </span>
                           </div>
                           <div className="text-sm font-medium text-white">
-                            Featured News Article 3
+                            Messari Crypto Fundraising Report Q1 2022
                           </div>
                         </div>
                       </div>
@@ -237,7 +237,7 @@ export default function Curriculum({ locked, courseState, isLoading }) {
                       <a
                         target="_blank"
                         rel="noreferrer"
-                        href="https://www.google.com"
+                        href="https://messari.io/report/h1-2022-crypto-fundraising-report-dove-metrics-x-messari"
                         className="text-green-600 hover:text-green-900"
                       >
                         Read now
@@ -260,7 +260,7 @@ export default function Curriculum({ locked, courseState, isLoading }) {
                             </span>
                           </div>
                           <div className="text-sm font-medium text-white">
-                            Featured News Article 4
+                            Aptos Vs Solana
                           </div>
                         </div>
                       </div>
@@ -292,7 +292,7 @@ export default function Curriculum({ locked, courseState, isLoading }) {
                       <a
                         target="_blank"
                         rel="noreferrer"
-                        href="https://www.google.com"
+                        href="hhttps://defieducation.substack.com/p/aptos-solana-20-or-something-more?utm_source=%2Fprofile%2F39850567-defi-education&utm_medium=reader2"
                         className="text-green-600 hover:text-green-900"
                       >
                         Read now
