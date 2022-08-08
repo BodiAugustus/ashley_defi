@@ -84,6 +84,7 @@ const Navbar = () => {
                     : 'links-container'
                 }
                 lg:w-[45%]
+                2xl:w-[40%]
                 `}
         >
           <ul
