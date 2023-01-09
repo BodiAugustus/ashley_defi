@@ -148,7 +148,7 @@ const Features = () => {
              
                 "
         >
-          2022 DeFi Focus
+          2023 DeFi Focus
         </h2>
         <div
           className="white-glassmorphism sm:h-[35vh] mb-8  
