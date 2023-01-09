@@ -51,7 +51,7 @@ const Call2Action = () => {
                 "
         >
           Or to put it more succintly,{' '}
-          <span className="text-green-400">$30 USD</span> per month.
+          <span className="text-green-400">$99 USD</span> per month.
         </h4>
         <h4
           className="text-center mt-4

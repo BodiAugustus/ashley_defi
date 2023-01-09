@@ -64,7 +64,7 @@ const Subscribe = () => {
           </h4>
         </div>
         <div
-          className="col-span-1 bg-[#43fc80] text-center hover:bg-[#7bf9a5]  font-thin 
+          className="col-span-1 bg-[#43fc80] text-center hover:bg-[#7bf9a5]  font-thin cursor-pointer
                 xxs:text-base xxs:pt-4
                 xs:pt-4 
                 sm:text-lg sm:pt-4
@@ -79,7 +79,7 @@ const Subscribe = () => {
           </h2>
         </div>
         <div
-          className="col-span-1 bg-[#43fc80] text-center hover:bg-[#7bf9a5] font-thin 
+          className="col-span-1 bg-[#43fc80] text-center hover:bg-[#7bf9a5] font-thin cursor-pointer
                 xxs:text-base xxs:pt-4
                 xs:pt-4
                 sm:text-lg sm:pt-4
@@ -94,7 +94,7 @@ const Subscribe = () => {
           </h2>
         </div>
         <div
-          className="col-span-1 bg-[#43fc80] text-center pt-3 hover:bg-[#7bf9a5] font-thin 
+          className="col-span-1 bg-[#43fc80] text-center pt-3 hover:bg-[#7bf9a5] font-thin cursor-pointer
                 xxs:text-base
                 xs:pt-3 xs:px-1
                 sm:text-lg sm:pt-6
@@ -109,7 +109,7 @@ const Subscribe = () => {
           </h2>
         </div>
         <div
-          className="col-span-1 bg-[#43fc80] text-center p-2 hover:bg-[#7bf9a5] font-thin 
+          className="col-span-1 bg-[#43fc80] text-center p-2 hover:bg-[#7bf9a5] font-thin cursor-pointer
                 xxs:text-base xxs:pt-4
                 xs:pt-4
                 sm:text-lg sm:pt-6
@@ -124,7 +124,7 @@ const Subscribe = () => {
           </h2>
         </div>
         <div
-          className="col-span-1 bg-[#43fc80] text-center hover:bg-[#7bf9a5] font-thin pt-2
+          className="col-span-1 bg-[#43fc80] text-center hover:bg-[#7bf9a5] font-thin pt-2 cursor-pointer
                 xxs:text-base
                 xs:pt-3 xs:px-3
                
@@ -139,7 +139,7 @@ const Subscribe = () => {
           </h2>
         </div>
         <div
-          className="col-span-1 bg-[#43fc80] text-center hover:bg-[#7bf9a5] font-thin
+          className="col-span-1 bg-[#43fc80] text-center hover:bg-[#7bf9a5] font-thin cursor-pointer
                 xxs:text-base xxs:pt-3
                 xs:pt-3 xs:px-3
                 sm:text-lg sm:pt-2
@@ -163,7 +163,7 @@ const Subscribe = () => {
                     "
           >
             Come & join us, <br /> the future is{' '}
-            <span className="text-[#04491b] ">
+            <span className="text-[#F0FF42] ">
               <b>now</b>
             </span>
             .

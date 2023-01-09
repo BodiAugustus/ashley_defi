@@ -76,7 +76,8 @@ const URLALGO = 'https://api.coingecko.com/api/v3/coins/algorand';
 
 const URLZCASH = 'https://api.coingecko.com/api/v3/coins/zcash';
 
-export const COURSE_PRICE = 30;
+//this is the price per month in USD !!
+export const COURSE_PRICE = 99;
 
 const fetcher = async url => {
   const res = await fetch(url);
