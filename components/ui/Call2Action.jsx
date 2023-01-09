@@ -40,7 +40,7 @@ const Call2Action = () => {
                 xl:text-3xl
                 "
         >
-          One dollar per day.
+          A few dollars per day.
         </h3>
         <h4
           className="text-center text-lg mt-4
